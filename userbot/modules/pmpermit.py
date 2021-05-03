@@ -43,16 +43,16 @@ LASTMSG = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else f"│Karena Saya Akan Otomatis Memblokir\n│Anda, Tunggu Sampai {DEFAULTUSER}\n│Menerima Pesan Anda, Terimakasih.\n" 
 DEF_UNAPPROVED_MSG = (
-    "◄┈─╼━━━━━━━━━━━━━━━━━━╾─┈╮\n"
-    "ㅤ  “𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
-    "╭┈─╼━━━━━━━━━━━━━━━━━━╾─┈╯\n"
+    "◄┈─╼━━━━━━━━━━━━━━━━━╾─┈╮\n"
+    "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
+    "╭┈─╼━━━━━━━━━━━━━━━━━╾─┈╯\n"
     "│❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈❗\n│\n"
     f"{CUSTOM_MIDDLE_PMP}│\n"
-    "╰┈─────────────────────┈─➤\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
-    "┣[○› `PESAN OTOMATIS`\n"
-    f"┣[○› `BY` @LynxUserbot\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱")
+    "╰┈────────────────────┈─➤\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▰▱\n"
+    "┣[○› `AUTOMATIC MESSAGES`\n"
+    f"┣[○› `BY` Geez Project\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▱")
 
 # =================================================================
 
@@ -113,7 +113,7 @@ async def permitpm(event):
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Saya 😼`"
+                    "`Ke Room Chat Saya`"
                 )
 
                 try:
@@ -123,7 +123,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Yang Mulia, Telah Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Saya 😿 !",
+                            "Telah Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Saya !",
                         )
                     return LOGS.info("CountPM wen't rarted boi")
 
@@ -251,7 +251,7 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke, Pesan Anda Sudah Diterima Oleh Pemilik Saya 😼`")
+        return await apprvpm.edit("`Oke, Pesan Anda Sudah Diterima Oleh Pemilik Saya`")
 
     await apprvpm.edit(f"`𝙷𝚊𝚒 👋` [{name0}](tg://user?id={uid}) `𝙿𝚎𝚜𝚊𝚗 𝙰𝚗𝚍𝚊 𝚂𝚞𝚍𝚊𝚑 𝙳𝚒𝚝𝚎𝚛𝚒𝚖𝚊` ⚡")
     await apprvpm.delete(getmsg)
@@ -264,7 +264,7 @@ async def approvepm(apprvpm):
         )
 
 
-@register(outgoing=True, pattern=r"^\.(?:tolak|nopm)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:tolak|nope)\s?(.)?")
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -406,7 +406,7 @@ CMD_HELP.update(
     {
         "pmpermit": "⚡𝘾𝙈𝘿⚡: >`.setuju | .ok`"
         "\n↳ : Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.tolak | .nopm`"
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.tolak | .nope`"
         "\n↳ : Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n⚡𝘾𝙈𝘿⚡: >`.block`"
         "\n↳ : Memblokir Orang Di PM."
