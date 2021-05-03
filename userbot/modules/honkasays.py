@@ -13,7 +13,7 @@ from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbid
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-@register(outgoing=True, pattern=r"^\.honka (.*)")
+@register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
     wai = await event.edit("`Sedang Memproses, Mohon Tunggu Sebentar...`")
     text = event.pattern_match.group(1)
@@ -52,7 +52,7 @@ async def honkasays(event):
 
 CMD_HELP.update(
     {
-        "honkasays": "⚡𝘾𝙈𝘿⚡: `.honka` space <text>\
+        "frog": "⚡𝘾𝙈𝘿⚡: `.frog` space <text>\
     \n↳ : Menampilkan Pesan (text) di Sticker Animasi."
     }
 )
