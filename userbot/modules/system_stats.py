@@ -164,8 +164,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Versi:** \n "
-            f"heads/Lynx-Userbot-0-x634i7u1"
+            "**⚜-**⚡Geez-Project⚡ Versi:** \n "
+            f"heads/Geez-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -228,19 +228,19 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-           f"**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+           f"**⚡𝙂𝙚𝙚𝙯-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
         f"\n__**{GEEZ_TEKS_KUSTOM}**__\n"
-        f"**══════════════════════**\n"
+        f"**───────────────────────**\n"
         f"**🤴 GEEZ** \n"
         f" ↳ : `{DEFAULTUSER}` \n"
         f"**🔎 Username** \n"
         f" ↳ : `@{user.username}` \n"
-        f"╔═══════════════════════\n"
-        f"╟[•⚙️ `Telethon :`Ver {version.__version__} \n"
-        f"╟[•🐍 `Python   :`Ver {python_version()} \n"
-        f"╟[•👾 `Bot Ver  :`{BOT_VER} \n"
-        f"╟[•📂 `Modules  :`{len(modules)} \n"
-        f"╚═══════════════════════")
+        f"╭───────────────────────\n"
+        f"├[•⚙️ `Telethon :`Ver {version.__version__} \n"
+        f"├[•🐍 `Python   :`Ver {python_version()} \n"
+        f"├[•👾 `Bot Ver  :`{BOT_VER} \n"
+        f"├[•📂 `Modules  :`{len(modules)} \n"
+        f"╰───────────────────────")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -266,16 +266,16 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**ㅤㅤㅤㅤ ⚡【𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏】⚡**\n"
-        f"╔══════════╣۩ ✞ ۩╠══════════╗ \n"
-        f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＫΞＮＺＯ](t.me/SyndicateTwenty4)             ㅤ ║\n"
+        f"**ㅤㅤㅤㅤ ⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡**\n"
+        f"╔══════════╬════╬══════════╗ \n"
+        f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＧΞ ΞＺ](t.me/VckyouuBitch)             ㅤ ║\n"
         f"╟⟩⟩ 🖥️ • `ꜱʏꜱᴛᴇᴍ.   :`Ubuntu 20.10            ║\n"
         f"╟⟩⟩ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ  :`v.{version.__version__}                ㅤㅤ  ║\n"
         f"╟⟩⟩ 🐍 • `ᴘʏᴛʜᴏɴ.   :`v.{python_version()} ㅤㅤㅤㅤ         ║\n"
         f"╟⟩⟩ 👾 • `ʙᴏᴛ      :`v.{BOT_VER}                ㅤㅤㅤ ║\n"
         f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
-        f"╚══════════╣۩ ✞ ۩╠══════════╝ \n"
-        f"😼 : [𝗥𝗘𝗣𝗢-𝗟𝘆𝗻𝘅](https://github.com/KENZO-404/Lynx-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👩‍💻 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/SyndicateTwenty4)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
+        f"╚══════════╬════╬══════════╝ \n"
+        f"🔰 : [𝗥𝗘𝗣𝗢-𝙂𝙚𝙚𝙯](https://github.com/vckyou/Geez-UserBot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
             )
     if ALIVE_LOGO:
         try:
@@ -301,68 +301,30 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Connecting to server.__")
-    await alive.edit("__Connecting to server..__")
-    await alive.edit("__Connecting to server...__")
-    await alive.edit("__Connecting to server.__")
-    await alive.edit("__Connecting to server..__")
-    await alive.edit("__Connecting to server...__")
-    await alive.edit("__Connecting to server.__")
-    await alive.edit("__Connecting to server..__")
-    await alive.edit("__Connecting to server...__")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡              🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡             🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡            🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡           🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡          🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡         🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡        🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡       🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡      🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡     🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡    🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡   🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ 🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊🐈⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽🐈𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍🐈𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀🐈𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎🐈𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐🐈𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-🐈𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅🐈𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆𝗻🐈-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟𝘆🐈𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡𝗟🐈𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("⚡🐈𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
-    await alive.edit("🐈𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("__Connecting.__")
+    await alive.edit("__Connecting..__")
+    await alive.edit("__Connecting...__")
+    await alive.edit("__Connecting....__")
+    await alive.edit("__Connecting.__")
+    await alive.edit("__Connecting..__")
+    await alive.edit("__Connecting...__")
+    await alive.edit("__Connecting....__")
     await alive.edit("⚡")
-    await asyncio.sleep(3)
-    await alive.edit("😼")
-    await asyncio.sleep(3)
+    await asyncio.sleep(2)
     output = (
-        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
-        f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
-        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
-        f"╭╼════════════════════╾╮ \n"
-        f"│    ⇱  𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ⇲ \n"
-        f"┟╼════════════════════╾┤ \n"
-        f"╟◈ 😼  `Lynx     :`{DEFAULTUSER} \n"
-        f"╟◈ 🔎  `Username :`@{user.username} \n"
-        f"╟◈ ⚙️  `Telethon :`v. {version.__version__} \n"
-        f"╟◈ 🐍  `Python   :`v. {python_version()} \n"
-        f"╟◈ 🛠️  `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"╟◈ 👾  `Bot Ver  :`v. {BOT_VER} \n"
-        f"╟◈ 📂  `Plugins  :`{len(modules)} Plugins \n"
-        f"┞╼════════════════════╾┤ \n"
-        f"├◈ **Don't forget to support our** \n"
-        f"│    **userbot, how to press below.** \n"
-        f"╰╼════════════════════╾╯ \n"
-        f"| [𝗥𝗲𝗽𝗼](https://kenzo-404.github.io/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | " f"[𝗠𝘆 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE}) | ")
+        f"╭──────────────────────╮\n"
+        f"┃  **⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡**\n"
+        f"╰──────────────────────╯ \n"
+        f" ❍ `Name     :` {DEFAULTUSER} \n"
+        f" ❍ `Username :` @{user.username} \n"
+        f" ❍ `Telethon :` Ver {version.__version__} \n"
+        f" ❍ `Python   :` Ver {python_version()} \n"
+        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f" ❍ `Bot Ver  :` {BOT_VER} \n"
+        f" ❍ `Modules  :` {len(modules)} Modules \n"
+        f"╭──────────────────────╮ \n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | " f"[𝗠𝘆 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
+        f"╰──────────────────────╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
