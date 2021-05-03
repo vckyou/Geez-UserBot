@@ -80,7 +80,7 @@ async def handler(tele):
                             return
 
 
-@register(outgoing=True, pattern="^.gban(?: |$)(.*)")
+@register(outgoing=True, pattern="^.gbans(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -146,7 +146,7 @@ async def gben(userbot):
     )
 
 
-@register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
+@register(outgoing=True, pattern="^.ungbans(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -213,7 +213,7 @@ async def gunben(userbot):
 
 CMD_HELP.update({
     "globalban":
-    "⚡𝘾𝙈𝘿⚡: `.gban`\
+    "⚡𝘾𝙈𝘿⚡: `.gbans`\
 \n↳ : Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin.\
-\n\n⚡𝘾𝙈𝘿⚡: `.ungban`\
+\n\n⚡𝘾𝙈𝘿⚡: `.ungbans`\
 \n↳ : Membatalkan Banned Secara Global."})
