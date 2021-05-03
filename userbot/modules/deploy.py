@@ -1,6 +1,6 @@
 # © Copyright 2021 Lynx-Userbot LLC Company.
 # GPL-3.0 License From Github
-# Ported for Lynx-Userbot by @TeamSecret_Kz (KENZO)
+# Ported for Geez-Project by @TeamSecret_Kz (KENZO)
 # WARNING !! Don't Delete This Tag if u Kang it This File.
 # Credits by @SyndicateTwenty4 (Axel)
 
@@ -33,7 +33,7 @@ async def _(event):
 
     animation_chars = [
         
-            "Heroku Connecting To Latest Github Build (KENZO-404/Lynx-Userbot)",
+            "Heroku Connecting To Latest Github Build (Vckyou/Geez-UserBot)",
             f"Build started by user `{DEFAULTUSER}`",
             f"Deploy `535a74f0` by user `{DEFAULTUSER}`",
             "`Restarting Heroku Server...`",
@@ -52,8 +52,8 @@ async def _(event):
             "telethon.network.mtprotosender -\nINFO - Received response without parent request",
             "INFO - Lynx-Userbot: Logged in as 557667062",
             "INFO - Lynx-Userbot: Successfully...",
-            "919852+00:00 app[worker.1]: 919 - Lynx-Userbot -",
-            "INFO - ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⚙️ V4.0 [TELAH DIAKTIFKAN!]",
+            "919852+00:00 app[worker.1]: 919 - Geez-Project -",
+            "INFO - ⚡ Geez-Project⚡ ⚙️ V4.0 [TELAH DIAKTIFKAN!]",
             "**Build Succeeded**"
 
  ]
