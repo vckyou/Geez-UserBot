@@ -7,19 +7,19 @@ from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 @register(outgoing=True, pattern=r'^.kekuatan(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Lord Mengaktifkan Kekuatan Telegram...👾`")
+    await fry.edit("`Prosess, Mengaktifkan jurus tumor bolong...😜`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
         await fry.edit("`Gambar tidak di dukung`")
         return
     if reply_message.sender.bot:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker`")
         return
     chat = "@image_deepfrybot"
     message_id_to_reply = fry.message.reply_to_msg_id
@@ -38,10 +38,10 @@ async def _(fry):
             """ - don't spam notif - """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await fry.reply("`Lord Mohon Unblock` @image_deepfrybot`...`")
+            await fry.reply("`Mohon Unblock` @image_deepfrybot`...`")
             return
         if response.text.startswith("Forward"):
-            await fry.edit("`Lord Mohon Matikan Setelan Forward Privasi...`")
+            await fry.edit("`Mohon Matikan Setelan Forward Privasi...`")
         else:
             downloaded_file_name = await fry.client.download_media(
                 response.media,
@@ -131,6 +131,6 @@ async def _(fry):
 
 CMD_HELP.update({
     "kekuatan":
-    "`.kekuatan` or `.kekuatan` [level(1-8)]"
+    "`.kamuii` or `.kamuii` [level(1-8)]"
     "\nUsage: untuk mengubah foto/sticker."
 })
