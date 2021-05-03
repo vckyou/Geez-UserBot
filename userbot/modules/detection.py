@@ -1,6 +1,6 @@
 # Copyright © 2021 Lynx-Userbot (LLC Company (WARNING))
 # GPL-3.0 License From Github (General Public License)
-# Ported From Cat Userbot For Lynx-Userbot By Alvin/LiuAlvinas.
+# Ported From Cat Userbot For Geez-Project By Alvin/LiuAlvinas.
 # Based On Plugins
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
