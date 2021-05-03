@@ -489,7 +489,7 @@ async def _(event):
             await event.client.delete_message(chat, event.chat_id, response.message)
 
 
-@register(outgoing=True, pattern="^.bunglon(?: |$)(.*)")
+@register(outgoing=True, pattern="^.clone(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1016,7 +1016,7 @@ async def xcursive(cursivelite):
     await cursivelite.edit(string)
 
 
-@register(outgoing=True, pattern="^.rbunglon(?: |$)(.*)")
+@register(outgoing=True, pattern="^.rclone(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1044,7 +1044,7 @@ CMD_HELP.update({
 \n↳ : Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
 \n\n⚡𝘾𝙈𝘿⚡: `.rnupload` filename.extenstion\
 \n↳ : Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n⚡𝘾𝙈𝘿⚡: `.bunglon` @username Dan '.rbunglon' Untuk Mengembalikan\
+\n\n⚡𝘾𝙈𝘿⚡: `.clone` @username Dan '.rclone' Untuk Mengembalikan\
 \n↳ : Clone Akun Orang Tapi Username Tidak Di Clone\
 \n\n⚡𝘾𝙈𝘿⚡: `.res`\
 \n↳ : Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
