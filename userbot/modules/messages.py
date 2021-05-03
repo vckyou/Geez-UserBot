@@ -59,13 +59,13 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Berhasil Menghapus Pesan Lord,` " + str(count) + " `Pesan Telah Dihapus ⛧`",
+        "`Berhasil Menghapus Pesan,` " + str(count) + " `Pesan Telah Dihapus ⛧`",
     )
     """
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "`Lord Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ⛧`")
+            "`Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ⛧`")
     """
     await sleep(2)
     i = 1
@@ -82,14 +82,14 @@ async def delete_it(delme):
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "`Lord Berhasil Menghapus Pesan ⛧`")
+                    BOTLOG_CHATID, "`Berhasil Menghapus Pesan ⛧`")
             """
         except rpcbaseerrors.BadRequestError:
             await delme.edit("`Tidak Bisa Menghapus Pesan`")
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "`Tidak Bisa Menghapus Pesan Lord`")
+                    BOTLOG_CHATID, "`Tidak Bisa Menghapus Pesan`")
             """
 
 
