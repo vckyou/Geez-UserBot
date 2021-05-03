@@ -1807,7 +1807,7 @@ async def emoji_tengkorak(e):
 
 
 CMD_HELP.update({
-    "memes":
+    "animasi3":
     ">`.cowsay`"
     "\nUsage: sapi yang mengatakan sesuatu."
     "\n\n> .cp"
