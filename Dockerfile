@@ -1,5 +1,5 @@
 # Docker Tag Images, Using Python Slim Buster.
-FROM xluxz/xluxzuser:Buster
+FROM xluxz/xluxzuser:buster
 # ===========================================
 #               Geez - Userbot
 # ===========================================
