@@ -53,7 +53,7 @@ async def mine(event):
     await event.edit(output_str)
 
 
-@register(outgoing=True, pattern="^.name")
+@register(outgoing=True, pattern="^.cname")
 async def update_name(name):
     """ For .name command, change your name in Telegram. """
     newname = name.text[6:]
