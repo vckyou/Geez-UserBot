@@ -54,7 +54,7 @@ async def lastname(steal):
                 response = await conv.get_response()
             except YouBlockedUserError:
                 await steal.reply(
-                    "```Yang Mulia, Mohon Unblock @sangmatainfo_bot Dan Coba Scan Kembali.```"
+                    "```Mohon Unblock @sangmatainfo_bot Dan Coba Scan Kembali.```"
                 )
                 return
             if r.text.startswith("Name"):
