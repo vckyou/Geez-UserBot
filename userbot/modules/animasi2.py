@@ -1577,7 +1577,7 @@ async def emoji_penis(e):
 
 CMD_HELP.update(
     {
-        "memes": ">`.cowsay`"
+        "animasi2": ">`.cowsay`"
         "\nUsage: cow which says things."
         "\n\n>`:/`"
         "\nUsage: Check yourself ;)"
