@@ -50,15 +50,14 @@ async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("__Connecting to server.__")
-    await pong.edit("__Connecting to server..__")
-    await pong.edit("__Connecting to server...__")
-    await pong.edit("__Connecting to server.__")
-    await pong.edit("__Connecting to server..__")
-    await pong.edit("__Connecting to server...__")
-    await pong.edit("__Connecting to server.__")
-    await pong.edit("__Connecting to server..__")
-    await pong.edit("__Connecting to server...__")
+    await pong.edit("__Connecting.__")
+    await pong.edit("__Connecting..__")
+    await pong.edit("__Connecting...__")
+    await pong.edit("__Connecting....__")
+    await pong.edit("__Connecting.__")
+    await pong.edit("__Connecting..__")
+    await pong.edit("__Connecting...__")
+    await pong.edit("__Connecting....__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**╭━━━━━━━━━━━━━━━━━╮** \n"
@@ -112,28 +111,24 @@ async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("__Connecting to data center.__")
-    await pong.edit("__Connecting to data center..__")
-    await pong.edit("__Connecting to data center...__")
-    await pong.edit("__Connecting to data center.__")
-    await pong.edit("__Connecting to data center..__")
-    await pong.edit("__Connecting to data center...__")
-    await pong.edit("__Connecting to data center.__")
-    await pong.edit("__Connecting to data center..__")
-    await pong.edit("__Connecting to data center...__")
+    await pong.edit("__Connecting.__")
+    await pong.edit("__Connecting..__")
+    await pong.edit("__Connecting...__")
+    await pong.edit("__Connecting....__")
+    await pong.edit("__Connecting.__")
+    await pong.edit("__Connecting..__")
+    await pong.edit("__Connecting...__")
+    await pong.edit("__Connecting....__")
     await pong.edit("⚡")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**╭─━━━━━━━━━━━━━━━─╮** \n"
-                    f"**       ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
-                    f"**╭─━━━━━━━━━━━━━━━─╯** \n"
-                    f"**│⊙  Sɪɢɴᴀʟ   :** "
+    await pong.edit(f"**⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡**\n\n"
+                    f"** ▹  Sɪɢɴᴀʟ   :** "
                     f"`%sms` \n"
-                    f"**│⊙  Uᴘᴛɪᴍᴇ  :** "
+                    f"** ▹  Uᴘᴛɪᴍᴇ  :** "
                     f"`{uptime}` \n"
-                    f"**│⊙  Oᴡɴᴇʀ   :** `{ALIVE_NAME}` \n"
-                    f"**╰━━━━━━━━━━━━━━━━━╯**" % (duration))
+                    f"** ▹  Oᴡɴᴇʀ   :** `{ALIVE_NAME}` \n" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
