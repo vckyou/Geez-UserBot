@@ -3,8 +3,8 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-# Modified by KENZO @SyndicateTwenty4
-# Port by Lynx-Userbot GPL-3.0 License
+# Modified by Vckyouuu @VckyouuBitch
+# Using By Geez Project GPL-3.0 License
 
 import io
 import os
