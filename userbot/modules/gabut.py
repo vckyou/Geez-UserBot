@@ -435,7 +435,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 CMD_HELP.update({
-    "gabut":
+    "animasi6":
     "⚡𝘾𝙈𝘿⚡: `.gabut` atau `.dino`\
     \n↳ : Dikala gabut, yaaa pake aja xixixi.\
     \n\n⚡𝘾𝙈𝘿⚡: `.yatim`\
