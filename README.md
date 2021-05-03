@@ -1,4 +1,4 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5513591.gif" width="654" height="163" alt="Lynx Userbot" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/383072037997668.gif" width="654" height="163" alt="Lynx Userbot" /></a>
 <p align="center"> 🚀 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 🚀</p>
 <p align="left">
   <a href="https://github.com/KENZO-404/Lynx-Userbot/fork"><img src="https://img.shields.io/github/forks/KENZO-404/Lynx-Userbot?label=Fork&style=social"></a>
