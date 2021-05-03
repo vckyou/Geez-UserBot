@@ -3,7 +3,7 @@ FROM xluxz/xluxzuser:buster
 # ===========================================
 #               Geez - Userbot
 # ===========================================
-RUN git clone -b Geez-Userbot https://github.com/vckyou/Geez-UserBot /root/userbot
+RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --no-cache-dir --upgrade pip setuptools
 WORKDIR /root/userbot
