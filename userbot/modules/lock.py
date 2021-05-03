@@ -69,7 +69,7 @@ async def locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Mohon Maaf, Apa Yang Harus Saya Kunci ? 😾`")
+            await event.edit("`Mohon Maaf, Apa Yang Harus Saya Kunci ?`")
             return
         else:
             await event.edit(f"`Mohon Maaf Yang Mulia, Jenis Yang Mau Anda Kunci Tidak Valid` `{input_str}`")
@@ -95,7 +95,7 @@ async def locks(event):
         await event.edit(f"⚡ `Yang Mulia Telah Mengunci {what} Untuk Obrolan Ini` ⚡")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Yang Mulia Mempunyai Izin Melakukan Itu Disini ? 😿`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Yang Mulia Mempunyai Izin Melakukan Itu Disini ?`\n**Kesalahan:** {str(e)}")
         return
 
 
@@ -157,10 +157,10 @@ async def rem_locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Mohon Maaf Yang Mulia, Apa Yang Harus Saya Buka ? 😾`")
+            await event.edit("`Mohon Maaf, Apa Yang Harus Saya Buka ?`")
             return
         else:
-            await event.edit(f"`Mohon Maaf Yang Mulia, Jenis Kunci Yang Mau Anda Buka Tidak Valid. 😿` `{input_str}`")
+            await event.edit(f"`Mohon Maaf, Jenis Kunci Yang Mau Anda Buka Tidak Valid.` `{input_str}`")
             return
 
     unlock_rights = ChatBannedRights(
@@ -180,10 +180,10 @@ async def rem_locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=unlock_rights))
-        await event.edit(f"⚡ `Yang Mulia Telah Membuka Kunci {what} Untuk Obrolan Ini` ⚡")
+        await event.edit(f"`Yang Mulia Telah Membuka Kunci {what} Untuk Obrolan Ini` ⚡")
     except BaseException as e:
         await event.edit(
-            f"`Mohon Maaf, Apakah Yang Mulia Mempunyai Izin Melakukan Itu Disini ? 😿`\n**Kesalahan:** {str(e)}")
+            f"`Mohon Maaf, Apakah Yang Mulia Mempunyai Izin Melakukan Itu Disini ?`\n**Kesalahan:** {str(e)}")
         return
 
 
