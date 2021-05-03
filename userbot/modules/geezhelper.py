@@ -25,7 +25,7 @@ async def var(m):
 
 
 CMD_HELP.update({
-    "lynxhelper":
+    "helper":
     "`.lhelp`\
 \nUsage: Bantuan Untuk Lynx-Userbot.\
 \n`.vars`\
