@@ -72,7 +72,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`Lynx-Userbot Telah Dimatikan`")
+                                        "`Userbot Telah Dimatikan`")
     await bot.disconnect()
 
 
@@ -83,7 +83,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Lynx-Userbot Telah Di Restart`")
+                                        "`Userbot Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -95,7 +95,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡Lynx-Userbot⚡ Repo](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/README.md)"
+        "\n[⚡ Geez-Project Repo](https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -120,11 +120,11 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭─━━━━━━━━━━━━━─╮\n"
         "                  ʀᴇᴘᴏ\n"
-        "    [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡]({REPOLINK})\n"
+        "    [⚡ Geez-Project⚡]({REPOLINK})\n"
         "╭─━━━━━━━━━━━━━─╯\n"
-        "│⊙ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/AxelAlexiusL)\n"
+        "│🔰 **ᴏᴡɴᴇʀ :** [Geez](t.me/VckyouuBitch)\n"
         "╰━━━━━━━━━━━━━━━╯\n"
-        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE)"
+        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE)"
     )
 
 
