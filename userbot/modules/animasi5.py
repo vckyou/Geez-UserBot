@@ -302,7 +302,7 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "vip":
+    "animasi5":
     "`.bulan` ; `.hati` ; `.bernyanyi`\
     \nUsage: liat aja.\
     \n\n`.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
