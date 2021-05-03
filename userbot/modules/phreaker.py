@@ -21,7 +21,7 @@ async def _(event):
             await conv.send_message(f'/{nmap} {link}')
             response = await response
         except YouBlockedUserError:
-            await event.reply("Unblock @ scriptkiddies_bot dulu Goblok!!")
+            await event.reply("Unblock @scriptkiddies_bot dulu Goblok!!")
             return
         else:
             await event.edit(f"{response.message.message}")
