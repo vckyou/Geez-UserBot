@@ -130,7 +130,7 @@ async def _(fry):
 
 
 CMD_HELP.update({
-    "kekuatan":
+    "kamuii":
     "`.kamuii` or `.kamuii` [level(1-8)]"
     "\nUsage: untuk mengubah foto/sticker."
 })
