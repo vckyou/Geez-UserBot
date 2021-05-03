@@ -78,7 +78,7 @@ async def variable(var):
                 await var.edit("`Mohon Ubah BOTLOG Ke True`")
                 return False
     elif exe == "del":
-        await var.edit("`Menghapus Config Vars... 😼`")
+        await var.edit("`Menghapus Config Vars...`")
         variable = var.pattern_match.group(2)
         if variable == '':
             await var.edit("`Mohon Tentukan Config Vars Yang Mau Anda Hapus`")
@@ -183,8 +183,8 @@ async def dyno_usage(dyno):
 
             await dyno.edit(
                 "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│      ⇱ ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⇲ \n"
-                "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
+                "│      ⇱ ⚡Geez - Project⚡ ⇲ \n"
+                "╭┈─╼━━━━━━━━━━━━━━━╾─┈╯ \n"
                 "│📱◈ 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐚𝐧 𝐊𝐮𝐨𝐭𝐚 𝐀𝐧𝐝𝐚 : \n"
                 f"│⏳◈ {AppHours} Jam - {AppMinutes} Menit. \n"
                 f"│⚡◈ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {AppPercentage}% \n"
