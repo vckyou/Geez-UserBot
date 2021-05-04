@@ -85,7 +85,6 @@ async def typewriter(typew):
                      "\n╭╯╰╯┃╰╯┃╰╯┃╰╯┃╰╮"
                      "\n╰━━━┻━━┻━━┻━━┻━╯")
 
-# Create by amiweird @SyndicateTwenty4
 
 
 CMD_HELP.update({
