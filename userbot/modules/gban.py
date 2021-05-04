@@ -50,7 +50,7 @@ async def get_user_from_id(user, event):
 async def handler(tele):
     if tele.user_joined or tele.user_added:
         try:
-            from userbot.modules.sql_helper.gmute_sql import is_gmuted
+            from userbot.modules.sql_helper.gban_sql import freakgban, freakungban
 
             guser = await tele.get_user()
             gmuted = is_gmuted(guser.id)
@@ -111,7 +111,7 @@ async def gben(userbot):
                 f"`🚫 Anda Tidak Bisa Melakukan Global Banned Ke Geez, Dia Adalah Pembuat Saya.`"
             )
         try:
-            from userbot.modules.sql_helper.gmute_sql import gmute
+            from userbot.modules.sql_helper.gban_sql import freakgban, freakungban
         except BaseException:
             pass
         try:
