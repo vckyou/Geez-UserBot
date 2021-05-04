@@ -236,7 +236,7 @@ CMD_HELP.update({
     "⚡𝘾𝙈𝘿⚡: `.update`"
     "\n• : Untuk Melihat Pembaruan Terbaru Geez-Project."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update now`"
-    "\n• : Memperbarui Lynx-Userbot."
+    "\n• : Memperbarui Geez-Project."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update deploy`"
     "\n• : Memperbarui Geez-Project Dengan Cara Men-Deploy Ulang."
 })
