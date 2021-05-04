@@ -133,7 +133,7 @@ async def ccbin(event):
         return 
     geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
-    await event.edit(f"Trying to generate CC from the given bin `{lynx_input}`")
+    await event.edit(f"Trying to generate CC from the given bin `{geez_input}`")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
