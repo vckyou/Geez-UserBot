@@ -53,7 +53,7 @@ async def handler(tele):
             pass
 
             guser = await tele.get_user()
-            gmuted = is_gmuted(guser.id)
+            gmuted = is_gbanned(guser.id)
         except BaseException:
             return
         if gmuted:
