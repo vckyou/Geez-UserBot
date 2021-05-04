@@ -85,6 +85,7 @@ bitlyshortener
 validators
 geopy
 glitch_this
+lyrics_extractor
 twitter_scraper
 pyaztro
 jikanpy
