@@ -7,7 +7,6 @@ from userbot.events import register
 from userbot import CMD_HELP, bot
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-#Ported by KENZO @TeamSecret_Kz
 
 @register(outgoing=True, pattern=r"^\.detect(?: |$)(.*)")
 async def detect(event):
