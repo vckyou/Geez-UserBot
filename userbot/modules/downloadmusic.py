@@ -149,7 +149,6 @@ async def original(event):
     await event.client.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
     await event.delete()
 
-# For Lynx-Userbot by @Vckyouuu
 
 CMD_HELP.update(
     {
