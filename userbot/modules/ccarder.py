@@ -17,15 +17,15 @@ from userbot.events import register
 
 # Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.gencc(?: |$)(.*)")
-async def gencc(lynxevent):
-    if lynxevent.fwd_from:
+async def gencc(geezevent):
+    if geezevent.fwd_from:
         return
-    lynxcc = Faker()
-    lynxname = lynxcc.name()
-    lynxadre = lynxcc.address()
-    lynxcard = lynxcc.credit_card_full()
+    geezcc = Faker()
+    geezname = geezcc.name()
+    geezadre = geezcc.address()
+    geezcard = geezcc.credit_card_full()
     
-    await edit_or_reply(lynxevent, f"__**👤 NAME :- **__\n`{lynxname}`\n\n__**🏡 ADDRESS :- **__\n`{lynxadre}`\n\n__**💸 CARD :- **__\n`{lynxcard}`")
+    await edit_or_reply(geezevent, f"__**👤 NAME :- **__\n`{geezname}`\n\n__**🏡 ADDRESS :- **__\n`{geezadre}`\n\n__**💸 CARD :- **__\n`{geezcard}`")
     
 
 @register(outgoing=True, pattern=r"^\.bin(?: |$)(.*)")
@@ -48,7 +48,6 @@ async def bin(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.vbv(?: |$)(.*)")
 async def vbv(event):
     if event.fwd_from:
@@ -69,7 +68,6 @@ async def vbv(event):
              await event.client.send_message(event.chat_id, response.message)
   
   
-# Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.key(?: |$)(.*)")
 async def key(event):
     if event.fwd_from:
@@ -90,7 +88,6 @@ async def key(event):
              await event.client.send_message(event.chat_id, response.message)
  
 
-# Ported for Lynx-Userbot  
 @register(outgoing=True, pattern=r"^\.iban(?: |$)(.*)")
 async def iban(event):
     if event.fwd_from:
