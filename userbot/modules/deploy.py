@@ -1,21 +1,3 @@
-# © Copyright 2021 Lynx-Userbot LLC Company.
-# GPL-3.0 License From Github
-# Ported for Geez-Project by @TeamSecret_Kz (KENZO)
-# WARNING !! Don't Delete This Tag if u Kang it This File.
-# Credits by @SyndicateTwenty4 (Axel)
-
-import asyncio
-
-from telethon import events
-from userbot import CMD_HELP, ALIVE_NAME, bot
-from userbot.events import register
-from platform import uname
-
-# Ported for Lynx by KENZO (Lynx-Userbot)
-# ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
-
 @register(outgoing=True, pattern="^.deploy ?(.*)")
 async def _(event):
 
