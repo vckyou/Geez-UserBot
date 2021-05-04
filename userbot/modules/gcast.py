@@ -1,9 +1,3 @@
-# Copyright © 2021 Lynx-Userbot (LLC Company)
-# GPL-3.0 License (General Public License) From Github Corporation.
-# Port by Koala @manusiarakitann
-# @LordUserbot_Group
-# Credits by Alvin, Lord Userbot, Ultroid, Koala.
-
 from userbot.events import register
 from userbot import CMD_HELP, bot
 # Alvin Ganteng
