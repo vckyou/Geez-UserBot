@@ -27,7 +27,7 @@ from PIL import Image
 # Ported for Lynx-Userbot by @SyndicateTwenty4
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-REPOLINK = str(UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/KENZO-404/Lynx-Userbot"
+REPOLINK = str(UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/vckyou/Geez-UserBot"
 # ============================================
 
 opener = urllib.request.build_opener()
