@@ -1,10 +1,3 @@
-# © Copyright 2021 Lynx-Userbot LLC Company.
-# GPL-3.0 License From Github
-# Ported by @TeamSecret_Kz (KENZO)
-# WARNING !!
-# Credits by @TeamUltroid, Kraken, Sawan.
-
-
 from time import sleep
 from userbot import CMD_HELP, bot
 from userbot.events import register
