@@ -31,13 +31,13 @@ async def gencc(geezevent):
 async def bin(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/bin {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/bin {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -51,13 +51,13 @@ async def bin(event):
 async def vbv(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/vbv {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/vbv {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -71,13 +71,13 @@ async def vbv(event):
 async def key(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/key {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/key {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -91,13 +91,13 @@ async def key(event):
 async def iban(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/iban {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/iban {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -111,13 +111,13 @@ async def iban(event):
 async def ccheck(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/ss {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/ss {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -131,13 +131,13 @@ async def ccheck(event):
 async def ccbin(event):
     if event.fwd_from:
         return 
-    lynx_input = event.pattern_match.group(1)
+    geez_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit(f"Trying to generate CC from the given bin `{lynx_input}`")
     async with event.client.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1448477501))
-              await event.client.send_message(chat, f"/gen {lynx_input}")
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=1282429349))
+              await event.client.send_message(chat, f"/gen {geez_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
