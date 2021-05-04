@@ -1,17 +1,3 @@
-# Koala Ganteng, Kode Dari Koala Bangsul Press F untuk Koala @Manusiarakitann
-# Keredit Motor Eh Maksudnya Kredit Kampang Bot (c) Koala Bgke @ManusiaRakitann
-# Karna Aku Gabut Aku Pasang Keredit Lagi # Keredit
-# Yak Pasang Credit Banyak Banyak Biar Makin Keren
-# Copyright (C) 2021 Alvin / @LiuAlvinas By Lord Userbot
-# All rights reserved.
-# Keredit
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-# Lord Userbot - From Lord To Lord
-# Yang Gbs Basa Enggres bisa Terjemahkan di atas
-# Ngefork Doang Gak Bintang Anjg
-# Kalo Clone Ini Jangan dihapus ya anjg nanti Koala Ngamuk, Ok Mksh Sma Sma
-
 import redis
 import platform
 import asyncio
@@ -23,11 +9,7 @@ from userbot.events import register
 from userbot import bot, CMD_HELP, ALIVE_NAME
 from platform import uname
 
-# Alvin Gans
-# Apin Gansssss Anjjjayy Yahahaha
 
-
-# Ported by KENZO (Lynx-Userbot)
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
@@ -76,8 +58,6 @@ async def igsaver(event):
             await event.delete()
 
 
-# By Lord - Userbot
-# Alvin Gansssssss Mksh Sma Sma
-# Alvin Gans
+
 CMD_HELP.update({"instasaver": "⚡𝘾𝙈𝘿⚡: `.igsaver`"
                  "\n↳ : Download Postingan di Instagram, Silahkan Salin Link Postingan Instagram Yang Ingin Anda Download Terus Kirim Link, Lalu Reply dan Ketik `.igsaver`"})
