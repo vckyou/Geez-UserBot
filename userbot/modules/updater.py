@@ -98,7 +98,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#BOT \n"
-                "`Lynx-Userbot Berhasil Di Update`")
+                "`Geez-Project Berhasil Di Update`")
 
     else:
         await event.edit('`[HEROKU]:'
