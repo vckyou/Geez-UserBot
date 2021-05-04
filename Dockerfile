@@ -1,8 +1,8 @@
 # Using Python Slim-Buster
 FROM koala21/kampangbot:buster
-
-
-
+# Perkontolan eh maaf kasar
+# Koala/@manusiarakitan
+#
 RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
