@@ -1,9 +1,3 @@
-# Copyright © 2021 Lynx-Userbot (LLC Company (WARNING))
-# GPL-3.0 License From Github (General Public License)
-# Ported From Cat Userbot For Geez-Project By Alvin/LiuAlvinas.
-# Based On Plugins
-# Credits by Alvin/Liualvinas & Cat Userbot.
-
 import time
 
 from telethon.tl.custom import Dialog
@@ -77,5 +71,5 @@ def user_full_name(user):
 CMD_HELP.update({
     "detection":
         "⚡𝘾𝙈𝘿⚡: `.detect`\
-          \n↳ : Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
+          \n📌 : Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
 })
