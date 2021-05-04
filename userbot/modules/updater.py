@@ -208,18 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update, Sebagai Berikut.**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡.__')
+        return await event.respond('**Perintah Untuk Update, Sebagai Berikut.**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡Geez-Project⚡.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Loading....1%`')
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Loading....20%`')
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Loading....35%`')
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Loading....77%`')
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Updating...90%`')
-        await event.edit('` Proses Update ⚡Geez-Project⚡, Mohon Tunggu Sebentar....100%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....1%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....20%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....35%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....77%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Updating...90%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Mohon Tunggu Sebentar....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
