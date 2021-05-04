@@ -28,7 +28,6 @@ async def gencc(lynxevent):
     await edit_or_reply(lynxevent, f"__**👤 NAME :- **__\n`{lynxname}`\n\n__**🏡 ADDRESS :- **__\n`{lynxadre}`\n\n__**💸 CARD :- **__\n`{lynxcard}`")
     
 
-# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.bin(?: |$)(.*)")
 async def bin(event):
     if event.fwd_from:
