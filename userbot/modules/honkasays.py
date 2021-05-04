@@ -1,12 +1,3 @@
-# © Copyright 2021 Lynx-Userbot LLC Company. (Axel Alexius Latukolan)
-# GPL-3.0 License (General Public License) From Github
-# WARNING !! Don't Delete This Hashtag if u Kang it !!
-# Ported for Lynx-Userbot by @SyndicateTwenty4 (axel)
-# Credits : @Vckyyy
-# Code of Source : @Ultroid
-
-
-
 import random
 
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
