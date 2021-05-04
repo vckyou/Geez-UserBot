@@ -10,7 +10,7 @@ from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 @register(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
 async def _(hazmat):
-    await hazmat.edit("`Lynx Ingin Mengaktifkan Perintah Hazmat`")
+    await hazmat.edit("`Ingin Mengaktifkan Perintah Hazmat`")
     level = hazmat.pattern_match.group(2)
     if hazmat.fwd_from:
         return
