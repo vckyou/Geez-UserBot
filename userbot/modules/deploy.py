@@ -1,14 +1,12 @@
 import asyncio
 
-from telethon import events
-from userbot import CMD_HELP, ALIVE_NAME, bot
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 from platform import uname
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
-
 
 
 @register(outgoing=True, pattern="^.deploy ?(.*)")
