@@ -51,7 +51,7 @@ createuser botuser
 
 cd ..
 echo "pg_ctl -D $PREFIX/var/lib/postgresql start" > startbot.sh
-echo "cd Lynx-Userbot" >> startbot.sh
+echo "cd Geez-UserBot" >> startbot.sh
 echo "python3 -m userbot" >> startbot.sh
 chmod 755 startbot.sh
 
