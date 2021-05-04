@@ -1,15 +1,17 @@
-# Docker Tag Images, Using Python Slim Buster.
+# Using Python Slim-Buster
 FROM koala21/kampangbot:buster
-# ===========================================
-#               Geez - Userbot
-# ===========================================
+
+
+
 RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
-RUN pip install --no-cache-dir --upgrade pip setuptools
+RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
 
-# Install Requirements Packages
-RUN pip3 install --no-cache-dir -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
 
-# Finishim
+EXPOSE 80 443
+
+# Finalization
 CMD ["python3","-m","userbot"]
