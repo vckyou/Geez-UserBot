@@ -1,9 +1,3 @@
-# BASED FROM ULTROID PORTED FOR LYNX USERBOT BY ALVIN / @LIUALVINAS
-# THANKS ULTROID
-# DONT REMOVE THIS
-# ALVIN GANTENG
-# @LORDUSERBOT_GROUP
-
 from telethon import events
 from userbot import CMD_HELP, bot
 from userbot.events import register
