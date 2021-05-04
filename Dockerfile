@@ -1,17 +1,17 @@
-# Using Python Slim-Buster
-FROM koala21/kampangbot:buster
-# Perkontolan eh maaf kasar
-# Koala/@manusiarakitan
+# We're using Ubuntu 20.10
+FROM koala21/kampangbot/buster
+
 #
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
+# Clone repo and prepare working directory
+#
+RUN git clone -b alpha https://github.com/ximfine/Xbot-Remix /home/xnewbie/
+RUN mkdir /home/xnewbie/bin/
+WORKDIR /home/xnewbie/
+
+# Upgrade pip
+RUN pip install --upgrade pip
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
+# RUN pip3 install -r https://raw.githubusercontent.com/ximfine/XBot-Remix/alpha/requirements.txt
 
-EXPOSE 80 443
-
-# Finalization
 CMD ["python3","-m","userbot"]
