@@ -1018,7 +1018,10 @@ async def stretch(stret):
         return await stret.edit("`GiiiiiiiB sooooooomeeeeeee teeeeeeext!`")
 
     count = randint(3, 10)
-    reply_text = sub(r"([aeiouAEIOUａｅｉｏｕＡＥＩＯＵаеиоуюяыэё])", (r"\1" * count), message)
+    reply_text = sub(
+        r"([aeiouAEIOUａｅｉｏｕＡＥＩＯＵаеиоуюяыэё])",
+        (r"\1" * count),
+        message)
     await stret.edit(reply_text)
 
 
@@ -1646,6 +1649,4 @@ CMD_HELP.update(
         "\n.nou | .bot | .gey | .gay | .tf | .paw | .taco | .nih | .ii ;"
         "\n.fag | .gtfo | .stfu | .lol | .lool | .fail | .leave"
         "\n.love | .rain | .earth | .fuck | .penis | .koc | .anjay"
-        "\n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."
-    }
-)
+        "\n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."})

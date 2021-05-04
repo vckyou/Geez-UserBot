@@ -155,7 +155,6 @@ class RedisSession(MemorySession):
         keys = self.redis_connection.keys(f"{self.sess_prefix}*")
         self.redis_connection.delete(*keys)
 
-    
     def get_update_state(self, entity_id):
         key_pattern = "{}:update_states:{}".format(self.sess_prefix, entity_id)
         return self.redis_connection.get(key_pattern)
@@ -167,7 +166,7 @@ class RedisSession(MemorySession):
     def _get_entities(self, strip_prefix=False):
         key_pattern = "{}:entities:".format(self.sess_prefix)
         try:
-            entities = self.redis_connection.keys(key_pattern+"*")
+            entities = self.redis_connection.keys(key_pattern + "*")
             if not strip_prefix:
                 return entities
             return [s.decode().replace(key_pattern, "") for s in entities]
@@ -308,4 +307,3 @@ class RedisSession(MemorySession):
             except Exception as ex:
                 LOGGER.exception(ex.args)
                 return None
-    

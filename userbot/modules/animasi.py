@@ -86,7 +86,6 @@ async def typewriter(typew):
                      "\n╰━━━┻━━┻━━┻━━┻━╯")
 
 
-
 CMD_HELP.update({
     "animasi2":
     "⚡𝘾𝙈𝘿⚡: `.sadboy`\

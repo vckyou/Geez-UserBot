@@ -7,13 +7,11 @@
 # Using By Geez Project GPL-3.0 License
 
 import io
-import os
-import random
 import textwrap
 
 
 from PIL import Image, ImageDraw, ImageFont
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
 
 

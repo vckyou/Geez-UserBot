@@ -12,8 +12,6 @@ import shutil
 import time
 import qrcode
 import barcode
-import asyncurban
-import emoji
 import requests
 import subprocess
 
@@ -21,15 +19,12 @@ from asyncio import sleep
 from barcode.writer import ImageWriter
 from re import findall
 from re import match
-from os import popen
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
 from random import choice
 from requests import get, post, exceptions
 from humanize import naturalsize
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 from bs4 import BeautifulSoup
 from emoji import get_emoji_regexp
@@ -63,8 +58,6 @@ from userbot import (
     IMG_LIMIT,
     TEMP_DOWNLOAD_DIRECTORY,
     WOLFRAM_ID,
-    CHROME_DRIVER,
-    GOOGLE_CHROME_BIN,
     LOGS,
     OCR_SPACE_API_KEY,
     REM_BG_API_KEY,
@@ -209,8 +202,7 @@ async def moni(event):
             currency_from = input_sgra[1].upper()
             currency_to = input_sgra[2].upper()
             request_url = "https://api.exchangeratesapi.io/latest?base={}".format(
-                currency_from
-            )
+                currency_from)
             current_response = get(request_url).json()
             if currency_to in current_response["rates"]:
                 current_rate = float(current_response["rates"][currency_to])
@@ -391,13 +383,15 @@ async def imdb(e):
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
-        page = get("https://www.imdb.com/find?ref_=nv_sr_fn&q=" + final_name + "&s=all")
+        page = get(
+            "https://www.imdb.com/find?ref_=nv_sr_fn&q=" +
+            final_name +
+            "&s=all")
         soup = BeautifulSoup(page.content, "lxml")
         odds = soup.findAll("tr", "odd")
         mov_title = odds[0].findNext("td").findNext("td").text
-        mov_link = (
-            "http://www.imdb.com/" + odds[0].findNext("td").findNext("td").a["href"]
-        )
+        mov_link = ("http://www.imdb.com/" +
+                    odds[0].findNext("td").findNext("td").a["href"])
         page1 = get(mov_link)
         soup = BeautifulSoup(page1.content, "lxml")
         if soup.find("div", "poster"):
@@ -429,7 +423,8 @@ async def imdb(e):
             actors.pop()
             stars = actors[0] + "," + actors[1] + "," + actors[2]
         if soup.find("div", "inline canwrap"):
-            story_line = soup.find("div", "inline canwrap").findAll("p")[0].text
+            story_line = soup.find(
+                "div", "inline canwrap").findAll("p")[0].text
         else:
             story_line = "Not available"
         info = soup.findAll("div", "txt-block")
@@ -687,7 +682,6 @@ async def download_video(v_url):
 
 def deEmojify(inputString):
     return get_emoji_regexp().sub("", inputString)
-
 
 
 @register(pattern=r".ocr (.*)", outgoing=True)
@@ -983,6 +977,8 @@ async def kbg(remob):
 
 # this method will call the API, and return in the appropriate format
 # with the name provided.
+
+
 async def ReTrieveFile(input_file_name):
     headers = {
         "X-API-Key": REM_BG_API_KEY,
@@ -1118,7 +1114,8 @@ def zippy_share(url: str) -> str:
                                 script.text).group('url')
             math = re.search(r'= (?P<url>\".+\" \+ (?P<math>\(.+\)) .+);',
                              script.text).group('math')
-            dl_url = url_raw.replace(math, '"' + str(ast.literal_eval(math)) + '"')
+            dl_url = url_raw.replace(math,
+                                     '"' + str(ast.literal_eval(math)) + '"')
             break
     dl_url = base_url + ast.literal_eval(dl_url)
     name = urllib.parse.unquote(dl_url.split('/')[-1])
@@ -1443,7 +1440,7 @@ CMD_HELP.update(
         "carbon2": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply messages]`\
          \n↳ : Beautify your code using carbon.now.sh\
          \n**How to Use** > `.crblang` <text> to set language for your code."
-    }   
+    }
 )
 CMD_HELP.update(
     {
@@ -1490,12 +1487,12 @@ CMD_HELP.update(
     }
 )
 CMD_HELP.update(
-    {     
+    {
         "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`\
          \n↳ : Takes a screenshot of a website and sends the screenshot.\
          \n**Example of a valid URL** : `https://www.google.com`"
     }
-)      
+)
 CMD_HELP.update(
     {
         "nekobin": "⚡𝘾𝙈𝘿⚡: `.neko` <text/reply>\
@@ -1507,13 +1504,13 @@ CMD_HELP.update(
         "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply>\
          \n↳ : Create a paste or a shortened url using dogbin"
     }
-)      
+)
 CMD_HELP.update(
     {
         "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)\
          \n↳ : Manghapus latar belakang gambar."
     }
-)       
+)
 CMD_HELP.update(
     {
         "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>\
@@ -1534,14 +1531,14 @@ CMD_HELP.update(
 )
 CMD_HELP.update(
     {
-       "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"      
+        "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"
     }
 )
 
 CMD_HELP.update(
     {
-       "youtube": 
-       "⚡𝘾𝙈𝘿⚡ : `.aud <link yt>`\
+        "youtube":
+        "⚡𝘾𝙈𝘿⚡ : `.aud <link yt>`\
     \n↳ : Downloads the AUDIO from the given link\
     \n\n⚡𝘾𝙈𝘿⚡ : `.vid <link yt>`\
     \n↳ : Downloads the VIDEO from the given link\

@@ -8,13 +8,12 @@ import urllib
 import os
 
 from telethon.tl import functions
-from asyncio import sleep
 
 import asyncio
 
 
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
 COLLECTION_STRING = [
     "epic-fantasy-wallpaper",
@@ -82,5 +81,5 @@ async def main(event):
         await asyncio.sleep(3600)  # Edit this to your required needs
 
 CMD_HELP.update({
-        "randompp": "\n\n⚡𝘾𝙈𝘿⚡: `.pprandom`"
-        "\n↳ : Mengubah Photo Profile Anda Secara Random."})
+    "randompp": "\n\n⚡𝘾𝙈𝘿⚡: `.pprandom`"
+    "\n↳ : Mengubah Photo Profile Anda Secara Random."})

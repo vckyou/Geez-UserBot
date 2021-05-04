@@ -107,11 +107,9 @@ async def sticker_to_png(sticker):
     return
 
 
-CMD_HELP.update(
-    {
-        "stickers2": "⚡𝘾𝙈𝘿⚡: `.itos`"
-        "\n↳ : Balas ke sticker atau gambar .itos untuk mengambil sticker bukan ke pack."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.get`"
-        "\n↳ : Balas ke sticker untuk mendapatkan file 'PNG' sticker."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.stoi`"
-        "\n↳ : Balas Ke sticker untuk mendapatkan file 'PNG' sticker."})
+CMD_HELP.update({"stickers2": "⚡𝘾𝙈𝘿⚡: `.itos`"
+                 "\n↳ : Balas ke sticker atau gambar .itos untuk mengambil sticker bukan ke pack."
+                 "\n\n⚡𝘾𝙈𝘿⚡: `.get`"
+                 "\n↳ : Balas ke sticker untuk mendapatkan file 'PNG' sticker."
+                 "\n\n⚡𝘾𝙈𝘿⚡: `.stoi`"
+                 "\n↳ : Balas Ke sticker untuk mendapatkan file 'PNG' sticker."})

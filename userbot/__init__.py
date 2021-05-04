@@ -1,5 +1,8 @@
 """ Userbot initialization. """
 
+from userbot import (
+    ALIVE_NAME
+)
 import os
 import time
 import re
@@ -78,7 +81,9 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
 
 # Pm Permit Img
-PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
+PM_PERMIT_PIC = os.environ.get(
+    "PM_PERMIT_PIC",
+    None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -204,7 +209,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
 
-# Link Instagram for CMD Alive 
+# Link Instagram for CMD Alive
 INSTAGRAM_ALIVE = os.environ.get("INSTAGRAM_ALIVE", None)
 
 # Last.fm Module
@@ -374,13 +379,11 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
-from userbot import (
-    ALIVE_NAME
-)
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
+
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
@@ -442,7 +445,9 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}"f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"        "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
+                    text="{}"
+                    f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
+                    "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
                         "** ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ **",
                         len(dugmeler),
                     ),
@@ -466,8 +471,7 @@ with bot:
                                 "https://github.com/vckyou/Geez-UserBot"),
                             custom.Button.url(
                                 "✨𝗢𝘄𝗻𝗲𝗿",
-                                "t.me/VckyouuBitch")] 
-                    ],
+                                "t.me/VckyouuBitch")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)

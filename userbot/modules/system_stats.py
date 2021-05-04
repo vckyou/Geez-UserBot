@@ -18,7 +18,7 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, GEEZ_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, INSTAGRAM_ALIVE, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, GEEZ_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import register
 
 
@@ -47,7 +47,7 @@ async def get_readable_time(seconds: int) -> str:
         seconds = int(remainder)
 
     for x in range(len(time_list)):
-       time_list[x] = str(time_list[x]) + time_suffix_list[x]
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
 
     if len(time_list) == 4:
         up_time += time_list.pop() + ", "
@@ -150,7 +150,7 @@ async def bot_ver(event):
             stderr=asyncPIPE,
         )
         stdout, stderr = await ver.communicate()
-        verout = str(stdout.decode().strip()) + str(stderr.decode().strip())
+        str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         rev = await asyncrunapp(
             "git",
@@ -228,7 +228,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-           f"**⚡𝙂𝙚𝙚𝙯-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+        f"**⚡𝙂𝙚𝙚𝙯-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
         f"\n__**{GEEZ_TEKS_KUSTOM}**__\n"
         f"**───────────────────────**\n"
         f"**🤴 GEEZ** \n"
@@ -263,7 +263,7 @@ async def amireallyalive(alive):
 
 @register(outgoing=True, pattern=r"^\.(?:gezza)\s?(.)?")
 async def amireallyalive(alive):
-    user = await bot.get_me()
+    await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**ㅤㅤㅤㅤ ⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡**\n"
@@ -276,7 +276,7 @@ async def amireallyalive(alive):
         f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
         f"╚══════════╬════╬══════════╝ \n"
         f"🔰 : [𝗥𝗘𝗣𝗢-𝙂𝙚𝙚𝙯](https://github.com/vckyou/Geez-UserBot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
-            )
+    )
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -323,7 +323,8 @@ async def redis(alive):
         f" ❍ `Bot Ver  :` {BOT_VER} \n"
         f" ❍ `Modules  :` {len(modules)} Modules \n"
         f"╭─────────────────────╮ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot) | [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/LordUserbot_Group) | " f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot) | [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/LordUserbot_Group) | "
+        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
         f"╰─────────────────────╯")
     if ALIVE_LOGO:
         try:
@@ -346,13 +347,13 @@ async def redis(alive):
 
 
 @register(outgoing=True, pattern="^.aliveu")
-async def amireallyaliveuser(username): 
+async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
     output = ".aliveu [new username] tidak boleh kosong"
     if not (message == ".aliveu" and message[7:8] != " "):
         newuser = message[8:]
-        global DEFAULTUSER # global statement
+        global DEFAULTUSER  # global statement
         DEFAULTUSER = username
         output = "Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
@@ -360,34 +361,34 @@ async def amireallyaliveuser(username):
 
 @register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
-    global DEFAULTUSER # global statement
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node 
+    global DEFAULTUSER  # global statement
+    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
 CMD_HELP.update({
     "system":
-    "⚡𝘾𝙈𝘿⚡: `.sysd`"\
-"\n↳ : Shows system information using neofetch."
-"\n\n⚡𝘾𝙈𝘿⚡: `.db`"
-"\n↳ : Shows database related info."
-"\n\n⚡𝘾𝙈𝘿⚡: `.spc`"
-"\n↳ : Show system specification."
+    "⚡𝘾𝙈𝘿⚡: `.sysd`"
+    "\n↳ : Shows system information using neofetch."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.db`"
+    "\n↳ : Shows database related info."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.spc`"
+    "\n↳ : Show system specification."
 })
 CMD_HELP.update({
     "alive":
     "⚡𝘾𝙈𝘿⚡: `.alive` or `.on`"
-"\n↳ : To see whether your bot is working or not."
-"\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
-"\n↳ : Changes the 'user' in alive to the text you want."
-"\n\n⚡𝘾𝙈𝘿⚡: `.restalive`"
-"\n↳ : Resets the user to default."
+    "\n↳ : To see whether your bot is working or not."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
+    "\n↳ : Changes the 'user' in alive to the text you want."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.restalive`"
+    "\n↳ : Resets the user to default."
 })
 CMD_HELP.update(
-{
-    "botversion":
-    "⚡𝘾𝙈𝘿⚡: `.botver`"
-"\n↳ : Shows the userbot version."
-"\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
-"\n↳ : Does a search of pip modules(s)."
-})
+    {
+        "botversion":
+        "⚡𝘾𝙈𝘿⚡: `.botver`"
+        "\n↳ : Shows the userbot version."
+        "\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
+        "\n↳ : Does a search of pip modules(s)."
+    })

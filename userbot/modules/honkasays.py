@@ -1,26 +1,26 @@
-import random
 
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
+
 @register(outgoing=True, pattern=r"^\.frog (.*)")
 async def honkasays(event):
-    wai = await event.edit("`Sedang Memproses, Mohon Tunggu Sebentar...`")
+    await event.edit("`Sedang Memproses, Mohon Tunggu Sebentar...`")
     text = event.pattern_match.group(1)
     if not text:
         return await event.edit("Beri Aku Bebeberapa Text, Contoh : `.honka space <text>`")
     try:
         if not text.endswith("."):
             text = text + "."
-        if len(text)<=9:
+        if len(text) <= 9:
             results = await bot.inline_query("honka_says_bot", text)
             await results[2].click(
                 event.chat_id,
                 silent=True,
                 hide_via=True,
             )
-        elif len(text)>=14:
+        elif len(text) >= 14:
             results = await bot.inline_query("honka_says_bot", text)
             await results[0].click(
                 event.chat_id,

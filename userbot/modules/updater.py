@@ -203,7 +203,7 @@ async def upstream(event):
             await event.client.send_file(
                 event.chat_id,
                 "output.txt",
-                reply_to = event.id,
+                reply_to=event.id,
             )
             remove("output.txt")
         else:

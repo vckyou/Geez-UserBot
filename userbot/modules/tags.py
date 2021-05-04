@@ -1,15 +1,15 @@
-import asyncio
 from telethon.tl.types import ChannelParticipantAdmin as admin
 from telethon.tl.types import ChannelParticipantCreator as owner
 from telethon.tl.types import UserStatusOffline as off
 from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
-from telethon import custom, events
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
 
-@register(outgoing=True, pattern=r"^.tags(?: |$)(on|off|all|bots|rec|admins|owner)?")
+
+@register(outgoing=True,
+          pattern=r"^.tags(?: |$)(on|off|all|bots|rec|admins|owner)?")
 async def _(event):
     okk = event.text
     lll = event.pattern_match.group(2)

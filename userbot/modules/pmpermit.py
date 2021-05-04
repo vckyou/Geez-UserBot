@@ -6,14 +6,10 @@
 """Userbot module for keeping control who PM you."""
 
 import os
-import time
-import asyncio
-import io
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
-from telethon import events, errors, functions, types
 
 from userbot import (
     BOTLOG,
@@ -31,9 +27,9 @@ from userbot.events import register
 
 PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
 if PM_PERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
+    WARN_PIC = "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 else:
-  WARN_PIC = PM_PERMIT_PIC
+    WARN_PIC = PM_PERMIT_PIC
 
 COUNT_PM = {}
 LASTMSG = {}
@@ -41,7 +37,8 @@ LASTMSG = {}
 # ========================= CONSTANTS ============================
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else f"│Karena Saya Akan Otomatis Memblokir\n│Anda, Tunggu Sampai {DEFAULTUSER}\n│Menerima Pesan Anda, Terimakasih.\n" 
+CUSTOM_MIDDLE_PMP = str(
+    CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else f"│Karena Saya Akan Otomatis Memblokir\n│Anda, Tunggu Sampai {DEFAULTUSER}\n│Menerima Pesan Anda, Terimakasih.\n"
 DEF_UNAPPROVED_MSG = (
     "◄┈─╼━━━━━━━━━━━━━━━━━╾─┈╮\n"
     "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
@@ -399,7 +396,6 @@ async def add_pmsg(cust_msg):
                 "*Anda Belum Menyetel Pesan PM*\n"
                 f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
-
 
 
 CMD_HELP.update(

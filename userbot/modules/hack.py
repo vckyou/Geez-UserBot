@@ -1,17 +1,12 @@
-from time import sleep
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
-from random import getrandbits, randint
-from re import sub
 
-import requests
 import asyncio
-import random
+
 
 @register(outgoing=True, pattern='^.hack(?: |$)(.*)')
 async def hack(event):
-    animation_interval = 0.7
-    animation_ttl = range(0, 11)
+    range(0, 11)
     await event.edit("Installing.")
     await event.edit("Installing..")
     await event.edit("Installing...")
@@ -115,9 +110,9 @@ async def hack(event):
     await event.edit("`Accoount hacked\n Collecting all data\n converting data into PDF`")
     await asyncio.sleep(3)
     await event.edit("PDF Created Click Link Below to Download Data`\n\n`Don't Worry Only i Can Open This File 😎😎..\nIf u don't Believe try to Download 🙂\n\nhttps://drive.google.com/file/d/1o2wXirqy1RZqnUMgsoM8qX4j4iyse26X/view?usp=sharing")
-    
+
 
 CMD_HELP.update({
-        "hack": "⚡𝘾𝙈𝘿⚡: `.hack`\
+    "hack": "⚡𝘾𝙈𝘿⚡: `.hack`\
         \n↳ : Untuk hacking via Termux."
 })

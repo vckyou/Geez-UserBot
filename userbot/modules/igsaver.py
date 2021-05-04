@@ -1,8 +1,4 @@
-import redis
-import platform
-import asyncio
 
-from asyncio import create_subprocess_exec as asyncrunapp
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
@@ -56,7 +52,6 @@ async def igsaver(event):
             await event.client.send_read_acknowledge(conv.chat_id)
             await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
             await event.delete()
-
 
 
 CMD_HELP.update({"instasaver": "⚡𝘾𝙈𝘿⚡: `.igsaver`"

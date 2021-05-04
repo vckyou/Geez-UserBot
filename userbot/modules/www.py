@@ -182,7 +182,7 @@ async def pingme(pong):
 
 
 CMD_HELP.update({
-        "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
+    "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
          \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
