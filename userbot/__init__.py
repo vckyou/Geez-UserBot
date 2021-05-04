@@ -1,8 +1,5 @@
 """ Userbot initialization. """
 
-from userbot import (
-    ALIVE_NAME
-)
 import os
 import time
 import re
