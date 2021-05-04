@@ -39,7 +39,6 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
             process.pid)
 
 
-# Ported for Lynx-Userbot by @TeamSecret_Kz
 
 
 async def ytsearch(query, limit):
