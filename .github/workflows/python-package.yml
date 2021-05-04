@@ -5,9 +5,9 @@ name: Python package
 
 on:
   push:
-    branches: [ Kampang ]
+    branches: [ Geez-UserBot ]
   pull_request:
-    branches: [ Kampang ]
+    branches: [ Geez-UserBot ]
 
 jobs:
   build:
@@ -37,5 +37,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-[![Python package](https://github.com/ManusiaRakitan/Kampang-Bot/actions/workflows/python-package.yml/badge.svg?branch=Kampang&event=workflow_dispatch)](https://github.com/ManusiaRakitan/Kampang-Bot/actions/workflows/python-package.yml)
+[![Python package](https://github.com/vckyou/Geez-UserBot/actions/workflows/python-package.yml/badge.svg?branch=Geez-UserBot&event=workflow_dispatch)](https://github.com/vckyou/Geez-UserBot/actions/workflows/python-package.yml)
 
