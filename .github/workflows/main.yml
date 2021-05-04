@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the Lynx-Userbot branch
+  # Triggers the workflow on push or pull request events but only for the Geez-Userbot branch
   push:
     branches: [ Geez-UserBot ]
   pull_request:
