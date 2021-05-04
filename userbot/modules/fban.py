@@ -1,7 +1,3 @@
-# Copyright (C) 2020 KenHV
-# Port for Lynx-Userbot
-# GNU General Public License v3.0
-
 from sqlalchemy.exc import IntegrityError
 
 from userbot import CMD_HELP, bot
