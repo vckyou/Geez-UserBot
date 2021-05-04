@@ -689,9 +689,6 @@ def deEmojify(inputString):
     return get_emoji_regexp().sub("", inputString)
 
 
-#Ported By Kenzo
-#Lynx-Userbot !!WARNING!! GPL-3.0 License
-
 
 @register(pattern=r".ocr (.*)", outgoing=True)
 async def ocr(event):
