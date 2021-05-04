@@ -1,11 +1,3 @@
-# © Copyright 2021 Geez-UserBot LLC Company. (Axel Alexius Latukolan)
-# GPL-3.0 License (General Public License) From Github
-# WARNING !! Don't Delete This Hashtag if u Kang it !!
-# Ported for Lynx-Userbot by @Vckyuuu (piki)
-# Credits : @Ultroid
-
-
-
 import json
 import os
 import random
