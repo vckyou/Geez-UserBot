@@ -29,7 +29,6 @@ async def _(event):
 
 
 # Alvin Ganteng
-# Ported For Lynx-Userbot From Ultroid
 
 CMD_HELP.update({"tempmail": "⚡𝘾𝙈𝘿⚡: `.tm`"
                  "\n↳: Mendapatkan Email Gratis Dari Temp Mail"})
