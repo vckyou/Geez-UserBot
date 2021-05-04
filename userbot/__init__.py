@@ -374,7 +374,6 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
-#Import Userbot - Ported by KENZO
 from userbot import (
     ALIVE_NAME
 )
