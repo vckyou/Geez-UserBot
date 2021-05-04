@@ -15,7 +15,6 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.gencc(?: |$)(.*)")
 async def gencc(geezevent):
     if geezevent.fwd_from:
@@ -108,7 +107,6 @@ async def iban(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-# Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.ccheck(?: |$)(.*)")
 async def ccheck(event):
     if event.fwd_from:
@@ -128,8 +126,7 @@ async def ccheck(event):
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
         
-     
-# Ported for Lynx-Userbot             
+                  
 @register(outgoing=True, pattern=r"^\.ccbin(?: |$)(.*)")
 async def ccbin(event):
     if event.fwd_from:
@@ -150,7 +147,6 @@ async def ccbin(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-# Ported for Lynx-Userbot    
 CMD_HELP.update({
     "ccarder": "⚡𝘾𝙈𝘿⚡: `.gencc`\
 \n↳ : Generates Fake CC.\
