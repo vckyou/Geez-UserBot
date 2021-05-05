@@ -2,9 +2,9 @@
 
 on:
   push:
-    branches: [ Kampang ]
+    branches: [ Geez-UserBot ]
   pull_request:
-    branches: [ Kampang ]
+    branches: [ Geez-UserBot ]
 
 jobs:
   build:
