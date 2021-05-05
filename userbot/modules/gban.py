@@ -1,7 +1,10 @@
-from telethon.events import ChatAction
-from userbot import CMD_HELP, bot
+from userbot import ALIVE_NAME, CMD_HELP, bot
 from userbot.events import register
+
+from telethon.events import ChatAction
+from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
+
 from userbot.modules.sql_helper import gban_sql
 
 
@@ -12,7 +15,7 @@ async def get_full_user(event):
         previous_message = await event.get_reply_message()
         user_obj = await event.client.get_entity(previous_message.sender_id)
         extra = event.pattern_match.group(1)
-    elif len(args[0]) > 0:
+    elif args:
         user = args[0]
         if len(args) == 2:
             extra = args[1]
@@ -31,7 +34,8 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("`Terjadi Kesalahan... Silahkan Hubungi` @VckyouuBitch", str(err))
+            await event.edit("`Terjadi Kesalahan... Silahkan Hubungi` @VckyouuBitch", str(err))
+            return
     return user_obj, extra
 
 
@@ -71,30 +75,38 @@ async def gben(event):
     if event.fwd_from:
         return
     geez = await event.edit("`Melakukan Global Ban pada Pengguna ini...`")
-    user, reason = await get_full_user(event)
     chats = 0
     if event.is_private:
         userid = (await event.get_chat()).id
     elif event.reply_to_msg_id:
         userid = (await event.get_reply_message()).sender_id
+    elif event.pattern_match.group(1):
+        if (event.pattern_match.group(1)).isdigit():
+            try:
+                userid = (await event.client.get_entity(int(event.pattern_match.group(1)))).id
+            except ValueError as verr:
+                return await geez.edit(f"{str(verr)}")
+        else:
+            try:
+                userid = (await event.client.get_entity(str(event.pattern_match.group(1)))).id
+            except ValueError as verr:
+                return await geez.edit(f"{str(verr)}")
+    else:
+        return await geez.edit("Balas sebuah pesan atau tambahkan id user")
     name = (await event.client.get_entity(userid)).first_name
-    if not user:
-        return
-    if not reason:
-        reason = "Tidak ada alasan"
-    if user.id == (await event.client.get_me()).id:
+    if userid == (await event.client.get_me()).id:
         await geez.edit("Apakah saya harus ban diri saya sendiri?")
         return
-    if gban_sql.is_gbanned(user.id):
-        await geez.edit(f"[user](tg://user?id={user.id}) sudah di global banned sebelumnya")
+    if gban_sql.is_gbanned(userid):
+        await geez.edit(f"[user](tg://user?id={userid}) sudah di global banned sebelumnya")
     async for gban in event.client.iter_dialogs():
         if gban.is_group or gban.is_channel:
             try:
-                await event.client.edit_permissions(gban.id, user, view_messages=False)
+                await event.client.edit_permissions(gban.id, userid, view_messages=False)
                 chats += 1
             except BaseException:
                 pass
-    gban_sql.freakgban(userid, reason)
+    gban_sql.freakgban(userid)
     await geez.edit(
         f"`Gbanned` [{name}](tg://user?id={userid}) didalam {chats} grup"
     )
