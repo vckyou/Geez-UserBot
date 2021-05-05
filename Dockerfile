@@ -1,15 +1,15 @@
-# Docker Tag Images, Using Python Slim Buster.
-FROM xluxz/xvoltz:buster
-# ===========================================
-#               Geez - Userbot
-# ===========================================
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --no-cache-dir --upgrade pip setuptools
-WORKDIR /root/userbot
+FROM xluxz/geezproject:buster
 
-# Install Requirements Packages
-RUN pip3 install --no-cache-dir -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
+# Clone repo and prepare working directory
+RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /home/geezproject/ \
+    && chmod 777 /home/geezproject \
+    && mkdir /home/geezproject/bin/
 
-# Finishim
+# Copies config.env (if exists)
+COPY ./sample_config.env ./config.env* /home/geezproject/
+
+# Setup Working Directory
+WORKDIR /home/geezproject/
+
+# Finalization
 CMD ["python3","-m","userbot"]
