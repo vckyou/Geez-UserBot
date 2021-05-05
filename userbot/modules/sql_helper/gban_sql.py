@@ -33,8 +33,8 @@ def get_gbanuser(chat_id):
         SESSION.close()
 
 
-def freakgban(chat_id, reason):
-    adder = GBan(str(chat_id), str(reason))
+def freakgban(chat_id):
+    adder = GBan(str(chat_id))
     SESSION.add(adder)
     SESSION.commit()
 
