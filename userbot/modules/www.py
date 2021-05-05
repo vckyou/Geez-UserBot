@@ -104,7 +104,10 @@ async def redis(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.ping$")
+
+
+
+@register(outgoing=True, pattern="^.pings$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -127,6 +130,23 @@ async def redis(pong):
                     f"** ▹  Uᴘᴛɪᴍᴇ  :** "
                     f"`{uptime}` \n"
                     f"** ▹  Oᴡɴᴇʀ   :** `{ALIVE_NAME}` \n" % (duration))
+
+
+@register(outgoing=True, pattern="^.ping$")
+async def redis(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("__Pinging.__")
+    await pong.edit("__Pinging..__")
+    await pong.edit("__Pinging...__")
+    await pong.edit("__Pinging....__")
+    await pong.edit("⚡")
+    await asyncio.sleep(2)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"**Geez - Project!!🎈**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+
 
 
 @register(outgoing=True, pattern="^.speed$")
@@ -173,16 +193,16 @@ def speed_convert(size):
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
-    await pong.edit("⚡")
+    await pong.edit("PONG")
     await asyncio.sleep(1)
-    await pong.edit("😼")
+    await pong.edit("⚡")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**🤴 Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
+    await pong.edit(f"**Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
 
 
 CMD_HELP.update({
-    "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
+    "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.pings` | `.sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
          \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
