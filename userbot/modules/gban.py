@@ -2,6 +2,7 @@ from telethon.events import ChatAction
 from userbot import CMD_HELP, bot
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
+from userbot.modules.sql_helper import gban_sql
 
 
 async def get_full_user(event):
