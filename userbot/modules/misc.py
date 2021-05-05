@@ -110,12 +110,12 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "╭─━━━━━━━━━━━━━─╮\n"
-        "                  ʀᴇᴘᴏ\n"
-        "    [⚡ Geez-Project⚡]({REPOLINK})\n"
-        "╭─━━━━━━━━━━━━━─╯\n"
+        "╭‒─‒──────────‒─‒╮\n"
+        "│                   ʀᴇᴘᴏ\n"
+        "│       [⚡Geez-Project⚡](https://github.com/Vckyou/Geez-UserBot)\n"
+        "├‒─‒──────────‒─‒╯\n"
         "│🔰 **ᴏᴡɴᴇʀ :** [Geez](t.me/VckyouuBitch)\n"
-        "╰━━━━━━━━━━━━━━━╯\n"
+        "╰‒─‒──────────‒─‒╯\n"
         "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE)"
     )
 
