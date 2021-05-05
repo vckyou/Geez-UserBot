@@ -1,6 +1,5 @@
 from telethon.events import ChatAction
-from userbot import ALIVE_NAME, CMD_HELP, bot
-from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
+from userbot import CMD_HELP, bot
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
 
