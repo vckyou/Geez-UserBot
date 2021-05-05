@@ -104,9 +104,6 @@ async def redis(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-
-
-
 @register(outgoing=True, pattern="^.pings$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
@@ -146,7 +143,6 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**Geez - Project!!🎈**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
-
 
 
 @register(outgoing=True, pattern="^.speed$")
