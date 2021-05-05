@@ -125,13 +125,13 @@ async def set_var(var):
 """
 
 
-@register(outgoing=True, pattern=r"^.kuota(?: |$)")
+@register(outgoing=True, pattern=r"^.usage(?: |$)")
 async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
     await dyno.edit("⚡")
-    await asyncio.sleep(1)
+    await asyncio.sleep(2)
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -152,7 +152,7 @@ async def dyno_usage(dyno):
                     f"`{r.reason}`",
                     reply_to=dyno.id
                 )
-                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno Anda 😿`")
+                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno Anda`")
                 return False
             result = await r.json()
             quota = result['account_quota']
@@ -181,17 +181,17 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│         ⚡Geez - Project⚡  \n"
-                "├┈─╼━━━━━━━━━━━━━━━╾─┈╯ \n"
-                "│◈ 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐚𝐧 𝐊𝐮𝐨𝐭𝐚 𝐀𝐧𝐝𝐚 : \n"
-                f"│   ◈ {AppHours} Jam - {AppMinutes} Menit. \n"
-                f"│   ◈ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {AppPercentage}% \n"
-                "├┈───────────────────┈╮ \n"
-                "│◈ 𝐒𝐢𝐬𝐚 𝐊𝐮𝐨𝐭𝐚 𝐁𝐮𝐥𝐚𝐧 𝐈𝐧𝐢 : \n"
-                f"│   ◈ {hours} Jam - {minutes} Menit. \n"
-                f"│   ◈ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {percentage}% Lagi. \n"
-                "╰┈───────────────────┈╯ \n"
+                "╭┈─╼━━━━━━━━━━━━━━╾─┈╮ \n"
+                "│           ⚡Geez - Project⚡  \n"
+                "├┈─╼━━━━━━━━━━━━━━╾─┈╯ \n"
+                "│💠 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅʏɴᴏ ꜱᴀᴀᴛ ɪɴɪ : \n"
+                f"│  ▸ {AppHours} ᴊᴀᴍ - {AppMinutes} ᴍᴇɴɪᴛ. \n"
+                f"│  ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : {AppPercentage}% \n"
+                "├┈──────────────────┈╮ \n"
+                "│💠 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅʏɴᴏ ʙᴜʟᴀɴ ɪɴɪ : \n"
+                f"│  ▸ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ. \n"
+                f"│  ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : {percentage}%. \n"
+                "╰┈──────────────────┈╯ \n"
                 f"• Oᴡɴᴇʀ  : {ALIVE_NAME} \n"
             )
             await asyncio.sleep(20)
@@ -208,7 +208,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Sedang Mengambil Logs Anda Yang Mulia 😼`")
+    await dyno.edit("`Sedang Mengambil Logs Anda Yang Mulia`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -220,7 +220,7 @@ async def _(dyno):
     return os.remove("logs.txt")
 
 
-CMD_HELP.update({"herokuapp": "⚡𝘾𝙈𝘿⚡: `.kuota`"
+CMD_HELP.update({"herokuapp": "⚡𝘾𝙈𝘿⚡: `.usage`"
                  "\n↳ : Check Quota Dyno Heroku"
                  "\n\n⚡𝘾𝙈𝘿⚡: `.set var <NEW VAR> <VALUE>`"
                  "\n↳ : Tambahkan Variabel Baru Atau Memperbarui Variabel"
