@@ -1,5 +1,6 @@
 """ Userbot initialization. """
 
+import logging
 import os
 import time
 import re
@@ -134,9 +135,9 @@ if REDIS_URI and REDIS_PASSWORD:
         )
         redis_connection.ping()
     except Exception as e:
-        LOGGER.exception(e)
+        logging.exception(e)
         print()
-        LOGGER.error(
+        logging.error(
             "Make sure you have the correct Redis endpoint and password "
             "and your machine can make connections."
         )
