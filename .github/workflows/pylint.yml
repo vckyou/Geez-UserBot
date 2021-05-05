@@ -11,7 +11,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: 3.8
 
       - name: Install Python lint libraries
         run: |
@@ -29,6 +29,6 @@ jobs:
           commit_message: 'pylint: auto fixes'
           commit_options: '--no-verify --signoff'
           repository: .
-          commit_user_name: Vckyou
-          commit_user_email: viicky.aaz@gmail.com
-          commit_author: xluxz <viicky.aaz@gmail.com>
+          commit_user_name: vckyou
+          commit_user_email: viicky.auliaz@gmail.com
+          commit_author: vckyou <viicky.auliaz@gmail.com>
