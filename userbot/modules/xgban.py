@@ -52,7 +52,7 @@ async def get_user_sender_id(user, event):
     return user_obj
 
 
-@register(outgoing=True, pattern=r"^\.gban(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.gbans(?: |$)(.*)")
 async def gspider(userbot):
     lol = userbot
     sender = await lol.get_sender()
@@ -129,7 +129,7 @@ async def gspider(userbot):
         )
 
 
-@register(outgoing=True, pattern=r"^\.ungban(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.ungbans(?: |$)(.*)")
 async def gspider(userbot):
     lol = userbot
     sender = await lol.get_sender()
