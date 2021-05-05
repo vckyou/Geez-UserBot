@@ -1,15 +1,17 @@
-FROM xluxz/geezproject:buster
+# Using Python Slim-Buster
+FROM xluxz/geez-project:buster
+# Lah U cp Atur atur
+# Geez-UserBot
+#
+RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
+RUN mkdir /root/userbot/.bin
+RUN pip install --upgrade pip setuptools
+WORKDIR /root/userbot
 
-# Clone repo and prepare working directory
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /home/geezproject/ \
-    && chmod 777 /home/geezproject \
-    && mkdir /home/geezproject/bin/
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
 
-# Copies config.env (if exists)
-COPY ./sample_config.env ./config.env* /home/geezproject/
-
-# Setup Working Directory
-WORKDIR /home/geezproject/
+EXPOSE 80 443
 
 # Finalization
 CMD ["python3","-m","userbot"]
