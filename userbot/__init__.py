@@ -195,7 +195,7 @@ BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 TERM_ALIAS = os.environ.get("TERM_ALIAS", "Geez-UserBot")
 
 # Bot Version
-BOT_VER = os.environ.get("BOT_VER", "0.2.6")
+BOT_VER = os.environ.get("BOT_VER", "5.0")
 
 # Default .alive Username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
