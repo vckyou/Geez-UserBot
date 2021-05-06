@@ -30,15 +30,15 @@ async def stext(event):
 
     image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
-    fontsize = 230
+    fontsize = 220
     font = ImageFont.truetype(
-        "userbot/files/RobotoMono-Regular.ttf",
+        "userbot/files/font.otf",
         size=fontsize)
 
     while draw.multiline_textsize(sticktext, font=font) > (512, 512):
         fontsize -= 3
         font = ImageFont.truetype(
-            "userbot/files/RobotoMono-Regular.ttf",
+            "userbot/files/font.otf",
             size=fontsize)
 
     width, height = draw.multiline_textsize(sticktext, font=font)
@@ -58,7 +58,7 @@ async def stext(event):
 
 
 CMD_HELP.update({
-    'stext':
+    'stickertext':
     "⚡𝘾𝙈𝘿⚡: `.stext` <text>"
     "\nUsage: Mengubah Teks/Kata-Kata, Menjadi Stiker Anda."
 })
