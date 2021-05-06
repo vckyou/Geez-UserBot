@@ -1029,7 +1029,7 @@ async def _(event):
     await event.edit(f"`👑 Yang Mulia {ALIVE_NAME} Telah Mengembalikan Akun-Nya.`")
 
 CMD_HELP.update({
-    "lynxmisc":
+    "misc":
     "⚡𝘾𝙈𝘿⚡: `.app`\
 \n↳ : ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
 \n\n⚡𝘾𝙈𝘿⚡: `.undlt`\
