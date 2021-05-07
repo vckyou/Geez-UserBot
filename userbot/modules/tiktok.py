@@ -42,7 +42,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "tiktok": "⚡𝘾𝙈𝘿⚡: `.tiktok <Link>`"
+        "tiktok": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiktok <Link>`"
         "\n• : Download Video Tiktok Tanpa Watermark"
     }
 )
