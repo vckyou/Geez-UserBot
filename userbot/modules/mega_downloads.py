@@ -189,7 +189,7 @@ async def decrypt_file(megadl, file_path, temp_file_path, hex_key, hex_raw_key):
 
 CMD_HELP.update(
     {
-        "mega": "⚡𝘾𝙈𝘿⚡: >`.mega <MEGA.nz link>`"
+        "mega": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.mega <MEGA.nz link>`"
         "\n↳ : Reply to a MEGA.nz link or paste your MEGA.nz link to "
         "download the file into your userbot server."
     }
