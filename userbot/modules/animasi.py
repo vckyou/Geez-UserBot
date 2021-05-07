@@ -88,12 +88,12 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "animasi2":
-    "⚡𝘾𝙈𝘿⚡: `.sadboy`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sadboy`\
     \n↳ : Biasalah sadboy hikss\
-    \n\n⚡𝘾𝙈𝘿⚡: `.punten` dan `.pantau`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.punten` dan `.pantau`\
     \n↳ : Coba aja hehehe.\
-    \n\n⚡𝘾𝙈𝘿⚡: `.idiot`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.idiot`\
     \n↳ : u're ediot xixixi.\
-    \n\n⚡𝘾𝙈𝘿⚡: `kosong`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `kosong`\
     \n↳ : Tunggu update selanjutnya kawan."
 })
