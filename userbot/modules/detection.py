@@ -65,6 +65,6 @@ def user_full_name(user):
 # Alvin Bau Sawi
 CMD_HELP.update({
     "detection":
-        "⚡𝘾𝙈𝘿⚡: `.detect`\
+        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.detect`\
           \n📌 : Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
 })
