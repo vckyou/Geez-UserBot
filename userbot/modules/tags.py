@@ -58,18 +58,18 @@ async def _(event):
 
 CMD_HELP.update({
     'tags':
-    "⚡𝘾𝙈𝘿⚡: `.tags all`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags all`"
     "\n• : Tag Top 100 Members of chat."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags admin`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags admin`"
     "\n• : Tag Admins of that chat."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags owner`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags owner`"
     "\n• : Tag Owner of that chat."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags bot`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags bot`"
     "\n• : Tag Bots of that chat."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags rec`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags rec`"
     "\n• : Tag recently Active Members."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags on`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags on`"
     "\n• : Tag online Members(work only if privacy off)."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.tags off`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags off`"
     "\n• : Tag Offline Members(work only if privacy off)."
 })
