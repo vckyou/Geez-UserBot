@@ -233,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    "⚡𝘾𝙈𝘿⚡: `.update`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update`"
     "\n• : Untuk Melihat Pembaruan Terbaru Geez-Project."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.update now`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update now`"
     "\n• : Memperbarui Geez-Project."
-    "\n\n⚡𝘾𝙈𝘿⚡: `.update deploy`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update deploy`"
     "\n• : Memperbarui Geez-Project Dengan Cara Men-Deploy Ulang."
 })
