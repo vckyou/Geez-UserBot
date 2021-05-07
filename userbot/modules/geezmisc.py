@@ -1030,36 +1030,36 @@ async def _(event):
 
 CMD_HELP.update({
     "misc":
-    "⚡𝘾𝙈𝘿⚡: `.app`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.app`\
 \n↳ : ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
-\n\n⚡𝘾𝙈𝘿⚡: `.undlt`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.undlt`\
 \n↳ : urungkan pesan yang dihapus tetapi Anda harus menjadi admin.\
-\n\n⚡𝘾𝙈𝘿⚡: `.calc`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.calc`\
 \n↳ : `.calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
-\n\n⚡𝘾𝙈𝘿⚡: `.remove`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.remove`\
 \n↳ : gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
-\n\n⚡𝘾𝙈𝘿⚡: `.xcd`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.xcd`\
 \n↳ : Ketik xcd <query>.ps:Aku Sangat Bosan:v\
-\n\n⚡𝘾𝙈𝘿⚡: `.grab` <count>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.grab` <count>\
 \n↳ : Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
-\n\n⚡𝘾𝙈𝘿⚡: `.rnupload` filename.extenstion\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.rnupload` filename.extenstion\
 \n↳ : Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n⚡𝘾𝙈𝘿⚡: `.clone` @username Dan '.rclone' Untuk Mengembalikan\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.clone` @username Dan '.rclone' Untuk Mengembalikan\
 \n↳ : Clone Akun Orang Tapi Username Tidak Di Clone\
-\n\n⚡𝘾𝙈𝘿⚡: `.res`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.res`\
 \n↳ : Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
-\n\n⚡𝘾𝙈𝘿⚡: `.watch` <movie/tv>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.watch` <movie/tv>\
 \n↳ : Mengetahui Detail Tentang Film.\
-\n\n⚡𝘾𝙈𝘿⚡: `.weeb` <text>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.weeb` <text>\
 \n↳ : Teks Weebify.\
-\n\n⚡𝘾𝙈𝘿⚡: Ketik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medbold <Teks>`,`.doublestruck <Teks>`)\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: Ketik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medbold <Teks>`,`.doublestruck <Teks>`)\
 \n↳ : Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
-\n\n⚡𝘾𝙈𝘿⚡: `.randompp`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.randompp`\
 \n↳ : Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
-\n\n⚡𝘾𝙈𝘿⚡: `.glitch` Balas Ke Media\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.glitch` Balas Ke Media\
 \n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Gif Dan Level Glitch 1 - 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2\
-\n\n⚡𝘾𝙈𝘿⚡: `.glitchs` Balas Ke Media\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.glitchs` Balas Ke Media\
 \n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
 })
