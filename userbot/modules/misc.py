@@ -264,27 +264,27 @@ async def scam(results, lim):
 
 CMD_HELP.update({
     "random":
-    "⚡𝘾𝙈𝘿⚡: `.random <item1> <item2> ... <itemN>`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.random <item1> <item2> ... <itemN>`\
     \n↳ : Get a random item from the list of items.",
     "sleep":
-    "⚡𝘾𝙈𝘿⚡: `.sleep <seconds>`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sleep <seconds>`\
     \n↳ : Let yours snooze for a few seconds.",
     "shutdown":
-    "⚡𝘾𝙈𝘿⚡: `.shutdown`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.shutdown`\
     \n↳ : Shutdown bot",
     "repo":
-    "⚡𝘾𝙈𝘿⚡: `.repo`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.repo`\
     \n↳ : Github Repo of this bot",
     "readme":
-    "⚡𝘾𝙈𝘿⚡: `.readme`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `.readme`\
     \n↳ : Provide links to setup the userbot and it's modules.",
     "repeat":
-    "⚡𝘾𝙈𝘿⚡: `.repeat <no> <text>`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.repeat <no> <text>`\
     \n↳ : Repeats the text for a number of times. Don't confuse this with spam tho.",
     "restart":
-    "⚡𝘾𝙈𝘿⚡: `.restart`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restart`\
     \n↳ : Restarts the bot !!",
     "raw":
-    "⚡𝘾𝙈𝘿⚡: `.raw`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.raw`\
     \n↳ : Get detailed JSON-like formatted data about replied message."
 })
