@@ -51,9 +51,9 @@ async def _(event):
 
 CMD_HELP.update({
     "games": "\
-⚡𝘾𝙈𝘿⚡: `.xogame`\
+𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.xogame`\
 \n↳ : Mainkan game XO bersama temanmu.\
-\n\n⚡𝘾𝙈𝘿⚡: `.mod <nama app>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.mod <nama app>`\
 \n↳ : Dapatkan applikasi mod\
-\n\n⚡𝘾𝙈𝘿⚡: `.wp <teks> <username/ID>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.wp <teks> <username/ID>`\
 \n↳ : Berikan pesan rahasia"})
