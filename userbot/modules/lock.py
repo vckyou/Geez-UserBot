@@ -189,7 +189,7 @@ async def rem_locks(event):
 
 CMD_HELP.update({
     "locks":
-    "⚡𝘾𝙈𝘿⚡: `.lock <all atau Jenis>` atau `.unlock <all atau Jenis>`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.lock <all atau Jenis>` atau `.unlock <all atau Jenis>`\
 \n↳ : Memungkinkan anda kunci atau membuka kunci, beberapa jenis pesan dalam obrolan.\
 \n[Anda Harus Jadi Admin Grup Untuk Menggunakan Perintah!]\
 \n\nJenis pesan yang bisa dikunci atau dibuka adalah: \
