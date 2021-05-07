@@ -46,7 +46,7 @@ async def _(event):
         "INFO - Geez-Project: Logged in as 557667062",
         "INFO - Geez-Project: Successfully...",
         "919852+00:00 app[worker.1]: 919 - Geez-Project -",
-        "INFO - ⚡ Geez-Project⚡ ⚙️ V4.0 [TELAH DIAKTIFKAN!]",
+        "INFO - ⚡ Geez-Project⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
         "**Build Succeeded**"
 
     ]
@@ -59,5 +59,5 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "deploy": "⚡𝘾𝙈𝘿⚡: `.deploy`"
+    "deploy": ": `.deploy`"
     "\n↳ : Untuk Deploy ke Heroku.. <Animasi> :v haha"})
