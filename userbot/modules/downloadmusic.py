@@ -152,9 +152,9 @@ async def original(event):
 
 CMD_HELP.update(
     {
-        "musikdownload": "⚡𝘾𝙈𝘿⚡: `.musik <Penyanyi atau Band - Judul Lagu>`\
+        "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.musik <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mengunduh Sebuah Lagu Yang Diinginkan.\
-         \n⚡𝘾𝙈𝘿⚡: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mencari Lirik Lagu Yang Diinginkan."
     }
 )
