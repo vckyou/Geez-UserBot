@@ -210,17 +210,17 @@ async def delf(event):
 
 CMD_HELP.update(
     {
-        "federation": "⚡𝘾𝙈𝘿⚡: `.fban <id/username> <reason>`"
+        "federation": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.fban <id/username> <reason>`"
         "\n↳ : Bans user from connected federations."
         "\nYou can reply to the user whom you want to fban or manually pass the username/id."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.unfban <id/username> <reason>`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.unfban <id/username> <reason>`"
         "\n↳ : Same as fban but unbans the user"
-        "\n\n⚡𝘾𝙈𝘿⚡: `.addf <name>`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.addf <name>`"
         "\n↳ : Adds current group and stores it as <name> in connected federations."
         "\nAdding one group is enough for one federation."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.delf`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.delf`"
         "\n↳ : Removes current group from connected federations."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.listf`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.listf`"
         "\n↳ : Lists all connected federations by specified name."
-        "\n\n⚡𝘾𝙈𝘿⚡: `.clearf`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.clearf`"
         "\n↳ : Disconnects from all connected federations. Use it carefully."})
