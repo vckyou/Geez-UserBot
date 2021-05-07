@@ -40,6 +40,6 @@ async def _(event):
 
 CMD_HELP.update({
     "getid":
-    "⚡𝘾𝙈𝘿⚡: `.gid`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gid`"
     "\n↳ : Balas Ke Pesan Pengguna Untuk Mendapatkan ID Nya."
 })
