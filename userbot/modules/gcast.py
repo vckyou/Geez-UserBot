@@ -26,6 +26,6 @@ async def gcast(event):
 # Alvin Ganteng
 CMD_HELP.update(
     {
-        "gcast": "⚡𝘾𝙈𝘿⚡: `.gcast <pesan>`\
+        "gcast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gcast <pesan>`\
     \n↳ : Global Broadcast. Mengirim pesan ke Seluruh Grup yang Anda Masuki."
     })
