@@ -158,18 +158,18 @@ async def ccbin(event):
 
 
 CMD_HELP.update({
-    "ccarder": "⚡𝘾𝙈𝘿⚡: `.gencc`\
+    "ccarder": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gencc`\
 \n↳ : Generates Fake CC.\
-\n\n⚡𝘾𝙈𝘿⚡: `.ccheck` <query>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ccheck` <query>\
 \n↳ : Checks That The Given CC is Live or Not.\
-\n\n⚡𝘾𝙈𝘿⚡: `.iban` <query>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.iban` <query>\
 \n↳ : Checks That The Given IBAN ID is Live or Not.\
-\n\n⚡𝘾𝙈𝘿⚡: `.key` <query>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.key` <query>\
 \n↳ : Checks the status of probided key.\
-\n\n⚡𝘾𝙈𝘿⚡: `.vbv` <query>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vbv` <query>\
 \n↳ : Checks the vbv status of given card.\
-\n\n⚡𝘾𝙈𝘿⚡: `.bin` <query>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.bin` <query>\
 \n↳ : Checks that the given bin is valid or not.\
-\n\n⚡𝘾𝙈𝘿⚡: `.ccbin` <bin>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ccbin` <bin>\
 \n↳ : Generates CC from the given bin."
 })
