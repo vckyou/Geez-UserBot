@@ -91,5 +91,5 @@ async def _(event):
 # Lord - Userbot
 
 CMD_HELP.update({
-    "tiny": "⚡𝘾𝙈𝘿⚡: `.tiny`\
+    "tiny": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
     \n• : Untuk Memperkecil Sticker."})
