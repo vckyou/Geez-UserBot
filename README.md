@@ -42,27 +42,6 @@
 
 <a href="https://replit.com/@Vckyou/Geez-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
-**Generate String Using Terminal⤵️**
-```
-    STRING SESSION via TERMUX _>
-
- 1. First copy the one below.
-
-      $ pkg update -y && pkg upgrade && pkg install wget python
-
- 2. Wait for the installation to finish, if you have copied the one below.
-
-<T>   $ pip install telethon && wget https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/string_session.py && python string_session.py
-
-<P>   $ wget https://raw.githubusercontent.com/vckyou/xLuxz-Strimg-Session/master/pyrogram-session.py && python string_session.py
-
- <T> (For Telethon) and <P> (For Pyrogram)
- Just choose Telethon if you want to deploy.
-
-📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
-
-```
-
 ## <p align="center">DEPLOY TO HEROKU</p>
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-aqua?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
@@ -74,7 +53,7 @@
 
  🙏 **THANK YOU VERY MUCH FOR**
 
-*   [xiM_FiNe](https://github.com/ximfine/xBot-Remix) - xBotRemix
+*   [X_iMFiNe](https://github.com/ximfine/xBot-Remix) - xBot-Remix
 *   [Alvin](https://github.com/Zora24/Lord-Userbot) - Lord Userbot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
 *   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
