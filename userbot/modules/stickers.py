@@ -24,8 +24,8 @@ from userbot.events import register
 
 
 KANGING_STR = [
-    "Mengambil Sticker Ini Ke Pack Anda",
-    "Yang Mulia Sedang Mengambil Sticker Ini Ke Pack",
+    "Sedang Mengambil Sticker Ini Ke Pack Anda",
+    "Sedang Mengambil Sticker Ini Ke Pack Anda",
 ]
 
 
@@ -69,9 +69,9 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            return await args.edit("`File Tidak Didukung Yang Mulia!`")
+            return await args.edit("`Mohon Maaf, File Tidak Didukug!`")
     else:
-        return await args.edit("`Mohon Maaf Yang Mulia, Saya Gagal Mengambil Sticker Ini!`")
+        return await args.edit("`Mohon Maaf, Saya Gagal Mengambil Sticker Ini!`")
 
     if photo:
         splat = args.text.split()
@@ -242,7 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            f"**Sticker Berhasil Ditambahkan,** **[Tekan Disini](t.me/addstickers/{packname})** **Untuk Melihat Sticker Anda**",
+            f"**Sticker Berhasil Ditambahkan**\n       **>>> [Tekan Disini](t.me/addstickers/{packname}) <<<**\n**Untuk Melihat Sticker Anda**",
             parse_mode="md",
         )
 
@@ -330,7 +330,7 @@ async def sticker_to_png(sticker):
     try:
         img.document.attributes[1]
     except Exception:
-        await sticker.edit("`Mohon Maaf Yang Mulia, Ini Bukanlah Sticker`")
+        await sticker.edit("`Mohon Maaf, Ini Bukanlah Sticker`")
         return
 
     with io.BytesIO() as image:
