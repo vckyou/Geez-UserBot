@@ -1404,7 +1404,7 @@ async def weebify(e):
         get = await e.get_reply_message()
         args = get.text
     if not args:
-        await e.edit("`Apa Yang Anda Lakukan Lord ツ`")
+        await e.edit("`Apa Yang Anda Lakukan`")
         return
     string = '  '.join(args).lower()
     for normiecharacter in string:
@@ -1424,7 +1424,7 @@ async def claptext(memereview):
     elif textx:
         message = textx.text
     else:
-        return await memereview.edit("`Lord, Mohon Balas Ke Pesan Orang Yang Ingin Anda Puji ツ`")
+        return await memereview.edit("`Mohon Balas Ke Pesan Orang Yang Ingin Anda Puji ツ`")
     reply_text = "👏 "
     reply_text += message.replace(" ", " 👏 ")
     reply_text += " 👏"
