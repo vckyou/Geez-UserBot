@@ -1,6 +1,5 @@
 from userbot.events import register
 from userbot import CMD_HELP, bot
-# Alvin Ganteng
 
 
 @register(outgoing=True, pattern="^.gcast (.*)")
@@ -23,9 +22,31 @@ async def gcast(event):
                 er += 1
     await kk.edit(f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**")
 
-# Alvin Ganteng
-CMD_HELP.update(
-    {
-        "gcast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gcast <pesan>`\
-    \n↳ : Global Broadcast. Mengirim pesan ke Seluruh Grup yang Anda Masuki."
-    })
+@register(outgoing=True, pattern=r"^\.broadcast(?: |$)(.*)")
+async def gucast(event):
+    xx = event.pattern_match.group(1)
+    if not xx:
+        return await event.edit("`Berikan beberapa teks untuk Siaran Global`")
+    tt = event.text
+    msg = tt[7:]
+    kk = await event.edit("`Sedang Mengirim pesan secara global...`")
+    er = 0
+    done = 0
+    async for x in bot.iter_dialogs():
+        if x.is_user and not x.entity.bot:
+            chat = x.id
+            try:
+                done += 1
+                await bot.send_message(chat, msg)
+            except BaseException:
+                er += 1
+    await kk.edit(f"Berhasil Mengirim Pesan Ke `{done}` obrolan, kesalahan dalam `{er}` obrolan(s)")
+
+
+CMD_HELP.update({
+    "gcast": "\
+`.gcast query`\
+\nUsage: Disiarkan Secara Global dari semua Grup .\
+\n\n`.broadcast query`\
+\nUsage: Disiarkan Secara Global dari semua Pengguna di Obrolan PM"
+})
