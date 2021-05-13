@@ -80,7 +80,7 @@ async def okgoogle(img):
         if guess and imgspage:
             await img.edit(f"[{guess}]({fetchUrl})\n\n`Sedang Mencari Gambar Yang Mirip...`")
         else:
-            await img.edit("`Maaf Lord, Saya Tidak Bisa Menemukan Apapun`")
+            await img.edit("`Maaf, Saya Tidak Bisa Menemukan Apapun`")
             return
 
         if img.pattern_match.group(1):
