@@ -52,7 +52,7 @@
  🙏 **THANK YOU VERY MUCH FOR**
 
 *   [X_iMFiNe](https://github.com/ximfine/xBot-Remix) - xBot-Remix
-*   [koala](https://github.com/koala24/Kampang-Bot) - Kampang-Bot
+*   [Koala](https://github.com/ManusiaRakitan/Kampang-Bot) - Kampang-Bot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
 *   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
 *   [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
