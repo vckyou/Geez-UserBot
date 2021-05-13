@@ -301,9 +301,11 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Checking.__")
-    await alive.edit("__Checking..__")
     await alive.edit("__Connecting.__")
+    await alive.edit("__Connecting..__")
+    await alive.edit("__Connecting.__")
+    await alive.edit("__Connecting..__")
+    await alive.edit("__Connecting...__")
     await alive.edit("__Connecting..__")
     await alive.edit("__Connecting...__")
     await alive.edit("⚡")
@@ -320,8 +322,8 @@ async def redis(alive):
         f" ❍ `Bot Ver  :` {BOT_VER} \n"
         f" ❍ `Modules  :` {len(modules)} Modules \n"
         f"╭═───────╼⌘╾──────── \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/vckyou/Geez-UserBot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
-        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE})\n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/LordUserbot_Group)  |  "
+        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
         f"╰═──────╼═⌘═╾────────")
     if ALIVE_LOGO:
         try:
