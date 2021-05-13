@@ -60,7 +60,7 @@ async def add_new_filter(new_handler):
         if BOTLOG_CHATID:
             await new_handler.client.send_message(
                 BOTLOG_CHATID, f"#FILTER\nID OBROLAN: {new_handler.chat_id}\nTRIGGER: {keyword}"
-                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya Lord`"
+                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya`"
             )
             msg_o = await new_handler.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -133,7 +133,7 @@ async def filters_active(event):
     filters = get_filters(event.chat_id)
     for filt in filters:
         if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**❃ Daftar Filter Lord Yang Aktif Disini:**\n"
+            transact = "**❃ Daftar Filter Anda Yang Aktif Disini:**\n"
             transact += " ➥ `{}`\n".format(filt.keyword)
         else:
             transact += " ➥ `{}`\n".format(filt.keyword)
