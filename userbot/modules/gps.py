@@ -15,7 +15,7 @@ async def gps(event):
     input_str = event.pattern_match.group(1)
 
     if not input_str:
-        return await event.edit("`Lord Mohon Berikan Tempat Yang Dicari`")
+        return await event.edit("`Mohon Berikan Tempat Yang Dicari`")
 
     await event.edit("`Menemukan Lokasi Ini Di Server Map....`")
 
@@ -35,7 +35,7 @@ async def gps(event):
         )
         await event.delete()
     else:
-        await event.edit("`Lord Saya Tidak Dapat Menemukannya`")
+        await event.edit("`Saya Tidak Dapat Menemukannya`")
 
 CMD_HELP.update({
     "gps":
