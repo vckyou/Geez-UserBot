@@ -144,7 +144,7 @@ async def filters_active(event):
 CMD_HELP.update({
     "filter":
     "`.filters`\
-    \nUsage: Melihat filter lord userbot yang aktif di obrolan.\
+    \nUsage: Melihat filter userbot yang aktif di obrolan.\
     \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
