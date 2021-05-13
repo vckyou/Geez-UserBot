@@ -23,7 +23,7 @@ async def get_full_user(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit("`Lord, Ini Tidak Mungkin Tanpa ID Pengguna`")
+            await event.edit("`Ini Tidak Mungkin Tanpa ID Pengguna`")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -48,7 +48,6 @@ async def get_user_from_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
-# Ported For Lord-Userbot by liualvinas/Alvin
 
 
 @bot.on(ChatAction)
@@ -214,6 +213,6 @@ async def gunben(userbot):
 CMD_HELP.update({
     "gban": "\
 **Modules:** __Global Banned__\n\n**Perintah:** `.gban`\
-\n**Penjelasan:** Melakukan Banned Secara Global Ke Semua Grup Dimana Lord Sebagai Admin.\
+\n**Penjelasan:** Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin.\
 \n\n**Perintah:** `.ungban`\
 \n**Penjelasan:** Membatalkan Global Banned"})
