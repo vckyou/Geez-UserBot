@@ -83,7 +83,7 @@ async def on_delete_blacklist(rmbl):
         if sql.rm_from_blacklist(rmbl.chat_id, trigger.lower()):
             successful += 1
     if not successful:
-        await rmbl.edit("`Lord,` **{}** `Tidak Ada Di Blacklist`".format(text))
+        await rmbl.edit("**{}** `Tidak Ada Di Blacklist`".format(text))
     else:
         await rmbl.edit("`Berhasil Menghapus` **{}** `Di Blacklist`".format(text))
 
