@@ -27,8 +27,6 @@
 <p align="left">
 </p>
 
-[![Sparkline](https://stars.medv.io/vckyou/Geez-UserBot.svg)](https://stars.medv.io/vckyou/Geez-UserBot)
-
 ## ⚡Geez-UserBot
 ![Geez UserBot](https://telegra.ph/file/c92925807ed5a1c68ebff.png)
 
@@ -44,7 +42,7 @@
 
 ## <p align="center">DEPLOY TO HEROKU</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-aqua?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=flat&logo=heroku" width="310" height="54.56" /></a></p>
 
 <br>
 </p>
@@ -54,7 +52,7 @@
  🙏 **THANK YOU VERY MUCH FOR**
 
 *   [X_iMFiNe](https://github.com/ximfine/xBot-Remix) - xBot-Remix
-*   [Alvin](https://github.com/Zora24/Lord-Userbot) - Lord Userbot
+*   [koala](https://github.com/koala24/Kampang-Bot) - Kampang-Bot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
 *   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
 *   [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
