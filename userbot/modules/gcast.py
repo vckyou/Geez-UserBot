@@ -22,8 +22,7 @@ async def gcast(event):
                 er += 1
     await kk.edit(f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**")
 
-
-@register(outgoing=True, pattern=r"^\.broadcast(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if not xx:
@@ -44,10 +43,11 @@ async def gucast(event):
     await kk.edit(f"Berhasil Mengirim Pesan Ke `{done}` obrolan, kesalahan dalam `{er}` obrolan(s)")
 
 
-CMD_HELP.update({
-    "gcast": "\
-`.gcast query`\
-\nUsage: Disiarkan Secara Global dari semua Grup .\
-\n\n`.broadcast query`\
-\nUsage: Disiarkan Secara Global dari semua Pengguna di Obrolan PM"
-})
+CMD_HELP.update(
+    {
+        "broadcast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gcast`\
+         \n↳ : Mengirim Pesan Group Secara Global.\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gucast`\
+         \n↳ : Mengirim Pesan Pribadi Secara Global"
+    }
+)
