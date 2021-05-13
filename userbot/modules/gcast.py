@@ -22,6 +22,7 @@ async def gcast(event):
                 er += 1
     await kk.edit(f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**")
 
+
 @register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
