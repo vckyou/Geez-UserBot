@@ -1779,7 +1779,7 @@ async def emoji_penis(e):
     emoji = e.pattern_match.group(1)
     titid = GAMBAR_TITIT
     if emoji:
-        titid = titid.replace('😋', emoji)
+        titid = titid.replace('🌟', emoji)
     await e.edit(titid)
 
 
