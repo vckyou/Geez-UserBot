@@ -35,7 +35,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Lord Mohon Balas Ke Sticker`")
+        await img.edit("`Mohon Balas Ke Sticker`")
         return
 
     if photo:
