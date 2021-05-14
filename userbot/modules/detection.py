@@ -27,18 +27,18 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
-    event = await event.edit("__Connecting to server telegram.__")
-    event = await event.edit("__Connecting to server telegram..__")
-    event = await event.edit("__Connecting to server telegram...__")
-    event = await event.edit("__Connecting to server telegram.__")
-    event = await event.edit("__Connecting to server telegram..__")
-    event = await event.edit("__Connecting to server telegram...__")
-    event = await event.edit("__Connecting to server telegram.__")
-    event = await event.edit("__Connecting to server telegram..__")
-    event = await event.edit("__Connecting to server telegram...__")
-    event = await event.edit("__Connecting to server telegram.__")
-    event = await event.edit("__Connecting to server telegram..__")
-    event = await event.edit("__Connecting to server telegram...__")
+    event = await event.edit("__Connecting.__")
+    event = await event.edit("__Connecting..__")
+    event = await event.edit("__Connecting...__")
+    event = await event.edit("__Connecting.__")
+    event = await event.edit("__Connecting..__")
+    event = await event.edit("__Connecting...__")
+    event = await event.edit("__Connecting.__")
+    event = await event.edit("__Connecting..__")
+    event = await event.edit("__Connecting...__")
+    event = await event.edit("__Connecting.__")
+    event = await event.edit("__Connecting..__")
+    event = await event.edit("__Connecting...__")
     async with bot.conversation(chat) as conv:
         try:
             await conv.send_message(f"{uid}")
@@ -62,7 +62,6 @@ def user_full_name(user):
     return " ".join(names)
 
 
-# Alvin Bau Sawi
 CMD_HELP.update({
     "detection":
         "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.detect`\
