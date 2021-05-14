@@ -28,6 +28,5 @@ async def _(event):
         await event.edit(f"**GEEZ TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({geezuserbot})")
 
 
-
 CMD_HELP.update({"tempmail": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tm`"
                  "\n•: Mendapatkan Email Gratis Dari Temp Mail"})
