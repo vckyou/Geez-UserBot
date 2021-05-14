@@ -81,7 +81,7 @@ async def glitch(event):
         duration=DURATION,
         loop=LOOP,
     )
-    await event.edit("`Sedang Mengunggah Media Yang Telah Di Glitch ツ`")
+    await event.edit("`Sedang Mengunggah Media Yang Telah Di Glitch`")
     c_time = time.time()
     nosave = await event.client.send_file(
         event.chat_id,
@@ -113,7 +113,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "LordFont/FontLord.ttf", int((70 / 640) * i_width)
+        "GeezFont/GeezFont.otf", int((70 / 640) * i_width)
     )
     if ";" in text:
         upper_text, lower_text = text.split(";")
