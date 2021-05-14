@@ -1,4 +1,4 @@
-# Alvin Gans
+
 
 from time import sleep
 from userbot import CMD_HELP, bot
@@ -140,7 +140,6 @@ async def typewriter(typew):
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
                      "`\n💖<\\  *Tapi Bo'ong Hiyahiyahiya`")
-# Alpinnnn Gans
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -173,9 +172,7 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 6])
-# Alvin Imut
-# Alvin Gans
-# Lord
+
 CMD_HELP.update({
     "animasi1":
     "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.nah` ; `.huh` ; `.owner`\
