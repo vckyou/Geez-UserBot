@@ -6,7 +6,7 @@ from userbot.events import register
 async def _(event):
     if event.fwd_from:
         return
-    botusername = "@xobor"
+    botusername = "@xobot"
     noob = "play"
     if event.reply_to_msg_id:
         await event.get_reply_message()
