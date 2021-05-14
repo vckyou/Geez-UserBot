@@ -1,7 +1,3 @@
-# Ported By Koala / @ManusiaRakitann From Dark Cobra # Thanks
-# Based On Plugins
-# Lord Userbot
-
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
