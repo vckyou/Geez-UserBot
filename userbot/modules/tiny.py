@@ -1,18 +1,8 @@
-# Port By LiuAlvinas/Alvin For Lord Userbot From Ultroid, Thanks
-# Based Plugins
-# Fixed By ManusiaRakitann/Koala
-# Dont Remove
-
-
-# Alvin Ganteng
-
 from PIL import Image
 import cv2
 import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
-
-# Ngapain Kesini Ajg Hus
 
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
@@ -87,8 +77,6 @@ async def _(event):
     os.remove(file)
     os.remove(ik)
 
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
 
 CMD_HELP.update({
     "tiny": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
