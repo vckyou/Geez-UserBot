@@ -207,9 +207,6 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
 
-# Link Instagram for CMD Alive
-INSTAGRAM_ALIVE = os.environ.get("INSTAGRAM_ALIVE", None)
-
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
 DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
@@ -408,8 +405,11 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "⋖╯", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
+                    'Closr', b'close'
+                ),
+                custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
-                )
+                ),
             )
         ]
     return pairs
@@ -426,6 +426,7 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
+        logo = "https://telegra.ph/file/03cc82e4ac5c3aa5f9e97.jpg"
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
