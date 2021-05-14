@@ -1,4 +1,3 @@
-
 from userbot.events import register
 from userbot import CMD_HELP, bot
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -27,12 +26,12 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
-    event = await event.edit("__Connecting.__")
-    event = await event.edit("__Connecting..__")
-    event = await event.edit("__Connecting...__")
-    event = await event.edit("__Connecting.__")
-    event = await event.edit("__Connecting..__")
-    event = await event.edit("__Connecting...__")
+    event = await event.edit("__Checking.__")
+    event = await event.edit("__Checking..__")
+    event = await event.edit("__Checking...__")
+    event = await event.edit("__Checking.__")
+    event = await event.edit("__Checking..__")
+    event = await event.edit("__Checking...__")
     event = await event.edit("__Connecting.__")
     event = await event.edit("__Connecting..__")
     event = await event.edit("__Connecting...__")
