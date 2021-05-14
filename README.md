@@ -42,7 +42,7 @@
 
 ## <p align="center">DEPLOY TO HEROKU</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=flat&logo=heroku" width="310" height="54.56" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=flat&logo=heroku" width="310" height="57.56" /></a></p>
 
 <br>
 </p>
