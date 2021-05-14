@@ -164,7 +164,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "📍 bismillahirrahmanirrahim",
+      "value": "unknown",
       "required": false
     },
     "ALIVE_NAME": {
@@ -172,7 +172,7 @@
       "required": false
     },
     "GEEZ_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .geez (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .gezza (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
@@ -181,7 +181,7 @@
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
-      "value": "Isi id grup mu",
+      "value": "isi id grup mu",
       "required": false
     },
     "G_DRIVE_DATA": {
@@ -201,11 +201,6 @@
       "value": "",
       "required": false
     },
-    "INSTAGRAM_ALIVE": {
-      "description": "Contoh : instagram.com/vckyouuu , Silahkan diisi Dengan Username ig Kalian.",
-      "value": "",
-      "required": false
-   },
     "UB_BLACK_LIST_CHAT": {
       "description": "Isi Apa Aja",
       "required": false
