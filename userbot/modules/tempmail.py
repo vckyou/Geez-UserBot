@@ -30,4 +30,4 @@ async def _(event):
 
 
 CMD_HELP.update({"tempmail": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tm`"
-                 "\n↳: Mendapatkan Email Gratis Dari Temp Mail"})
+                 "\n•: Mendapatkan Email Gratis Dari Temp Mail"})
