@@ -1,15 +1,6 @@
-# Copyright (C) 2020 Frizzy.
-# All rights reserved.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-# Lord Userbot
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP
 from userbot.events import register
-
-# Alvin Gans
 
 
 @register(outgoing=True, pattern="^.tiktok(?: |$)(.*)")
