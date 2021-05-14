@@ -30,7 +30,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "```Mengubah Gambar Ini xixix Saatnya Menulis ```"
+            "```Mengubah Gambar Ini!.Saatnya Menulis ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -58,7 +58,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "userbot/utils/styles/MutantAcademyStyle.ttf", int(
+        "userbot/utils/styles/FontGeez.otf", int(
             (70 / 640) * i_width)
     )
     if ";" in text:
@@ -186,7 +186,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
+            "```Mengubah Gambar Ini!. Saatnya Menulis```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -214,7 +214,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "userbot/utils/styles/FontLord.ttf", int((95 / 730) * i_width)
+        "userbot/utils/styles/GeezFont.otf", int((95 / 730) * i_width)
     )
     if ";" in text:
         upper_text, lower_text = text.split(";")
