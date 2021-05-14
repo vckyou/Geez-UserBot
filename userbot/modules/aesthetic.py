@@ -1,6 +1,3 @@
-# Based Plugins
-# Ported By liualvinas/Alvin
-
 from telethon import events
 from userbot.events import register
 from userbot import CMD_HELP
