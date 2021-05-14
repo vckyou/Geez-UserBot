@@ -1,8 +1,3 @@
-# Ported From Cat Userbot For FromVT-Ubot By Alvin/LiuAlvinas # Jangan Hapus # Jangan Ubah
-# Based On Plugins
-# Alvin Ganteng
-
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import CMD_HELP, bot
 from userbot.events import register
@@ -54,7 +49,6 @@ def user_full_name(user):
     return " ".join(names)
 
 
-# Alvin Ganteng
 CMD_HELP.update({
     "deteksi":
         "`.dgrup` ; `.dg`\
