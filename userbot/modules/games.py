@@ -15,7 +15,7 @@ async def _(event):
     await event.delete()
 
 
-@register(outgoing=True, pattern=r"^\.wp(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.whisp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -46,5 +46,5 @@ CMD_HELP.update({
 \n↳ : Mainkan game XO bersama temanmu.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.mod <nama app>`\
 \n↳ : Dapatkan applikasi mod\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.wp <teks> <username/ID>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.whisp <teks> <username/ID>`\
 \n↳ : Berikan pesan rahasia"})
