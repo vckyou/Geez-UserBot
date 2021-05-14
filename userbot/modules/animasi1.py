@@ -176,7 +176,7 @@ async def _(event):
 CMD_HELP.update({
     "animasi1":
     "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.nah` ; `.huh` ; `.owner`\
-    \n↳ : Cobain Aja Sendiri.\
+    \n↳ : Cobain Sendiri.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.bunga` ; `.buah`\
     \n↳ : animasi.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.waktu`\
