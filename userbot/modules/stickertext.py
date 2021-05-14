@@ -20,7 +20,7 @@ async def stext(event):
     sticktext = event.pattern_match.group(1)
 
     if not sticktext:
-        await event.edit("`Mohon Maaf Yang Mulia, Saya Membutuhkan Text Anda.`")
+        await event.edit("`Mohon Maaf, Saya Membutuhkan Text Anda.`")
         return
 
     await event.delete()
