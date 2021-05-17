@@ -26,7 +26,7 @@ async def get_user_from_event(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit(f"`{ALIVE_NAME}`: ** Pass the user's username, id or reply!**")
+            await event.edit(f"`{ALIVE_NAME}`: **Berikan nama pengguna, id, atau balasan pengguna!**")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -68,7 +68,7 @@ async def gspide(rk):
     else:
         rkp = await lazy.edit("`processing...`")
     me = await rk.client.get_me()
-    await rkp.edit(f"`{ALIVE_NAME}:` **Requesting  to global kick user!**")
+    await rkp.edit(f"`{ALIVE_NAME}:` **Requesting to global kick user!**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
@@ -88,8 +88,8 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}:`**Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 1560233393:
-            return await rkp.edit(f"`{ALIVE_NAME}:`**, Anda Tidak Bisa Global Kick Kepada Pembuat Saya**")
+        if user.id == 1282429349:
+            return await rkp.edit(f"`{ALIVE_NAME}`, _Anda Tidak Bisa Global Kick Kepada Pembuat Saya__")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
