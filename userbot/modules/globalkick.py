@@ -86,7 +86,7 @@ async def gspide(rk):
         if not reason:
             reason = 'Private'
     except BaseException:
-        return await rkp.edit(f"`{ALIVE_NAME}:`**Kesalahan! Pengguna tidak dikenal.**")
+        return await rkp.edit(f"`{ALIVE_NAME}`, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
         if user.id == 1282429349:
             return await rkp.edit(f"`{ALIVE_NAME}`, __Anda Tidak Bisa Global Kick Kepada Pembuat Saya__")
@@ -101,12 +101,12 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME}:` **Requesting to kicking user!\nGkicked {a} chats.....**")
+                await rkp.edit(f"`{ALIVE_NAME} :` **Requesting to kicking user!\nGkicked {a} chats.....**")
 
             except BaseException:
                 b += 1
     else:
-        await rkp.edit(f"`{ALIVE_NAME}:` **Reply to a user !! **")
+        await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
 
     return await rkp.edit(f"`{ALIVE_NAME}:` **GKicked [{user.first_name}](tg://user?id={user.id}) in {a} chat(s) **")
 
