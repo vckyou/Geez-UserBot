@@ -1469,9 +1469,9 @@ CMD_HELP.update(
 )
 CMD_HELP.update(
     {
-        "translate": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.trt` <text> [or reply]\
+        "translate": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tr` <text> [or reply]\
          \n↳ : Translates text to the language which is set.\
-         \n**How to Use** > `.lang trt` <language code> to set language for tr. (Default is English)"
+         \n**How to Use** > `.lang tr` <language code> to set language for tr. (Default is English)"
     }
 )
 CMD_HELP.update(
