@@ -504,7 +504,7 @@ async def translateme(trans):
 @register(pattern=r"^\.lang (tr|tts) (.*)", outgoing=True)
 async def lang(value):
     util = value.pattern_match.group(1).lower()
-    if util == "trt":
+    if util == "tr":
         scraper = "Translator"
         global TRT_LANG
         arg = value.pattern_match.group(2).lower()
