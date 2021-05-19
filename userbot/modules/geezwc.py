@@ -25,7 +25,7 @@ async def _(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video Yang Mulia.`")
+        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video.`")
         return
     await event.edit("`Mendownload Media...`")
     if reply_message.photo:
