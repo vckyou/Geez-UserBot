@@ -136,7 +136,7 @@ async def mute_chat(mute_e):
         return
     await mute_e.edit(str(mute_e.chat_id))
     kread(str(mute_e.chat_id))
-    await mute_e.edit("`Ssshssh Yang Mulia Telah Membisukan Obrolan !`")
+    await mute_e.edit("`Ssshssh Anda Telah Membisukan Obrolan !`")
     await sleep(2)
     await mute_e.delete()
     if BOTLOG:
@@ -224,7 +224,7 @@ async def get_chatinfo(event):
             await event.edit("`Group/Channel Tidak Valid`")
             return None
         except ChannelPrivateError:
-            await event.edit("`Ini Adalah Group/Channel Privasi Atau Yang Mulia Telah Terbanned Dari Sana`")
+            await event.edit("`Ini Adalah Group/Channel Privasi Atau Mungkin Anda Telah Terbanned Dari Sana`")
             return None
         except ChannelPublicGroupNaError:
             await event.edit("`Channel Atau Supergroup Tidak Ditemukan`")
