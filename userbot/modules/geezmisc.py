@@ -1026,7 +1026,7 @@ async def _(event):
     await bot(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n)))
     await bot(functions.account.UpdateProfileRequest(about=bio))
     await bot(functions.account.UpdateProfileRequest(first_name=name))
-    await event.edit(f"`👑 Yang Mulia {ALIVE_NAME} Telah Mengembalikan Akun-Nya.`")
+    await event.edit(f"`Anda {ALIVE_NAME} Telah Mengembalikan Akun-Nya.`")
 
 CMD_HELP.update({
     "misc":
