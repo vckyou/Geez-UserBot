@@ -50,7 +50,7 @@ async def _(event):
         await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu Yang Mulia.`")
         return
     chat = "@stickers_to_image_bot"
-    await event.edit("`Yang Mulia Sedang Mengubah Sticker Menjadi Gambar...`")
+    await event.edit("`Sedang Mengubah Sticker Menjadi Gambar...`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -60,10 +60,10 @@ async def _(event):
             msg = await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("Mohon Maaf Yang Mulia, Buka Blokir @stickers_to_image_bot Lalu Coba Lagi.")
+            await event.reply("Mohon Maaf, Buka Blokir @stickers_to_image_bot Lalu Coba Lagi.")
             return
         if response.text.startswith("I understand only stickers"):
-            await event.edit("`Maaf Yang Mulia, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi ?`")
+            await event.edit("`Maaf, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi ?`")
         else:
             response = conv.wait_event(
                 events.NewMessage(
@@ -92,7 +92,7 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Mohon Maaf Yang Mulia, Ini Bukanlah Sticker`")
+        await sticker.edit("`Mohon Maaf, Ini Bukanlah Sticker`")
         return False
 
     await sticker.edit("`Berhasil Mengambil Sticker Ini !`")
