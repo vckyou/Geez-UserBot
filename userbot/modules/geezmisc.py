@@ -143,7 +143,7 @@ async def _(event):
         for i in a:
             await event.reply(i.original.action.message)
     else:
-        await event.edit("Mohon Maaf Yang Mulia, Anda harus memerlukan izin Admin untuk melakukan perintah ini.")
+        await event.edit("Mohon Maaf, Anda harus memerlukan izin Admin untuk melakukan perintah ini.")
         await asyncio.sleep(3)
         await event.delete()
 
@@ -543,7 +543,7 @@ async def _(event):
     await event.delete()
     await bot.send_message(
         event.chat_id,
-        "`Ssssttt, Anda Telah Berhasil Yang Mulia.`",
+        "`Ssssttt, Anda Telah Berhasil Ngeclon!.`",
         reply_to=reply_message
     )
 
