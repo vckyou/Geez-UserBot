@@ -43,11 +43,11 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu Yang Mulia.`")
+        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu.`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu Yang Mulia.`")
+        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu.`")
         return
     chat = "@stickers_to_image_bot"
     await event.edit("`Sedang Mengubah Sticker Menjadi Gambar...`")
