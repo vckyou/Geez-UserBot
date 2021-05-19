@@ -13,7 +13,7 @@ async def _(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("```Mohon Balas Ke Reply Yang Mulia```")
+        await event.edit("```Mohon Balas Ke Reply```")
         return
     chat = "@getidsbot"
     reply_message.sender
