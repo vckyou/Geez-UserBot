@@ -21,7 +21,7 @@ from userbot.events import register
 @register(outgoing=True, pattern=r"^\.(wc)$")
 async def _(event):
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Media Apapun Yang Mulia.`")
+        await event.edit("`Mohon Balas Ke Media Apapun.`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
