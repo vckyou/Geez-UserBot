@@ -119,7 +119,7 @@ async def update(event, repo, ups_rem, ac_br):
     await asyncio.sleep(1)
     await event.edit('**⚡Geez-Project⚡** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik Yang Mulia.`')
+    await event.edit('`Mohon Menunggu Beberapa Detik.`')
     await asyncio.sleep(10)
     await event.delete()
 
