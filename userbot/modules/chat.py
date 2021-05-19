@@ -121,7 +121,7 @@ async def unmute_chat(unm_e):
         await unm_e.edit('`Running on Non-SQL Mode!`')
         return
     unkread(str(unm_e.chat_id))
-    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan Yang Mulia```")
+    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan```")
     await sleep(2)
     await unm_e.delete()
 
