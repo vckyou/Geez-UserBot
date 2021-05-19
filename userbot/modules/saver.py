@@ -16,11 +16,11 @@ async def igsaver(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Yang Mulia, Mohon Reply Ke Link Instagram Ya..`")
+        await event.edit("`Mohon Reply Ke Link Instagram Ya..`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("`Mohon Maaf Yang Mulia, Saya Membutuhkan Link Media Instagram Untuk di Download`")
+        await event.edit("`Mohon Maaf, Saya Membutuhkan Link Media Instagram Untuk di Download`")
         return
     chat = "@SaveAsBot"
     reply_message.sender
@@ -36,7 +36,7 @@ async def igsaver(event):
             await event.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.edit("`Yang Mulia, Mohon Pergi ke ` @SaveAsbot `Lalu Tekan Start dan Coba Lagi.`")
+            await event.edit("`Mohon Pergi ke ` @SaveAsbot `Lalu Tekan Start dan Coba Lagi.`")
             return
         if response.text.startswith("Forward"):
             await event.edit(
