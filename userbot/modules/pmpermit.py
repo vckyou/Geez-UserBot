@@ -344,7 +344,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Mohon Maaf Yang Mulia, Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`\n Silahkan Lakukan set var")
+        return await cust_msg.edit("**Mohon Maaf, Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`\n Silahkan Lakukan set var")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -371,7 +371,7 @@ async def add_pmsg(cust_msg):
         else:
             return await cust_msg.edit("`Mohon Balas Ke Pesan`")
 
-        await cust_msg.edit("⚡`Pesan Berhasil Disimpan Ke Room Chat`⚡")
+        await cust_msg.edit("`Pesan Berhasil Disimpan Ke Room Chat`")
 
         if BOTLOG:
             await cust_msg.client.send_message(
