@@ -108,7 +108,7 @@ async def set_var(var):
                 "**Mengganti Config Vars**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Sedang Di Proses Yang Mulia, Mohon Menunggu Dalam Beberapa Detik 😼`")
+        await var.edit("`Sedang Di Proses, Mohon Menunggu Dalam Beberapa Detik 😼`")
     else:
         if BOTLOG:
             await var.client.send_message(
@@ -116,7 +116,7 @@ async def set_var(var):
                 "**Menambahkan Config Vars**:\n"
                 f"`{variable}` **=** `{value}`"
             )
-        await var.edit("`Yang Mulia Menambahkan Config Vars...`")
+        await var.edit("`Menambahkan Config Vars...`")
     heroku_var[variable] = value
 
 
