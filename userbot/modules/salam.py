@@ -22,13 +22,13 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.L(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Wa'alaikumussalam wr. wb.`")
+    await typew.edit("`Wa'alaikumssalam wr. wb.`")
 
 
 @register(outgoing=True, pattern='^.l(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Wa'alaikumussalam wr. wb.`")
+    await typew.edit("`Wa'alaikumssalam wr. wb.`")
 
 
 CMD_HELP.update({
