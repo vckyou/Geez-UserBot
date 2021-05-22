@@ -11,7 +11,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.sspam (.*)")
 async def _(e):
     geez = await e.get_reply_message()
-    if not (geez and geez.media and hasattr(geez.media, "document")):
+    if not (geez and geez.media("document")):
         return await e.edit("`Reply To Sticker Only`")
     set = geez.document.attributes[1]
     sset = await e.edit_bot(
@@ -26,7 +26,7 @@ async def _(e):
     docs = [
         utils.get_input_document(geez)
         for geez in (
-            await event_bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
+            await e.edit_bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
         ).documents
     ]
     for xx in docs:
