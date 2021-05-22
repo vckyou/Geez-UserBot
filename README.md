@@ -9,7 +9,7 @@
   <a href="https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE"><img src="https://img.shields.io/github/license/vckyou/Geez-UserBot?&style=social&logo=github">
   </a></p>
 
-
+![VIEWS](https://komarev.com/ghpvc/?username=vckyou)
 ![Repo Size](https://img.shields.io/github/repo-size/vckyou/Geez-UserBot?&style=plastic&logo=github)
 [![GitHub issues](https://img.shields.io/github/issues/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/issues)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/graphs/commit-activity)
@@ -26,9 +26,11 @@
 </p>
 <p align="left">
 </p>
+<a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/VcgSupportGroup"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
 ## ⚡Geez-UserBot
-![Geez UserBot](https://telegra.ph/file/c92925807ed5a1c68ebff.png)
+![Geez UserBot](https://telegra.ph/file/9464f116132df37c649c8.png)
 
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
