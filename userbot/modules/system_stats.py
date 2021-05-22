@@ -228,19 +228,18 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**⚡𝙂𝙚𝙚𝙯-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
         f"\n__**{GEEZ_TEKS_KUSTOM}**__\n"
-        f"**───────────────────────**\n"
-        f"**🤴 GEEZ** \n"
-        f" ↳ : `{DEFAULTUSER}` \n"
-        f"**🔎 Username** \n"
-        f" ↳ : `@{user.username}` \n"
-        f"╭───────────────────────\n"
+        f"**╭───────────────────**\n"
+        f"**├[• 🤴 Geez Owner** \n"
+        f"├[•   : `{DEFAULTUSER}` \n"
+        f"**├[• 🔎 Username** \n"
+        f"├[•   : `@{user.username}` \n"
+        f"├──────────────────\n"
         f"├[•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"├[•🐍 `Python   :`Ver {python_version()} \n"
         f"├[•👾 `Bot Ver  :`{BOT_VER} \n"
         f"├[•📂 `Modules  :`{len(modules)} \n"
-        f"╰───────────────────────")
+        f"╰─────────────────")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -301,19 +300,19 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Connecting.__")
-    await alive.edit("__Connecting..__")
-    await alive.edit("__Connecting.__")
-    await alive.edit("__Connecting..__")
+    await alive.edit("__Reconnect.__")
+    await alive.edit("__Reconnect..__")
+    await alive.edit("__Reconnect.__")
+    await alive.edit("__Reconnect..__")
     await alive.edit("__Connecting...__")
     await alive.edit("__Connecting..__")
     await alive.edit("__Connecting...__")
     await alive.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"╭═──────╼═⌘═╾────────\n"
+        f"╭═──────╼═⌘═╾───────═\n"
         f"┃⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡\n"
-        f"╰═─────╼══⌘══╾────── \n"
+        f"╰═─────╼══⌘══╾─────═ \n"
         f" ❍ `Name     :` {DEFAULTUSER} \n"
         f" ❍ `Username :` @{user.username} \n"
         f" ❍ `Telethon :` Ver {version.__version__} \n"
@@ -321,10 +320,10 @@ async def redis(alive):
         f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
         f" ❍ `Bot Ver  :` {BOT_VER} \n"
         f" ❍ `Modules  :` {len(modules)} Modules \n"
-        f"╭═───────╼⌘╾──────── \n"
+        f"╭═───────╼⌘╾───────═ \n"
         f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
         f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
-        f"╰═──────╼═⌘═╾────────")
+        f"╰═──────╼═⌘═╾───────═")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -376,7 +375,7 @@ CMD_HELP.update({
 })
 CMD_HELP.update({
     "alive":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on`"
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `.geezalive`"
     "\n↳ : To see whether your bot is working or not."
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
     "\n↳ : Changes the 'user' in alive to the text you want."
