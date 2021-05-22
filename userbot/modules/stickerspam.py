@@ -9,10 +9,10 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern="^.sspam (.*)")
-async def _(event):
-    geez = await event.get_reply_message()
+async def _(e):
+    geez = await e.get_reply_message()
     if not (geez and geez.media("document")):
-        return await event.edit("`Reply To Sticker Only`")
+        return await e.edit("`Reply To Sticker Only`")
     set = geez.document.attributes[1]
     sset = await bot(
         GetStickerSetRequest(
@@ -24,8 +24,8 @@ async def _(event):
     )
     pack = sset.set.short_name
     docs = [
-        utils.get_input_document(x)
-        for x in (
+        utils.get_input_document(geez)
+        for geez in (
             await bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
         ).documents
     ]
