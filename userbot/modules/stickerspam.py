@@ -9,12 +9,12 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern="^.sspam (.*)")
-async def _(event):
-    x = await event.get_reply_message()
-    if not (x and x.media and hasattr(x.media, "document")):
-        return await event.edit("`Reply To Sticker Only`")
-    set = x.document.attributes[1]
-    sset = await event_bot(
+async def _(e):
+    geez = await e.get_reply_message()
+    if not (geez and geez.media and hasattr(geez.media, "document")):
+        return await e.edit("`Reply To Sticker Only`")
+    set = geez.document.attributes[1]
+    sset = await e.edit_bot(
         GetStickerSetRequest(
             InputStickerSetID(
                 id=set.stickerset.id,
@@ -24,13 +24,13 @@ async def _(event):
     )
     pack = sset.set.short_name
     docs = [
-        utils.get_input_document(x)
-        for x in (
+        utils.get_input_document(geez)
+        for geez in (
             await event_bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
         ).documents
     ]
     for xx in docs:
-        await event.respond(file=(xx))
+        await e.respond(file=(xx))
 
 
 CMD_HELP.update({"sspam": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sspam` <kota>"
