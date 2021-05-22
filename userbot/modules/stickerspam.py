@@ -30,7 +30,7 @@ async def _(e):
         ).documents
     ]
     for xx in docs:
-        await e.respon(file=(xx))
+        await e.respond(file=(xx))
 
 
 CMD_HELP.update({"sspam": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sspam` <Reply on Sticker>"
