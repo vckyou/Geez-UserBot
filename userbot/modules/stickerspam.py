@@ -26,11 +26,11 @@ async def _(event):
     docs = [
         utils.get_input_document(x)
         for x in (
-            await bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
+            await event_bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
         ).documents
     ]
     for xx in docs:
-        await e.respond(file=(xx))
+        await event.respond(file=(xx))
 
 
 CMD_HELP.update({"sspam": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sspam` <kota>"
