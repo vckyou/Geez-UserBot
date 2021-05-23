@@ -83,6 +83,9 @@ PM_PERMIT_PIC = os.environ.get(
     "PM_PERMIT_PIC",
     None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 
+#Auto Name
+AUTONAME = os.environ.get("AUTONAME", None)
+
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
