@@ -12,7 +12,7 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
 from userbot.events import register
-from userbot import AUTONAME, BOTLOG, BOTLOG_CHATID, DEFAULT_BIO, CMD_HELP
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, DEFAULT_BIO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
