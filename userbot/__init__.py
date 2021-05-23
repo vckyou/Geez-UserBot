@@ -172,7 +172,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-#Auto Pic
+# Auto Pic
 CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
 
 # Untuk Perintah .geez
