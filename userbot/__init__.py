@@ -173,7 +173,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 #Auto Pic
-    CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
+CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
 
 # Untuk Perintah .geez
 GEEZ_TEKS_KUSTOM = os.environ.get("GEEZ_TEKS_KUSTOM", None)
