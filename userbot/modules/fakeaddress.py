@@ -24,15 +24,15 @@ async def _(event):
     result = result.decode()
 
     result = json.loads(result)
-    a = result["type"]
-    b = result["country_code"]
-    c = result["region_name"]
-    d = result["city"]
-    e = result["zip"]
-    f = result["latitude"]
-    g = result["longitude"]
+    geez1 = result["type"]
+    geez2 = result["country_code"]
+    geez3 = result["region_name"]
+    geez4 = result["city"]
+    geez5 = result["zip"]
+    geez6 = result["latitude"]
+    geez7 = result["longitude"]
     await event.edit(
-        f"<b><u>INFORMASI BERHASIL DIKUMPULKAN</b></u>\n\n<b>Ip type :-</b><code>{a}</code>\n<b>Country code:- </b> <code>{b}</code>\n<b>State name :-</b><code>{c}</code>\n<b>City name :- </b><code>{d}</code>\n<b>zip :-</b><code>{e}</code>\n<b>Latitude:- </b> <code>{f}</code>\n<b>Longitude :- </b><code>{g}</code>\n",
+        f"<b><u>INFORMASI BERHASIL DIKUMPULKAN</b></u>\n\n<b>Ip type :-</b><code>{geez1}</code>\n<b>Country code:- </b> <code>{geez2}</code>\n<b>State name :-</b><code>{geez3}</code>\n<b>City name :- </b><code>{geez4}</code>\n<b>zip :-</b><code>{geez5}</code>\n<b>Latitude:- </b> <code>{geez6}</code>\n<b>Longitude :- </b><code>{geez7}</code>\n",
         parse_mode="HTML",
     )
 
