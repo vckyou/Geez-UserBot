@@ -16,8 +16,8 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, DEFAULT_BIO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
-CHANGE_TIME = userbot.CHANGE_TIME
-DEFAULTUSER = userbot.AUTONAME or ALIVE_NAME
+CHANGE_TIME = CHANGE_TIME
+DEFAULTUSER = AUTONAME or ALIVE_NAME
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
