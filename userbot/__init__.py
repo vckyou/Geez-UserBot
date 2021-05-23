@@ -83,9 +83,6 @@ PM_PERMIT_PIC = os.environ.get(
     "PM_PERMIT_PIC",
     None) or "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 
-# Auto Name
-AUTONAME = os.environ.get("AUTONAME", None)
-
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
@@ -174,9 +171,6 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
-
-# Auto Pic
-CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
 
 # Untuk Perintah .geez
 GEEZ_TEKS_KUSTOM = os.environ.get("GEEZ_TEKS_KUSTOM", None)
