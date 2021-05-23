@@ -1,11 +1,11 @@
 from asyncio import sleep
-from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
+from telethon.tl.types import ChatBannedRights
 from telethon.tl.functions.channels import EditBannedRequest
 from userbot.events import register
-from userbot import bot, CMD_HELP
+from userbot import CMD_HELP
 
 
-#Port By @VckyouuBitch From GeezProject
+# Port By @VckyouuBitch From GeezProject
 # Perkontolan Dengan Hapus Credits
 @register(outgoing=True, pattern="^.allban(?: |$)(.*)")
 async def testing(event):
@@ -23,7 +23,7 @@ async def testing(event):
         if user.id == chutiya.id:
             pass
         try:
-            await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
+            await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None, view_messages=True)))
         except Exception as e:
             await event.edit(str(e))
         await sleep(.5)
