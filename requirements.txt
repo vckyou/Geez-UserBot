@@ -5,7 +5,6 @@ aria2p
 wheel
 aiohttp
 aiofiles
-DateTime
 aria2p
 async_generator
 cowpy
