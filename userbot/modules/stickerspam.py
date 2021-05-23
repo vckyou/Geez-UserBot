@@ -11,7 +11,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.sspam (.*)")
 async def _(e):
     await e.get_reply_message()
-    if not reply.message_media("document")):
+    if not reply_message.media("document"):
         return await e.edit("`Reply To Sticker Only`")
     set=document.attributes[1]
     sset=await bot(
