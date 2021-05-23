@@ -17,7 +17,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
 CHANGE_TIME = Config.CHANGE_TIME
-DEFAULTUSER = AUTONAME or ALIVE_NAME
+DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
