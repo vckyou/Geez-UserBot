@@ -68,7 +68,8 @@ async def main(event):
     downloader.start(blocking=False)
     while not downloader.isFinished():
         pass
-    if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
+    if gvarstatus("digitalpic") is not None and gvarstatus(
+            "digitalpic") == "true":
         return await edit_delete(event, f"`Digitalpic is already enabled`")
     addgvar("digitalpic", True)
     await edit_delete(event, f"`digitalpfp has been started by my Master`")
@@ -124,7 +125,8 @@ async def _(event):  # sourcery no-metrics
         return
     input_str = event.pattern_match.group(1)
     if input_str == "autopic":
-        if gvarstatus("autopic") is not None and gvarstatus("autopic") == "true":
+        if gvarstatus("autopic") is not None and gvarstatus(
+                "autopic") == "true":
             delgvar("autopic")
             if os.path.exists(autopic_path):
                 file = await event.client.upload_file(autopic_path)
@@ -136,7 +138,8 @@ async def _(event):  # sourcery no-metrics
             return await edit_delete(event, "`Autopic has been stopped now`")
         return await edit_delete(event, "`Autopic haven't enabled`")
     if input_str == "digitalpfp":
-        if gvarstatus("digitalpic") is not None and gvarstatus("digitalpic") == "true":
+        if gvarstatus("digitalpic") is not None and gvarstatus(
+                "digitalpic") == "true":
             delgvar("digitalpic")
             await event.client(
                 functions.photos.DeletePhotosRequest(
@@ -158,7 +161,8 @@ async def _(event):  # sourcery no-metrics
             return await edit_delete(event, "`Bloom has been stopped now`")
         return await edit_delete(event, "`Bloom haven't enabled`")
     if input_str == "autoname":
-        if gvarstatus("autoname") is not None and gvarstatus("autoname") == "true":
+        if gvarstatus("autoname") is not None and gvarstatus(
+                "autoname") == "true":
             delgvar("autoname")
             await event.client(
                 functions.account.UpdateProfileRequest(first_name=DEFAULTUSER)
@@ -166,7 +170,8 @@ async def _(event):  # sourcery no-metrics
             return await edit_delete(event, "`Autoname has been stopped now`")
         return await edit_delete(event, "`Autoname haven't enabled`")
     if input_str == "autobio":
-        if gvarstatus("autobio") is not None and gvarstatus("autobio") == "true":
+        if gvarstatus("autobio") is not None and gvarstatus(
+                "autobio") == "true":
             delgvar("autobio")
             await event.client(
                 functions.account.UpdateProfileRequest(about=DEFAULTUSERBIO)
@@ -191,13 +196,20 @@ async def autopicloop():
             LOGS.warn(str(e))
     while AUTOPICSTART:
         if not os.path.exists(autopic_path):
-            downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=False)
+            downloader = SmartDL(
+                Config.DEFAULT_PIC,
+                autopic_path,
+                progress_bar=False)
             downloader.start(blocking=False)
             while not downloader.isFinished():
                 pass
         shutil.copy(autopic_path, autophoto_path)
         im = Image.open(autophoto_path)
-        file_test = im.rotate(counter, expand=False).save(autophoto_path, "PNG")
+        file_test = im.rotate(
+            counter,
+            expand=False).save(
+            autophoto_path,
+            "PNG")
         current_time = datetime.now().strftime("  Time: %H:%M \n  Date: %d.%m.%y ")
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
@@ -220,7 +232,10 @@ async def digitalpicloop():
     i = 0
     while DIGITALPICSTART:
         if not os.path.exists(digitalpic_path):
-            downloader = SmartDL(digitalpfp, digitalpic_path, progress_bar=False)
+            downloader = SmartDL(
+                digitalpfp,
+                digitalpic_path,
+                progress_bar=False)
             downloader.start(blocking=False)
             while not downloader.isFinished():
                 pass
@@ -229,9 +244,8 @@ async def digitalpicloop():
         current_time = datetime.now().strftime("%H:%M")
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
-        cat = str(base64.b64decode("dXNlcmJvdC9oZWxwZXJzL3N0eWxlcy9kaWdpdGFsLnR0Zg=="))[
-            2:36
-        ]
+        cat = str(base64.b64decode(
+            "dXNlcmJvdC9oZWxwZXJzL3N0eWxlcy9kaWdpdGFsLnR0Zg=="))[2:36]
         fnt = ImageFont.truetype(cat, 200)
         drawn_text.text((350, 100), current_time, font=fnt, fill=(124, 252, 0))
         img.save(autophoto_path)
@@ -263,7 +277,10 @@ async def bloom_pfploop():
         return
     while BLOOMSTART:
         if not os.path.exists(autopic_path):
-            downloader = SmartDL(Config.DEFAULT_PIC, autopic_path, progress_bar=False)
+            downloader = SmartDL(
+                Config.DEFAULT_PIC,
+                autopic_path,
+                progress_bar=False)
             downloader.start(blocking=False)
             while not downloader.isFinished():
                 pass
