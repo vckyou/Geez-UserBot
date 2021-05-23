@@ -13,8 +13,8 @@ async def _(e):
     await e.get_reply_message()
     if not reply_message.media("document"):
         return await e.edit("`Reply To Sticker Only`")
-    set=document.attributes[1]
-    sset=await bot(
+    set = document.attributes[1]
+    sset = await bot(
         GetStickerSetRequest(
             InputStickerSetID(
                 id=set.stickerset.id,
@@ -22,8 +22,8 @@ async def _(e):
             )
         )
     )
-    pack=sset.set.short_name
-    docs=[
+    pack = sset.set.short_name
+    docs = [
         utils.get_input_document(x)
         for x in (
             await bot(GetStickerSetRequest(InputStickerSetShortName(pack)))
