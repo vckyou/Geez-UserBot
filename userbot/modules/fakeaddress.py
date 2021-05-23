@@ -8,7 +8,7 @@ from userbot import CMD_HELP
 
 # Port By @VckyouuBitch From GeezProject
 # Buat Kamu Yang Hapus Credits. Intinya Kamu Anjing:)
-@register(outgoing=True, pattern="^.fakeaddress(?: |$)(.*)")
+@register(outgoing=True, pattern="^.ip(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
