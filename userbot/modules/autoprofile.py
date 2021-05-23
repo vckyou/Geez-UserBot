@@ -12,11 +12,11 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
 from userbot.events import register
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, DEFAULT_BIO
+from userbot import AUTONAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEFAULT_BIO
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 DEFAULTUSERBIO = DEFAULT_BIO or " ᗯᗩᏆᎢᏆᑎᏀ ᏞᏆᏦᗴ ᎢᏆᗰᗴ  "
-CHANGE_TIME = CHANGE_TIME
+CHANGE_TIME = config.CHANGE_TIME
 DEFAULTUSER = AUTONAME or ALIVE_NAME
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
