@@ -10,10 +10,10 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.sspam (.*)")
 async def _(e):
-    x = await e.get_reply_message()
-    if not (x and x.media("document")):
+    await e.get_reply_message()
+    if not reply.message_media("document")):
         return await e.edit("`Reply To Sticker Only`")
-    set = x.document.attributes[1]
+    set = document.attributes[1]
     sset = await bot(
         GetStickerSetRequest(
             InputStickerSetID(
