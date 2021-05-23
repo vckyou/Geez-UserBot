@@ -22,6 +22,7 @@ gitpython
 asyncurban
 google-api-python-client==1.8.0
 google-auth-oauthlib
+google_images_download>=2.7.1
 googletrans==3.1.0a0
 gTTS>=2.1.1
 gTTS-token>=1.1.3
