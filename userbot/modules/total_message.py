@@ -9,16 +9,16 @@ async def _(event):
     k = await event.get_reply_message()
     if k:
         a = await bot.get_messages(event.chat_id, 0, from_user=k.sender_id)
-        return await event.edit(f"Total msgs of {u} here = {a.total}")
+        return await event.edit(f"Total Message Dari {u}. Total Chats `{a.total}`")
     u = event.pattern_match.group(1)
     if not u:
         u = "me"
     a = await bot.get_messages(event.chat_id, 0, from_user=u)
-    await event.edit(f"Total msgs of {u} here={a.total}")
+    await event.edit(f"Total Message Dari {u}. Total Chats `{a.total}`")
 
 CMD_HELP.update(
     {
         "totalmsg": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tmsg` | `.tmsg` <username>\
-    \n↳ : Returns your total msg count in current chat Or Returns total msg count of user in current chat."
+    \n↳ : Mengembalikan jumlah pesan total pengguna dalam obrolan saat ini."
     }
 )
