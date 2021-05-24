@@ -1,10 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Port to userbot by @MoveAngel
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP
 from userbot.events import register
@@ -16,19 +9,16 @@ async def lastname(steal):
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
-        await steal.edit("```Mohon Reply Ke Pesan Pengguna Yang Ingin Anda Scan.```")
+        await steal.edit("```Mohon Balas Ke Pesan Pengguna.```")
         return
     message = await steal.get_reply_message()
     chat = "@SangMataInfo_bot"
     user_id = message.sender.id
     id = f"/search_id {user_id}"
     if message.sender.bot:
-        await steal.edit("```Reply Ke Pesan Pengguna Yang Ingin Di Scan.```")
+        await steal.edit("```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
         return
-    await steal.edit("__Sedang Memprosess__")
-    await steal.edit("__Sedang Memprosess__")
-    await steal.edit("__Sedang Memprosess__")
-    await steal.edit("__Sedang Memprosess__")
+    await steal.edit("```Memerintahku Mengambil Informasi Riwayat Pergantian Nama Orang Ini```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -37,7 +27,7 @@ async def lastname(steal):
                 response = await conv.get_response()
             except YouBlockedUserError:
                 await steal.reply(
-                    "```Mohon Unblock @sangmatainfo_bot Dan Coba Scan Kembali.```"
+                    "```Mohon Unblock @sangmatainfo_bot Dan Coba Lagi```"
                 )
                 return
             if r.text.startswith("Name"):
@@ -50,7 +40,7 @@ async def lastname(steal):
             if response.text.startswith("No records") or r.text.startswith(
                 "No records"
             ):
-                await steal.edit("```Saya Tidak Menemukan Informasi Pergantian Nama Ini, Orang Ini Belum Pernah Mengganti Nama Sebelumnya```")
+                await steal.edit("```Saya Tidak Menemukan Informasi Pergantian Nama, Orang Ini Belum Pernah Mengganti Namanya```")
                 await steal.client.delete_messages(
                     conv.chat_id, [msg.id, r.id, response.id]
                 )
@@ -62,11 +52,11 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await steal.edit("`Saya Sedang Sakit, Mohon Maaf`")
+        return await steal.edit("`Saya Sedang Sakit Mohon Maaf`")
 
 
 CMD_HELP.update({
     "sangmata":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sa`\
-          \n↳ : Mendapatkan Riwayat Nama Pengguna Yang Di Scan."
+        "`.sa`\
+          \nUsage: Mendapatkan Riwayat Nama Pengguna."
 })
