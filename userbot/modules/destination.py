@@ -1,9 +1,7 @@
 from userbot.events import register
 from userbot import CMD_HELP
 
-# ported By @VckyouuBitch From GeezProject
-
-
+#ported By @VckyouuBitch From GeezProject
 @register(outgoing=True, pattern=r"^\.(?:dm)\s?(.*)?")
 async def remoteaccess(event):
 
@@ -12,7 +10,7 @@ async def remoteaccess(event):
 
     chat_id = m[0]
     try:
-        chat_id = int(chat_message)
+        chat_id = int(chat_id)
     except BaseException:
 
         pass
@@ -28,7 +26,7 @@ async def remoteaccess(event):
         return
     try:
         await event.client.send_message(chat_id, msg)
-        await event.edit("Success Mengirim Pesan Anda.`")
+        await event.edit("`Success Mengirim Pesan Anda.`")
     except BaseException:
         await event.edit("**Terjadi Error. Gagal Mengirim Pesan.**")
 
