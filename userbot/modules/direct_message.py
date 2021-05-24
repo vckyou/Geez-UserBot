@@ -1,7 +1,7 @@
 from userbot.events import register
 from userbot import CMD_HELP
 
-Ported By @ VckyouuBitch From GeezProject
+# Ported By @VckyouuBitch From GeezProject
 # Devoted To GeezProject
 
 
