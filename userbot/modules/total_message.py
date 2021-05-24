@@ -14,7 +14,7 @@ async def _(event):
     if not u:
         u = "me"
     a = await bot.get_messages(chat_id, 0, from_user=u)
-    await event.edit(f'Total msgs of {u} here={a.total}")
+    await event.edit(f"Total msgs of {u} here={a.total}")
 
 CMD_HELP.update(
     {
