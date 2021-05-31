@@ -14,7 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from .format import parse_pre
 from .chrome import chrome, options
 from .google_images_download import googleimagesdownload
 from .progress import progress
-from .tools import humanbytes, time_formatter, human_to_bytes, md5, take_screen_shot, runcmd
+from .tools import humanbytes, time_formatter, human_to_bytes, md5,post_to_telegraph, take_screen_shot, runcmd
