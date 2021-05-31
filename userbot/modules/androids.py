@@ -20,6 +20,10 @@ from userbot.events import register
 from userbot.utils import chrome, human_to_bytes, humanbytes, md5, time_formatter
 
 GITHUB = "https://github.com"
+DEVICES_DATA = (
+    "https://raw.githubusercontent.com/androidtrackers/"
+    "certified-android-devices/master/by_device.json"
+)
 
 
 @register(outgoing=True, pattern=r"^\.magisk$")
