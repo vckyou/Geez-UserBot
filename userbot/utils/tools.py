@@ -22,7 +22,8 @@ import shlex
 import os
 from os.path import basename
 import os.path
-from typing import Optional, Tuple
+from html_telegraph_poster import TelegraphPoster
+from typing import Optional, List
 from userbot import bot, LOGS
 
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -148,3 +149,29 @@ async def check_media(reply_message):
         return False
     else:
         return data
+
+
+async def run_cmd(cmd: List) -> (bytes, bytes):
+    process = await asyncio.create_subprocess_exec(
+        *cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    out, err = await process.communicate()
+    t_resp = out.strip()
+    e_resp = err.strip()
+    return t_resp, e_resp
+
+
+def post_to_telegraph(title, html_format_content):
+    post_client = TelegraphPoster(use_api=True)
+    auth_name = "Geez-UserBot"
+    auth_url = "https://github.com/vckyou/Geez-UserBot"
+    post_client.create_api_token(auth_name)
+    post_page = post_client.post(
+        title=title,
+        author=auth_name,
+        author_url=auth_url,
+        text=html_format_content,
+    )
+    return post_page["url"]
