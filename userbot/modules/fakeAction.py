@@ -1,7 +1,9 @@
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
-#Port By @VckyouuBitch From Geez-Projects
+# Port By @VckyouuBitch From Geez-Projects
+
+
 @register(outgoing=True, pattern="^.ftyping(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
