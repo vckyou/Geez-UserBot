@@ -1,3 +1,5 @@
+#Port By @VckyouuBitch From GeezProjects
+#Copyright © 2021 Geez-Projects
 from telethon.tl.types import (
     ChannelParticipantsKicked,
 )
@@ -21,7 +23,7 @@ async def _(event):
             p += 1
         except BaseException:
             pass
-    await event.edit("{title}: {p} UnBanned")
+    await event.edit(f"`{title}: {p} UnBanned`")
 
 
 CMD_HELP.update(
