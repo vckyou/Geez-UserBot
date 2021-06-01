@@ -15,11 +15,11 @@ async def _(event):
             t = int(t)
         except BaseException:
             try:
-                t = await ban_time(t)
+                t = await event.ban_time(t)
             except BaseException:
-                return await event.edit(f"`Incorrect Format`")
+                return await event.edit("`Incorrect Format`")
     await event.edit(f"`Starting Fake Typing For` {t} `sec.`")
-    async with event.client.conversation(event.chat_id, "typing"):
+    async with event.client.action(event.chat_id, "typing"):
         await asyncio.sleep(t)
 
 CMD_HELP.update(
