@@ -10,7 +10,7 @@ from userbot import CMD_HELP
 
 @register(outgoing=True, pattern=r"^\.allunban(?: |$)(.*)", groups_only=True)
 async def _(event):
-    await event.edit("`Searching Participant Lists.`")
+    await event.edit("`Sedang Mencari List Banning.`")
     p = 0
     (await event.get_chat()).title
     async for i in event.client.iter_participants(
@@ -23,7 +23,7 @@ async def _(event):
             p += 1
         except BaseException:
             pass
-    await event.edit(f"`{title}: {p} UnBanned`")
+    await event.edit("`Sukses Menghapus List Banning`")
 
 
 CMD_HELP.update(
