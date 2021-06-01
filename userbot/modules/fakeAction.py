@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 @register(outgoing=True, pattern="^.ftyping(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
-    if not (t or t.isdigit()):
+    if not t.isdigit():
         t = 100
     else:
         try:
