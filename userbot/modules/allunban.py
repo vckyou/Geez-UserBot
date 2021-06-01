@@ -1,22 +1,14 @@
-from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import (
     ChannelParticipantsKicked,
-    ChatBannedRights,
-    UserStatusEmpty,
-    UserStatusLastMonth,
-    UserStatusLastWeek,
-    UserStatusOffline,
-    UserStatusOnline,
-    UserStatusRecently,
 )
 
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.allunban(?: |$)(.*)", groups_only=True)
 async def _(event):
-    xx = await event.edit("`Searching Participant Lists.`")
+    await event.edit("`Searching Participant Lists.`")
     p = 0
     (await event.get_chat()).title
     async for i in event.client.iter_participants(
