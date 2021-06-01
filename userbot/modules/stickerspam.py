@@ -16,7 +16,7 @@ async def _(event):
         GetStickerSetRequest(
             InputStickerSetID(
                 id=set.stickerset.id,
-                access_hash=set.stickerset.access_hash,
+                access_hash=stickerset_attr.stickerset.access_hash,
             )
         )
     )
