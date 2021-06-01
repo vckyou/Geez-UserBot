@@ -8,7 +8,7 @@ import asyncio
 @register(outgoing=True, pattern="^.ftyping(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
-    if not t.isdigit():
+    if not (t or t.isdigit()):
         t = 100
     else:
         try:
