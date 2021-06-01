@@ -1,5 +1,6 @@
 from userbot.events import register
 from userbot import CMD_HELP
+import asyncio
 
 # Port By @VckyouuBitch From Geez-Projects
 
@@ -19,7 +20,7 @@ async def _(event):
                 return await event.edit("`Incorrect Format`")
     await event.edit(f"Starting Fake Typing For {t} sec.")
     async with event.client.action(event.chat_id, "typing"):
-        await asyncio.sleep(t)
+        await asyncio.sleep(100)
 
 CMD_HELP.update(
     {
