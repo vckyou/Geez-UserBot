@@ -2,10 +2,10 @@ from telethon import utils
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import InputStickerSetID, InputStickerSetShortName
 
+from userbot.events import register
 from userbot import CMD_HELP
 
-
-@ultroid_cmd(pattern="sspam$")
+@register(outgoing=True, pattern=r"^\.sspam")
 async def _(event):
     x = await event.get_reply_message()
     if not (x and x.media and hasattr(x.media, "document")):
