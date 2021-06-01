@@ -9,7 +9,7 @@ from userbot import CMD_HELP
 @register(outgoing=True, pattern=r"^\.sspam")
 async def _(event):
     x = await event.get_reply_message()
-    if not (x and x.media and hasattr(x.media, "document")):
+    if not (x and x.hasattr(x.media, "document")):
         return await event.edit("`Reply To Sticker Only`")
     set = x.document.attributes[1]
     sset = await bot(
