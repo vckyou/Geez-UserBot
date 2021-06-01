@@ -1,5 +1,5 @@
-#Port By @VckyouuBitch From GeezProjects
-#Copyright © 2021 Geez-Projects
+# Port By @VckyouuBitch From GeezProjects
+# Copyright © 2021 Geez-Projects
 from telethon.tl.types import (
     ChannelParticipantsKicked,
 )
