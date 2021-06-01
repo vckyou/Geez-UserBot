@@ -19,7 +19,7 @@ async def _(event):
             except BaseException:
                 return await event.edit(f"`Incorrect Format`")
     await event.edit(f"`Starting Fake Typing For` {t} `sec.`")
-    async with event.edit.client.action(event.chat_id, "typing"):
+    async with event.client.action(chat_id, "typing"):
         await asyncio.sleep(t)
 
 CMD_HELP.update(
