@@ -52,7 +52,7 @@ async def _(event):
         url = f"https://nekobin.com/{key}"
 
     reply_text = f"Pasted to Nekobin : [neko]({url})"
-    await event.edit_or_reply(reply_text)
+    await edit_or_reply(event, reply_text)
 
 
 CMD_HELP.update(
