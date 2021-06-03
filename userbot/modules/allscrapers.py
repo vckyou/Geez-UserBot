@@ -845,21 +845,13 @@ async def _(event):
         py_file = ""
         py_file += ".py"
         data = message
-        key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
-        )
+        key = (requests.post("https://nekobin.com/api/documents",
+                             json={"content": data}) .json() .get("result") .get("key"))
         url = f"https://nekobin.com/{key}{py_file}"
     else:
         data = message
-        key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
-        )
+        key = (requests.post("https://nekobin.com/api/documents",
+                             json={"content": data}) .json() .get("result") .get("key"))
         url = f"https://nekobin.com/{key}"
 
     reply_text = f"Pasted to Nekobin : [neko]({url})"
