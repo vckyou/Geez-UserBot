@@ -99,8 +99,8 @@ def register(**args):
                     text = "**Geez-Project ERROR**\n"
                     link = "Silahkan chat: @VckyouuBitch"
                     text += "Untuk melaporkan kesalahan"
-                    text += f"- tinggal teruskan pesan ini {link}.\n"
-                    text += "Axel Siap Membantu Kamu\n"
+                    text += f" tinggal teruskan pesan ini {link}.\n"
+                    text += "Vcky Siap Membantu Kamu\n"
 
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded ONLY here,"
