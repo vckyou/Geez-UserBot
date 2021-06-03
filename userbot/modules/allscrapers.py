@@ -812,52 +812,58 @@ async def neko(nekobin):
 
 @register(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
 async def _(event):
-    await event.edit("` Pasting to nekobin... `")
-    input_str = "".join(event.text.split(maxsplit=1)[1:])
-    if not (input_str or event.is_reply):
-        return await event.edit("`Reply to a Message/Document or Give me Some Text !`")
+    if event.fwd_from:
+        return
+    datetime.now()
+    if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+    input_str = event.pattern_match.group(1)
+    message = "SYNTAX: `.neko <long text to include>`"
     if input_str:
         message = input_str
-        downloaded_file_name = None
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
             downloaded_file_name = await event.client.download_media(
                 previous_message,
-                TEMP_DOWNLOAD_DIRECTORY,
+                TMP_DOWNLOAD_DIRECTORY,
+                progress_callback=progress,
             )
             m_list = None
             with open(downloaded_file_name, "rb") as fd:
                 m_list = fd.readlines()
             message = ""
-            try:
-                for m in m_list:
-                    message += m.decode("UTF-8")
-            except BaseException:
-                message = "`Include long text / Reply to text file`"
+            for m in m_list:
+                # message += m.decode("UTF-8") + "\r\n"
+                message += m.decode("UTF-8")
             os.remove(downloaded_file_name)
         else:
-            downloaded_file_name = None
             message = previous_message.message
     else:
-        downloaded_file_name = None
-        message = "`Include long text / Reply to text file`"
-    if downloaded_file_name and downloaded_file_name.endswith(".py"):
+        message = "SYNTAX: `.neko <long text to include>`"
+    if downloaded_file_name.endswith(".py"):
+        py_file = ""
+        py_file += ".py"
         data = message
-        key = (requests.post("https://nekobin.com/api/documents",
-                             json={"content": data}) .json() .get("result") .get("key"))
+        key = (
+            requests.post("https://nekobin.com/api/documents", json={"content": data})
+            .json()
+            .get("result")
+            .get("key")
+        )
+        url = f"https://nekobin.com/{key}{py_file}"
     else:
         data = message
-        key = (requests.post("https://nekobin.com/api/documents",
-                             json={"content": data}) .json() .get("result") .get("key"))
-    q = f"paste {key}"
-    reply_text = f"• **Pasted to Nekobin :** [Neko](https://nekobin.com/{key})\n• **Raw Url :** : [Raw](https://nekobin.com/raw/{key})"
-    try:
-        ok = await bot.inline_query(asst.me.username, q)
-        await ok[0].click(event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True)
-        await event.delete()
-    except BaseException:
-        await event.edit(reply_text)
+        key = (
+            requests.post("https://nekobin.com/api/documents", json={"content": data})
+            .json()
+            .get("result")
+            .get("key")
+        )
+        url = f"https://nekobin.com/{key}"
+
+    reply_text = f"Pasted to Nekobin : [neko]({url})"
+    await event.edit_or_reply(reply_text)
 
 
 @register(outgoing=True, pattern=r"^\.getpaste(?: |$)(.*)")
