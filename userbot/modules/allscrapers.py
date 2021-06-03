@@ -812,7 +812,7 @@ async def neko(nekobin):
 
 @register(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
 async def _(event):
-    xx = await event.edit("` Pasting to nekobin... `")
+    await event.edit("` Pasting to nekobin... `")
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     if not (input_str or event.is_reply):
         return await event.edit("`Reply to a Message/Document or Give me Some Text !`")
@@ -844,20 +844,12 @@ async def _(event):
         message = "`Include long text / Reply to text file`"
     if downloaded_file_name and downloaded_file_name.endswith(".py"):
         data = message
-        key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
-        )
+        key = (requests.post("https://nekobin.com/api/documents",
+                             json={"content": data}) .json() .get("result") .get("key"))
     else:
         data = message
-        key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
-        )
+        key = (requests.post("https://nekobin.com/api/documents",
+                             json={"content": data}) .json() .get("result") .get("key"))
     q = f"paste {key}"
     reply_text = f"• **Pasted to Nekobin :** [Neko](https://nekobin.com/{key})\n• **Raw Url :** : [Raw](https://nekobin.com/raw/{key})"
     try:
