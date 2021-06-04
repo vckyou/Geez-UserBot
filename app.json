@@ -41,13 +41,13 @@
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Dengan Username @MissRose_Bot, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi Id Grup, Contoh -1001234567890",
+      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
     },
     "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Dengan Username @MissRose_Bot, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup, Contoh -1001234567890",
+      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
