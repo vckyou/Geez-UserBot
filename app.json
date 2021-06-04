@@ -41,8 +41,13 @@
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah sebuah grup private/public masukan bot rose lalu ketik /id.",
-      "value": "Isi id grup mu",
+      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Dengan Username @MissRose_Bot, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "value": "Isi Id Grup, Contoh -1001234567890",
+      "required": true
+    },
+    "G_BAN_LOGGER_GROUP": {
+      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Dengan Username @MissRose_Bot, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "value": "Isi ID Grup, Contoh -1001234567890",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
@@ -177,11 +182,6 @@
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
-      "value": "isi id grup mu",
       "required": false
     },
     "G_DRIVE_DATA": {
