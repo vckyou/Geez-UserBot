@@ -219,7 +219,7 @@ async def _(event):
                 else:
                     await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈)
+                await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
