@@ -543,7 +543,7 @@ async def _(event):
     await event.delete()
     await bot.send_message(
         event.chat_id,
-        "`Ssssttt, Anda Telah Berhasil Ngeclon!.`",
+        "`Anda Telah Berhasil Ngeclon!.`",
         reply_to=reply_message
     )
 
@@ -1026,7 +1026,7 @@ async def _(event):
     await bot(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n)))
     await bot(functions.account.UpdateProfileRequest(about=bio))
     await bot(functions.account.UpdateProfileRequest(first_name=name))
-    await event.edit(f"`Anda {ALIVE_NAME} Telah Mengembalikan Akun-Nya.`")
+    await event.edit(f"`{ALIVE_NAME} Telah Mengembalikan Ke Akun Utama.`")
 
 CMD_HELP.update({
     "misc":
@@ -1044,8 +1044,6 @@ CMD_HELP.update({
 \n↳ : Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.rnupload` filename.extenstion\
 \n↳ : Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.clone` @username Dan '.rclone' Untuk Mengembalikan\
-\n↳ : Clone Akun Orang Tapi Username Tidak Di Clone\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.res`\
 \n↳ : Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.watch` <movie/tv>\
@@ -1063,3 +1061,14 @@ Jika Tidak Memberikan Level Otomatis Default Ke Level 2\
 \n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
 })
+
+
+CMD_HELP.update(
+    {
+        "clone": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.clone` <username>.\
+        \n↳ : Mulai Mengaktifkan Clonning Ke Seseorang\
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `'.rclone' Untuk Mengembalikan\
+        \n↳ : Mengembalikan Kloning, Dan Kembali Keakun Utama.\
+    "
+    }
+)
