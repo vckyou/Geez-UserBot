@@ -1,12 +1,6 @@
 import os
-from datetime import datetime as dt
-from random import choice
-from shutil import rmtree
 
 import moviepy.editor as m
-import pytz
-import requests
-from bs4 import BeautifulSoup as b
 
 from userbot import CMD_HELP
 from userbot.events import register
@@ -31,7 +25,7 @@ async def adaudroid(event):
     if not (ureply and ("video" in ureply.document.mime_type)):
         await event.edit("`Reply To Gif/Video In which u want to add audio.`")
         return
-    xx = await event.edit("`processing...`")
+    await event.edit("`processing...`")
     ultt = await ureply.download_media()
     ls = os.listdir("resources/extras")
     z = "ul.mp3"
