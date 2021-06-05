@@ -5,6 +5,7 @@ aria2p
 wheel
 aiohttp
 aiofiles
+moviepy
 aria2p
 async_generator
 cowpy
