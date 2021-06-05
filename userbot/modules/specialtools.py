@@ -26,7 +26,7 @@ async def adaudroid(event):
         await event.edit("`Reply To Gif/Video In which u want to add audio.`")
         return
     await event.edit("`processing...`")
-    gezza = await ureply.download_media()
+    gezza = await event.client.download_media()
     ls = os.path.join("resources/extras")
     z = "ul.mp3"
     x = "resources/extras/ul.mp3"
