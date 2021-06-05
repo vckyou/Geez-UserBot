@@ -29,7 +29,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-    await event.edit("`Sedang Memproses Musik, Mohon Tunggu Sebentar...`")
+    await event.edit("`Di Proses Dulu, Sabar Ya Sayang...`")
     url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**List Error**\nCara Penggunaan : -`.musik <Judul Lagu>`")
