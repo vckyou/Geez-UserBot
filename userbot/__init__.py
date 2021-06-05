@@ -106,7 +106,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/vckyou/Geez-UserBot")
+    "https://github.com/Mpey0503/PeyyProject")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Geez-UserBot")
 
@@ -205,7 +205,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
+    "ALIVE_LOGO") or "https://telegra.ph/file/d86cb727b3df94590a091.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -386,7 +386,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} 🔰".format("🔰", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} ✣".format("✣", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -423,12 +423,12 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        logo = "https://telegra.ph/file/03cc82e4ac5c3aa5f9e97.jpg"
+        logo = "https://telegra.ph/file/d86cb727b3df94590a091.jpg"
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://vckyou.github.io/Geez-UserBot)")
+                await event.reply("⚜️𝙋𝙚𝙮𝙮 𝙋𝙧𝙤𝙟𝙚𝙘𝙩⚜️, Buat Userbot Mu Sendiri [Tekan Disini](https://Mpey0503.github.io/PeyyProject)")
             else:
                 await event.reply(f"`Hai {DEFAULTUSER}\n\nApa Kabarmu ? 😊`")
 
@@ -444,7 +444,7 @@ with bot:
                     text="{}"
                     f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
                     "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
-                        "** ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ **",
+                        "** ╡⚜️𝙋𝙚𝙮𝙮 𝙋𝙧𝙤𝙟𝙚𝙘𝙩⚜️╞ **",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -452,22 +452,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
+                    "Bantuan Dari ╡⚜️𝙋𝙚𝙮𝙮 𝙋𝙧𝙤𝙟𝙚𝙘𝙩⚜️╞ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
-                    text="""**Anda Bisa Membuat ⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
+                    " ╡⚜️𝙋𝙚𝙮𝙮 𝙋𝙧𝙤𝙟𝙚𝙘𝙩⚜️╞ ",
+                    text="""**Anda Bisa Membuat ⚜️𝙋𝙚𝙮𝙮 𝙋𝙧𝙤𝙟𝙚𝙘𝙩⚜️ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "⚡𝗚𝗲𝗲𝘇",
-                                "https://github.com/vckyou/Geez-UserBot"),
+                                "⚜️𝐏𝐄𝐘𝐘⚜️",
+                                "https://github.com/Mpey0503/PeyyProject"),
                             custom.Button.url(
-                                "✨𝗢𝘄𝗻𝗲𝗿",
-                                "t.me/VckyouuBitch")]],
+                                "🍃𝗢𝘄𝗻𝗲𝗿",
+                                "t.me/Untelee")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
