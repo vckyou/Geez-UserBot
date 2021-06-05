@@ -24,7 +24,7 @@ from userbot import CMD_HELP, ALIVE_NAME
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
-@register(outgoing=True, pattern=r"^\.musik (.*)")
+@register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
     a = event.text
     if a[5] == "s":
@@ -107,7 +107,7 @@ Connected to server...
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"╭┈────────────────┈\n➥ {rip_data['title']}\n➥ Uploader - {rip_data['uploader']}\n╭┈────────────────┈╯\n➥ By : {DEFAULTUSER}\n╰┈────────────────┈➤"
+    CAPT = f"╭┈───────────────┈\n • {rip_data['title']}\n • Uploader - {rip_data['uploader']}\n├┈──────────────┈\n├ By : {DEFAULTUSER}\n╰┈─────────────┈"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
@@ -152,7 +152,7 @@ async def original(event):
 
 CMD_HELP.update(
     {
-        "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.musik <Penyanyi atau Band - Judul Lagu>`\
+        "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.song<Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mengunduh Sebuah Lagu Yang Diinginkan.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mencari Lirik Lagu Yang Diinginkan."
