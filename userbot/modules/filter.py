@@ -132,8 +132,8 @@ async def filters_active(event):
     transact = "`Tidak Ada Filter Apapun Disini.`"
     filters = get_filters(event.chat_id)
     for filt in filters:
-        if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**❃ Daftar Filter Anda Yang Aktif Disini:**\n"
+        if transact == "`Tidak Ada Filter Apapun Disini Sayang.`":
+            transact = "**❃ Daftar Filter Tuan Yang Aktif Disini:**\n"
             transact += " ➥ `{}`\n".format(filt.keyword)
         else:
             transact += " ➥ `{}`\n".format(filt.keyword)
