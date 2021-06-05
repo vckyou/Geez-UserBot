@@ -40,9 +40,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`Tidak Dapat Menemukan Musik...`")
+        return await event.edit("`Musiknya Ga Ketemu Bangsat , Ketik Yang Benar !...`")
     type = "audio"
-    await event.edit(f"`Persiapan Mendownload {url}...`")
+    await event.edit(f" Downdload Dulu Skuyy{url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -63,7 +63,7 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Mendapatkan Info Musik...`")
+        await event.edit("`Dapetin Info Musik Dulss...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -135,7 +135,7 @@ async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit("Beri Saya Sebuah Judul Lagu Untuk Mencari Lirik.\n**Contoh** : `.lirik` <Judul Lagu>")
     geez = event.pattern_match.group(1)
-    event = await event.edit("`Sedang Mencari Lirik Lagu...`")
+    event = await event.edit("Cari Lirik Lagunya Skuyy..`")
     dc = random.randrange(1, 3)
     if dc == 1:
         piki = "AIzaSyAyDBsY3WRtB5YPC6aB_w8JAy6ZdXNc6FU"
