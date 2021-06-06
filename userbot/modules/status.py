@@ -6,12 +6,16 @@ import urllib
 
 from telethon.tl import functions
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import (
+    CMD_HELP,
+    bot,
+    ALIVE_NAME,
+)
 from userbot import TEMP_DOWNLOAD_DIRECTORY
 
 
-OFFLINE_TAG = "#OFFLINE"
-ONLINE_TAG = "#ONLINE"
+OFFLINE_TAG = "{ALIVE_NAME} #OFFLINE"
+ONLINE_TAG = "{ALIVE_NAME} #ONLINE"
 PROFILE_IMAGE = os.environ.get(
     "PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg"
 )
