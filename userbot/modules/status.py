@@ -14,8 +14,8 @@ from userbot import (
 from userbot import TEMP_DOWNLOAD_DIRECTORY
 
 
-OFFLINE_TAG = "{ALIVE_NAME} #OFFLINE"
-ONLINE_TAG = "{ALIVE_NAME} #ONLINE"
+OFFLINE_TAG = f"{ALIVE_NAME} #OFFLINE"
+ONLINE_TAG = f"{ALIVE_NAME} #ONLINE"
 PROFILE_IMAGE = os.environ.get(
     "PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg"
 )
