@@ -30,7 +30,7 @@ async def _(event):
     mediatype = media_type(reply)
     if not reply or not mediatype or mediatype not in ["Voice", "Audio"]:
         return await event.edit("__Reply to Voice clip or Audio clip to reverse search that song.__"
-        )
+                                )
     await event.edit("__Downloading the audio clip...__")
     try:
         for attr in getattr(reply.document, "attributes", []):
@@ -49,7 +49,7 @@ async def _(event):
     except Exception as e:
         LOGS.error(e)
         return await event.edit(f"**Error while reverse searching song:**\n__{str(e)}__"
-        )
+                                )
     image = track["images"]["background"]
     song = track["share"]["subject"]
     await event.client.send_file(
