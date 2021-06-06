@@ -7,8 +7,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern=r"^\.limit(?: |$)(.*)")
 async def _(event):
-    chat = "@SpamBot"
-    msg = await event.edit("`Checking If You Are Limited...`")
+    await event.edit("`Checking If You Are Limited...`")
     async with bot.conversation("@SpamBot") as conv:
         try:
             response = conv.wait_event(
