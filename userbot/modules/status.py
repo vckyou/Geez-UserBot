@@ -14,7 +14,7 @@ PROFILE_IMAGE = os.environ.get(
 
 
 @register(outgoing=True, pattern="^.offline(?: |$)(.*)")
-  # pylint:disable=E0602
+# pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
