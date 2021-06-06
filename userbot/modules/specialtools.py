@@ -22,11 +22,11 @@ async def daudtoid(event):
 @register(outgoing=True, pattern="^.addaudio(?: |$)(.*)")
 async def adaudroid(event):
     ureply = await event.get_reply_message()
-    if not (ureply and ("video" in ureply.document.mime_type)):
+    if not (ureply and ("video" in ureply.document.mime_type.split))('/'):
         await event.edit("`Reply To Gif/Video In which u want to add audio.`")
         return
     await event.edit("`processing...`")
-    gezza = await event.client.download_media(ureply, ls)
+    gezza = await ureply.download_media()
     ls = os.path.join("resources/extras")
     z = "ul.mp3"
     x = "resources/extras/ul.mp3"
