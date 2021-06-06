@@ -31,7 +31,7 @@ async def _(event):
     await event.edit("**Changing Profile to Offline...**")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
- 
+
     photo = "donottouch.jpg"
     if photo:
         file = await event.client.upload_file(photo)
