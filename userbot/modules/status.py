@@ -4,6 +4,7 @@ import urllib
 from telethon.tl import functions
 from userbot.events import register
 from userbot import CMD_HELP, bot
+from userbot import TEMP_DOWNLOAD_DIRECTORY
 
 
 OFFLINE_TAG = "#OFFLINE"
@@ -56,7 +57,7 @@ async def _(event):
         await event.edit(str(e))
 
 
-@register(outgoing=True, pattern="^.online(?: |$)(.*)")
+@register(outgoing=True, pattern="^.unoff(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -101,7 +102,7 @@ CMD_HELP.update(
     {
         "mystatus": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.offline`\
          \n↳ : `Add an offline tag in your name and change profile pic to black`\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.online`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.unoff`\
          \n↳ : `Remove Offline Tag from your name and change profile pic to vars PROFILE_IMAGE.`"
     }
 )
