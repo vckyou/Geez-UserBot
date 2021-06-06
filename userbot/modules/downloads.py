@@ -1,8 +1,6 @@
 import json
 import os
 import random
-from ShazamAPI import Shazam
-from userbot import LOGS
 from lyrics_extractor import SongLyrics as sl
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
@@ -22,7 +20,6 @@ from userbot.events import register
 from userbot import CMD_HELP, ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-
 
 
 @register(outgoing=True, pattern=r"^\.song (.*)")
