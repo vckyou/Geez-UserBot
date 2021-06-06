@@ -6,7 +6,6 @@ wheel
 aiohttp
 aiofiles
 moviepy
-ShazamAPI
 aria2p
 async_generator
 cowpy
