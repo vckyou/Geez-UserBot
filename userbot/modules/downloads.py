@@ -21,42 +21,8 @@ from youtubesearchpython import SearchVideos
 from userbot.events import register
 from userbot import CMD_HELP, ALIVE_NAME
 
-LOGS = logging.getLogger(__name__)
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
-
-@register(outgoing=True, pattern=r"^\.cekjudul (.*)")
-async def _(event):
-    reply = await event.get_reply_message()
-    mediatype = media_type(reply)
-    if not reply or not mediatype or mediatype not in ["Voice", "Audio"]:
-        return await event.edit("__Reply to Voice clip or Audio clip to reverse search that song.__"
-                                )
-    await event.edit("__Downloading the audio clip...__")
-    try:
-        for attr in getattr(reply.document, "attributes", []):
-            if isinstance(attr, types.DocumentAttributeFilename):
-                name = attr.file_name
-        dl = io.FileIO(name, "a")
-        await event.client.fast_download_file(
-            location=reply.document,
-            out=dl,
-        )
-        dl.close()
-        mp3_fileto_recognize = open(name, "rb").read()
-        shazam = Shazam(mp3_fileto_recognize)
-        recognize_generator = shazam.recognizeSong()
-        track = next(recognize_generator)[1]["track"]
-    except Exception as e:
-        LOGS.error(e)
-        return await event.edit(f"**Error while reverse searching song:**\n__{str(e)}__"
-                                )
-    image = track["images"]["background"]
-    song = track["share"]["subject"]
-    await event.client.send_file(
-        event.chat_id, image, caption=f"**Song:** `{song}`", reply_to=reply
-    )
-    await event.delete()
 
 
 @register(outgoing=True, pattern=r"^\.song (.*)")
