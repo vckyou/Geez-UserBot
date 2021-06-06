@@ -1,3 +1,7 @@
+# Credits By @VckyouuBitch From Geez - Project
+# BUATLO NI ANAK ANAK ANJING KALO NGAMBIL MODUL DENGAN HAPUS CREDITS.
+# INTINYA LO ANJING!!!!!!
+
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
