@@ -7,7 +7,7 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern="^.getaudio(?: |$)(.*)")
-async def daudtoid(event):
+async def _(event):
     ureply = await event.get_reply_message()
     if not (ureply and ("audio" in ureply.document.mime_type)):
         await event.edit("`Reply To Audio Only..`")
@@ -20,7 +20,7 @@ async def daudtoid(event):
 
 
 @register(outgoing=True, pattern="^.addaudio(?: |$)(.*)")
-async def adaudroid(event):
+async def _(event):
     ureply = await event.get_reply_message()
     if not (ureply and ("video" in ureply.document.mime_type)):
         await event.edit("`Reply To Gif/Video In which u want to add audio.`")
