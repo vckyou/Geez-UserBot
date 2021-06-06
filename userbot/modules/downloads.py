@@ -2,7 +2,7 @@ import json
 import os
 import random
 from ShazamAPI import Shazam
-from userbot import bot, LOGS
+from userbot import LOGS
 from lyrics_extractor import SongLyrics as sl
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
