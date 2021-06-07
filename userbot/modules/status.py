@@ -17,7 +17,7 @@ from userbot import TEMP_DOWNLOAD_DIRECTORY
 OFFLINE_TAG = f"{ALIVE_NAME} #OFFLINE"
 ONLINE_TAG = f"{ALIVE_NAME} #ONLINE"
 PROFILE_IMAGE = os.environ.get(
-    "PROFILE_IMAGE", ""
+    "PROFILE_IMAGE", "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg"
 )
 
 
@@ -35,10 +35,10 @@ async def _(event):
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     urllib.request.urlretrieve(
-    "donottouch.jpg"
-   )
-   photo = "donottouch.jpg"
-   if photo:
+        "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg", "donottouch.jpg"
+    )
+    photo = "donottouch.jpg"
+    if photo:
         file = await event.client.upload_file(photo)
         try:
             await bot(functions.photos.UploadProfilePhotoRequest(file))
