@@ -1,3 +1,7 @@
+#Credits By @VckyouuBitch From Geez-Project
+#Tolong Haragai ya:)
+#Kalo emg Bisa Menghargai seseorang pasti pahamm la
+
 import os
 
 import moviepy.editor as m
