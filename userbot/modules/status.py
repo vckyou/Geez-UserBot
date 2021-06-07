@@ -16,6 +16,9 @@ from userbot import TEMP_DOWNLOAD_DIRECTORY
 
 OFFLINE_TAG = f"{ALIVE_NAME} #OFFLINE"
 ONLINE_TAG = f"{ALIVE_NAME} #ONLINE"
+PROFILE_IMAGE = os.environ.get(
+    "PROFILE_IMAGE", ""
+)
 
 
 @register(outgoing=True, pattern="^.offline(?: |$)(.*)")
@@ -31,6 +34,9 @@ async def _(event):
     await event.edit("**Changing Profile to Offline...**")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
+urllib.request.urlretrieve(
+        "donottouch.jpg"
+    )
 
     photo = "donottouch.jpg"
     if photo:
@@ -72,7 +78,7 @@ async def _(event):
         return
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
-    urllib.request.urlretrieve("donottouch.jpg")
+    urllib.request.urlretrieve(PROFILE_IMAGE, "donottouch.jpg")
     photo = "donottouch.jpg"
     if photo:
         file = await event.client.upload_file(photo)
