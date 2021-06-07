@@ -402,7 +402,7 @@ async def _(event):
         await event.client(EditBannedRequest(peer_id, reply.from_id, lock_rights))
         await event.edit(f"`Unlocked {locktype} for this user !!`")
     except BaseException as e:
-        await event.edit(f"`Do I have proper rights for that ??`\n\n**Error:** `{str(e)}`",time=5)
+        await event.edit(f"`Do I have proper rights for that ??`\n\n**Error:** `{str(e)}`", time=5)
 
 CMD_HELP.update({
     "plock":
