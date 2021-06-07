@@ -6,7 +6,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.getaudio(?: |$)(.*)")
+@register(outgoing=True, pattern="^.getaudio(?: |$)(.*)", disable_errors=True)
 async def _(event):
     ureply = await event.get_reply_message()
     if not (ureply and ("audio" in ureply.document.mime_type)):
@@ -19,21 +19,21 @@ async def _(event):
     await event.edit("`Done.. Now reply to video In which u want to add that Audio`")
 
 
-@register(outgoing=True, pattern="^.addaudio(?: |$)(.*)")
+@register(outgoing=True, pattern="^.addaudio(?: |$)(.*)", disable_errors=True)
 async def _(event):
     ureply = await event.get_reply_message()
     if not (ureply and ("video" in ureply.document.mime_type)):
         await event.edit("`Reply To Gif/Video In which u want to add audio.`")
         return
-    await event.edit("`processing...`")
-    gezza = await ureply.download_media()
-    ls = os.path.join("resources/extras")
+    xx = await event.edit("`processing...`")
+    ultt = await ureply.download_media()
+    ls = os.listdir("resources/extras")
     z = "ul.mp3"
     x = "resources/extras/ul.mp3"
     if z not in ls:
         await event.edit("`First reply an audio with .aw`")
         return
-    video = m.VideoFileClip(gezza)
+    video = m.VideoFileClip(ultt)
     audio = m.AudioFileClip(x)
     out = video.set_audio(audio)
     out.write_videofile("ok.mp4", fps=30)
@@ -45,9 +45,8 @@ async def _(event):
     )
     os.remove("ok.mp4")
     os.remove(x)
-    os.remove(gezza)
-    await event.delete()
-
+    os.remove(ultt)
+    await xx.delete()
 
 CMD_HELP.update(
     {
