@@ -1,7 +1,7 @@
-#Credits By @VckyouuBitch From Geez-Project
-#Tolong Haragai ya:)
-#Kalo emg Bisa Menghargai seseorang pasti pahamm la ya:)
-#Credits © Geez - Projects
+# Credits By @VckyouuBitch From Geez-Project
+# Tolong Haragai ya:)
+# Kalo emg Bisa Menghargai seseorang pasti pahamm la ya:)
+# Credits © Geez - Projects
 
 import os
 
