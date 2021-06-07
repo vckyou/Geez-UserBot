@@ -77,8 +77,8 @@ async def _(event):
         await asyncio.sleep(t)
 
 CMD_HELP.update({
-   "fakeaction":
-   "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ftyping` <jumlah teks>\
+    "fakeaction":
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ftyping` <jumlah teks>\
    \nUsage : Seakan akan sedang mengetik padahal tidak\
    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.faudio` <jumlah teks>\
    \nUsage : Berfungsi sama seperti ftyping tapi ini dalam bentuk fake audio\
