@@ -35,9 +35,8 @@ async def _(event):
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
 urllib.request.urlretrieve(
-    "donottouch.jpg"
-)
-
+    "", "donottouch.jpg"
+  )
   photo = "donottouch.jpg"
    if photo:
         file = await event.client.upload_file(photo)
