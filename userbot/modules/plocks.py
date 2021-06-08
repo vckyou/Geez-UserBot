@@ -1,6 +1,5 @@
 import base64
 
-from telethon import functions
 from userbot.utils.tools import is_admin
 from telethon.tl.functions.channels import EditBannedRequest, GetParticipantRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
@@ -19,7 +18,7 @@ async def _(event):  # sourcery no-metrics
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
     result = await event.client(GetParticipantRequest(peer_id, reply.from_id)
-    )
+                                )
     admincheck = await is_admin(event.client, peer_id, reply.from_id)
     if admincheck:
         return await event.edit("`This user is admin you cant play with him`")
@@ -214,7 +213,7 @@ async def _(event):  # sourcery no-metrics
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
     result = await event.client(GetParticipantRequest(peer_id, reply.from_id)
-    )
+                                )
     admincheck = await is_admin(event.client, peer_id, reply.from_id)
     if admincheck:
         return await event.edit("`This user is admin you cant play with him`")
