@@ -2,7 +2,7 @@ import base64
 
 from telethon import functions
 from userbot.utils.tools import is_admin
-from telethon.tl.functions.channels import EditBannedRequest
+from telethon.tl.functions.channels import EditBannedRequest, GetParticipantRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
 
@@ -18,8 +18,7 @@ async def _(event):  # sourcery no-metrics
     peer_id = event.chat_id
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
-    result = await event.client(
-        functions.channels.GetParticipantRequest(peer_id, reply.from_id)
+    result = await event.client(GetParticipantRequest(peer_id, reply.from_id)
     )
     admincheck = await is_admin(event.client, peer_id, reply.from_id)
     if admincheck:
@@ -210,12 +209,11 @@ async def _(event):  # sourcery no-metrics
           groups_only=True, disable_errors=True)
 async def _(event):  # sourcery no-metrics
     "To unlock the given permission for replied person only."
-    input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match.group(1).lower()
     peer_id = event.chat_id
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
-    result = await event.client(
-        functions.channels.GetParticipantRequest(peer_id, reply.from_id)
+    result = await event.client(GetParticipantRequest(peer_id, reply.from_id)
     )
     admincheck = await is_admin(event.client, peer_id, reply.from_id)
     if admincheck:
