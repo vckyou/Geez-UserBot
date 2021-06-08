@@ -1,5 +1,4 @@
 wheel
-carbonnow
 aiohttp[speedups]>=3.5.4
 aiofiles
 aria2p
@@ -101,3 +100,4 @@ scikit-image
 pendulum
 opencv-python
 youtube-search-python
+carbonnow
