@@ -19,9 +19,9 @@ async def _(event):  # sourcery no-metrics
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
     result = await event.client(
-        functions.channels.GetParticipantRequest(peer_id, reply.from_id)
+        functions.channels.GetParticipantRequest(peer=peer_id, reply.from_id)
     )
-    admincheck = await is_admin(event.client, peer_id, reply.from_id)
+    admincheck = await event.client.is_admin(peer=peer_id, reply.from_id)
     if admincheck:
         return await event.edit("`This user is admin you cant play with him`")
     cat = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
