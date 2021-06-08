@@ -14,7 +14,7 @@ from userbot import CMD_HELP
           groups_only=True, disable_errors=True)
 async def _(event):  # sourcery no-metrics
     "To lock the given permission for replied person only."
-    input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match.group(1).lower()
     peer_id = event.chat_id
     reply = await event.get_reply_message()
     chat_per = (await event.get_chat()).default_banned_rights
