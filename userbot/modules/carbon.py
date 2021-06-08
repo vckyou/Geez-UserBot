@@ -1,5 +1,5 @@
-#Port By @VckyouuBitch From Geez - Projects
-#Credits © Geez - Projects
+# Port By @VckyouuBitch From Geez - Projects
+# Credits © Geez - Projects
 import os
 import random
 
