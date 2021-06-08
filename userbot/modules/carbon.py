@@ -160,7 +160,7 @@ all_col = [
 ]
 
 
-@register(outgoing=True, pattern=r"^\.(carbon)$")
+@register(outgoing=True, pattern=r"^\.carbon")
 async def crbn(event):
     xxxx = await event.edit(get_string("com_1"))
     if event.reply_to_msg_id:
@@ -187,7 +187,7 @@ async def crbn(event):
     os.remove(xx)
 
 
-@register(outgoing=True, pattern=r"^\.(rcarbon)$")
+@register(outgoing=True, pattern=r"^\.rcarbon$")
 async def crbn(event):
     xxxx = await event.edit("Processing")
     if event.reply_to_msg_id:
