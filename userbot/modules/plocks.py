@@ -2,7 +2,6 @@ import base64
 
 from telethon import functions
 from userbot.utils.tools import is_admin
-from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
