@@ -5,7 +5,7 @@ import random
 
 from carbonnow import Carbon
 
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP, ALIVE_NAME, bot
 from userbot.events import register
 
 all_col = [
@@ -181,7 +181,7 @@ async def crbn(event):
     await bot.send_file(
         event.chat_id,
         xx,
-        caption=f"Carbonised by [{OWNER_NAME}](tg://user?id={OWNER_ID})",
+        caption=f"Carbonised by [{ALIVE_NAME}](tg://user?id={user_id})",
         force_document=True,
     )
     os.remove(xx)
@@ -209,7 +209,7 @@ async def crbn(event):
     await bot.send_file(
         event.chat_id,
         xx,
-        caption=f"Carbonised by [{OWNER_NAME}](tg://user?id={OWNER_ID})",
+        caption=f"Carbonised by [{ALIVE_NAME}](tg://user?id={user_id})",
         force_document=True,
     )
     os.remove(xx)
