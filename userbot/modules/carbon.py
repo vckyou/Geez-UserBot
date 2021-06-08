@@ -217,7 +217,7 @@ async def crbn(event):
 
 CMD_HELP.update(
     {
-        "carbon": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.carbon` <text/reply to msg/reply to document>\
+        "karbon": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.carbon` <text/reply to msg/reply to document>\
          \n↳ : `Carbonise the text with default settings.`\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.rcarbon` <text/reply to msg/reply to document>\
          \n↳ : `Carbonise the text, with random bg colours`"
