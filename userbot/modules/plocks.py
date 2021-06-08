@@ -2,6 +2,7 @@ import base64
 
 from telethon import functions
 from userbot.utils.tools import is_admin
+from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
@@ -11,7 +12,7 @@ from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.plock(?: |$)(.*)",
-          groups_only=True, disable_errors=True)
+          groups_only=True)
 async def _(event):  # sourcery no-metrics
     "To lock the given permission for replied person only."
     input_str = event.pattern_match.group(1).lower()
@@ -21,7 +22,7 @@ async def _(event):  # sourcery no-metrics
     result = await event.client(
         functions.channels.GetParticipantRequest(peer_id, reply.from_id)
     )
-    admincheck = await event.client.is_admin(peer_id, reply.from_id)
+    admincheck = await is_admin(event.client, peer_id, reply.from_id)
     if admincheck:
         return await event.edit("`This user is admin you cant play with him`")
     cat = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
