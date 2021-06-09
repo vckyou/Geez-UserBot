@@ -13,7 +13,7 @@
 </p>  
 
 # GAL-EBOT
-![GALE-BOT Logo](https://telegra.ph/file/a4a7bbda065cd5ff2202e.jpg)
+![GALE-BOT Logo](https://telegra.ph/file/7544a48bc241a3e98e1c0.jpg)
 
 <h3 align="center">Repo Yang Terbentuk Dari Hasil Kegabutan</h3>
 <p align="center">&nbsp;</p>
