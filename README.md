@@ -12,13 +12,13 @@
   </a>
 </p>  
 
-# GAL-EBOT
-![GALE-BOT Logo](https://telegra.ph/file/7544a48bc241a3e98e1c0.jpg)
+# Gal-eusbt
+![Gal-eusbt Logo](https://telegra.ph/file/7544a48bc241a3e98e1c0.jpg)
 
 <h3 align="center">Repo Yang Terbentuk Dari Hasil Kegabutan</h3>
 <p align="center">&nbsp;</p>
 
-### Repo GAL-EBOT
+### Repo Gal-eusbt
 Repo Yang Dibuat [Gale](https://t.me/gstwne) Yang Ter-Inspirasi Dari Repo Userbot Github 
 
 
@@ -42,10 +42,10 @@ Repo Yang Dibuat [Gale](https://t.me/gstwne) Yang Ter-Inspirasi Dari Repo Userbo
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
 Atau Bisa tanyakan Kepada Owner Jika mengalami Kesulitan [TEKAN DISINI](https://t.me/gstwne)
-## <p align="center">DEPLOY GAL-EBOT</p>
+## <p align="center">DEPLOY Gal-eusbt</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/galeinst/GAL-EBOT/tree/GAL-EBOT"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-orange?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/galeinst/Gal-eusbt/tree/Gal-eusbt"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Pornhub-orange?style=flat&logo=PornHub" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
