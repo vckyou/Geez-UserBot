@@ -3,7 +3,7 @@ import asyncio
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import quote_plus
-from userbot import CHROME_DRIVER, CHROME_BIN, CMD_HELP
+from userbot import CHROME_DRIVER, GOOGLE_CHROME_BIN, CMD_HELP
 from userbot.events import register
 
 
@@ -27,7 +27,7 @@ async def carbon_api(event):
     url = CARBON.format(code=code, lang=CARBONLANG)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    chrome_options.binary_location = CHROME_BIN
+    chrome_options.binary_location = GOOGLE_CHROME_BIN
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
@@ -72,6 +72,6 @@ async def carbon_api(event):
 
 CMD_HELP.update({
     "carbon":
-    "`.carbon`value <values=1,2,3,4,5>\
-        \nUsage:reply or type .carbon1 or 2,3,4,5 value and beautify your text."
+    "`.carbon`\
+        \nUsage:reply or type."
 })
