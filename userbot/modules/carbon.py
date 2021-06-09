@@ -10,7 +10,7 @@ from userbot.events import register
 CARBONLANG = "auto"
 
 
-@register(outgoing=True, pattern="^.crblang (.*)")
+@register(outgoing=True, pattern="^.carbon (.*)")
 async def carbon_api(event):
     """A Wrapper for carbon.now.sh"""
     await event.edit("`Processing..`")
@@ -24,6 +24,8 @@ async def carbon_api(event):
     pcode = deEmojify(pcode)
     code = quote_plus(pcode)
     await event.edit("`Carbonizing...\n25%`")
+    if os.path.isfile("/root/userbot/.bin/carbon.png"):
+        os.remove("/root/userbot/.bin/carbon.png")
     url = CARBON.format(code=code, lang=CARBONLANG)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -32,7 +34,7 @@ async def carbon_api(event):
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
-    prefs = {"download.default_directory": "./"}
+    prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
     driver = webdriver.Chrome(
         executable_path=CHROME_DRIVER, options=chrome_options
