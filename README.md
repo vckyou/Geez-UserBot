@@ -22,7 +22,7 @@
 </p>
 <p align="justify">
 <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
-<img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.4-white?style=for-the-badge&logo=appveyor"/>
+<img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.5-white?style=for-the-badge&logo=appveyor"/>
 </p>
 <p align="left">
 </p>
@@ -53,12 +53,13 @@
 
  🙏 **THANK YOU VERY MUCH FOR**
 
-*   [X_iMFiNe](https://github.com/ximfine/xBot-Remix) - xBot-Remix
-*   [Koala](https://github.com/ManusiaRakitan/Kampang-Bot) - Kampang-Bot
-*   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
-*   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
-*   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
-*   [sandy1709](https://github.com/sandy1709/catuserbot) CatUserbot
+*   [VCKYOU](https://github.com/Vckyou/Geez-Project)    Geez - Project
+*   [X_iMFiNe](https://github.com/ximfine/xBot-Remix)    XBOT-REMIX
+*   [Koala](https://github.com/ManusiaRakitan/Kampang-Bot)    Kampang - Bot
+*   [RaphielGang](https://github.com/RaphielGang)    Telegram - Paperplane
+*   [AvinashReddy3108](https://github.com/AvinashReddy3108)    PaperplaneExtended
+*   [TeamUserge](https://github.com/UsergeTeam/Userge)    Userge
+*   [sandy1709](https://github.com/sandy1709/catuserbot)    CatUserbot
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
