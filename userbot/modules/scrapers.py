@@ -21,6 +21,7 @@ from re import findall
 from re import match
 from urllib.error import HTTPError
 from random import choice
+from urllib.parse import quote_plus
 from requests import get, post, exceptions
 from humanize import naturalsize
 
@@ -54,6 +55,7 @@ from userbot import (
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
+    IMG_LIMIT,
     TEMP_DOWNLOAD_DIRECTORY,
     WOLFRAM_ID,
     LOGS,
