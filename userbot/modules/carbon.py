@@ -39,7 +39,7 @@ async def carbon_api(event):
     )
     driver.get(url)
     await geez.edit("`Be Patient...\n50%`")
-    download_path = "'/root/userbot/.bin'"
+    download_path = "/root/userbot/.bin"
     driver.command_executor._commands["send_command"] = (
         "POST",
         "/session/$sessionId/chromium/send_command",
@@ -55,7 +55,7 @@ async def carbon_api(event):
 
     await asyncio.sleep(2)
     await event.edit("`Processing Done...\n100%`")
-    file = "'/root/userbot/.bin/carbon.png'"
+    file = "/root/userbot/.bin/carbon.png"
     await event.edit("`Uploading..`")
     await event.client.send_file(
         event.chat_id,
@@ -64,7 +64,7 @@ async def carbon_api(event):
         force_document=True,
         reply_to=event.message.reply_to_msg_id,
     )
-    os.remove("'/root/userbot/.bin/carbon.png'")
+    os.remove("/root/userbot/.bin/carbon.png")
     driver.quit()
 
     await geez.delete()
