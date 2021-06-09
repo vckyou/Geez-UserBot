@@ -143,6 +143,7 @@ if REDIS_URI and REDIS_PASSWORD:
         )
 
 # Chrome Driver and Headless Google Chrome Binaries
+CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
 GOOGLE_CHROME_BIN = os.environ.get(
     "GOOGLE_CHROME_BIN") or "/usr/bin/google-chrome"
