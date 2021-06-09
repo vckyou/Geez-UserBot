@@ -45,7 +45,7 @@ Atau Bisa tanyakan Kepada Owner Jika mengalami Kesulitan [TEKAN DISINI](https://
 ## <p align="center">DEPLOY GAL-EBOT</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/galeinst/GAL-EBOT/tree/GAL-EBOT"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/galeinst/GAL-EBOT/tree/GAL-EBOT"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-orange?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
@@ -66,4 +66,5 @@ TERIMAKASIH UNTUK
 *   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
 *   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
 *   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
+*   [vckyou](https://github.com/vckyou/Geez-UserBot) - Geez-Userbot
 *   DAN BANYAK LAGI 
