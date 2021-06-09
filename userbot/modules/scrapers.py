@@ -1,9 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
 import asyncio
 import json
 import os
@@ -20,6 +14,7 @@ from barcode.writer import ImageWriter
 from re import findall
 from re import match
 from urllib.error import HTTPError
+from urllib.parse import quote_plus
 from random import choice
 from requests import get, post, exceptions
 from humanize import naturalsize
@@ -54,6 +49,7 @@ from userbot import (
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
+    IMG_LIMIT,
     TEMP_DOWNLOAD_DIRECTORY,
     WOLFRAM_ID,
     LOGS,
@@ -106,10 +102,63 @@ DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
 
 
-@register(outgoing=True, pattern=r"^\.img (.*)")
+@register(outgoing=True, pattern=r"^\.crblang (.*)")
+async def setlang(prog):
+    global CARBONLANG
+    CARBONLANG = prog.pattern_match.group(1)
+    await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
+
+
+@register(outgoing=True, pattern=r"^\.carbon")
+async def carbon_api(e):
+    await e.edit("`Processing...`")
+    CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
+    global CARBONLANG
+    textx = await e.get_reply_message()
+    pcode = e.text
+    if pcode[8:]:
+        pcode = str(pcode[8:])
+    elif textx:
+        pcode = str(textx.message)  # Importing message to module
+    code = quote_plus(pcode)  # Converting to urlencoded
+    await e.edit("`Processing...\n25%`")
+    file_path = TEMP_DOWNLOAD_DIRECTORY + "carbon.png"
+    if os.path.isfile(file_path):
+        os.remove(file_path)
+    url = CARBON.format(code=code, lang=CARBONLANG)
+    driver = await chrome()
+    driver.get(url)
+    await e.edit("`Processing...\n50%`")
+    driver.find_element_by_xpath("//button[@id='export-menu']").click()
+    driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
+    driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
+    await e.edit("`Processing...\n75%`")
+    # Waiting for downloading
+    while not os.path.isfile(file_path):
+        await sleep(0.5)
+    await e.edit("`Processing...\n100%`")
+    await e.edit("`Uploading...`")
+    await e.client.send_file(
+        e.chat_id,
+        file_path,
+        caption=(
+            "Made using [Carbon](https://carbon.now.sh/about/),"
+            "\na project by [Dawn Labs](https://dawnlabs.io/)"
+        ),
+        force_document=True,
+        reply_to=e.message.reply_to_msg_id,
+    )
+
+    os.remove(file_path)
+    driver.quit()
+    # Removing carbon.png after uploading
+    await e.delete()  # Deleting msg
+
+
+@register(outgoing=True, pattern="^.img (.*)")
 async def img_sampler(event):
     """ For .img command, search and return images matching the query. """
-    await event.edit("`Processing Memuat Foto Yang Anda Pilih.`")
+    await event.edit("`Sabar ya.. Sedang Mencari Gambar Yang Anda Cari...`")
     query = event.pattern_match.group(1)
     lim = findall(r"lim=\d+", query)
     try:
@@ -125,15 +174,14 @@ async def img_sampler(event):
         "keywords": query,
         "limit": lim,
         "format": "jpg",
-        "no_directory": "no_directory",
+        "no_directory": "no_directory"
     }
 
     # passing the arguments to the function
     paths = response.download(arguments)
     lst = paths[0][query]
     await event.client.send_file(
-        await event.client.get_input_entity(event.chat_id), lst
-    )
+        await event.client.get_input_entity(event.chat_id), lst)
     shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
     await event.delete()
 
@@ -1427,6 +1475,13 @@ CMD_HELP.update(
     {
         "currency": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.currency <amount> <from> <to>`\
          \n↳ : Converts various currencies for you."
+    }
+)
+CMD_HELP.update(
+    {
+        "carbon2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.carbon <text> [or reply messages]`\
+         \n↳ : Beautify your code using carbon.now.sh\
+         \n**How to Use** > `.crblang` <text> to set language for your code."
     }
 )
 CMD_HELP.update(
