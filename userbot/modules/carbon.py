@@ -23,7 +23,7 @@ async def carbon_api(event):
         pcode = str(textx.message)
     pcode = deEmojify(pcode)
     code = quote_plus(pcode)
-    geez = await event.edit("`Carbonizing...\n25%`")
+    await event.edit("`Carbonizing...\n25%`")
     url = CARBON.format(code=code, lang=CARBONLANG)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -38,7 +38,7 @@ async def carbon_api(event):
         executable_path=CHROME_DRIVER, options=chrome_options
     )
     driver.get(url)
-    await geez.edit("`Be Patient...\n50%`")
+    await event.edit("`Be Patient...\n50%`")
     download_path = "/root/userbot/.bin"
     driver.command_executor._commands["send_command"] = (
         "POST",
@@ -67,7 +67,7 @@ async def carbon_api(event):
     os.remove("/root/userbot/.bin/carbon.png")
     driver.quit()
 
-    await geez.delete()
+    await event.delete()
 
 
 CMD_HELP.update({
