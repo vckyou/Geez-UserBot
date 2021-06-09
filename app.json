@@ -1,7 +1,7 @@
 {
-  "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-  "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "",
+  "name": "࿗ Gal-eusbt ࿗",
+  "description": "࿗Gal-eusbt࿗ Userbot Untuk bersenang-senang di telegram.",
+  "logo": "https://telegra.ph/file/7544a48bc241a3e98e1c0.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Vckyou/Geez-UserBot",
-  "telegram": "https://t.me/VckyouuBitch",
-  "success_url": "https://t.me/CariTemanRandom",
+  "repository": "https://github.com/galeinst/Gal-eusbt",
+  "telegram": "https://t.me/gstwne",
+  "success_url": "https://t.me/familyeufro",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -42,12 +42,12 @@
     },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001234567890",
+      "value": "Isi ID Grup lu cok, Contoh -1001234567890",
       "required": true
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001234567890",
+      "value": "Isi ID Grup lu cok, Contoh -1001234567890",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
@@ -169,19 +169,19 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "unknown",
+      "value": "Gal-eusbt",
       "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "GEEZ_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .gezza (Isi Terserah)",
+    "Gal-e_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .gl (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
+      "description": "Nama Sticker lu cok",
       "required": false
     },
     "G_DRIVE_DATA": {
@@ -202,7 +202,7 @@
       "required": false
     },
     "UB_BLACK_LIST_CHAT": {
-      "description": "Isi Apa Aja",
+      "description": "Isi apa aja dah",
       "required": false
     },
     "LYDIA_API_KEY": {
@@ -210,7 +210,7 @@
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "Set the default city for the userbot's weather module.",
+      "description": "Set Cuaca Di kota lu cok.",
       "value": "Tangerang",
       "required": false
     },
