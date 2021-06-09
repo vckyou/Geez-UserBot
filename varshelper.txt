@@ -48,6 +48,7 @@ REM_BG_API_KEY =
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_DRIVER = no need to change this value
 GOOGLE_CHROME_BIN = no need to change this value
+CHROME_BIN = no need to change this value
 
 # OpenWeatherMap API Key
 OPEN_WEATHER_MAP_APPID = 
