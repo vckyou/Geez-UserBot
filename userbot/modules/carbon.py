@@ -3,7 +3,7 @@ import asyncio
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import quote_plus
-from userbot import CHROME_DRIVER, CMD_HELP
+from userbot import CHROME_DRIVER, CHROME_BIN, CMD_HELP
 from userbot.events import register
 
 
