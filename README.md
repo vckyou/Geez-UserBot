@@ -1,6 +1,6 @@
 <p align="center"> 🚀 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 🚀</p>
 
-<a href=<a href="https://cooltext.com"><img src="https://images.cooltext.com/5534862.gif" width="368" height="108" alt="Gal-eusbt" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5534862.gif" width="368" height="108" alt="Gal-eusbt" /></a>
 
 <p align="center">
   <a href="https://github.com/Zora24/Lord-Userbot/fork">
