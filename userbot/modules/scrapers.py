@@ -108,7 +108,8 @@ NEKOBIN_URL = "https://nekobin.com/"
 
 @register(outgoing=True, pattern=r"^\.img (.*)")
 async def img_sampler(event):
-    await event.edit("`Processing...`")
+    """ For .img command, search and return images matching the query. """
+    await event.edit("`Processing Memuat Foto Yang Anda Pilih.`")
     query = event.pattern_match.group(1)
     lim = findall(r"lim=\d+", query)
     try:
