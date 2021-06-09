@@ -20,7 +20,6 @@ from barcode.writer import ImageWriter
 from re import findall
 from re import match
 from urllib.error import HTTPError
-from urllib.parse import quote_plus
 from random import choice
 from requests import get, post, exceptions
 from humanize import naturalsize
@@ -55,7 +54,6 @@ from userbot import (
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
-    IMG_LIMIT,
     TEMP_DOWNLOAD_DIRECTORY,
     WOLFRAM_ID,
     LOGS,
@@ -106,7 +104,6 @@ async def ocr_space_file(filename,
 
 DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
-
 
 
 @register(outgoing=True, pattern=r"^\.img (.*)")
