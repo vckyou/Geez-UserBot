@@ -136,7 +136,8 @@ async def carbon_api(e):
     driver = await chrome()
     driver.get(url)
     await e.edit("`Processing...\n50%`")
-    driver.find_element_by_css_selector('[data-cy="quick-export-button"]').click()
+    driver.find_element_by_css_selector(
+        '[data-cy="quick-export-button"]').click()
     await e.edit("`Processing...\n75%`")
     # Waiting for downloading
     while not os.path.isfile(file_path):
