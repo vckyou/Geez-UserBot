@@ -1,6 +1,6 @@
 {
-  "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-  "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "𝙋𝙚𝙣𝙞𝙠𝙢𝙖𝙩 𝙈𝙚𝙢𝙚𝙬",
+  "description": "Bot yang di gunakan untuk mendapatkan para memew.",
   "logo": "",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Vckyou/Geez-UserBot",
-  "telegram": "https://t.me/VckyouuBitch",
-  "success_url": "https://t.me/CariTemanRandom",
+  "repository": "https://github.com/executor99/Geez-UserBot",
+  "telegram": "https://t.me/penjelajahdimensi",
+  "success_url": "https://t.me/thisrevolution",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -23,11 +23,11 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @VckyouuBitch di telegram",
+      "description": "Dapatkan String Season nya",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (makanya baca kontol)",
       "required": true
     },
     "HEROKU_API_KEY": {
