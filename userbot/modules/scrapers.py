@@ -96,22 +96,22 @@ async def ocr_space_file(filename,
         )
     return r.json()
 
-
 DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
 
 
-@register(outgoing=True, pattern=r"^\.crblang (.*)")
+@register(outgoing=True, pattern="^.crblang (.*)")
 async def setlang(prog):
     global CARBONLANG
     CARBONLANG = prog.pattern_match.group(1)
     await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
 
 
-@register(outgoing=True, pattern=r"^\.carbons")
+@register(outgoing=True, pattern="^.carbon")
 async def carbon_api(e):
-    await e.edit("`Processing...`")
-    CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
+    """ A Wrapper for carbon.now.sh """
+    await e.edit("`Processing..`")
+    CARBON = 'https://carbon.now.sh/?l={lang}&code={code}'
     global CARBONLANG
     textx = await e.get_reply_message()
     pcode = e.text
@@ -120,35 +120,54 @@ async def carbon_api(e):
     elif textx:
         pcode = str(textx.message)  # Importing message to module
     code = quote_plus(pcode)  # Converting to urlencoded
-    await e.edit("`Processing...\n25%`")
-    file_path = TEMP_DOWNLOAD_DIRECTORY + "carbon.png"
-    if os.path.isfile(file_path):
-        os.remove(file_path)
+    await e.edit("`Processing..\n25%`")
+    if os.path.isfile("/root/userbot/.bin/carbon.png"):
+        os.remove("/root/userbot/.bin/carbon.png")
     url = CARBON.format(code=code, lang=CARBONLANG)
-    driver = await chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.binary_location = GOOGLE_CHROME_BIN
+    chrome_options.add_argument("--window-size=1920x1080")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-gpu")
+    prefs = {'download.default_directory': '/root/userbot/.bin'}
+    chrome_options.add_experimental_option('prefs', prefs)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
+                              options=chrome_options)
     driver.get(url)
-    await e.edit("`Processing...\n50%`")
-    driver.find_element_by_xpath("//button[@id='export-menu']").click()
-    driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
-    driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-    await e.edit("`Processing...\n75%`")
+    await e.edit("`Processing..\n50%`")
+    download_path = '/root/userbot/.bin'
+    driver.command_executor._commands["send_command"] = (
+        "POST", '/session/$sessionId/chromium/send_command')
+    params = {
+        'cmd': 'Page.setDownloadBehavior',
+        'params': {
+            'behavior': 'allow',
+            'downloadPath': download_path
+        }
+    }
+    driver.execute("send_command", params)
+    driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
+   # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
+   # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
+    await e.edit("`Processing..\n75%`")
     # Waiting for downloading
-    while not os.path.isfile(file_path):
+    while not os.path.isfile("/root/userbot/.bin/carbon.png"):
         await sleep(0.5)
-    await e.edit("`Processing...\n100%`")
-    await e.edit("`Uploading...`")
+    await e.edit("`Processing..\n100%`")
+    file = '/root/userbot/.bin/carbon.png'
+    await e.edit("`Uploading..`")
     await e.client.send_file(
         e.chat_id,
-        file_path,
-        caption=(
-            "Made using [Carbon](https://carbon.now.sh/about/),"
-            "\na project by [Dawn Labs](https://dawnlabs.io/)"
-        ),
+        file,
+        caption="Made using [Carbon](https://carbon.now.sh/about/),\
+        \na project by [Dawn Labs](https://dawnlabs.io/)",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
 
-    os.remove(file_path)
+    os.remove('/root/userbot/.bin/carbon.png')
     driver.quit()
     # Removing carbon.png after uploading
     await e.delete()  # Deleting msg
