@@ -176,7 +176,3 @@ def post_to_telegraph(title, html_format_content):
     )
     return post_page["url"]
 
-
-def deEmojify(inputString: str) -> str:
-    """Remove emojis and other non-safe characters from string"""
-    return get_emoji_regexp().sub("", inputString)
