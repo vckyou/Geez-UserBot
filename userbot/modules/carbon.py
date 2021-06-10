@@ -1,6 +1,7 @@
 import os
 import asyncio
 from selenium import webdriver
+from userbot.utils.tools import deEmojify
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import quote_plus
 from userbot import CHROME_DRIVER, GOOGLE_CHROME_BIN, CMD_HELP
@@ -8,6 +9,11 @@ from userbot.events import register
 
 
 CARBONLANG = "auto"
+
+
+def deEmojify(inputString: str) -> str:
+    """Remove emojis and other non-safe characters from string"""
+    return get_emoji_regexp().sub("", inputString)
 
 
 @register(outgoing=True, pattern="^.carbon (.*)")
