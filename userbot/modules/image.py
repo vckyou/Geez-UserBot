@@ -5,13 +5,7 @@
 from shutil import rmtree
 from userbot.events import register
 from userbot import CMD_HELP
-import requests
-from bs4 import BeautifulSoup as bs
-from PIL import Image
-from search_engine_parser import GoogleSearch
-from search_engine_parser.core.exceptions import NoResultsOrTrafficError as GoglError
 
-from strings import get_string
 
 
 @register(outgoing=True, pattern="^.img (.*)")
