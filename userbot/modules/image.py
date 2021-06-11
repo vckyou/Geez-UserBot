@@ -2,10 +2,9 @@
 # Credits © Geez-Project
 # Ya gitu deh:')
 
-import os
 from shutil import rmtree
 
-import requests
+
 
 @register(outgoing=True, pattern="^.img (.*)")
 async def goimg(event):
