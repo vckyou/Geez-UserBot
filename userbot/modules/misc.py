@@ -87,7 +87,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Geez-Project Repo](https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/README.md)"
+        "\n[⚡ Memew-Project Repo](https://github.com/executor99/Memew-Userbot/blob/Memew-Userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -112,11 +112,11 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭‒─‒──────────‒─‒╮\n"
         "│                   ʀᴇᴘᴏ\n"
-        "│       [⚡Geez-Project⚡](https://github.com/Vckyou/Geez-UserBot)\n"
+        "│       [⚡Memew-Project⚡](https://github.com/executor/Memew-Userbot)\n"
         "├‒─‒──────────‒─‒╯\n"
-        "│🔰 **ᴏᴡɴᴇʀ :** [Geez](t.me/VckyouuBitch)\n"
+        "│🔰 **ᴏᴡɴᴇʀ :** [Memew](t.me/penjelajahdimensi)\n"
         "╰‒─‒──────────‒─‒╯\n"
-        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE)"
+        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/executor99/Memew-Userbot/blob/Memew-Userbot/LICENSE)"
     )
 
 
