@@ -5,6 +5,7 @@
 from shutil import rmtree
 from userbot.events import register
 from userbot import CMD_HELP
+from userbot.utils import chrome, googleimagesdownload, progress, options
 
 
 
@@ -18,7 +19,7 @@ async def goimg(event):
         try:
             lmt = int(query.split(";")[1])
             query = query.split(";")[0]
-        except BaseException:
+        except BaseExceptaion:
             lmt = 5
     else:
         lmt = 5
