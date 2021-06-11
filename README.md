@@ -1,24 +1,24 @@
-<p align="center"> 🚀 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 🚀</p>
+<p align="center"> 🚀 𝗠𝗲𝗺𝗲𝘄 𝟲𝟵 🚀</p>
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
+  <a href="https://github.com/executor99/Memew-Userbot/fork"><img src="https://img.shields.io/github/forks/executor/Memew-Userbot?label=Fork&style=social"></a>
   </p>
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot"><img src="https://img.shields.io/github/stars/vckyou/Geez-UserBot?style=social"></a>
+  <a href="https://github.com/executor99/Memew-Userbot"><img src="https://img.shields.io/github/stars/executor99/Memew-Userbot?style=social"></a>
   </p>
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE"><img src="https://img.shields.io/github/license/vckyou/Geez-UserBot?&style=social&logo=github">
+  <a href="https://github.com/executor99/Memew-Userbot/blob/Memew-Userbot/LICENSE"><img src="https://img.shields.io/github/license/executor99/Memew-Userbot?&style=social&logo=github">
   </a></p>
 
 ![VIEWS](https://komarev.com/ghpvc/?username=vckyou)
-![Repo Size](https://img.shields.io/github/repo-size/vckyou/Geez-UserBot?&style=plastic&logo=github)
-[![GitHub issues](https://img.shields.io/github/issues/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/issues)
+![Repo Size](https://img.shields.io/github/repo-size/executor99/Memew-Userbot?&style=plastic&logo=github)
+[![GitHub issues](https://img.shields.io/github/issues/executor99/Memew-Userbot?&style=plastic&logo=github)](https://github.com/executor/Memew-Userbot/issues)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/graphs/commit-activity)
-[![GitHub contributors](https://img.shields.io/github/contributors/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://GitHub.com/vckyou/Geez-UserBot/graphs/contributors/)
-[![PR Open](https://img.shields.io/github/issues-pr/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/Vckyou/Geez-UserBot/pulls)
-[![PR Closed](https://img.shields.io/github/issues-pr-closed/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://github.com/vckyou/Geez-UserBot/pulls?q=is:closed)
+[![GitHub contributors](https://img.shields.io/github/contributors/vckyou/Geez-UserBot?&style=plastic&logo=github)](https://GitHub.com/executor/Memew-Userbot/graphs/contributors/)
+[![PR Open](https://img.shields.io/github/issues-pr/executor99/Memew-Userbot?&style=plastic&logo=github)](https://github.com/executor99/Memew-Userbot/pulls)
+[![PR Closed](https://img.shields.io/github/issues-pr-closed/executor99/Memew-Userbot?&style=plastic&logo=github)](https://github.com/executor/Memew-Userbot/pulls?q=is:closed)
 <p align="justify">
-<a href="https://github.com/vckyou/Geez-UserBot/commits/Geez-UserBot"><img src="https://img.shields.io/github/last-commit/vckyou/Geez-UserBot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
-<a href="https://github.com/vckyou/Geez-UserBot/actions/workflows/main.yml"><img src="https://img.shields.io/github/workflow/status/vckyou/Geez-UserBot/CI/Geez-UserBot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
+<a href="https://github.com/executor99/Memew-Userbot/commits/Memew-Userbot"><img src="https://img.shields.io/github/last-commit/executor99/Memew-Userbot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
+<a href="https://github.com/executor99/Memew-Userbot/actions/workflows/main.yml"><img src="https://img.shields.io/github/workflow/status/executor99/Memew-Userbot/CI/Memew-Userbot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
 </p>
 <p align="justify">
 <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
@@ -26,11 +26,11 @@
 </p>
 <p align="left">
 </p>
-<a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
-<a href="https://t.me/VcgSupportGroup"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/thisrevolution"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/joinchat/DvIgnc4IsZk2MTZh"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
-## ⚡Geez-UserBot
-![Geez UserBot](https://telegra.ph/file/9464f116132df37c649c8.png)
+## ⚡Memew-Userbot
+![Memew Userbot](https://telegra.ph/file/b03103cf6165ef4b73943.jpg)
 
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
@@ -44,7 +44,7 @@
 
 ## <p align="center">DEPLOY TO HEROKU</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/executor99/Memew-Userbot/tree/Memew-Userbot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
 
 <br>
 </p>
