@@ -26,7 +26,7 @@ async def _(event):
 
     animation_chars = [
 
-        "Heroku Connecting To Latest Github Build (Vckyou/Geez-UserBot)",
+        "Heroku Connecting To Latest Github Build (executor99/Memew-Userbot)",
         f"Build started by user `{DEFAULTUSER}`",
         f"Deploy `535a74f0` by user `{DEFAULTUSER}`",
         "`Restarting Heroku Server...`",
@@ -43,10 +43,10 @@ async def _(event):
         "telethon.network.mtprotosender -\nINFO - Connecting to 91.108.56.146:443/TcpFull...",
         "telethon.network.mtprotosender -\nINFO - Connection to 91.108.56.146:443/TcpFull complete!",
         "telethon.network.mtprotosender -\nINFO - Received response without parent request",
-        "INFO - Geez-Project: Logged in as 557667062",
-        "INFO - Geez-Project: Successfully...",
-        "919852+00:00 app[worker.1]: 919 - Geez-Project -",
-        "INFO - ⚡ Geez-Project⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
+        "INFO - Memew-Project: Logged in as 557667062",
+        "INFO - Memew-Project: Successfully...",
+        "919852+00:00 app[worker.1]: 919 - Memew-Project -",
+        "INFO - ⚡ Memew-Project⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
         "**Build Succeeded**"
 
     ]
