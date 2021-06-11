@@ -2,9 +2,10 @@
 # Credits © Geez-Project
 # Ya gitu deh:')
 
+import os
 from shutil import rmtree
 
-
+import requests
 
 @register(outgoing=True, pattern="^.img (.*)")
 async def goimg(event):
@@ -32,3 +33,11 @@ async def goimg(event):
     await event.client.send_file(event.chat_id, ann, caption=query, album=True)
     rmtree(f"./downloads/{query}/")
     await geez.delete()
+
+
+CMD_HELP.update(
+    {
+        "images": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.images <search_query>`\
+         \n↳ : Does an image search on Google and shows 5 images."
+    }
+)
