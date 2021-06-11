@@ -178,7 +178,7 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
 
 
-@register(outgoing=True, pattern="^.img (.*)")
+@register(outgoing=True, pattern="^.images (.*)")
 async def img_sampler(event):
     """ For .img command, search and return images matching the query. """
     await event.edit("Mencari Gambar...")
@@ -1490,7 +1490,7 @@ async def make_qr(makeqr):
 
 CMD_HELP.update(
     {
-        "img": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.img <search_query>`\
+        "images": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.images <search_query>`\
          \n↳ : Does an image search on Google and shows 5 images."
     }
 )
