@@ -3,6 +3,8 @@
 # Ya gitu deh:')
 
 from shutil import rmtree
+from userbot.events import register
+from userbot import CMD_HELP, bot
 
 
 
