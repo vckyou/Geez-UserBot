@@ -61,6 +61,7 @@ PyDrive2
 pyDownload
 beautifulsoup4>=4.8.1
 youtube-dl
+youtube_dl
 PyGithub
 bs4
 covid>=2.2.9
