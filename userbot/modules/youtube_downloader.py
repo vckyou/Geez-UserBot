@@ -64,7 +64,7 @@ async def download_from_youtube_(event):
             query = event.text.split(" ", 1)[1]
         except IndexError:
             return await event.edit("Give me a (youtube) search query to download audio from!"
-            )
+                                    )
         xx = await event.edit("`Searching on YouTube...`")
         url = await get_yt_link(query)
         await xx.edit("`Downloading audio song...`")
@@ -83,7 +83,7 @@ async def download_from_youtube_(event):
             query = event.text.split(" ", 1)[1]
         except IndexError:
             return await event.edit("Give me a (youtube) search query to download video from!"
-            )
+                                    )
         xx = await event.edit("`Searching YouTube...`")
         url = await get_yt_link(query)
         await xx.edit("`Downloading video song...`")
