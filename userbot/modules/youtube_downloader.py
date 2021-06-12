@@ -8,9 +8,9 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=".yt(a|v|sa|sv) (.*)")
+@register(outgoing=True, pattern=".yt(a|v|sa|sv) (.*)", disable_errors=True)
 async def download_from_youtube_(event):
-    opt = event.pattern_match.group(1)
+    opt = event.pattern_match.group(1).lower()
     if opt == "a":
         ytd = YoutubeDL(
             {
@@ -22,7 +22,7 @@ async def download_from_youtube_(event):
                 "outtmpl": "%(id)s.mp3",
             }
         )
-        url = event.pattern_match.group(2)
+        url = event.pattern_match.group(2).lower()
         if not url:
             return await event.edit("Give me a (youtube) URL to download audio from!")
         try:
@@ -41,7 +41,7 @@ async def download_from_youtube_(event):
                 "outtmpl": "%(id)s.mp4",
             }
         )
-        url = event.pattern_match.group(2)
+        url = event.pattern_match.group(2).lower()
         if not url:
             return await event.edit("Give me a (youtube) URL to download video from!")
         try:
