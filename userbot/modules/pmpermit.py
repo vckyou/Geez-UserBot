@@ -6,14 +6,10 @@
 """Userbot module for keeping control who PM you."""
 
 import os
-import time
-import asyncio
-import io
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
-from telethon import events, errors, functions, types
 
 from userbot import (
     BOTLOG,
