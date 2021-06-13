@@ -57,3 +57,22 @@ async def _(e):
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
     await e.client.send_message(e.chat_id, xx)
     await e.delete()
+
+
+CMD_HELP.update({
+    'tags':
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags all`"
+    "\n• : Tag Top 100 Members of chat."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags admin`"
+    "\n• : Tag Admins of that chat."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags owner`"
+    "\n• : Tag Owner of that chat."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags bot`"
+    "\n• : Tag Bots of that chat."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags rec`"
+    "\n• : Tag recently Active Members."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags on`"
+    "\n• : Tag online Members(work only if privacy off)."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tags off`"
+    "\n• : Tag Offline Members(work only if privacy off)."
+})
