@@ -70,11 +70,6 @@
       "description": "Get this value from https://genius.com/developers., basically same as GENIUS_API_TOKEN.",
       "required": false
     },
-    "IMG_LIMIT": {
-      "description": "Set limit for .img module",
-      "value": "6",
-      "required": true
-    },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
       "required": false
@@ -177,7 +172,7 @@
       "required": false
     },
     "GEEZ_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .gezza (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .geezalive (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
