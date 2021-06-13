@@ -1,5 +1,5 @@
 # Port By @VckyouuBitch From Geez - Project
-# Copyright © Geez - Project 
+# Copyright © Geez - Project
 # Credits By Ultroid
 
 from telethon.tl.types import ChannelParticipantAdmin as admin
