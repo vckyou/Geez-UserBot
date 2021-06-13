@@ -27,15 +27,15 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "╭┈─╼━━━━━━━━━━━━━━━━━╾─┈╮\n"
+    "╭┈──────────────────────\n"
     "│“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞”\n"
-    "├┈─╼━━━━━━━━━━━━━━━━━╾─┈╯\n"
-    "│❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈❗\n│\n"
+    "├┈────────────────────\n"
+    "│𝗗𝗜𝗟𝗔𝗥𝗔𝗡𝗚 𝗠𝗘𝗟𝗔𝗞𝗨𝗞𝗔𝗡 𝗦𝗣𝗔𝗠𝗠𝗜𝗡𝗚❗\n│\n"
     f"│Karena Saya Akan Otomatis Memblokir\n│Anda, Tunggu Sampai {DEFAULTUSER}\n│Menerima Pesan Anda, Terimakasih.\n"
-    "├┈────────────────────┈─╮\n"
-    "├[○› `AUTOMATIC MESSAGES`\n"
-    f"├[○› `BY` Geez Project\n"
-    "╰┈─┈─┈─┈─┈─┈┈─┈─┈─┈─┈─┈─╯")
+    "├┈──────────────────────\n"
+    "│ ○› `AUTOMATIC MESSAGES`\n"
+    f"│ ○› `BY` Geez Project\n"
+    "╰┈────────────────")
 # =================================================================
 
 
@@ -285,12 +285,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Anda Telah Diblokir Oleh {ALIVE_NAME}!`")
+        await block.edit(f"`Anda Telah Diblokir Oleh!`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`Anda Telah Diblokir Oleh {ALIVE_NAME}`")
+        await block.edit(f"`Anda Telah Diblokir Oleh`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -329,7 +329,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
+        return await cust_msg.edit("**Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True` Atau Ketik `.set var PM_AUTO_BAN True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -398,7 +398,7 @@ async def permitpm(event):
             pm_permit_sql.approve(
                 chats.id, f"`{ALIVE_NAME} Telah Mengirimi Anda Pesan 😯`")
             await borg.send_message(
-                chats, f"**Menerima Pesan!, Pengguna Terdeteksi Adalah {ALIVE_NAME}**"
+                chats, f"**Menerima Pesan!, Pengguna Terdeteksi Adalah {DEFAULTUSER}**"
             )
 
 CMD_HELP.update(
