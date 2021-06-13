@@ -286,12 +286,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Anda Telah Diblokir Oleh!`")
+        await block.edit(f"`Anda Telah Diblokir Oleh {DEFAULTUSER}`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`Anda Telah Diblokir Oleh`")
+        await block.edit(f"`Anda Telah Diblokir Oleh {DEFAULTUSER}`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
