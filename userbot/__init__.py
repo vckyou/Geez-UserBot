@@ -238,10 +238,6 @@ if G_PHOTOS_AUTH_TOKEN_ID:
 # Genius Lyrics  API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 
-# IMG Stuff
-IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
-CMD_HELP = {}
-
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
