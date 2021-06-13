@@ -5,6 +5,7 @@ from telethon.tl.types import InputStickerSetID, InputStickerSetShortName
 from userbot.events import register
 from userbot import CMD_HELP
 
+
 @register(outgoing=True, pattern="^.sspam(?: |$)(.*)")
 async def _(e):
     x = await e.get_reply_message()
