@@ -20,19 +20,8 @@ from userbot import (
     LOGS,
     PM_AUTO_BAN,
     ALIVE_NAME,
-    CUSTOM_PMPERMIT_TEXT,
 )
 from userbot.events import register
-
-
-PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
-if PM_PERMIT_PIC is None:
-    WARN_PIC = "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
-else:
-    WARN_PIC = PM_PERMIT_PIC
-
-COUNT_PM = {}
-LASTMSG = {}
 
 # ========================= CONSTANTS ============================
 
