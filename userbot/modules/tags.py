@@ -1,3 +1,7 @@
+# Port By @VckyouuBitch From Geez - Project
+# Copyright © Geez - Project 
+# Credits By Ultroid
+
 from telethon.tl.types import ChannelParticipantAdmin as admin
 from telethon.tl.types import ChannelParticipantCreator as owner
 from telethon.tl.types import UserStatusOffline as off
