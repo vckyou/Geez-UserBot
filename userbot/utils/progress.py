@@ -20,6 +20,10 @@ import math
 import re
 import time
 
+from telethon.errors.rpcerrorlist import MessageNotModifiedError
+
+from .tools import humanbytes, time_formatter
+from .exceptions import CancelProcess
 
 async def md5(fname: str) -> str:
     hash_md5 = hashlib.md5()
@@ -80,7 +84,7 @@ async def progress(
     if is_cancelled is True:
         raise CancelProcess
 
-    if round(diff % 10.00) == 0 or current == total:
+    if round(diff % 15.00) == 0 or current == total:
         percentage = current * 100 / total
         speed = current / diff
         elapsed_time = round(diff)
@@ -93,8 +97,8 @@ async def progress(
             status = "Unknown"
         progress_str = "`{0}` | `[{1}{2}] {3}%`".format(
             status,
-            "".join(["▰" for i in range(math.floor(percentage / 10))]),
-            "".join(["▱" for i in range(10 - math.floor(percentage / 10))]),
+            "".join(["●" for i in range(math.floor(percentage / 10))]),
+            "".join(["○" for i in range(10 - math.floor(percentage / 10))]),
             round(percentage, 2),
         )
         tmp = (
@@ -104,13 +108,16 @@ async def progress(
             f"**ETA :**` {time_formatter(eta)}`\n"
             f"**Duration :** `{time_formatter(elapsed_time)}`"
         )
-        if file_name:
-            await gdrive.edit(
-                f"**{prog_type}**\n\n"
-                f"**File Name : **`{file_name}`**\nStatus**\n{tmp}"
-            )
-        else:
-            await gdrive.edit(f"**{prog_type}**\n\n" f"**Status**\n{tmp}")
+        try:
+            if file_name:
+                await gdrive.edit(
+                    f"**{prog_type}**\n\n"
+                    f"**Nama File : **`{file_name}`**\nStatus**\n{tmp}"
+                )
+            else:
+                await gdrive.edit(f"**{prog_type}**\n\n" f"**Status**\n{tmp}")
+        except MessageNotModifiedError:
+            pass
 
 
 class CancelProcess(Exception):
