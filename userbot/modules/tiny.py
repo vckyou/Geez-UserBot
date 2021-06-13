@@ -1,3 +1,6 @@
+# Ported By VCKYOU @VckyouuBitch 
+# Fixes By Koala @Manusiarakitann 
+
 from PIL import Image
 import cv2
 import os
@@ -13,7 +16,7 @@ async def _(event):
         return
     xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("geez/geez.png")
+    im1 = Image.open("resources/extra/geez.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
