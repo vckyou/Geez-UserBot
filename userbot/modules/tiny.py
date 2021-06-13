@@ -1,5 +1,5 @@
-# Ported By VCKYOU @VckyouuBitch 
-# Fixes By Koala @Manusiarakitann 
+# Ported By VCKYOU @VckyouuBitch
+# Fixes By Koala @Manusiarakitann
 
 from PIL import Image
 import cv2
