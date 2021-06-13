@@ -25,6 +25,7 @@ from telethon.errors.rpcerrorlist import MessageNotModifiedError
 from .tools import humanbytes, time_formatter
 from .exceptions import CancelProcess
 
+
 async def md5(fname: str) -> str:
     hash_md5 = hashlib.md5()
     with open(fname, "rb") as f:
