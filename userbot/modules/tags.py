@@ -5,7 +5,6 @@ from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
 
-from userbot import CMD_HELP
 from userbot.events import register
 
 
