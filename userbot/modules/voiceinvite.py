@@ -31,7 +31,7 @@ async def _(e):
     for p in yaa:
         try:
             await e.client(invitetovc(call=await get_call(e), users=p))
-            z += 6
+            z = z + 6
         except BaseException:
             pass
     await geez.edit(f"`Invited {z} users`")
