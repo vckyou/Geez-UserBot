@@ -1,6 +1,3 @@
-# Ported By @VckyouuBitch From Geez-Projects
-# Fixes BUGS, HEHE USAHA MEMANG TIDAK MENGHIANATI HASIL:)
-
 from userbot.events import register
 from time import sleep
 
