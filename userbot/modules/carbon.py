@@ -290,7 +290,7 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
 
 
-@register(outgoing=True, pattern=r"^\.carbon5")
+@register(outgoing=True, pattern=r"^\.carbon")
 async def carbon_api(e):
     """A Wrapper for carbon.now.sh"""
     await e.edit("`Processing..`")
@@ -359,8 +359,8 @@ async def carbon_api(e):
 CMD_HELP.update(
     {
         "carbon": "**Plugin : **`carbon`\
-        \n\n  •  **Syntax :** `.carbon` <values=1,2,3,4,5>\
-        \n  •  **Function : **Balas pesan atau ketik .carbon1 atau 2,3,4,5 dan mempercantik teks Anda.\
+        \n\n  •  **Syntax :** `.carbon` <values=1,2,3,4>\
+        \n  •  **Function : **Balas pesan atau ketik .carbon1 atau 2,3,4 dan mempercantik teks Anda.\
     "
     }
 )
