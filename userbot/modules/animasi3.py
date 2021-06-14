@@ -13,7 +13,7 @@ from asyncio import sleep
 from collections import deque
 from random import choice, getrandbits, randint
 
-from userbot import bot, CMD_HELP
+from userbot import bot, CMD_HELP, ALIVE_NAME
 from userbot.events import register
 from userbot.modules.admin import get_user_from_event
 
@@ -1544,7 +1544,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.leave$")
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`❗ Ｇｅｅｚ. Telah Meninggalkan Group...`")
+        await e.edit(f"`❗ {ALIVE_NAME} Telah Meninggalkan Group...`")
 
 
 @register(outgoing=True, pattern=r"^\.fail$")
