@@ -63,19 +63,16 @@ from userbot import (
 )
 
 from userbot.events import register
-from userbot.utils import chrome, googleimagesdownload, progress, options
+from userbot.utils import chrome, googleimagesdownload, options, progress
 
 CARBONLANG = "auto"
-TTS_LANG = "id"
-TRT_LANG = "id"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
 
 
-async def ocr_space_file(filename,
-                         overlay=False,
-                         api_key=OCR_SPACE_API_KEY,
-                         language='eng'):
-    """ OCR.space API request with local file.
+async def ocr_space_file(
+    filename, overlay=False, api_key=OCR_SPACE_API_KEY, language="eng"
+):
+    """OCR.space API request with local file.
         Python3.5 - not tested on 2.7
     :param filename: Your file path & name.
     :param overlay: Is OCR.space overlay required in your response.
@@ -89,34 +86,35 @@ async def ocr_space_file(filename,
     """
 
     payload = {
-        'isOverlayRequired': overlay,
-        'apikey': api_key,
-        'language': language,
+        "isOverlayRequired": overlay,
+        "apikey": api_key,
+        "language": language,
     }
-    with open(filename, 'rb') as f:
+    with open(filename, "rb") as f:
         r = requests.post(
-            'https://api.ocr.space/parse/image',
+            "https://api.ocr.space/parse/image",
             files={filename: f},
             data=payload,
         )
     return r.json()
 
+
 DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
 
 
-@register(outgoing=True, pattern="^.crblangg (.*)")
+@register(outgoing=True, pattern=r"^\.crblang (.*)")
 async def setlang(prog):
     global CARBONLANG
     CARBONLANG = prog.pattern_match.group(1)
-    await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
+    await prog.edit(f"Bahasa untuk carbon.now.sh mulai {CARBONLANG}")
 
 
 @register(outgoing=True, pattern="^.carbon")
 async def carbon_api(e):
-    """ A Wrapper for carbon.now.sh """
+    """A Wrapper for carbon.now.sh"""
     await e.edit("`Processing..`")
-    CARBON = 'https://carbon.now.sh/?l={lang}&code={code}'
+    CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
     global CARBONLANG
     textx = await e.get_reply_message()
     pcode = e.text
@@ -136,32 +134,30 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
-    prefs = {'download.default_directory': '/root/userbot/.bin'}
-    chrome_options.add_experimental_option('prefs', prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
-                              options=chrome_options)
+    prefs = {"download.default_directory": "/root/userbot/.bin"}
+    chrome_options.add_experimental_option("prefs", prefs)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
-    download_path = '/root/userbot/.bin'
+    download_path = "/root/userbot/.bin"
     driver.command_executor._commands["send_command"] = (
-        "POST", '/session/$sessionId/chromium/send_command')
+        "POST",
+        "/session/$sessionId/chromium/send_command",
+    )
     params = {
-        'cmd': 'Page.setDownloadBehavior',
-        'params': {
-            'behavior': 'allow',
-            'downloadPath': download_path
-        }
+        "cmd": "Page.setDownloadBehavior",
+        "params": {"behavior": "allow", "downloadPath": download_path},
     }
     driver.execute("send_command", params)
     driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
-   # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
-   # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
+    # driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
+    # driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
     await e.edit("`Processing..\n75%`")
     # Waiting for downloading
     while not os.path.isfile("/root/userbot/.bin/carbon.png"):
         await sleep(0.5)
     await e.edit("`Processing..\n100%`")
-    file = '/root/userbot/.bin/carbon.png'
+    file = "/root/userbot/.bin/carbon.png"
     await e.edit("`Uploading..`")
     await e.client.send_file(
         e.chat_id,
@@ -172,7 +168,7 @@ async def carbon_api(e):
         reply_to=e.message.reply_to_msg_id,
     )
 
-    os.remove('/root/userbot/.bin/carbon.png')
+    os.remove("/root/userbot/.bin/carbon.png")
     driver.quit()
     # Removing carbon.png after uploading
     await e.delete()  # Deleting msg
@@ -189,7 +185,7 @@ async def img_sampler(event):
         lim = lim.replace("lim=", "")
         query = query.replace("lim=" + lim[0], "")
     except IndexError:
-        lim = 5
+        lim = 10
     gi = googleimagesdownload()
 
     # creating list of arguments
