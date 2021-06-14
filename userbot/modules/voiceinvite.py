@@ -1,5 +1,6 @@
 # Copyright (C) 2021 Geez Project
 
+from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
@@ -30,7 +31,7 @@ async def _(e):
     hmm = list(user_list(users, 6))
     for p in hmm:
         try:
-            await e.client(invitetovc(call=await e.get_call, users=p))
+            await e.client(invitetovc(call=await get_call(e), users=p))
             z += 6
         except BaseException:
             pass
