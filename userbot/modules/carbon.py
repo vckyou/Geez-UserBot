@@ -18,6 +18,13 @@ TRT_LANG = "en"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
 
 
+@register(outgoing=True, pattern="^.crblang (.*)")
+async def setlang(prog):
+    global CARBONLANG
+    CARBONLANG = prog.pattern_match.group(1)
+    await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
+
+
 @register(outgoing=True, pattern="^.carbon1")
 async def carbon_api(e):
     """ A Wrapper for carbon.now.sh """
