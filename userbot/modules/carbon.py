@@ -292,7 +292,7 @@ async def carbon_api(e):
 @register(outgoing=True, pattern="^.carbon")
 async def carbon_api(e):
     """ A Wrapper for carbon.now.sh """
-    await e.edit("`Processing..`")
+    await e.edit("`MemProsess`")
     CARBON = 'https://carbon.now.sh/?bg=rgba(76%2C144%2C140%2C1)&t=night-owl&wt=none&l=coffeescript&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=133%25&si=false&es=2x&wm=false&code={code}'
     global CARBONLANG
     textx = await e.get_reply_message()
