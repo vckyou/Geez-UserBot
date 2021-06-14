@@ -110,7 +110,7 @@ async def setlang(prog):
     await prog.edit(f"Bahasa untuk carbon.now.sh mulai {CARBONLANG}")
 
 
-@register(outgoing=True, pattern="^.carbon")
+@register(outgoing=True, pattern="^.carbond")
 async def carbon_api(e):
     """A Wrapper for carbon.now.sh"""
     await e.edit("`Processing..`")
