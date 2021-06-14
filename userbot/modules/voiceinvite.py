@@ -19,28 +19,27 @@ def user_list(l, n):
         yield l[i: i + n]
 
 
-@register(outgoing=True, pattern=r"^\.vcinvite(?: |$)(.*)",
-          disable_errors=True, groups_only=True)
+@register(outgoing=True, pattern=r"^\.vcinvite(?: |$)(.*)", groups_only=True)
 async def _(e):
-    ok = await e.edit("`Inviting Members to Voice Chat...`")
+    geez = await e.edit("`Inviting Members to Voice Chat...`")
     users = []
     z = 0
-    async for user in e.client.iter_participants(e.chat_id):
-        if not user.bot:
-            users.append(user.id)
-    hmm = list(user_list(users, 6))
-    for p in hmm:
+    async for x in e.client.iter_participants(e.chat_id):
+        if not x.bot:
+            users.append(x.id)
+    yaa = list(user_list(users, 6))
+    for p in yaa:
         try:
             await e.client(invitetovc(call=await get_call(e), users=p))
             z += 6
         except BaseException:
             pass
-    await ok.edit(f"`Invited {z} users`")
+    await geez.edit(f"`Invited {z} users`")
 
 
 CMD_HELP.update(
     {
         "vcplugin": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vcinvite`"
-        "\n• : Mengundang Seseorang Kedalam Vcg"
+        "\n• : Mengundang Seseorang Kedalam VCG"
     }
 )
