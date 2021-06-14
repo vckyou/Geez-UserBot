@@ -52,7 +52,9 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER,
+        options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
     download_path = "/root/userbot/.bin"
@@ -116,7 +118,9 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER,
+        options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
     download_path = "/root/userbot/.bin"
@@ -180,7 +184,9 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER,
+        options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
     download_path = "/root/userbot/.bin"
@@ -244,7 +250,9 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER,
+        options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
     download_path = "/root/userbot/.bin"
@@ -308,7 +316,9 @@ async def carbon_api(e):
     chrome_options.add_argument("--disable-gpu")
     prefs = {"download.default_directory": "/root/userbot/.bin"}
     chrome_options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER,
+        options=chrome_options)
     driver.get(url)
     await e.edit("`Processing..\n50%`")
     download_path = "/root/userbot/.bin"
