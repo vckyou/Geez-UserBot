@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 from requests import get
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
+from telethon import Button, events, functions, types
 from telethon.utils import get_display_name
 
 redis_db = None
