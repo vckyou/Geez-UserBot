@@ -453,15 +453,15 @@ with bot:
             if event.message.from_id != uid:
                 u = await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"WOI NGENTOT [{get_display_name(u)}](tg://user?id={u.id}) NGAPAIN LU DI\n**RAM-UBOT**\nKALO MAU TAU LEBIH DETAIL MENDING LU KE\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
+                    f"Hallo [{get_display_name(u)}](tg://user?id={u.id}) Selamat Datang Di\n**Geez - Project**\nKalo mau tau lebih lanjut silahkan Join Ke \n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                            Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
-                                       "t.me/userbotchannel"),
-                            Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
-                                       "t.me/geezSupportGroup")],
-                        [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                    "t.me/vckyouubitch")],
+                            Button.url("📢 Channel Support",
+                                       "t.me/GeezProject"),
+                            Button.url("🚨 Group support",
+                                       "t.me/GeezSupportGroup")],
+                        [Button.url("👤 Development",
+                                    "t.me/VckyouuBitch")],
                     ]
                 )
 
@@ -543,8 +543,8 @@ with bot:
                     file=geezlogo,
                     link_preview=True,
                     buttons=[
-                        Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
-                        Button.url("•SUPPORT• ", "t.me/Userbotchannel")
+                        Button.url("⚡ Geez-Project", "t.me/geezsupportgroup"),
+                        Button.url("Support Channel ", "t.me/GeezProjects")
                     ]
                 )
 
