@@ -19,6 +19,8 @@ from dotenv import load_dotenv
 from requests import get
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
+from telethon import Button, events, funtcions, types
+from telethon.utils import get_display_name
 
 redis_db = None
 
@@ -481,8 +483,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith(
-                    "@Geez-UserBot"):
+            if event.query.user_id == uid and query.startswith("@Geez-UserBot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=geezlogo,
