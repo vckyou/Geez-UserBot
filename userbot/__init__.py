@@ -374,7 +374,6 @@ ZALG_LIST = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
-
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
     number_of_cols = 2
@@ -421,6 +420,7 @@ with bot:
         me = bot.get_me()
         uid = me.id
 
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile("open")
@@ -430,7 +430,7 @@ with bot:
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
-                    results = await event.client.inline_query(tgbotusername, "@Geez-UserBot")
+                    results = await event.client.inline_query(tgbotusername, "@Geez-Project")
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
                     )
@@ -444,7 +444,6 @@ with bot:
                     "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
                 )
 
-# From ramadhani892
 
         geezlogo = INLINE_PIC
         plugins = CMD_HELP
@@ -455,17 +454,18 @@ with bot:
             if event.message.from_id != uid:
                 u = await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"Hai  [{get_display_name(u)}](tg://user?id={u.id}) Selamat datang di\n⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\nKalau Kamu Ingin Tahu Lebih Detail Bisa Klik\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
+                    f"WOI NGENTOT [{get_display_name(u)}](tg://user?id={u.id}) NGAPAIN LU DI\n**RAM-UBOT**\nKALO MAU TAU LEBIH DETAIL MENDING LU KE\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                            Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
-                                       "t.me/userbotchannel"),
-                            Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
-                                       "t.me/geezSupportGroup")],
-                        [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                    "t.me/vckyouubitch")],
+                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                        "t.me/userbotchannel"),
+                             Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
+                                        "t.me/geezSupportGroup")],
+                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                        "t.me/vckyouubitch")],
                     ]
                 )
+
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
@@ -483,36 +483,35 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith(
-                    "@Geez-UserBot"):
+            if event.query.user_id == uid and query.startswith("@Geez-Project"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.article(
+                result = builder.photo(
                     file=geezlogo,
                     link_preview=False,
-                    text=f"╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞\n\n**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n⚡ **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `7.0`\n⚡ **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n⚡ **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : VCKYOUUBITCH **".format(
+                    text=f"╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞\n\n⚡**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n⚡ **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `5.0`\n⚡ **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n⚡ **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : VCKYOUUU **".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
-                    link_preview=False,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
-                    text="Daftar Modul",
+                    "Bantuan Dari ⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ",
+                    text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
                     " ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
-                    text="""**Anda Bisa Membuat ⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
+                    text="""**⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\n\n Anda Bisa Membuat Geez Userbot Anda Sendiri Dengan Cara:** __TEKEN DIBAWAH INI!__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "⚡𝗚𝗲𝗲𝘇",
-                                "https://github.com/vckyou/Geez-UserBot"),
+                                "⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
+                                "https://github.com/vckyou/Geez-Userbot"),
                             custom.Button.url(
-                                "✨𝗢𝘄𝗻𝗲𝗿",
-                                "t.me/VckyouuBitch")]],
+                                "OWNER",
+                                "t.me/Vckyouubitch")] 
+                    ],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
@@ -534,22 +533,24 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_close\((.+?)\)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:  # @Geez-project
+            if event.query.user_id == uid:  # @Geez-Project
                 # https://t.me/TelethonChat/115200
                 await event.edit(
-                    file=geezlogo,
+                    file=ramlogo,
                     link_preview=True,
                     buttons=[
-                        Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
-                        Button.url("⚡𝗦𝗨𝗣𝗣𝗢𝗥𝗧⚡ ", "t.me/userbotchannel")
+                          Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
+                          Button.url("•SUPPORT• ", "t.me/Userbotchannel")
                     ]
                 )
+
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -569,9 +570,10 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(b"ub_modul_(.*)")
+                data=re.compile(rb"ub_modul_(.*)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
@@ -582,7 +584,7 @@ with bot:
                 if len(cmdhel) > 150:
                     help_string = (
                         str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
-                        + "\n\nBaca Teks Berikutnya Ketik .help "
+                        + "\n\nBaca Text Berikutnya Ketik .help "
                         + modul_name
                         + " "
                     )
@@ -597,19 +599,19 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Dilarang Menggunakan Milik {DEFAULTUSER}."
+                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
             "Mode Inline Bot Mu Nonaktif. "
-            "Untuk Mengaktifkan Pergi Ke @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
+            "Untuk Mengaktifkannya, Silahkan Pergi Ke @BotFather Lalu, Settings Bot > Pilih Mode Inline > Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except BaseException:
         LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file."
+            "BOTLOG_CHATID Environment Variable Isn't a "
+            "Valid Entity. Please Check Your Environment variables/config.env File."
         )
         quit(1)
