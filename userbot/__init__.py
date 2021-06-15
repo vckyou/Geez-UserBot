@@ -485,7 +485,7 @@ with bot:
                     "@Geez-Project"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
-                    file=ramlogo,
+                    file=geezlogo,
                     link_preview=False,
                     text=f"╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞\n\n**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n⚡ **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `7.0`\n⚡ **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n⚡ **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : VCKYOUUBITCH **".format(
                         len(dugmeler),
