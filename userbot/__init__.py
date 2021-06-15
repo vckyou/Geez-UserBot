@@ -374,6 +374,7 @@ ZALG_LIST = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
+
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
     number_of_cols = 2
@@ -420,7 +421,6 @@ with bot:
         me = bot.get_me()
         uid = me.id
 
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile("open")
@@ -444,7 +444,6 @@ with bot:
                     "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
                 )
 
-
         geezlogo = INLINE_PIC
         plugins = CMD_HELP
         vr = BOT_VER
@@ -457,15 +456,14 @@ with bot:
                     f"WOI NGENTOT [{get_display_name(u)}](tg://user?id={u.id}) NGAPAIN LU DI\n**RAM-UBOT**\nKALO MAU TAU LEBIH DETAIL MENDING LU KE\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
-                                        "t.me/userbotchannel"),
-                             Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
-                                        "t.me/geezSupportGroup")],
-                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                        "t.me/vckyouubitch")],
+                            Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                       "t.me/userbotchannel"),
+                            Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
+                                       "t.me/geezSupportGroup")],
+                        [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                    "t.me/vckyouubitch")],
                     ]
                 )
-
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
@@ -483,7 +481,8 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@Geez-Project"):
+            if event.query.user_id == uid and query.startswith(
+                    "@Geez-Project"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=geezlogo,
@@ -510,8 +509,7 @@ with bot:
                                 "https://github.com/vckyou/Geez-Userbot"),
                             custom.Button.url(
                                 "OWNER",
-                                "t.me/Vckyouubitch")] 
-                    ],
+                                "t.me/Vckyouubitch")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
@@ -533,7 +531,6 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_close\((.+?)\)")
@@ -546,11 +543,10 @@ with bot:
                     file=ramlogo,
                     link_preview=True,
                     buttons=[
-                          Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
-                          Button.url("•SUPPORT• ", "t.me/Userbotchannel")
+                        Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
+                        Button.url("•SUPPORT• ", "t.me/Userbotchannel")
                     ]
                 )
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -569,7 +565,6 @@ with bot:
             else:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -612,6 +607,5 @@ with bot:
     except BaseException:
         LOGS.info(
             "BOTLOG_CHATID Environment Variable Isn't a "
-            "Valid Entity. Please Check Your Environment variables/config.env File."
-        )
+            "Valid Entity. Please Check Your Environment variables/config.env File.")
         quit(1)
