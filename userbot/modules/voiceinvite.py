@@ -30,7 +30,7 @@ async def _(e):
     yaa = list(user_list(users, 6))
     for p in yaa:
         try:
-            await e.client(invitetovc(call=await get_call(e), users=p))
+            await e.client(invitetovc(call=await e.get_call(), users=p))
             z = z + 6
         except BaseException:
             pass
