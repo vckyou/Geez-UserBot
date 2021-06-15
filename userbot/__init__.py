@@ -539,7 +539,7 @@ with bot:
             if event.query.user_id == uid:  # @Geez-Project
                 # https://t.me/TelethonChat/115200
                 await event.edit(
-                    file=ramlogo,
+                    file=geezlogo,
                     link_preview=True,
                     buttons=[
                         Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
