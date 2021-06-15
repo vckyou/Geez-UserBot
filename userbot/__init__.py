@@ -547,7 +547,6 @@ with bot:
                     ]
                 )
 
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_prev\((.+?)\)")
