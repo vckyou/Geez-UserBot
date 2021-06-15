@@ -418,8 +418,6 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -444,12 +442,11 @@ with bot:
                     "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
                 )
 
-# From ramadhani892 
+# From ramadhani892
 
         geezlogo = HELP_LOGO
         plugins = CMD_HELP
         vr = BOT_VER
-
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
@@ -459,15 +456,14 @@ with bot:
                     f"Hai  [{get_display_name(u)}](tg://user?id={u.id}) Selamat datang di\n⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\nKalau Kamu Ingin Tahu Lebih Detail Bisa Klik\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
-                                        "t.me/userbotchannel"),
-                             Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
-                                        "t.me/geezSupportGroup")],
-                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                        "t.me/vckyouubitch")],
+                            Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                       "t.me/userbotchannel"),
+                            Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
+                                       "t.me/geezSupportGroup")],
+                        [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                    "t.me/vckyouubitch")],
                     ]
                 )
-
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
@@ -485,7 +481,8 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@Geez-Project"):
+            if event.query.user_id == uid and query.startswith(
+                    "@Geez-Project"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=ramlogo,
@@ -547,12 +544,10 @@ with bot:
                     file=geezlogo,
                     link_preview=True,
                     buttons=[
-                          Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
-                          Button.url("⚡𝗦𝗨𝗣𝗣𝗢𝗥𝗧⚡ ", "t.me/userbotchannel")
+                        Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
+                        Button.url("⚡𝗦𝗨𝗣𝗣𝗢𝗥𝗧⚡ ", "t.me/userbotchannel")
                     ]
                 )
-
-
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
