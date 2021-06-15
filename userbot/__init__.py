@@ -542,10 +542,11 @@ with bot:
                     file=geezlogo,
                     link_preview=True,
                     buttons=[
-                        Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
-                        Button.url("•SUPPORT• ", "t.me/Userbotchannel")
+                          Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
+                          Button.url("•SUPPORT• ", "t.me/Userbotchannel")
                     ]
                 )
+
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
