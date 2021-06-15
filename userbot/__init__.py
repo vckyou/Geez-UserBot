@@ -200,6 +200,10 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
 
+# Default .helpme Logo
+INLINE_PIC = os.environ.get(
+    "INLINE_PIC") or "https://telegra.ph/file/9e3f0783db33698243b7d.png"
+
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
 DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
@@ -371,7 +375,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
-    number_of_cols = 4
+    number_of_cols = 2
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
@@ -379,8 +383,7 @@ def paginate_help(page_number, loaded_modules, prefix):
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
-                     modules[1::number_of_cols],
-                     modules[2::number_of_cols]))
+                     modules[1::number_of_cols]))
     if len(modules) % number_of_cols == 1:
         pairs.append((modules[-1],))
     max_num_pages = ceil(len(pairs) / number_of_rows)
@@ -392,6 +395,9 @@ def paginate_help(page_number, loaded_modules, prefix):
             (
                 custom.Button.inline(
                     "⋖╯", data="{}_prev({})".format(prefix, modulo_page)
+                ),
+                custom.Button.inline(
+                    "⚡𝗖𝗹𝗼𝘀𝗲⚡", data="{}_close({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
@@ -412,28 +418,79 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        logo = "https://telegra.ph/file/03cc82e4ac5c3aa5f9e97.jpg"
+        
+
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile("open")
+            )
+        )
+        async def opeen(event):
+            try:
+                tgbotusername = BOT_USERNAME
+                if tgbotusername is not None:
+                    results = await event.client.inline_query(tgbotusername, "@Geez-Project")
+                    await results[0].click(
+                        event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
+                    )
+                    await event.delete()
+                else:
+                    await event.edit(
+                        "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
+                    )
+            except Exception:
+                return await event.edit(
+                    "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
+                )
+
+# From ramadhani892 
+
+        geezlogo = HELP_LOGO
+        plugins = CMD_HELP
+        vr = BOT_VER
+
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://vckyou.github.io/Geez-UserBot)")
-            else:
-                await event.reply(f"`Hai {DEFAULTUSER}\n\nApa Kabarmu ? 😊`")
+                u = await event.client.get_entity(event.chat_id)
+                await event.reply(
+                    f"Hai  [{get_display_name(u)}](tg://user?id={u.id}) Selamat datang di\n⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\nKalau Kamu Ingin Tahu Lebih Detail Bisa Klik\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
+                    buttons=[
+                        [
+                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                                        "t.me/userbotchannel"),
+                             Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
+                                        "t.me/geezSupportGroup")],
+                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
+                                        "t.me/vckyouubitch")],
+                    ]
+                )
+
+
+        @tgbot.on(events.NewMessage(pattern="/ping"))
+        async def handler(event):
+            if event.message.from_id != uid:
+                start = datetime.now()
+                end = datetime.now()
+                ms = (end - start).microseconds / 1000
+                await tgbot.send_message(
+                    event.chat_id,
+                    f"**PONG!!**\n `{ms}ms`",
+                )
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@UserButt"):
+            if event.query.user_id == uid and query.startswith("@Geez-Project"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.article(
-                    "Harap Gunakan .help Untuk Perintah",
-                    text="{}"
-                    f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
-                    "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
-                        "** ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ **",
+                result = builder.photo(
+                    file=ramlogo,
+                    link_preview=False,
+                    text=f"╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞\n\n**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n⚡ **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `7.0`\n⚡ **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n⚡ **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : VCKYOUUBITCH **".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -477,6 +534,25 @@ with bot:
             else:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+        @tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"helpme_close\((.+?)\)")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:  # @Geez-project
+                # https://t.me/TelethonChat/115200
+                await event.edit(
+                    file=geezlogo,
+                    link_preview=True,
+                    buttons=[
+                          Button.url("⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡", "t.me/geezsupportgroup"),
+                          Button.url("⚡𝗦𝗨𝗣𝗣𝗢𝗥𝗧⚡ ", "t.me/userbotchannel")
+                    ]
+                )
+
+
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
