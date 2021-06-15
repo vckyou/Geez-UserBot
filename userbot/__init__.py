@@ -444,7 +444,7 @@ with bot:
 
 # From ramadhani892
 
-        geezlogo = HELP_LOGO
+        geezlogo = INLINE_PIC
         plugins = CMD_HELP
         vr = BOT_VER
 
