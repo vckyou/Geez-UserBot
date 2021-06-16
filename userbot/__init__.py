@@ -404,9 +404,9 @@ def paginate_help(page_number, loaded_modules, prefix):
                 ),
                 custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
-                ),
+                ),[
                 custom.Button.inline(
-                    'Close', b'close'
+                    'Close', b'close')],
                 )
             )
         ]
