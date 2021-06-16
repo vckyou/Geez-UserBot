@@ -422,7 +422,7 @@ with bot:
         me = bot.get_me()
         uid = me.id
 
-        @ tgbot.on(
+        @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile("open")
             )
@@ -549,6 +549,9 @@ with bot:
                                        "t.me/GeezProject"),
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
+                        [custom.Button.inline(
+                            "Open Again", "open")],
+                        ]
                         [custom.Button.inline(
                             "❎", b"close")],
                     ]
