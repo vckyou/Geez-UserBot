@@ -400,10 +400,13 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "⋖╯", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "⚡𝗖𝗹𝗼𝘀𝗲⚡", data="{}_close({})".format(prefix, modulo_page)
+                    "Support", data="{}_close({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
+                ),
+                custom.Button.inline(
+                    'Close', b'close'
                 )
             )
         ]
@@ -532,6 +535,7 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_close\((.+?)\)")
@@ -598,6 +602,12 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+
+        @tgbot.on(events.CallbackQuery(data=b'close'))
+        async def close(event):
+            await event.edit("Button closed!", buttons=Button.clear())
+
 
     except BaseException:
         LOGS.info(
