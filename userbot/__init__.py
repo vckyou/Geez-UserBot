@@ -383,8 +383,8 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = sorted(helpable_modules)
     modules = [
         custom.Button.inline(
-    "{} {} 🔰".format(
-        "🔰", x), data="ub_modul_{}".format(x))
+            "{} {} 🔰".format(
+                "🔰", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -563,9 +563,9 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number=int(
+                current_page_number = int(
                     event.data_match.group(1).decode("UTF-8"))
-                buttons=paginate_help(
+                buttons = paginate_help(
                     current_page_number - 1, dugmeler, "helpme"  # pylint:disable=E0602
                 )
                 # https://t.me/TelethonChat/115200
