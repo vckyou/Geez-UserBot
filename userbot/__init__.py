@@ -553,9 +553,6 @@ with bot:
                                        "t.me/GeezSupportGroup")],
                         [custom.Button.inline(
                             "Open Again", "open")],
-                        ]
-                        [custom.Button.inline(
-                            "❎", b"close")],
                     ]
                 )
 
