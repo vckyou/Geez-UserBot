@@ -552,7 +552,7 @@ with bot:
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
                         [custom.Button.inline(
-                            "Open Again", "open")],
+                            "Open Again", data="ub_modul_{}".format(x))")],
                     ]
                 )
 
@@ -584,9 +584,9 @@ with bot:
                 modul_name = event.data_match.group(1).decode("UTF-8")
 
                 cmdhel = str(CMD_HELP[modul_name])
-                if len(cmdhel) > 150:
+                if len(cmdhel) > 180:
                     help_string = (
-                        str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
+                        str(CMD_HELP[modul_name]).replace('`', '')[:180] + "..."
                         + "\n\nBaca Text Berikutnya Ketik .help "
                         + modul_name
                         + " "
