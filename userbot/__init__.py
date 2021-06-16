@@ -404,9 +404,9 @@ def paginate_help(page_number, loaded_modules, prefix):
                 ),
                 custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
-                ),[
-                custom.Button.inline(
-                    'Close', b'close']
+                ), [
+                    custom.Button.inline(
+                        'Close', b'close']
                 )
             )
         ]
@@ -417,13 +417,13 @@ with bot:
     try:
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
-            api_id = API_KEY,
-            api_hash = API_HASH).start(
-            bot_token = BOT_TOKEN)
+            api_id=API_KEY,
+            api_hash=API_HASH).start(
+            bot_token=BOT_TOKEN)
 
-        dugmeler=CMD_HELP
-        me=bot.get_me()
-        uid=me.id
+        dugmeler = CMD_HELP
+        me = bot.get_me()
+        uid = me.id
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -432,11 +432,11 @@ with bot:
         )
         async def opeen(event):
             try:
-                tgbotusername=BOT_USERNAME
+                tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
-                    results=await event.client.inline_query(tgbotusername, "@Geez-Project")
+                    results = await event.client.inline_query(tgbotusername, "@Geez-Project")
                     await results[0].click(
-                        event.chat_id, reply_to = event.reply_to_msg_id, hide_via = True
+                        event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
                     )
                     await event.delete()
                 else:
