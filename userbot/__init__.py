@@ -400,14 +400,11 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "⋖╯", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "Support", data="{}_close({})".format(prefix, modulo_page)
+                    "Close", data="{}_close({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     "╰⋗", data="{}_next({})".format(prefix, modulo_page)
-                ), [
-                    custom.Button.inline(
-                        'Close', b'close']
-                )
+                ),
             )
         ]
     return pairs
@@ -547,8 +544,13 @@ with bot:
                     file=geezlogo,
                     link_preview=True,
                     buttons=[
-                        Button.url("⚡ Geez-Project", "t.me/geezsupportgroup"),
-                        Button.url("Support Channel ", "t.me/GeezProjects")
+                        [
+                            Button.url("📢 Channel Support",
+                                       "t.me/GeezProject"),
+                            Button.url("🚨 Group support",
+                                       "t.me/GeezSupportGroup")],
+                        [custom.Button.inline(
+                               "❎", b"close")],
                     ]
                 )
 
@@ -602,9 +604,9 @@ with bot:
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.CallbackQuery(data=b'close'))
+        @tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
-            await event.edit("Button closed!", buttons=Button.clear())
+            await event.edit("Menu Ditutup!", buttons=Button.clear())
 
     except BaseException:
         LOGS.info(
