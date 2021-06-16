@@ -550,7 +550,7 @@ with bot:
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
                         [custom.Button.inline(
-                               "❎", b"close")],
+                            "❎", b"close")],
                     ]
                 )
 
