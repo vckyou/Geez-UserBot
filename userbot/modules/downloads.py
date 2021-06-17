@@ -108,7 +108,7 @@ async def download_video(event):
     )
     CAPT = f"╭┈───────────────┈\n • {rip_data['title']}\n • Uploader - {rip_data['uploader']}\n├┈──────────────┈\n├ By : {DEFAULTUSER}\n╰┈─────────────┈"
     await event.client.send_file(
-        x.chat_id,
+        event.chat_id,
         ttt,
         thumb=thumb,
         supports_streaming=True,
