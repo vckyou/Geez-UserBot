@@ -27,10 +27,10 @@ async def download_video(event):
     a = event.text
     if len(a) >= 5 and a[5] == "s":
         return
-    await event.edit("`Sedang Memproses Musik, Mohon Tunggu Sebentar...`")
+    geez = await event.edit("`Sedang Memproses Musik, Mohon Tunggu Sebentar...`")
     url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**List Error**\nCara Penggunaan : -`.musik <Judul Lagu>`")
+        return await geez.edit("**List Error**\nCara Penggunaan : -`.musik <Judul Lagu>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -38,9 +38,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`Tidak Dapat Menemukan Musik...`")
+        return await geez.edit("`Tidak Dapat Menemukan Musik...`")
     type = "audio"
-    await event.edit(f"`Persiapan Mendownload {url}...`")
+    await geez.edit(f"`Persiapan Mendownload {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -61,35 +61,35 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Mendapatkan Info Musik...`")
+        await geez.edit("`Mendapatkan Info Musik...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
-        await event.edit(f"`{str(DE)}`")
+        await geez.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await event.edit("`The download content was too short.`")
+        await geez.edit("`The download content was too short.`")
         return
     except GeoRestrictedError:
-        await event.edit("`Video is not available from your geographic location due to"
+        await geez.edit("`Video is not available from your geographic location due to"
                          + " geographic restrictions imposed by a website.`"
                          )
         return
     except MaxDownloadsReached:
-        await event.edit("`Max-downloads limit has been reached.`")
+        await geez.edit("`Max-downloads limit has been reached.`")
         return
     except PostProcessingError:
-        await event.edit("`There was an error during post processing.`")
+        await geez.edit("`There was an error during post processing.`")
         return
     except UnavailableVideoError:
-        await event.edit("`Media is not available in the requested format.`")
+        await geez.edit("`Media is not available in the requested format.`")
         return
     except XAttrMetadataError as XAME:
-        return await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        return await geez.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
     except ExtractorError:
-        return await event.edit("`There was an error during info extraction.`")
+        return await geez.edit("`There was an error during info extraction.`")
     except Exception as e:
-        return await event.edit(f"{str(type(e)): {str(e)}}")
+        return await geez.edit(f"{str(type(e)): {str(e)}}")
     dir = os.listdir()
     if f"{rip_data['id']}.mp3.jpg" in dir:
         thumb = f"{rip_data['id']}.mp3.jpg"
@@ -102,6 +102,7 @@ async def download_video(event):
         rip_data["id"] + ".mp3",
         rip_data["title"] + ".mp3",
         tail,
+        geez,
         "Uploading " + rip_data["title"],
     )
     CAPT = f"╭┈───────────────┈\n • {rip_data['title']}\n • Uploader - {rip_data['uploader']}\n├┈──────────────┈\n├ By : {DEFAULTUSER}\n╰┈─────────────┈"
@@ -119,7 +120,7 @@ async def download_video(event):
             )
         ],
     )
-    await event.delete()
+    await geez.delete()
     os.remove(f"{rip_data['id']}.mp3")
     try:
         os.remove(thumb)
