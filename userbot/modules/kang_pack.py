@@ -49,7 +49,7 @@ async def pack_kangish(event):
             except BaseException:
                 pack = 1
             try:
-                _r_e_s = await asst(
+                _r_e_s = await bot(
                     functions.stickers.CreateStickerSetRequest(
                         user_id=_.sender_id,
                         title=_packname,
@@ -62,7 +62,7 @@ async def pack_kangish(event):
             except PackShortNameOccupiedError:
                 time.sleep(1)
                 pack += 1
-                _r_e_s = await asst(
+                _r_e_s = await bot(
                     functions.stickers.CreateStickerSetRequest(
                         user_id=_.sender_id,
                         title=_packname,
