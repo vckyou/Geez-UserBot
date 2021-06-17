@@ -25,7 +25,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 @register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
     a = event.text
-    if a[5] == "s":
+    if len(a) >= 5 and a[5] == "s":
         return
     await event.edit("`Sedang Memproses Musik, Mohon Tunggu Sebentar...`")
     url = event.pattern_match.group(1)
@@ -97,18 +97,17 @@ async def download_video(event):
         thumb = f"{rip_data['id']}.mp3.webp"
     else:
         thumb = None
-    upteload = """
-Connected to server...
-• {}
-• By - {}
-""".format(
-        rip_data["title"], rip_data["uploader"]
+    tail = time.time()
+    ttt = await uploader(
+        rip_data["id"] + ".mp3",
+        rip_data["title"] + ".mp3",
+        tail,
+        "Uploading " + rip_data["title"],
     )
-    await event.edit(f"`{upteload}`")
     CAPT = f"╭┈───────────────┈\n • {rip_data['title']}\n • Uploader - {rip_data['uploader']}\n├┈──────────────┈\n├ By : {DEFAULTUSER}\n╰┈─────────────┈"
     await event.client.send_file(
         event.chat_id,
-        f"{rip_data['id']}.mp3",
+        ttt,
         thumb=thumb,
         supports_streaming=True,
         caption=CAPT,
@@ -126,6 +125,81 @@ Connected to server...
         os.remove(thumb)
     except BaseException:
         pass
+
+
+@register(outgoing=True, pattern=r"^\.vsong (.*)")
+async def download_vsong(ult):
+    geez = await event.edit("Processing..")
+    url = event.pattern_match.group(1)
+    if not url:
+        return await geez.edit("**Error**\nUsage - `.vsong <song name>`")
+    search = SearchVideos(url, offset=1, mode="json", max_results=1)
+    test = search.result()
+    p = json.loads(test)
+    q = p.get("search_result")
+    try:
+        url = q[0]["link"]
+    except BaseException:
+        return await geez.edit("`No matching songs found...`")
+    type = "audio"
+    await geez.edit("`Preparing to download...`")
+    if type == "audio":
+        opts = {
+            "format": "best",
+            "addmetadata": True,
+            "key": "FFmpegMetadata",
+            "prefer_ffmpeg": True,
+            "geo_bypass": True,
+            "nocheckcertificate": True,
+            "postprocessors": [
+                {"key": "FFmpegVideoConvertor", "preferedformat": "mp4"}
+            ],
+            "outtmpl": "%(id)s.mp4",
+            "logtostderr": False,
+            "quiet": True,
+        }
+    try:
+        await geez.edit("`Fetching data, please wait..`")
+        with YoutubeDL(opts) as rip:
+            rip_data = rip.extract_info(url)
+    except DownloadError as DE:
+        return await geez.edit(f"`{str(DE)}`")
+    except ContentTooShortError:
+        return await geez.edit("`The download content was too short.`")
+    except GeoRestrictedError:
+        return await geez.edit(
+            "`Video is not available from your geographic location due to"
+            + " geographic restrictions imposed by a website.`"
+        )
+    except MaxDownloadsReached:
+        return await geez.edit("`Max-downloads limit has been reached.`")
+    except PostProcessingError:
+        return await geez.edit("`There was an error during post processing.`")
+    except UnavailableVideoError:
+        return await geez.edit("`Media is not available in the requested format.`")
+    except XAttrMetadataError as XAME:
+        return await geez.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+    except ExtractorError:
+        return await geez.edit("`There was an error during info extraction.`")
+    except Exception as e:
+        return await geez.edit(f"{str(type(e)): {str(e)}}")
+    tail = time.time()
+    ttt = await uploader(
+        rip_data["id"] + ".mp4",
+        rip_data["title"] + ".mp4",
+        tail,
+        geez,
+        "Uploading " + rip_data["title"],
+    )
+    CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
+    await event.client.send_file(
+        event.chat_id,
+        ttt,
+        supports_streaming=True,
+        caption=CAPT,
+    )
+    os.remove(f"{rip_data['id']}.mp4")
+    await geez.delete()
 
 
 @register(outgoing=True, pattern=r"^\.lirik (.*)")
@@ -152,8 +226,8 @@ CMD_HELP.update(
     {
         "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.song<Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mengunduh Sebuah Lagu Yang Diinginkan.\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ceklirik` `<reply judul lagu/video>`\
-         \n↳ : `Reply Video Agar Tau Judul Lagu/Video`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vsong` `<judul lagu>`\
+         \n↳ : `unggah video lagu.`\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mencari Lirik Lagu Yang Diinginkan."
     }
