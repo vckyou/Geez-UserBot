@@ -7,8 +7,6 @@
 
 from telethon import utils
 from telethon.errors import PackShortNameOccupiedError
-from telethon.tl.functions.messages import GetStickerSetRequest
-from telethon.tl.types import InputStickerSetID
 
 from userbot.events import register
 from userbot import CMD_HELP
