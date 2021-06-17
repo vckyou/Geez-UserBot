@@ -34,7 +34,7 @@ async def song_recog(event):
 
 
 CMD_HELP.update({
-        "getjudul": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.getjudul`\
+    "getjudul": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.getjudul`\
     \nUsage : Reply ke file lagu, untuk mengenali lagu tersebut.."
-    }
+}
 )
