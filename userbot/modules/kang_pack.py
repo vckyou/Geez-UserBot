@@ -24,16 +24,16 @@ async def pack_kangish(event):
     else:
         _packname = f"Geez Stickers Kang By {_.sender_id}"
     if _e and _e.media and _e.media.document.mime_type == "image/webp":
-        _id = _e.media.document.attributes[1].stickerset.id
-        _hash = _e.media.document.attributes[1].stickerset.access_hash
+        _e.media.document.attributes[1].stickerset.id
+        _e.media.document.attributes[1].stickerset.access_hash
         _get_stiks = await bot(
-        GetStickerSetRequest(
-            InputStickerSetID(
-                id=stickerset_attr.stickerset.id,
-                access_hash=stickerset_attr.stickerset.access_hash,
+            GetStickerSetRequest(
+                InputStickerSetID(
+                    id=stickerset_attr.stickerset.id,
+                    access_hash=stickerset_attr.stickerset.access_hash,
+                )
             )
         )
-    )
         stiks = []
         for i in _get_stiks.documents:
             x = utils.get_input_document(i)
