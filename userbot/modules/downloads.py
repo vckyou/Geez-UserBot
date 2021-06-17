@@ -129,7 +129,7 @@ Connected to server...
         pass
 
 
-@register(outgoing=True, pattern=r"^\.vsong (.*)")
+@register(outgoing=True, pattern=r"^\.vsongs (.*)")
 async def download_vsong(event):
     x = await event.edit("Processing..")
     url = event.pattern_match.group(1)
