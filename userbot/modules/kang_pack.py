@@ -7,6 +7,8 @@
 
 from telethon import utils
 from telethon.errors import PackShortNameOccupiedError
+from telethon.tl.functions.messages import GetStickerSetRequest
+from telethon.tl.types import InputStickerSetID
 
 from userbot.events import register
 from userbot import CMD_HELP
@@ -25,10 +27,13 @@ async def pack_kangish(event):
         _id = _e.media.document.attributes[1].stickerset.id
         _hash = _e.media.document.attributes[1].stickerset.access_hash
         _get_stiks = await bot(
-            functions.messages.GetStickerSetRequest(
-                stickerset=types.InputStickerSetID(id=_id, access_hash=_hash)
+        GetStickerSetRequest(
+            InputStickerSetID(
+                id=stickerset_attr.stickerset.id,
+                access_hash=stickerset_attr.stickerset.access_hash,
             )
         )
+    )
         stiks = []
         for i in _get_stiks.documents:
             x = utils.get_input_document(i)
