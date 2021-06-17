@@ -12,13 +12,13 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.packkang$", disable_errors=True)
-async def pack_kangish(_):
-    _e = await _.get_reply_message()
+@register(outgoing=True, pattern=r"^\.packkang$")
+async def pack_kangish(event):
+    _e = await event.get_reply_message()
     if not _e:
-        return await _.edit("`Reply to Sticker.`")
-    if len(_.text) > 9:
-        _packname = _.text.split(" ", maxsplit=1)[1]
+        return await event.edit("`Reply to Sticker.`")
+    if len(event.text) > 9:
+        _packname = event.text.split(" ", maxsplit=1)[1]
     else:
         _packname = f"Geez Stickers Kang By {_.sender_id}"
     if _e and _e.media and _e.media.document.mime_type == "image/webp":
@@ -52,7 +52,7 @@ async def pack_kangish(_):
                 functions.stickers.CreateStickerSetRequest(
                     user_id=_.sender_id,
                     title=_packname,
-                    short_name=f"bot_{_.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
+                    short_name=f"geez_{_.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
                     stickers=stiks,
                 )
             )
@@ -65,16 +65,16 @@ async def pack_kangish(_):
                 functions.stickers.CreateStickerSetRequest(
                     user_id=_.sender_id,
                     title=_packname,
-                    short_name=f"bot_{_.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
+                    short_name=f"geez_{_.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
                     stickers=stiks,
                 )
             )
             ok.update({_.sender_id: pack})
             udB.set("PACKKANG", str(ok))
-        await _.edit(f"Pack Kanged Successfully.\nKanged Pack: [link](https://t.me/addstickers/{_r_e_s.set.short_name})",
+        await event.edit(f"Pack Kanged Successfully.\nKanged Pack: [link](https://t.me/addstickers/{_r_e_s.set.short_name})",
                      )
     else:
-        await _.edit("Unsupported File")
+        await event.edit("Unsupported File")
 
 
 CMD_HELP.update({
