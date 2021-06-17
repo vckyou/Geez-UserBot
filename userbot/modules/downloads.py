@@ -73,8 +73,8 @@ async def download_video(event):
         return
     except GeoRestrictedError:
         await x.edit("`Video is not available from your geographic location due to"
-                        + " geographic restrictions imposed by a website.`"
-                        )
+                     + " geographic restrictions imposed by a website.`"
+                     )
         return
     except MaxDownloadsReached:
         await x.edit("`Max-downloads limit has been reached.`")
@@ -190,7 +190,7 @@ async def download_vsong(event):
         rip_data["id"] + ".mp4",
         rip_data["title"] + ".mp4",
         tail,
-        x, 
+        x,
         "Uploading " + rip_data["title"],
     )
     CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
