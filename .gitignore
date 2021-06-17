@@ -15,3 +15,5 @@ bin/*
 TG_BOT_TOKEN.session
 *.mp3
 *.mp4
+*.webm
+*.mkv
