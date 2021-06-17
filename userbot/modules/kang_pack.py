@@ -72,7 +72,7 @@ async def pack_kangish(event):
             ok.update({_.sender_id: pack})
             udB.set("PACKKANG", str(ok))
         await event.edit(f"Pack Kanged Successfully.\nKanged Pack: [link](https://t.me/addstickers/{_r_e_s.set.short_name})",
-                     )
+                         )
     else:
         await event.edit("Unsupported File")
 
