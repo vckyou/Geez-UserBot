@@ -1,5 +1,5 @@
 # Thanks Full To Ultroid
-# Ported By @VckyouuBitch 
+# Ported By @VckyouuBitch
 # Copyright (c) 2021 Geez - Projects
 # Geez - Projects https://github.com/Vckyou/Geez-UserBot
 
@@ -9,11 +9,7 @@ import random
 import time
 
 from lyrics_extractor import SongLyrics as sl
-from lyrics_extractor.lyrics import LyricScraperException as LyError
-from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
-from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.types import DocumentAttributeAudio
-from telethon.tl.types import InputMessagesFilterMusic as filtermus
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (ContentTooShortError, DownloadError,
                               ExtractorError, GeoRestrictedError,
