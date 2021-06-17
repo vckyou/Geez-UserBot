@@ -13,8 +13,8 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.packkang$")
-async def pack_kangish(event):
+@register(outgoing=True, pattern=r"^\.packkang$", disable_errors=True)
+async def _(event):
     _e = await event.get_reply_message()
     if not _e:
         return await event.edit("`Reply to Sticker.`")
