@@ -43,6 +43,7 @@ pySmartDL
 python-barcode
 python-dotenv
 pytz
+shazamio
 qrcode
 requests>=2.18.4
 search-engine-parser>=0.6.1
@@ -101,4 +102,3 @@ scikit-image
 pendulum
 opencv-python
 youtube-search-python
-shazamio
