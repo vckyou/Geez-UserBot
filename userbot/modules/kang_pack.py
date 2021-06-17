@@ -3,7 +3,8 @@
 # Copyright (c) Geez - Project
 #
 # https://github.com/Vckyou/Geez-UserBot
-
+# INI BELUM KE FIX YA BGST JADI JANGAN ASAL AMBIL MODUL AJAA:')
+# KALO EMG KALIAN BISA FIX NYA TOLONG SEGERA DIBANTU :)
 
 from telethon import utils
 from telethon.errors import PackShortNameOccupiedError
@@ -76,6 +77,7 @@ async def pack_kangish(event):
     else:
         await event.edit("Unsupported File")
 
+# SEKALI LAGI INI BELUM KE FIX, MASU STUCK !!!!!!
 
 CMD_HELP.update({
     "packkang":
