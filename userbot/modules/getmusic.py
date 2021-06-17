@@ -150,7 +150,7 @@ async def _(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.vsongs(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.vsong(?: |$)(.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
