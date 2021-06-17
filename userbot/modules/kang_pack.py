@@ -12,7 +12,7 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.stkrinfo$", disable_errors=True)
+@register(outgoing=True, pattern=r"^\.packkang$", disable_errors=True)
 async def pack_kangish(_):
     _e = await _.get_reply_message()
     if not _e:
