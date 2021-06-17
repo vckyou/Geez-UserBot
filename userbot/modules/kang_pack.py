@@ -4,25 +4,9 @@
 #
 # https://github.com/Vckyou/Geez-UserBot
 
-import asyncio
-import io
-import os
-import random
-import re
-import urllib.request
-from os import remove
 
-import cv2
-import numpy as np
-from PIL import Image, ImageDraw
 from telethon import utils
-from telethon.errors import ChatSendStickersForbiddenError, PackShortNameOccupiedError
-from telethon.tl.functions.messages import GetStickerSetRequest
-from telethon.tl.types import (
-    DocumentAttributeFilename,
-    DocumentAttributeSticker,
-    MessageMediaPhoto,
-)
+from telethon.errors import PackShortNameOccupiedError
 
 from userbot.events import register
 from userbot import CMD_HELP
@@ -88,7 +72,7 @@ async def pack_kangish(_):
             ok.update({_.sender_id: pack})
             udB.set("PACKKANG", str(ok))
         await _.edit(f"Pack Kanged Successfully.\nKanged Pack: [link](https://t.me/addstickers/{_r_e_s.set.short_name})",
-        )
+                     )
     else:
         await _.edit("Unsupported File")
 
