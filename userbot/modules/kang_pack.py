@@ -15,16 +15,16 @@ from userbot import CMD_HELP
 
 @register(outgoing=True, pattern=r"^\.packkang$", disable_errors=True)
 async def _(event):
-    _e = await event.get_reply_message()
-    if not _e:
+    ureply = await event.get_reply_message()
+    if not ureply:
         return await event.edit("`Reply to Sticker.`")
     if len(event.text) > 9:
         _packname = event.text.split(" ", maxsplit=1)[1]
     else:
         _packname = f"Geez Stickers Kang By {event.sender_id}"
-    if _e and _e.media and _e.media.document.mime_type == "image/webp":
-        _id = _e.media.document.attributes[1].stickerset.id
-        _hash = _e.media.document.attributes[1].stickerset.access_hash
+    if ureply and ureply.media and ureply.media.document.mime_type == "image/webp":
+        _id = ureply.media.document.attributes[1].stickerset.id
+        _hash = ureply.media.document.attributes[1].stickerset.access_hash
         _get_stiks = await bot(
             functions.messages.GetStickerSetRequest(
                 stickerset=types.InputStickerSetID(id=_id, access_hash=_hash)
@@ -49,7 +49,7 @@ async def _(event):
             except BaseException:
                 pack = 1
             try:
-                _r_e_s = await bot(
+                _r_e_s = await event.client.send_file(
                     functions.stickers.CreateStickerSetRequest(
                         user_id=event.sender_id,
                         title=_packname,
@@ -62,7 +62,7 @@ async def _(event):
             except PackShortNameOccupiedError:
                 time.sleep(1)
                 pack += 1
-                _r_e_s = await bot(
+                _r_e_s = await event.client.send_file(
                     functions.stickers.CreateStickerSetRequest(
                         user_id=event.sender_id,
                         title=_packname,
