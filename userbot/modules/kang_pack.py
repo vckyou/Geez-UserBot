@@ -53,7 +53,7 @@ async def _(event):
                     functions.stickers.CreateStickerSetRequest(
                         user_id=event.sender_id,
                         title=_packname,
-                        short_name=f"geez_{_.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
+                        short_name=f"geez_{event.sender_id}_{pack}_by_{(await tgbot.get_me()).username}",
                         stickers=stiks,
                     )
                 )
