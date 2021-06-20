@@ -26,7 +26,6 @@ google_trans_new
 googletrans==4.0.0rc1
 google-auth-oauthlib
 google_images_download
-
 gTTS>=2.1.1
 gTTS-token>=1.1.3
 hachoir>=3.0a5
