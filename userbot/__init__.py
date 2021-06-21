@@ -552,7 +552,7 @@ with bot:
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
                         [custom.Button.inline(
-                            "Close", b"close")],
+                             "Back", data="{}_next({})".format(prefix, modulo_page)],
                     ]
                 )
 
