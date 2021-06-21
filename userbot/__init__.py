@@ -579,7 +579,7 @@ def paginate_help(page_number, loaded_modules, prefix):
             )
         ]
 
-        @ tgbot.on(
+        @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_prev\((.+?)\)")
             )
@@ -597,7 +597,7 @@ def paginate_help(page_number, loaded_modules, prefix):
                 reply_pop_up_alert=f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @ tgbot.on(
+        @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"ub_modul_(.*)")
             )
@@ -630,7 +630,7 @@ def paginate_help(page_number, loaded_modules, prefix):
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @ tgbot.on(events.CallbackQuery(data=b"close"))
+        @tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
             await event.edit("Menu Ditutup!", buttons=Button.clear())
 
