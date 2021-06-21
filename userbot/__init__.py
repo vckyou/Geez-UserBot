@@ -490,7 +490,7 @@ with bot:
                 result = builder.photo(
                     file=geezlogo,
                     link_preview=False,
-                    text=f"╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞\n\n⚡**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n⚡ **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `5.0`\n⚡ **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n⚡ **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : VCKYOUUU **".format(
+                    text=f"⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡\n\n⚡**Owner : {DEFAULTUSER}**\n\n⚡ **Bot Ver :** `5.0`\n⚡ **𝗠odules :** `{len(plugins)}`\n\n⚡ **Dev : VCKYOUUU **".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -552,7 +552,7 @@ with bot:
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
                         [custom.Button.inline(
-                            "Close", rb"helpme_prev")],
+                            "Close", data"_prev")],
                     ]
                 )
 
