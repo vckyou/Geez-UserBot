@@ -545,7 +545,7 @@ with bot:
                 await event.edit(
                     file=geezlogo,
                     link_preview=True,
-                    buttons = [
+                    buttons=[
                         Button.url(
                             "Group Support",
                             "t.me/GeezSupportGroup",
@@ -575,35 +575,36 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                reply_pop_up_alert=f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.CallbackQuery(data=re.compile(rb"mainmenu")))
+        @ tgbot.on(events.CallbackQuery(data=re.compile(rb"mainmenu")))
         async def on_plug_in_callback_query_handler(event):
-            _result = main_menu()
+            _result=main_menu()
            await event.edit(_result[0], buttons=_result[1])
 
-        @tgbot.on(
+        @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"ub_modul_(.*)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                modul_name = event.data_match.group(1).decode("UTF-8")
+                modul_name=event.data_match.group(1).decode("UTF-8")
 
-                cmdhel = str(CMD_HELP[modul_name])
+                cmdhel=str(CMD_HELP[modul_name])
                 if len(cmdhel) > 180:
-                    help_string = (
-                        str(CMD_HELP[modul_name]).replace('`', '')[:180] + "..."
+                    help_string=(
+                        str(CMD_HELP[modul_name]).replace(
+                            '`', '')[:180] + "..."
                         + "\n\nBaca Text Berikutnya Ketik .help "
                         + modul_name
                         + " "
                     )
                 else:
-                    help_string = str(CMD_HELP[modul_name]).replace('`', '')
+                    help_string=str(CMD_HELP[modul_name]).replace('`', '')
 
-                reply_pop_up_alert = (
+                reply_pop_up_alert=(
                     help_string
                     if help_string is not None
                     else "{} No document has been written for module.".format(
@@ -611,11 +612,11 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                reply_pop_up_alert=f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.CallbackQuery(data=b"close"))
+        @ tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
             await event.edit("Menu Ditutup!", buttons=Button.clear())
 
