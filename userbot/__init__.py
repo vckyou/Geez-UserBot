@@ -545,15 +545,20 @@ with bot:
                 await event.edit(
                     file=geezlogo,
                     link_preview=True,
-                    buttons=[
-                            Button.url("📢 Channel Support",
-                                       "t.me/GeezProject"),
-                            Button.url("🚨 Group support",
-                                       "t.me/GeezSupportGroup")],
-                        [custom.Button.inline(
-                            "Close", data"mainmenu")],
+                    buttons = [
+                        Button.url(
+                            "Group Support",
+                            "t.me/GeezSupportGroup",
+                        ),
+                        Button.url(
+                            "Channel Support",
+                            "t.me/GeezProjects",
+                        ),
+                        costum.Button.inline(
+                            "Close",
+                            data="mainmenu",
+                        ),
                     ]
-                )
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
