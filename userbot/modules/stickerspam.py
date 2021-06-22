@@ -27,7 +27,7 @@ async def stickerpack_spam(event):
     try:
         stickerset_attr = reply.document.attributes[1]
         geezevent = await event.reply("`Fetching details of the sticker pack, please wait..`"
-                                     )
+                                      )
     except BaseException:
         await event.edit("`This is not a sticker. Reply to a sticker.`", 5)
         return
