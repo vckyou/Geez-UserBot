@@ -11,7 +11,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from userbot.events import register
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, InputStickerSetID
 
 
 @register(outgoing=True, pattern=r"^\.sspam(?: |$)(.*)")
@@ -34,7 +34,7 @@ async def stickerpack_spam(event):
     try:
         get_stickerset = await bot(
             GetStickerSetRequest(
-                types.InputStickerSetID(
+                InputStickerSetID(
                     id=stickerset_attr.stickerset.id,
                     access_hash=stickerset_attr.stickerset.access_hash,
                 )
