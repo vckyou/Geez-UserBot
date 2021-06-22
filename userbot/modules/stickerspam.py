@@ -9,9 +9,10 @@ import base64
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.tl.types import InputStickerSetID
 
 from userbot.events import register
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, InputStickerSetID
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.sspam(?: |$)(.*)")
