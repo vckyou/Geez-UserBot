@@ -33,9 +33,9 @@ async def stickerpack_spam(event):
         await event.edit("`This is not a sticker. Reply to a sticker.`", 5)
         return
     try:
-        get_stickerset = await bot(
+        get_stickerset = await event.client(
             GetStickerSetRequest(
-                InputStickerSetID(
+                types.InputStickerSetID(
                     id=stickerset_attr.stickerset.id,
                     access_hash=stickerset_attr.stickerset.access_hash,
                 )
@@ -49,7 +49,7 @@ async def stickerpack_spam(event):
         await event.client(hmm)
     except BaseException:
         pass
-    reqd_sticker_set = await bot(
+    reqd_sticker_set = await event.client(
         functions.messages.GetStickerSetRequest(
             stickerset=types.InputStickerSetShortName(
                 short_name=f"{get_stickerset.set.short_name}"
