@@ -574,11 +574,6 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.CallbackQuery(data=re.compile(rb"mainmenu")))
-        async def on_plug_in_callback_query_handler(event):
-            _result = main_menu()
-           await event.edit(_result[0], buttons=_result[1])
-
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"ub_modul_(.*)")
@@ -614,9 +609,6 @@ with bot:
 
         @tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
-            buttons = [
-                (Button.inline("Open Again", data="mainmenu"),),
-            ]
             await event.edit("Menu Ditutup!", buttons=Button.clear())
 
     except BaseException:
