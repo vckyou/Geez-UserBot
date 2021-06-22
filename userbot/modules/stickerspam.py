@@ -5,7 +5,6 @@
 
 import asyncio
 import base64
-import random
 
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
@@ -20,14 +19,15 @@ async def stickerpack_spam(event):
     if event.fwd_from:
         return
     reply = await event.get_reply_message()
-    if not reply or media_type(reply) is None or media_type(reply) != "Sticker":
+    if not reply or media_type(
+            reply) is None or media_type(reply) != "Sticker":
         return await event.edit("`reply to any sticker to send all stickers in that pack`"
-        )
+                                )
     hmm = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
     try:
         stickerset_attr = reply.document.attributes[1]
         geezevent = await event.edit("`Fetching details of the sticker pack, please wait..`"
-        )
+                                     )
     except BaseException:
         await event.edit("`This is not a sticker. Reply to a sticker.`", 5)
         return
@@ -42,7 +42,7 @@ async def stickerpack_spam(event):
         )
     except Exception:
         return await geezevent.edit("`I guess this sticker is not part of any pack so i cant kang this sticker pack try kang for this sticker`",
-        )
+                                    )
     try:
         hmm = Get(hmm)
         await event.client(hmm)
