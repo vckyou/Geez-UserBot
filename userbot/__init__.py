@@ -546,7 +546,6 @@ with bot:
                     file=geezlogo,
                     link_preview=True,
                     buttons=[
-                        [
                             Button.url("📢 Channel Support",
                                        "t.me/GeezProject"),
                             Button.url("🚨 Group support",
