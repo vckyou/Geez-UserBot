@@ -576,7 +576,7 @@ with bot:
 
         @tgbot.on(events.CallbackQuery(data=re.compile(rb"mainmenu")))
         async def on_plug_in_callback_query_handler(event):
-            _result=main_menu()
+            _result = main_menu()
            await event.edit(_result[0], buttons=_result[1])
 
         @tgbot.on(
