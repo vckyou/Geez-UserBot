@@ -3,6 +3,7 @@ aiohttp[speedups]>=3.5.4
 aiofiles
 aria2p
 wheel
+carbonnow
 aiohttp
 aiofiles
 moviepy
