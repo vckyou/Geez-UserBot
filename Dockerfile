@@ -1,5 +1,5 @@
 # Using Python Slim-Buster
-FROM xluxz/geezproject:buster
+FROM vckyouuu/geezprojects:buster
 # Lah U cp Atur atur
 # Geez-UserBot
 #
