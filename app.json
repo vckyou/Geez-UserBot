@@ -1,6 +1,6 @@
 {
-  "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-  "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "💉 𝙋𝙚𝙣𝙞𝙠𝙢𝙖𝙩 𝙈𝙚𝙢𝙚𝙬 𝙐𝙨𝙚𝙧𝙗𝙤𝙩 💉",
+  "description": "🚭 Memew Userbot 🚭 USERBOT YG DIGUNAKAN UNTUK MENIKMATI PARA MEMEW DI TELEGRAM 🗽..",
   "logo": "",
   "keywords": [
     "telegram",
@@ -10,20 +10,20 @@
     "productivity"
   ],
   "repository": "https://github.com/Vckyou/Geez-UserBot",
-  "telegram": "https://t.me/VckyouuBitch",
-  "success_url": "https://t.me/CariTemanRandom",
+  "telegram": "https://t.me/penjelajahdimensi",
+  "success_url": "https://t.me/thisrevolution",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org.",
+      "description": "Makanya jadi orang jadi dongo kontol.",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org.",
+      "description": "Makanya jadi orang jangan dongo kontol.",
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @VckyouuBitch di telegram",
+      "description": "Baca Goblok makanya",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -36,7 +36,7 @@
       "required": true
     },
     "BOTLOG": {
-      "description": "Kalo Mau Off in BOTLOG Ganti False",
+      "description": "Kalo Mau Off in ya BOTLOG nya di Ganti ke False Kontol",
       "value": "True",
       "required": true
     },
