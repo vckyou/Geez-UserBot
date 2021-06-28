@@ -6,11 +6,11 @@ from time import sleep
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Hai Perkenalkan Namaku Geez`")
+    await typew.edit("`Hai Perkenalkan Namaku Memew`")
     sleep(3)
-    await typew.edit("`19 Tahun`")
+    await typew.edit("`22 Tahun`")
     sleep(1)
-    await typew.edit("`Tinggal Di Tangerang, Salam Kenal:)`")
+    await typew.edit("`Tinggal Di Bali, Salam Kenal Ya Mew:)`")
 # Create by myself @localheart
 
 
@@ -20,7 +20,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`Cuma Mau Bilang`")
     sleep(3)
-    await typew.edit("`Aku Sayang Kamu`")
+    await typew.edit("`Aku Sange sama Kamu`")
     sleep(1)
     await typew.edit("`I LOVE YOU 💞`")
 # Create by myself @localheart
