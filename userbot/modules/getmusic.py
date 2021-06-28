@@ -53,7 +53,7 @@ async def _(event):
     try:
         async with bot.conversation(chat) as conv:
             await asyncio.sleep(2)
-            await event.edit("`Downloading...Please wait`")
+            await event.edit("`Downloading...Tunggu Sebentar`")
             try:
                 msg = await conv.send_message(link)
                 response = await conv.get_response()
