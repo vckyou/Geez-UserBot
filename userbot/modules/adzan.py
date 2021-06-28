@@ -22,7 +22,7 @@ async def get_adzan(adzan):
     url = f"https://api.pray.zone/v2/times/today.json?city={LOCATION}"
     request = requests.get(url)
     if request.status_code == 500:
-        return await adzan.edit(f"**Tidak Dapat Menemukan Kota** `{LOCATION}`")
+        return await adzan.edit(f"**Kota Anda Kaum Kafir** `{LOCATION}`")
 
     parsed = json.loads(request.text)
 
