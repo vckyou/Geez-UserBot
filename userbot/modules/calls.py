@@ -17,6 +17,7 @@ from userbot.events import register
 
 NO_ADMIN = "`Sorry you are not admin :)`"
 
+
 async def get_call(event):
     geez = await event.client(getchat(event.chat_id))
     vcky = await event.client(getvc(geez.full_chat.call))
@@ -25,7 +26,7 @@ async def get_call(event):
 
 def user_list(l, n):
     for i in range(0, len(l), n):
-        yield l[i : i + n]
+        yield l[i: i + n]
 
 
 @register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
