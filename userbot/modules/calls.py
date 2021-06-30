@@ -55,7 +55,7 @@ async def _(e):
         return await e.edit(NO_ADMIN)
     new_rights = ChatAdminRights(invite_users=True)
     try:
-        await e.client(stopvc(await get_call(c)))
+        await e.client(stopvc(await get_call(e)))
         await e.edit("`Voice Chat Stopped...`")
     except Exception as ex:
         await e.edit(f"`{str(ex)}`")
