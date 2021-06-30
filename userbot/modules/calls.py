@@ -75,7 +75,7 @@ async def _(e):
             z += 6
         except BaseException:
             pass
-    await e.edit(f"`Invited {z} users`**")
+    await e.edit(f"`Invited {z} users`")
 
 
 CMD_HELP.update(
