@@ -988,7 +988,7 @@ async def paste(pstl):
         )
 
 
-@register(outgoing=True, pattern="^.rbg(?: |$)(.*)")
+@register(outgoing=True, pattern="^.removebg(?: |$)(.*)")
 async def kbg(remob):
     """ For .rbg command, Remove Image Background. """
     if REM_BG_API_KEY is None:
