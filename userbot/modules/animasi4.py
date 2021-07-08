@@ -8,30 +8,30 @@ import asyncio
 @register(outgoing=True, pattern="^.sayang$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("I LOVEE YOUUU 💕")
+        await e.edit("I LOVEE YOUU Memew 💕")
         await e.edit("💝💘💓💗")
         await e.edit("💞💕💗💘")
         await e.edit("💝💘💓💗")
         await e.edit("💞💕💗💘")
         await e.edit("💘💞💗💕")
         await e.edit("💘💞💕💗")
-        await e.edit("SAYANG KAMU 💝💖💘")
+        await e.edit("Kamu mau ngewe ? 💝💖💘")
         await e.edit("💝💘💓💗")
         await e.edit("💞💕💗💘")
         await e.edit("💘💞💕💗")
         await e.edit("SAYANG")
-        await e.edit("KAMU")
-        await e.edit("SELAMANYA 💕")
+        await e.edit("Ngewe Yuk")
+        await e.edit("Di Kebun 💕")
         await e.edit("💘💘💘💘")
         await e.edit("SAYANG")
-        await e.edit("KAMU")
+        await e.edit("Sange nih")
         await e.edit("SAYANG")
-        await e.edit("KAMU")
-        await e.edit("I LOVE YOUUUU")
+        await e.edit("Aku Sange")
+        await e.edit("Udah Yuk Ngewe")
         await e.edit("MY BABY")
         await e.edit("💕💞💘💝")
         await e.edit("💘💕💞💝")
-        await e.edit("SAYANG KAMU💞")
+        await e.edit("Aku Sayang Kamu Kalau Bisa Ngewe💞")
 
 
 @register(outgoing=True, pattern='^.dino(?: |$)(.*)')
@@ -45,7 +45,7 @@ async def typewriter(typew):
     await typew.edit("`🏃                       🦖`")
     await typew.edit("`🏃                      🦖`")
     await typew.edit("`🏃                     🦖`")
-    await typew.edit("`🏃   `LARII`          🦖`")
+    await typew.edit("`🏃   `Kabur`          🦖`")
     await typew.edit("`🏃                   🦖`")
     await typew.edit("`🏃                  🦖`")
     await typew.edit("`🏃                 🦖`")
@@ -55,7 +55,7 @@ async def typewriter(typew):
     await typew.edit("`🏃             🦖`")
     await typew.edit("`🏃            🦖`")
     await typew.edit("`🏃           🦖`")
-    await typew.edit("`🏃WOARGH!   🦖`")
+    await typew.edit("`🏃Ada Si Agus🦖`")
     await typew.edit("`🏃           🦖`")
     await typew.edit("`🏃            🦖`")
     await typew.edit("`🏃             🦖`")
@@ -67,7 +67,7 @@ async def typewriter(typew):
     await typew.edit("`🏃                   🦖`")
     await typew.edit("`🏃                    🦖`")
     await typew.edit("`🏃                     🦖`")
-    await typew.edit("`🏃  Huh-Huh           🦖`")
+    await typew.edit("`🏃  Kabor,Tolong       🦖`")
     await typew.edit("`🏃                   🦖`")
     await typew.edit("`🏃                  🦖`")
     await typew.edit("`🏃                 🦖`")
@@ -79,31 +79,31 @@ async def typewriter(typew):
     await typew.edit("`🏃           🦖`")
     await typew.edit("`🏃          🦖`")
     await typew.edit("`🏃         🦖`")
-    await typew.edit("`DIA SEMAKIN MENDEKAT!!!`")
+    await typew.edit("`Si AGUS SEMAKIN MENDEKAT!!!`")
     sleep(1)
     await typew.edit("`🏃       🦖`")
     await typew.edit("`🏃      🦖`")
     await typew.edit("`🏃     🦖`")
     await typew.edit("`🏃    🦖`")
-    await typew.edit("`Dahlah Pasrah Aja`")
+    await typew.edit("`Dahlah Pasrah Aja Gua Gus`")
     sleep(1)
     await typew.edit("`🧎🦖`")
     sleep(2)
-    await typew.edit("`-TAMAT-`")
+    await typew.edit("`-KONTOL-`")
 
 
 @register(outgoing=True, pattern="^.gabut$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`PERNAAHHHHH KAHHH KAUUU MENGIRA`")
-        await e.edit("`SEPEEERTIIIII APAAAA BENTUKKKKKKK CINTAAAA`")
-        await e.edit("`RAMBUUUT WARNAAA WARNII`")
+        await e.edit("`SEPEEERTIIIII APAAAA RASANYA COLI`")
+        await e.edit("`JEMBUTTT WARNA WARNI OH INDAH`")
         await e.edit("`BAGAI GULALI`")
         await e.edit("`IMUUUTTTTT LUCUUU`")
-        await e.edit("`WALAAUUUU TAK TERLALU TINGGI`")
+        await e.edit("`WALAAUUUU TAK TERLALU GEDE`")
         await e.edit("`GW GABUUTTTT`")
-        await e.edit("`EMMMM BACOTNYA`")
-        await e.edit("`GABUTTTT WOI GABUT`")
+        await e.edit("`PENGEN COLI`")
+        await e.edit("`COLI WOI SINII`")
         await e.edit("🙈🙈🙈🙈")
         await e.edit("🙉🙉🙉🙉")
         await e.edit("🙈🙈🙈🙈")
@@ -390,8 +390,8 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting Ke Server Cinta`",
-            "`Mencari Target Cinta`",
+            "`Connecting Ke Server SANGE`",
+            "`Mencari Target SANGE`",
             "`Mengirim Cintaku.. 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
@@ -399,8 +399,8 @@ async def _(event):
             "`Mengirim Cintaku.. 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 84%\n█████████████████████▒▒▒▒ `",
-            "`Mengirim Cintaku.. 100%\n█████████CINTAKU███████████ `",
-            f"`Cintaku Sekarang Sepenuhnya Terkirim Padamu, Dan Sekarang Aku Sangat Mencintai Mu, I Love You 💞`"]
+            "`Mengirim Cintaku.. 100%\n█████████SANGE███████████ `",
+            f"`Rasa Sangeku Sekarang Sepenuhnya Terkirim Padamu, Dan Sekarang Aku Sangat Ingin Mengewemu, Mantal sayang 🦈`"]
 
         for i in animation_ttl:
 

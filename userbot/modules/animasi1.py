@@ -47,15 +47,15 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n />❤️ *Ini Buat Kamu`")
+                     "`\n />❤️ *Ini Buat Kamu Sayang`")
     sleep(3)
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n/>💔  *Aku Ambil Lagi`")
+                     "`\n/>💔  *Aku Ambil Lagi Ya`")
     sleep(2)
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n💔<\\  *Terimakasih`")
+                     "`\n💔<\\  *Terimakasih Hehe`")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -139,7 +139,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n💖<\\  *Tapi Bo'ong Hiyahiyahiya`")
+                     "`\n💖<\\  *Tapi Bo'ong Hiyahiyahiya Kontol`")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))

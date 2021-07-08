@@ -31,7 +31,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("`Terjadi Kesalahan... Mohon Lapor Ke Grup` @GeezSupportGroup", str(err))
+            return await event.edit("`Terjadi Kesalahan... Mohon Lapor Ke Grup` @thisrevolution", str(err))
     return user_obj, extra
 
 
@@ -84,7 +84,7 @@ async def gben(userbot):
     if not sender.id == me.id:
         dark = await dc.reply("`Ingin Mengaktifkan Perintah Global Banned!`")
     else:
-        dark = await dc.edit("`Memproses Global Banned Pengguna Ini!!`")
+        dark = await dc.edit("`Sorry Ya Anak Anjing Kek Elu harus di Gban!!`")
     me = await userbot.client.get_me()
     await dark.edit(f"`Global Banned Akan Segera Aktif!!!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
@@ -127,7 +127,7 @@ async def gben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await dark.edit(f"`Global Banned Aktif ✅`")
+                await dark.edit(f"`MAMPUS Global Banned Aktif ✅`")
             except BaseException:
                 b += 1
     else:

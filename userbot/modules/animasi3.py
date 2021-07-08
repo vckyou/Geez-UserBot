@@ -1304,7 +1304,7 @@ async def clock(event):
 
 @register(outgoing=True, pattern="^.rain$")
 async def rain(event):
-    deq = deque(list("☀️🌤⛅️🌥☁️🌧⛈"))
+    deq = deque(list("☀️🌤⛅️🌥☁️🌧⛈ sayang vcs yuk"))
     try:
         for x in range(32):
             await sleep(0.1)
@@ -1385,7 +1385,7 @@ async def spongemocktext(mock):
     elif textx:
         message = textx.text
     else:
-        return await mock.edit("`bEriKan PeSan UnTuK MoCk!`")
+        return await mock.edit("`Berikan pesan kepada Momok!`")
 
     for charac in message:
         if charac.isalpha() and randint(0, 1):
@@ -1751,7 +1751,7 @@ async def koc(e):
         await e.edit("8===✊D💦💦💦💦💦💦💦💦💦")
         await e.edit("8==✊=D💦💦💦💦💦💦💦💦💦💦")
         await e.edit("8=✊==D Lah Kok Habis?")
-        await e.edit("😭😭😭😭")
+        await e.edit("Enak sayang,lagi ?")
 
 
 @register(outgoing=True, pattern="^.gas$")
