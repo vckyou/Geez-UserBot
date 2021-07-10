@@ -19,7 +19,7 @@ from telethon.errors.rpcerrorlist import (
 )
 
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.tl.types import InputPeerUser
 
