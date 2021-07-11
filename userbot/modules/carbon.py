@@ -18,7 +18,7 @@ TRT_LANG = "en"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
 
 
-@register(outgoing=True, pattern="^.crblang (.*)")
+@register(outgoing=True, pattern="^.krblang (.*)")
 async def setlang(prog):
     global CARBONLANG
     CARBONLANG = prog.pattern_match.group(1)
@@ -357,6 +357,6 @@ async def carbon_api(e):
 
 CMD_HELP.update({
     "carbon":
-    "`.carbon`value <values=1,2,3,4>\
-        \nUsage:reply or type .carbon1 or 2,3,4 value and beautify your text."
+    "`.carbon`value <values=1,2,3,4,5>\
+        \nUsage:reply or type .carbon1 or 2,3,4,5 value and beautify your text."
 })
