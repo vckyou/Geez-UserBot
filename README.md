@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./resources/extras/GeezAngry.gif" width="40px"> GEEZ PROJECTS <img src="./resources/extras/GeezAngry.gif" width="40px"></h1>
+<h1 align="center"><img src="./resources/extras/GeezAngry.gif" width="35px"> GEEZ PROJECTS <img src="./resources/extras/GeezAngry.gif" width="35px"></h1>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
