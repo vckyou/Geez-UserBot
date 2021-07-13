@@ -1,4 +1,4 @@
-<p align="center"> 🚀 𝗪𝗵𝗶𝗰𝗵 𝗶𝘀 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗕𝗮𝘀𝗲𝗱 🚀</p>
+<h1 align="center"><img src="./resources/extras/GeezAngry.gif" width="40px"> GEEZ PROJECTS <img src="./resources/extras/GeezAngry.gif" width="40px"></h1>
 <p align="left">
   <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
   </p>
