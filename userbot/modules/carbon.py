@@ -425,6 +425,6 @@ CMD_HELP.update({
     "carbon":
     "Command : `.carbon` <Text/Reply>\
     \nUsage : atau anda juga bisa ketik .crb1 atau 2,3,4,5 untuk mengganti warna background anda.\
-    \nCommand : .krblang <text>\
-    \n\nUsage : Percantik kode Anda menggunakan carbon.now.sh\nUse .krblang <text> untuk mengatur bahasa untuk kode Anda."
+    \n\nCommand : .krblang <text>\
+    \nUsage : Percantik kode Anda menggunakan carbon.now.sh\nUse .krblang <text> untuk mengatur bahasa untuk kode Anda."
 })
