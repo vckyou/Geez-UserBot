@@ -23,7 +23,6 @@ from os import popen
 from random import choice
 from re import findall, match
 from time import sleep
-from urllib.parse import quote_plus
 
 import asyncurban
 import barcode
