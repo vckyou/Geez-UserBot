@@ -1209,7 +1209,7 @@ async def get_dogbin_content(dog_url):
     await dog_url.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
+@register(outgoing=True, pattern=r"^\.nekko(?: |$)([\s\S]*)")
 async def neko(nekobin):
     """For .paste command, pastes the text directly to dogbin."""
     nekobin_final_url = ""
