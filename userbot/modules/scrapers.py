@@ -1331,20 +1331,6 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "paste": "**Modules : **`paste`\
-        \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.paste` <text/reply>\
-        \n  •  **Function : **Buat paste atau url yang dipersingkat menggunakan dog in.\
-        \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.getpaste` <text/reply>\
-        \n  •  **Function : **Buat paste atau url yang dipersingkat menggunakan dog in.\
-        \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.neko` <text/reply>\
-        \n  •  **Function : **Buat paste atau url yang dipersingkat menggunakan dog in.\
-    "
-    }
-)
-
-
-CMD_HELP.update(
-    {
         "removebg": "**Modules : **`removebg`\
         \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.removebg` <Tautan ke Gambar> atau balas gambar apa pun (Peringatan: tidak berfungsi pada stiker.)\
         \n  •  **Function : **Menghapus latar belakang gambar, menggunakan API remove.bg\
