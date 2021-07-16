@@ -479,6 +479,20 @@ with bot:
                     f"**PONG!!**\n `{ms}ms`",
                 )
 
+        @tgbot.on(
+             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                 data=re.compile(rb"nepo")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            current_page_number = int(lockpage)
+            buttons = paginate_help(current_page_number, plugins, "helpme")
+            await event.edit(
+                file=geezlogo,
+                buttons=buttons,
+                link_preview=False,
+            )
+
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
             builder = event.builder
@@ -556,6 +570,14 @@ with bot:
                     ]
                 )
 
+        @tgbot.on(events.CallbackQuery(data=b"close"))
+        async def close(event):
+            buttons = [
+                (Button.inline("Open Menu", data="nepo"),),
+            ]
+            await event.edit("Menu Ditutup!", buttons=Button.clear())
+
+
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile(rb"helpme_prev\((.+?)\)")
@@ -606,10 +628,6 @@ with bot:
                 reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-        @tgbot.on(events.CallbackQuery(data=b"close"))
-        async def close(event):
-            await event.edit("Menu Ditutup!", buttons=Button.clear())
 
     except BaseException:
         LOGS.info(
