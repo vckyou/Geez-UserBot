@@ -15,7 +15,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 
-from userbot import CMD_HELP, ALIVE_NAME, bot
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
