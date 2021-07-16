@@ -97,6 +97,7 @@ jikanpy
 vcsi
 lottie
 wand
+shazamio
 colour
 scipy
 wordcloud
