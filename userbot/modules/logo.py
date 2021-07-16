@@ -15,7 +15,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 
-from userbot import ALIVE_NAME, CMD_HELP
+from userbot import ALIVE_NAME, bot, CMD_HELP
 from userbot.events import register
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -24,7 +24,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 @register(outgoing=True, pattern=r"^\.logo(?: |$)(.*)", disable_errors=True)
 async def logo_gen(event):
     await event.edit(get_string("com_1"))
-    name = event.pattern_match.group(1)
+    name = event.pattern_match.group(1).lower()
     if not name:
         await event.edit("`Give a name too!`")
     bg_, font_ = "", ""
@@ -40,7 +40,7 @@ async def logo_gen(event):
                 bg_ = await temp.download_media()
     else:
         pics = []
-        async for i in event.client.iter_messages(
+        async for i in bot.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
@@ -50,7 +50,7 @@ async def logo_gen(event):
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
-        async for i in event.client.iter_messages(
+        async for i in bot.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
