@@ -15,7 +15,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 
-from userbot import CMD_HELP,ALIVE_NAME, bot
+from userbot import CMD_HELP, ALIVE_NAME, bot
 from userbot.events import register
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -23,7 +23,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 @register(outgoing=True, pattern=r"^\.logo(?: |$)(.*)")
 async def logo_gen(event):
-    xx = await event.edit(get_string("com_1"))
+    await event.edit(get_string("com_1"))
     name = event.pattern_match.group(1)
     if not name:
         await event.edit("`Give a name too!`")
@@ -82,9 +82,8 @@ async def logo_gen(event):
     )
     x = (image_width - w) / 2
     y = (image_height - h) / 2
-    draw.text(
-        (x, y), name, font=font, fill="white", stroke_width=strke, stroke_fill="black"
-    )
+    draw.text((x, y), name, font=font, fill="white",
+              stroke_width=strke, stroke_fill="black")
     flnme = f"ultd.png"
     img.save(flnme, "png")
     await event.edit("`Done!`")
