@@ -565,7 +565,7 @@ with bot:
                                        "t.me/GeezProject"),
                             Button.url("🚨 Group support",
                                        "t.me/GeezSupportGroup")],
-
+                        [Button.inline("Open Menu", data="nepo")],
                         [custom.Button.inline(
                             "Close", b"close")],
                     ]
