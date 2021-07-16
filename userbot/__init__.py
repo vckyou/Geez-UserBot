@@ -480,8 +480,8 @@ with bot:
                 )
 
         @tgbot.on(
-             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                 data=re.compile(rb"nepo")
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"nepo")
             )
         )
         async def on_plug_in_callback_query_handler(event):
@@ -576,7 +576,6 @@ with bot:
                 (Button.inline("Open Menu", data="nepo"),),
             ]
             await event.edit("Menu Ditutup!", buttons=Button.clear())
-
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
