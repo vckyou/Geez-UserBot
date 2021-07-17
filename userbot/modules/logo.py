@@ -6,7 +6,7 @@
 # <https://www.github.com/Vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE/>
 #
 # Ported By Vicky <viicky.auliaz@gmail.com>
-
+# Ini Belum Di Fix Sumpahh, Masi Null, Kalo Kalian Paham Dibantu Ya gess:)
 
 import glob
 import os
@@ -24,7 +24,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 @register(outgoing=True, pattern=r"^\.logo(?: |$)(.*)", disable_errors=True)
 async def logo_gen(event):
     xx = await event.edit(get_string("com_1"))
-    name = event.pattern_match.group(1).lower()
+    name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Give a name too!`")
     bg_, font_ = "", ""
@@ -40,7 +40,7 @@ async def logo_gen(event):
                 bg_ = await temp.download_media()
     else:
         pics = []
-        async for i in await conv.iter_messages(
+        async for i in bot.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
@@ -50,7 +50,7 @@ async def logo_gen(event):
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
-        async for i in await conv.iter_messages(
+        async for i in bot.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
