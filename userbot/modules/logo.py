@@ -15,7 +15,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 
-from userbot import ALIVE_NAME, bot, CMD_HELP
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -23,10 +23,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 @register(outgoing=True, pattern=r"^\.logo(?: |$)(.*)", disable_errors=True)
 async def logo_gen(event):
-    await event.edit(get_string("com_1"))
+    xx = await event.edit(get_string("com_1"))
     name = event.pattern_match.group(1).lower()
     if not name:
-        await event.edit("`Give a name too!`")
+        await xx.edit("`Give a name too!`")
     bg_, font_ = "", ""
     if event.reply_to_msg_id:
         temp = await event.get_reply_message()
@@ -40,7 +40,7 @@ async def logo_gen(event):
                 bg_ = await temp.download_media()
     else:
         pics = []
-        async for i in bot.iter_messages(
+        async for i in conv.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
@@ -50,7 +50,7 @@ async def logo_gen(event):
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
-        async for i in bot.iter_messages(
+        async for i in conv.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
@@ -86,7 +86,7 @@ async def logo_gen(event):
               stroke_width=strke, stroke_fill="black")
     flnme = f"ultd.png"
     img.save(flnme, "png")
-    await event.edit("`Done!`")
+    await xx.edit("`Done!`")
     if os.path.exists(flnme):
         await event.client.send_file(
             event.chat_id,
@@ -95,7 +95,7 @@ async def logo_gen(event):
             force_document=True,
         )
         os.remove(flnme)
-        await event.delete()
+        await xx.delete()
     if os.path.exists(bg_):
         os.remove(bg_)
     if os.path.exists(font_):
