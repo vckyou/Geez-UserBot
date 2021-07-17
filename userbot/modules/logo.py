@@ -40,7 +40,7 @@ async def logo_gen(event):
                 bg_ = await temp.download_media()
     else:
         pics = []
-        async for i in conv.iter_messages(
+        async for i in await conv.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
@@ -50,7 +50,7 @@ async def logo_gen(event):
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
-        async for i in conv.iter_messages(
+        async for i in await conv.iter_messages(
             "@UltroidLogos", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
