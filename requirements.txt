@@ -9,6 +9,7 @@ aiofiles
 moviepy
 aria2p
 async_generator
+carbonnow
 cowpy
 psutil
 wget
