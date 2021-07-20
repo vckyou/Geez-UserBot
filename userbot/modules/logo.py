@@ -12,7 +12,12 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocument
 
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP, bot, ALIVE_NAME
+
+
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
 
 
 PICS_STR = []
@@ -21,7 +26,7 @@ PICS_STR = []
 @register(outgoing=True, pattern="^.logo(?: |$)(.*)")
 async def _(geezevent):
     event = await geezevent.edit("`Processing.....`")
-    fnt = await geezevent.client.get_font_file("@GeezProjectFONT")
+    fnt = await get_font_file(geezevent.client, "@GeezProjectFONT")
     if geezevent.reply_to_msg_id:
         rply = await geezevent.get_reply_message()
         logo_ = await rply.download_media()
@@ -65,7 +70,7 @@ async def _(geezevent):
     await bot.send_file(
         geezevent.chat_id,
         file_name,
-        caption=f"**Made By :** {geez_mention}",
+        caption=f"**Made By :** {DEFAULTUSER}",
     )
     await event.delete()
     try:
