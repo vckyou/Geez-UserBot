@@ -83,14 +83,14 @@ async def _(geezevent):
 
 
 async def get_font_file(client, channel_id):
-    font_file_message_s = await event.get_reply_message(
+    font_file_message_s = await event.client.get_reply_message(
         entity=channel_id,
         filter=InputMessagesFilterDocument,
         limit=None,
     )
     font_file_message = random.choice(font_file_message_s)
 
-    return await bot.download_media(font_file_message)
+    return await event.client.download_media(font_file_message)
 
 
 CMD_HELP.update(
