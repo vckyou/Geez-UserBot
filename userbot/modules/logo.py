@@ -21,7 +21,7 @@ PICS_STR = []
 @register(outgoing=True, pattern="^.logo(?: |$)(.*)")
 async def lg1(geezevent):
     event = await geezevent.edit("`Processing.....`")
-    fnt = await get_font_file(geezevent.client, "@GeezProjectFONT")
+    fnt = await geezevent.client.get_font_file("@GeezProjectFONT")
     if geezevent.reply_to_msg_id:
         rply = await geezevent.get_reply_message()
         logo_ = await rply.download_media()
