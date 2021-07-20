@@ -7,7 +7,6 @@
 
 import os
 import random
-import time
 
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocument
