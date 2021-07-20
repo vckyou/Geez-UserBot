@@ -76,7 +76,7 @@ async def _(geezevent):
         pass
 
 
-async def get_font_file(client.channel_id):
+async def get_font_file(client, channel_id):
     font_file_message_s = await event.get_reply_message(
         entity=channel_id,
         filter=InputMessagesFilterDocument,
