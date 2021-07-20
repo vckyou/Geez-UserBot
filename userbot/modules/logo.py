@@ -67,10 +67,11 @@ async def _(geezevent):
               stroke_width=strik, stroke_fill="black")
     file_name = "GeezBot.png"
     img.save(file_name, "png")
-    await bot.send_file(
+    CAPT = f"**Created By** {DEFAULTUSER}"
+    await event.client.send_file(
         geezevent.chat_id,
         file_name,
-        caption=f"**Made By :** {DEFAULTUSER}",
+        caption=CAPT,
     )
     await event.delete()
     try:
