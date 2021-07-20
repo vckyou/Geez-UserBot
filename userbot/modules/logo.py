@@ -18,6 +18,7 @@ from userbot import CMD_HELP, bot
 
 PICS_STR = []
 
+
 @register(outgoing=True, pattern="^.logo(?: |$)(.*)")
 async def lg1(geezevent):
     event = await geezevent("`Processing.....`")
@@ -27,7 +28,7 @@ async def lg1(geezevent):
         logo_ = await rply.download_media()
     else:
         async for i in bot.iter_messages("@GeezLOGO", filter=InputMessagesFilterPhotos):
-    	    PICS_STR.append(i)
+            PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
     text = geezevent.pattern_match.group(1)
@@ -58,9 +59,8 @@ async def lg1(geezevent):
     )
     w_ = (image_width - w) / 2
     h_ = (image_height - h) / 2
-    draw.text(
-        (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
-    )
+    draw.text((w_, h_), text, font=font, fill="white",
+              stroke_width=strik, stroke_fill="black")
     file_name = "GeezBot.png"
     img.save(file_name, "png")
     await bot.send_file(
@@ -73,8 +73,8 @@ async def lg1(geezevent):
         os.remove(file_name)
         os.remove(fnt)
         os.remove(logo_)
-    except:
-    	pass
+    except BaseException:
+        pass
 
 
 async def get_font_file(client, channel_id):
@@ -90,7 +90,6 @@ async def get_font_file(client, channel_id):
 
 CMD_HELP.update(
     {
-        "logo": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.logo` <reply to pic + text> or <text>", \
-    \n↳ : Membuat logo dengan teks yang diberikan. Jika membalas gambar membuat logo yang lain mendapat BG acak."
+        "logo": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.logo` <reply to pic + text> or <text>", n↳: Membuat logo dengan teks yang diberikan. Jika membalas gambar membuat logo yang lain mendapat BG acak."
     }
 )
