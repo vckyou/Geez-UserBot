@@ -21,7 +21,7 @@ PICS_STR = []
 @register(outgoing=True, pattern="^.logo(?: |$)(.*)")
 async def _(geezevent):
     event = await geezevent.edit("`Processing.....`")
-    fnt = await event.client.get_font_file("@GeezProjectFONT")
+    fnt = await geezevent.client.get_font_file("@GeezProjectFONT")
     if geezevent.reply_to_msg_id:
         rply = await geezevent.get_reply_message()
         logo_ = await rply.download_media()
@@ -76,15 +76,15 @@ async def _(geezevent):
         pass
 
 
-async def get_font_file(client, channel_id):
-    font_file_message_s = await client.get_messages(
+async def get_font_file(client.channel_id):
+    font_file_message_s = await event.get_reply_message(
         entity=channel_id,
         filter=InputMessagesFilterDocument,
         limit=None,
     )
     font_file_message = random.choice(font_file_message_s)
 
-    return await client.download_media(font_file_message)
+    return await bot.download_media(font_file_message)
 
 
 CMD_HELP.update(
