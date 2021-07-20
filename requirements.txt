@@ -4,8 +4,6 @@ aiofiles
 aria2p
 aiofile
 wheel
-aiohttp
-aiofiles
 moviepy
 aria2p
 async_generator
