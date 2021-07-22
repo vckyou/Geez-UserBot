@@ -1,3 +1,10 @@
+# Thanks Full To Team Ultroid
+#
+# Geez - Projects <https://github.com/Vckyou/Geez-UserBot/>
+# Ported By Vcky @VckyouuBitch
+# Copyright (c) 2021 Geez - Projects
+#
+
 import glob
 import os
 import random
