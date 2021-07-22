@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos
 
 from userbot.events import register
-from userbot import ALIVE_NAME
+from userbot import, CMD_HELP, ALIVE_NAME
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -93,3 +93,11 @@ async def logo_gen(event):
     if os.path.exists(font_):
         if not font_.startswith("resources/fonts"):
             os.remove(font_)
+
+
+CMD_HELP.update(
+    {
+        "logo":
+        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.logo <text>`"
+        "\n↳ : Hasilkan logo dari Teks atau Balas Ke gambar yang diberikan, untuk menulis teks Anda di atasnya. Atau Balas Ke File Font, Untuk menulis dengan font itu."
+    })
