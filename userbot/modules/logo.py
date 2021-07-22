@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 @register(outgoing=True, pattern="^.logo(?: |$)(.*)")
 async def logo_gen(event):
-    xx = await event.edit(get_string("com_1"))
+    xx = await event.edit("`Processing.....`")
     name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Give a name too!`")
