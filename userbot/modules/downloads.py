@@ -28,10 +28,10 @@ async def download_video(event):
     a = event.text
     if len(a) >= 5 and a[5] == "s":
         return
-    await event.edit("`Sedang Memproses Musik, Mohon Tunggu Sebentar...`")
+    await event.edit("`Processing...`")
     url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**List Error**\nCara Penggunaan : -`.musik <Judul Lagu>`")
+        return await event.edit("**List Error**\nCara Penggunaan : -`.song <Judul Lagu>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -39,9 +39,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`Tidak Dapat Menemukan Musik...`")
+        return await event.edit("`Music Tidak Dapat Di Temukan...`")
     type = "audio"
-    await event.edit(f"`Persiapan Mendownload {url}...`")
+    await event.edit("`Informasi Ditemukan...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -62,7 +62,7 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Mendapatkan Info Musik...`")
+        await event.edit("`Prosess Mengupload Music...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -99,14 +99,14 @@ async def download_video(event):
     else:
         thumb = None
     upteload = """
-Connected to server...
+Music Sedang Di Download!...
 • {}
 • By - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"╭┈────────────────┈\n➥ {rip_data['title']}\n➥ Uploader - {rip_data['uploader']}\n╭┈────────────────┈╯\n➥ By : {DEFAULTUSER}\n╰┈────────────────┈➤"
+    CAPT = f"╭┈──────────────┈\n   ▸ {rip_data['title']}\n   ▸ Uploader - {rip_data['uploader']}\n├┈────────────┈\n   ▸ By : {DEFAULTUSER}\n╰┈──────────┈"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
