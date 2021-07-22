@@ -32,13 +32,13 @@ async def _(event):
                     return await event.edit(
                         "Terjadi kesalahan saat mengidentifikasi lagu. Coba gunakan pesan audio berdurasi 5-10 detik."
                     )
-                await event.edit("Tunggu sebentar...")
+                await event.edit("```Tunggu sebentar...```")
                 result = await conv.get_response()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("```Buka blokir (@auddbot) dan coba lagi```")
+                await event.edit("```Mohon buka blokir (@auddbot) dan coba lagi```")
                 return
-            namem = f"**Judul : **`{result.text.splitlines()[0]}`\
+            namem = f"**Judul : **{result.text.splitlines()[0]}\
         \n\n**Details : **__{result.text.splitlines()[2]}__"
             await event.edit(namem)
             await event.client.delete_messages(
