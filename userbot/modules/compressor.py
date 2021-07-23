@@ -247,11 +247,11 @@ async def _(e):
 CMD_HELP.update(
     {
         "compress": "`.comp`<reply to video>`\
-    \n\nExample: `kompres 27 aliran` atau `kompres 28`
-      Encode video yang dibalas sesuai dengan nilai CRF.
-        Lebih sedikit CRF == Kualitas Tinggi, Lebih Banyak Ukuran
-        Lebih banyak CRF == Kualitas Rendah, Ukuran Lebih Kecil
-        Rentang CRF=20 - 51
-        Standar=27"
+    \n\nExample: `kompres 27 aliran` atau `kompres 28`\
+        \nEncode video yang dibalas sesuai dengan nilai CRF.\
+        \nLebih sedikit CRF == Kualitas Tinggi, Lebih Banyak Ukuran\
+        \nLebih banyak CRF == Kualitas Rendah, Ukuran Lebih Kecil\
+        \nRentang CRF=20 - 51\
+        \nStandar=27"
     }
 )
