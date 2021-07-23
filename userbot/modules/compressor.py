@@ -4,7 +4,8 @@
 # Ported By Vcky @VckyouuBitch
 # Copyright (c) 2021 Geez - Projects
 #
-# Geez - UserBot < https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE/ >
+# Geez - UserBot <
+# https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE/ >
 
 import asyncio
 import os
@@ -162,16 +163,16 @@ async def _(e):
                         per = elapse * 100 / int(total_frames)
                         time_diff = time.time() - int(d_time)
                         speed = round(elapse / time_diff, 2)
-                        some_eta = ((int(total_frames) - elapse) / speed) * 1000
+                        some_eta = (
+                            (int(total_frames) - elapse) / speed) * 1000
                         text = f"`Compressing {file_name} at {crf} CRF.\n`"
                         progress_str = "`[{0}{1}] {2}%\n\n`".format(
                             "".join(["●" for i in range(math.floor(per / 5))]),
                             "".join(["" for i in range(20 - math.floor(per / 5))]),
                             round(per, 2),
                         )
-                        e_size = (
-                            humanbytes(size) + " of ~" + humanbytes((size / per) * 100)
-                        )
+                        e_size = (humanbytes(size) + " of ~" +
+                                  humanbytes((size / per) * 100))
                         eta = "~" + time_formatter(some_eta)
                         try:
                             await xxx.edit(
@@ -214,9 +215,10 @@ async def _(e):
                 width = int(wi.split(":")[1].split()[0])
                 attributes = [
                     DocumentAttributeVideo(
-                        duration=duration, w=width, h=height, supports_streaming=True
-                    )
-                ]
+                        duration=duration,
+                        w=width,
+                        h=height,
+                        supports_streaming=True)]
                 await e.client.send_file(
                     e.chat_id,
                     mmmm,
@@ -245,11 +247,11 @@ async def _(e):
 CMD_HELP.update(
     {
         "compress": "`.comp`<reply to video>`\
-    \n\nExample : `kompres 27 aliran` atau `kompres 28`
+    \n\nExample: `kompres 27 aliran` atau `kompres 28`
       Encode video yang dibalas sesuai dengan nilai CRF.
-      Lebih sedikit CRF == Kualitas Tinggi, Lebih Banyak Ukuran
-      Lebih banyak CRF == Kualitas Rendah, Ukuran Lebih Kecil
-      Rentang CRF = 20-51
-      Standar = 27"
+        Lebih sedikit CRF == Kualitas Tinggi, Lebih Banyak Ukuran
+        Lebih banyak CRF == Kualitas Rendah, Ukuran Lebih Kecil
+        Rentang CRF=20 - 51
+        Standar=27"
     }
 )
