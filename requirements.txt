@@ -40,6 +40,7 @@ psycopg2
 psycopg2-binary
 pybase64>=0.4.0
 pylast
+pydub
 pySmartDL
 python-barcode
 python-dotenv
