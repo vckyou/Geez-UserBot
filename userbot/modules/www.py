@@ -6,14 +6,28 @@
     Information Superhighway (yes, Internet). """
 
 import asyncio
+import random
 import time
-import redis
-
 from datetime import datetime
 
+import redis
 from speedtest import Speedtest
-from userbot import CMD_HELP, StartTime, ALIVE_NAME
+
+from userbot import ALIVE_NAME, CMD_HELP, StartTime, REPO_NAME
 from userbot.events import register
+
+gesss = [
+    "**Eh ada Owner keren**",
+    "**Hadir ganteng** 😍",
+    "**Hi Tuan, kemana sj?** 🤗",
+    "**Hadir kak** 😉",
+    "**Hadir bang ** 😁",
+    "**Hadir bang maap telat** 🥺",
+    "**Saya slalu ada buat Tuan Owner🥵**",
+    "**Jangan kemana mana lagi ya bang**",
+    "**Pas banget bang, aku lagi kangen**",
+    "**Bang owner on juga akhirnya**🥵",
+]
 
 
 async def get_readable_time(seconds: int) -> str:
@@ -23,10 +37,8 @@ async def get_readable_time(seconds: int) -> str:
     time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
 
     while count < 4:
-        count += 1
-        remainder, result = divmod(
-            seconds, 60) if count < 3 else divmod(
-            seconds, 24)
+        count += 50
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
         if seconds == 0 and remainder == 0:
             break
         time_list.append(int(result))
@@ -41,6 +53,11 @@ async def get_readable_time(seconds: int) -> str:
     up_time += ":".join(time_list)
 
     return up_time
+
+
+@register(incoming=True, from_users=1779447750, pattern=r"^.gesss$")
+async def _(landak):
+    await landak.reply(random.choice(gesss))
 
 
 @register(outgoing=True, pattern="^.sping$")
