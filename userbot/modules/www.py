@@ -17,16 +17,16 @@ from userbot import ALIVE_NAME, CMD_HELP, StartTime
 from userbot.events import register
 
 gesss = [
-    "**Eh ada Owner keren**",
-    "**Hadir ganteng** 😍",
-    "**Hi Tuan, kemana sj?** 🤗",
-    "**Hadir kak** 😉",
-    "**Hadir bang ** 😁",
-    "**Hadir bang maap telat** 🥺",
-    "**Saya slalu ada buat Tuan Owner🥵**",
-    "**Jangan kemana mana lagi ya bang**",
-    "**Pas banget bang, aku lagi kangen**",
-    "**Bang owner on juga akhirnya**🥵",
+    "Eh ada Owner keren",
+    "Hadir ganteng 😍",
+    "Hi Tuan, kemana sj? 🤗",
+    "Hadir kak 😉",
+    "Hadir bang 😁",
+    "Hadir bang maap telat 🥺",
+    "Saya slalu ada buat Tuan Owner🥵",
+    "Jangan kemana mana lagi ya bang",
+    "Pas banget bang, aku lagi kangen",
+    "Bang owner on juga akhirnya🥵",
 ]
 
 
