@@ -28,7 +28,7 @@
 Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot. Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.**
 
 ## DEPLOY TO HEROKU ⚠️
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-indigo?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ramadhani892/GEEZ"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-indigo?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
 
 <h3 align="center">Userbot Digunakan untuk Bersenang-senang di Telegram, dan untuk Menjaga Grup Anda.</h3>
 <p align="center">&nbsp;</p>
