@@ -20,7 +20,7 @@ async def koc(e):
         await e.edit("💞💕💗💘")
         await e.edit("💘💞💕💗")
         await e.edit("SAYANG")
-        await e.edit("KAMU")
+        await e.edit("ALDAA")
         await e.edit("SELAMANYA 💕")
         await e.edit("💘💘💘💘")
         await e.edit("SAYANG")
@@ -28,10 +28,10 @@ async def koc(e):
         await e.edit("SAYANG")
         await e.edit("KAMU")
         await e.edit("I LOVE YOUUUU")
-        await e.edit("MY BABY")
+        await e.edit("MINE 💖")
         await e.edit("💕💞💘💝")
         await e.edit("💘💕💞💝")
-        await e.edit("SAYANG KAMU💞")
+        await e.edit("SAYANG ALDAA💞")
 
 
 @register(outgoing=True, pattern='^.dino(?: |$)(.*)')
@@ -352,17 +352,17 @@ async def koc(e):
 @register(outgoing=True, pattern='^.sangean(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Kalo Sange Modal`")
+    await typew.edit("`Kalo Sange Modalko Nassundala`")
     sleep(1)
-    await typew.edit("`Jangan Modal Kontol Doang`")
+    await typew.edit("`Janganko Modal Kontolji Saja`")
     sleep(1)
-    await typew.edit("`Goblook Emang`")
+    await typew.edit("`Goblookko Emang`")
     sleep(1)
-    await typew.edit("`Kelamaan Nge Jomblo Sih`")
+    await typew.edit("`Kelamaan Jomblo Sih Hahaha`")
     sleep(1)
     await typew.edit("`Jadinya Gitu, Sange Berat`")
     sleep(1)
-    await typew.edit("`MAKANYA KALO HIDUP HARUS GANTENG KONTOOOLL`")
+    await typew.edit("`MAKANYA KALO HIDUP HARUSKO GANTENG SODARAA`")
 # Create by myself @localheart
 
 
