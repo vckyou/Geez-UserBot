@@ -1,6 +1,6 @@
 {
-  "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-  "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "⚡𝗦𝗔𝗡 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
+  "description": "🚫San-UserBot🚫 USERBOT KHUSUS ORANG ORANG NOLEP BGST.",
   "logo": "",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Vckyou/Geez-UserBot",
-  "telegram": "https://t.me/VckyouuBitch",
-  "success_url": "https://t.me/CariTemanRandom",
+  "repository": "https://github.com/jookalem/San-UserBot",
+  "telegram": "https://t.me/jooneverdie",
+  "success_url": "https://t.me/sannsupport",
   "stack": "container",
   "env": {
     "API_KEY": {
