@@ -49,31 +49,10 @@
       "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
     },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001234567890",
-      "required": true
-    },
-    "GITHUB_ACCESS_TOKEN": {
-      "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
-      "required": false
-    },
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "False",
+      "value": "True",
       "required": true
-    },
-    "ANTI_SPAMBOT": {
-      "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
-      "value": "False"
-    },
-    "ANTI_SPAMBOT_SHOUT": {
-      "description": "Report spambots to @admins in groups after they join, just in case when you don't have admin powers to kick that shit yourself.",
-      "value": "False"
-    },
-    "UPSTREAM_REPO_URL": {
-      "description": "In case you maintain a fork, add your repo URL here.",
-      "required": false
     },
     "BOT_TOKEN": {
       "description": "Set this to enable inline bot helper. get the token from @BotFather",
