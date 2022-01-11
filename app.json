@@ -14,10 +14,6 @@
   "success_url": "https://t.me/sannsupport",
   "stack": "container",
   "env": {
-    "ALIVE .NAME": {
-      "description": "Alive Name.", 
-      "required": true
-    },
     "API_KEY": {
       "description": "Dapatkan Api Key di web my.telegram.org.",
       "required": true
@@ -49,10 +45,14 @@
       "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
     },
-    "PM_AUTO_BAN": {
-      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "True",
+    "G_BAN_LOGGER_GROUP": {
+      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
+    },
+    "ALIVE_NAME": {
+      "description": "Nama untuk menunjukan pesan .alive",
+      "required": false
     },
     "BOT_TOKEN": {
       "description": "Set this to enable inline bot helper. get the token from @BotFather",
