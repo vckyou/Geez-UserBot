@@ -320,7 +320,7 @@ async def redis(alive):
         f" ❇ `𝘉𝘳𝘢𝘯𝘤𝘩   :` {UPSTREAM_REPO_BRANCH} \n"
         f" ❇ `𝘉𝘰𝘵 𝘝𝘦𝘳  :` {BOT_VER} \n"
         f" ❇ `𝘔𝘰𝘥𝘶𝘭𝘦𝘴  :` {len(modules)} Modules \n"
-        f" ❇ **𝘛𝘩𝘢𝘯𝘬𝘴 𝘐'𝘮 𝘜𝘴𝘪𝘯𝘨 𝘙𝘦𝘱𝘰 ⚡️𝘚𝘈𝘕⚡** : (https://github.com/jookalem/San-UserBot) 
+        f" ❇ '𝘛𝘩𝘢𝘯𝘬𝘴 𝘐'𝘮 𝘜𝘴𝘪𝘯𝘨 𝘙𝘦𝘱𝘰 ⚡️𝘚𝘈𝘕⚡ :' (https://github.com/jookalem/San-UserBot) 
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
