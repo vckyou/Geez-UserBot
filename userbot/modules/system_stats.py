@@ -307,23 +307,20 @@ async def redis(alive):
     await alive.edit("__Connecting...__")
     await alive.edit("__Connecting..__")
     await alive.edit("__Connecting...__")
-    await alive.edit("⚡")
+    await alive.edit("🌀")
     await asyncio.sleep(2)
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡\n"
+        f"┃🌀𝗦 𝗔 𝗡 - 𝗨 𝗦 𝗘 𝗥 𝗕 𝗢 𝗧🌀\n"
         f"╰═─────╼══⌘══╾─────═ \n"
-        f" ❍ `Name     :` {DEFAULTUSER} \n"
-        f" ❍ `Username :` @{user.username} \n"
-        f" ❍ `Telethon :` Ver {version.__version__} \n"
-        f" ❍ `Python   :` Ver {python_version()} \n"
-        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
-        f" ❍ `Bot Ver  :` {BOT_VER} \n"
-        f" ❍ `Modules  :` {len(modules)} Modules \n"
-        f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Geez-UserBot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
-        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
-        f"╰═──────╼═⌘═╾───────═")
+        f" ❇`𝘕𝘢𝘮𝘦     :` {DEFAULTUSER} \n"
+        f" ❇ `𝘜𝘴𝘦𝘳𝘯𝘢𝘮𝘦 :` @{user.username} \n"
+        f" ❇ `𝘛𝘦𝘭𝘦𝘵𝘩𝘰𝘯 :` Ver {version.__version__} \n"
+        f" ❇ `𝘗𝘺𝘵𝘰𝘯   :` Ver {python_version()} \n"
+        f" ❇ `𝘉𝘳𝘢𝘯𝘤𝘩   :` {UPSTREAM_REPO_BRANCH} \n"
+        f" ❇ `𝘉𝘰𝘵 𝘝𝘦𝘳  :` {BOT_VER} \n"
+        f" ❇ `𝘔𝘰𝘥𝘶𝘭𝘦𝘴  :` {len(modules)} Modules \n"
+        f" ❇ **𝘛𝘩𝘢𝘯𝘬𝘴 𝘐'𝘮 𝘜𝘴𝘪𝘯𝘨 𝘙𝘦𝘱𝘰 ⚡️𝘚𝘈𝘕⚡** : (https://github.com/jookalem/San-UserBot) 
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
