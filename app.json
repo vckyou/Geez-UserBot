@@ -105,16 +105,12 @@
       "description": "Nama Sticker Pack Mu",
       "required": false
     },
-    "UPSTREAM_REPO_URL": {
-      "description": "In case you maintain a fork, add your repo URL here.",
-      "required": false
-    },
     "BOT_TOKEN": {
-      "description": "Set this to enable inline bot helper. get the token from @BotFather",
+      "description": "Setel ini untuk mengaktifkan pembantu bot sebaris. dapatkan token dari @BotFather",
       "required": false
     },
     "BOT_USERNAME": {
-      "description": "Username of the bot you created with @BotFather",
+      "description": "Nama pengguna bot yang Anda buat dengan @BotFather",
       "required": false
     }
   },
