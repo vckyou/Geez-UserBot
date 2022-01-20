@@ -22,6 +22,10 @@
       "description": "Dapatkan Api Hash Di Web my.telegram.org.",
       "required": true
     },
+    "ALIVE_NAME": {
+      "description": "Isi Nama telegram mu.",
+      "required": true
+    },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @VckyouuBitch di telegram",
       "required": true
@@ -35,56 +39,30 @@
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
-    "BOTLOG": {
-      "description": "Kalo Mau Off in BOTLOG Ganti False",
-      "value": "True",
-      "required": true
-    },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "value": "Isi ID Grup Anda, Contoh -1001234567890",
       "required": true
-    },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001234567890",
-      "required": true
-    },
-    "CONSOLE_LOGGER_VERBOSE": {
-      "description": "If you need verbosity on the console logging",
-      "value": "False"
     },
     "QUOTES_API_TOKEN": {
       "description": "Dapatkan Token Dari http://antiddos.systems",
       "required": false
     },
     "GENIUS_ACCESS_TOKEN": {
-      "description": "Client Access Token from https://genius.com/api-clients.",
-      "required": false
-    },
-    "MONGO_URI": {
-      "description": "Your MongoDB Atlas URL, Get your guide from https://telegra.ph/Mongo-DB-12-24.",
+      "description": "Dapatkan Akses Token Di https://genius.com/api-clients.",
       "required": false
     },
     "GENIUS": {
-      "description": "Get this value from https://genius.com/developers., basically same as GENIUS_API_TOKEN.",
-      "required": false
-    },
-    "GITHUB_ACCESS_TOKEN": {
-      "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
-      "required": false
-    },
-    "GIT_REPO_NAME": {
-      "description": "Add the GIT_REPO_NAME here. It helps with commit on GitHub.",
+      "description": "Dapatkan nilai ini dari https://genius.com/developers., pada dasarnya sama dengan GENIUS_API_TOKEN.",
       "required": false
     },
     "COUNTRY": {
-      "description": "Set your Country to be used in the .time and .date commands.",
+      "description": "Atur Negara Anda untuk digunakan dalam perintah .time dan .date.",
       "value": "ID",
       "required": true
     },
     "TZ_NUMBER": {
-      "description": "Change this value in case your country has multiple Time Zones.",
+      "description": "Ubah nilai ini jika negara Anda memiliki beberapa Zona Waktu.",
       "value": "1",
       "required": false
     },
@@ -109,117 +87,22 @@
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
       "required": false
     },
-    "REDIS_URI": {
-      "description": "Redis endpoint URL, from redislabs.com",
-      "required": false
-    },
-    "REDIS_PASSWORD": {
-      "description": "Redis endpoint password, from redislabs.com",
-      "required": false
-    },
-    "ANTI_SPAMBOT": {
-      "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
-      "value": "False"
-    },
-    "ANTI_SPAMBOT_SHOUT": {
-      "description": "Report spambots to @admins in groups after they join, just in case when you don't have admin powers to kick that shit yourself.",
-      "value": "False"
-    },
     "TMP_DOWNLOAD_DIRECTORY": {
       "description": "Download location for many modules (GDrive, .download etc..)",
       "value": "./downloads/"
-    },
-    "CLEAN_WELCOME": {
-      "description": "When a new person joins, the old welcome message is deleted.",
-      "value": "True"
-    },
-    "G_DRIVE_FOLDER_ID": {
-      "description": "Create a folder and put that folder's id here.check folder link for id.",
-      "required": false
     },
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
       "value": "True",
       "required": true
     },
-    "LASTFM_API": {
-      "description": "API Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
-      "required": false
-    },
-    "LASTFM_SECRET": {
-      "description": "SECRET Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
-      "required": false
-    },
-    "LASTFM_USERNAME": {
-      "description": "Last.FM Username",
-      "required": false
-    },
-    "LASTFM_PASSWORD": {
-      "description": "Last.FM Password",
-      "required": false
-    },
-    "BIO_PREFIX": {
-      "description": "Prefix for Last.FM Module Bio.",
-      "required": false
-    },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
       "value": "unknown",
       "required": false
     },
-    "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
-      "required": false
-    },
-    "GEEZ_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .geezalive (Isi Terserah)",
-      "required": false
-    },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
-    "G_DRIVE_DATA": {
-      "description": "Enter the Google Drive authentication data, as a JSON structure.",
-      "required": false
-    },
-    "G_PHOTOS_CLIENT_ID": {
-      "description": "get the client id from https://j.mp/39lWQQm",
-      "required": false
-    },
-    "G_PHOTOS_CLIENT_SECRET": {
-      "description": "get the client secret from https://j.mp/39lWQQm",
-      "required": false
-    },
-    "BITLY_TOKEN": {
-      "description": "Your Bit.ly API key, get it from 'https://bitly.com/a/sign_up'",
-      "value": "",
-      "required": false
-    },
-    "UB_BLACK_LIST_CHAT": {
-      "description": "Isi Apa Aja",
-      "required": false
-    },
-    "LYDIA_API_KEY": {
-      "description": "This Module Needs CoffeeHouse API to work. so Join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions.",
-      "required": false
-    },
-    "WEATHER_DEFCITY": {
-      "description": "Set the default city for the userbot's weather module.",
-      "value": "Tangerang",
-      "required": false
-    },
-    "WOLFRAM_ID": {
-      "description": "Get an API KEY from products.wolframalpha.com/api/",
-      "required": false
-    },
-    "LOGSPAMMER": {
-      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
-      "value": "True",
-      "required": true
-    },
-    "DEEZER_ARL_TOKEN": {
-      "description": "Input your DEEZER ARL TOKEN https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken",
       "required": false
     },
     "UPSTREAM_REPO_URL": {
