@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Vicxln/GeezDeploy",
+  "repository": "https://github.com/vckyou/Geez-UserBot",
   "telegram": "https://t.me/VckyouuBitch",
-  "success_url": "https://t.me/CariTemanRandom",
+  "success_url": "https://t.me/GeezSupportGroup",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -41,68 +41,22 @@
     },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "Isi ID Grup Anda, Contoh -1001234567890",
+      "value": "Isi ID Grup Anda Yang BerAwalan -100",
       "required": true
-    },
-    "QUOTES_API_TOKEN": {
-      "description": "Dapatkan Token Dari http://antiddos.systems",
-      "required": false
-    },
-    "GENIUS_ACCESS_TOKEN": {
-      "description": "Dapatkan Akses Token Di https://genius.com/api-clients.",
-      "required": false
-    },
-    "GENIUS": {
-      "description": "Dapatkan nilai ini dari https://genius.com/developers., pada dasarnya sama dengan GENIUS_API_TOKEN.",
-      "required": false
-    },
-    "COUNTRY": {
-      "description": "Atur Negara Anda untuk digunakan dalam perintah .time dan .date.",
-      "value": "ID",
-      "required": true
-    },
-    "TZ_NUMBER": {
-      "description": "Ubah nilai ini jika negara Anda memiliki beberapa Zona Waktu.",
-      "value": "1",
-      "required": false
-    },
-    "OPEN_WEATHER_MAP_APPID": {
-      "description": "Get your own APPID (API key)from https://api.openweathermap.org/data/2.5/weather",
-      "required": false
     },
     "PM_AUTO_BAN": {
-      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
+      "description": "Pengalihan Fitur Larangan Otomatis PM. Juga dikenal sebagai modul Penjaga Chat Anda ketik (true) jika ingin aktifkan dan /skip untung melanjutkan ke vars selanjutnya.",
       "value": "False",
       "required": true
     },
-    "YOUTUBE_API_KEY": {
-      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
-      "required": false
-    },
-    "OCR_SPACE_API_KEY": {
-      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
-      "required": false
-    },
-    "REM_BG_API_KEY": {
-      "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
-      "required": false
-    },
-    "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Download location for many modules (GDrive, .download etc..)",
-      "value": "./downloads/"
-    },
-    "HEROKU_MEMEZ": {
-      "description": "This should be True if the userbot is running on a Heroku Dyno.",
-      "value": "True",
-      "required": true
-    },
+
     "DEFAULT_BIO": {
-      "description": "Default Bio Mu.",
+      "description": "Default Bio Mu. Isi terserah anda nannti akan muncul di bio profil.",
       "value": "unknown",
       "required": false
     },
     "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
+      "description": "Nama Sticker Pack Mu. (Contoh Stickers By @VckyouuBitch)",
       "required": false
     },
     "BOT_TOKEN": {
