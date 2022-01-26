@@ -30,7 +30,7 @@ from telethon.errors import (
     ChannelPublicGroupNaError)
 
 from userbot.events import register
-from userbot import CMD_HELP, DEVS
+from userbot import CMD_HELP
 
 
 async def get_chatinfo(event):
