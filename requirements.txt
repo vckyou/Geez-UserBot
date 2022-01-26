@@ -84,6 +84,7 @@ pymongo[srv]
 youtube_search
 justwatch
 deezloader
+markdown
 zipfile38
 bitlyshortener
 validators
