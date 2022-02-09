@@ -16,6 +16,11 @@ from userbot.events import register
 
 NO_ADMIN = "`Sorry you are not admin :)`"
 
+def vcmention(user):
+    full_name = get_display_name(user)
+    if not isinstance(user, types.User):
+        return full_name
+    return f"[{full_name}](tg://user?id={user.id})"
 
 async def get_call(event):
     geez = await event.client(getchat(event.chat_id))
