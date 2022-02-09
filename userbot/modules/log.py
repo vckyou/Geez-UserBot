@@ -13,7 +13,6 @@ from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.modules.calls import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
-from userbot.utils.tools import media_type
 from telethon import custom, events
 from telethon.utils import get_display_name
 
