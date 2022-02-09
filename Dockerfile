@@ -1,4 +1,4 @@
-FROM vckyouuu/geezprojecs:buster
+FROM vckyouuu/geezprojects:buster
 
 RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
