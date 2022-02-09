@@ -24,6 +24,7 @@ from userbot import (
 )
 
 from userbot.events import register
+from platform import uname
 
 # ========================= CONSTANTS ============================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
