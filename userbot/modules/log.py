@@ -1,7 +1,6 @@
 # Credits: cat userbot
 # Ported by @vckyaz
 # FROM GeezProjects <https://github.com/vckyou/GeezProjects>
-# 
 
 import asyncio
 
