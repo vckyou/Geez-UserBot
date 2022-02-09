@@ -72,7 +72,7 @@ async def _(event):
             pack = 1
         await xnxx.edit(f"`{random.choice(KANGING_STR)}`")
         try:
-            create_st = await tgbot(
+            create_st = await bot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -85,7 +85,7 @@ async def _(event):
             await asyncio.sleep(1)
             await xnxx.edit("`Sedang membuat paket baru...`")
             pack += 1
-            create_st = await tgbot(
+            create_st = await bot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
