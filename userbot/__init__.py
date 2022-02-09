@@ -126,26 +126,6 @@ OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 # remove.bg API key
 REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
 
-# Redis URI & Redis Password
-REDIS_URI = os.environ.get('REDIS_URI', None)
-REDIS_PASSWORD = os.environ.get('REDIS_PASSWORD', None)
-
-if REDIS_URI and REDIS_PASSWORD:
-    try:
-        REDIS_HOST = REDIS_URI.split(':')[0]
-        REDIS_PORT = REDIS_URI.split(':')[1]
-        redis_connection = redis.Redis(
-            host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD
-        )
-        redis_connection.ping()
-    except Exception as e:
-        logging.exception(e)
-        print()
-        logging.error(
-            "Make sure you have the correct Redis endpoint and password "
-            "and your machine can make connections."
-        )
-
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
