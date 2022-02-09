@@ -113,7 +113,7 @@ async def log_tagged_messages(event):
         resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
     else:
         btx = "📨 View Message"
-        msg = f"[{get_display_name(y)}](https://t.me/c/{hmm.id}/{event.message.id})"
+        msg = f"[{get_display_name(full)}](https://t.me/c/{hmm.id}/{event.message.id})"
         await asyncio.sleep(0.5)
     if not event.is_private:
         await event.client.send_message(
