@@ -89,7 +89,7 @@ async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         x = await event.client.get_entity(event.sender_id)
         if x.bot or x.verified:
-        return
+            return
         y = await event.client.get_entity(event.chat_id)
         if y.username:
             yy = f"[{get_display_name(y)}](https://t.me/{y.username})"
