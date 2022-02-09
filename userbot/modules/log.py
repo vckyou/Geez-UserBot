@@ -14,7 +14,7 @@ from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.modules.calls import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
 from userbot.utils.tools import media_type
-from telethon import events
+from telethon import Button, events
 
 from userbot.events import register
 
@@ -112,7 +112,7 @@ async def log_tagged_messages(event):
         resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
     else:
         btx = "📨 View Message"
-        msg += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a>"
+        msg = f"https://t.me/c/{hmm.id}/{event.message.id}'"
         await asyncio.sleep(0.5)
     if not event.is_private:
         await event.client.send_message(
