@@ -8,4 +8,4 @@ WORKDIR /root/userbot
 #Install python requirements
 RUN pip3 install -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
 
-CMD ["python3","-m","start"]
+CMD ["bash","start"]
