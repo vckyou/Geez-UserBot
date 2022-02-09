@@ -4,4 +4,4 @@
 # This file is a part of < https://github.com/vckyou/GeezProjects >
 # PLease read the GNU Affero General Public License in <https://github.com/vckyou/GeezProjects/blob/main/LICENSE/>.
 
-bash ./resources/session/session.sh
+python3 userbot/files/session/session.sh
