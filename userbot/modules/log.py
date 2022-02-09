@@ -123,8 +123,6 @@ async def log_tagged_messages(event):
 
 @geez_cmd(pattern="save(?: |$)(.*)")
 async def log(log_text):
-    if log_text.sender_id in SUDO_USERS:
-        return
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
             reply_msg = await log_text.get_reply_message()
@@ -147,8 +145,6 @@ async def log(log_text):
 
 @geez_cmd(pattern="log$")
 async def set_no_log_p_m(event):
-    if event.sender_id in SUDO_USERS:
-        return
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
         if no_log_pms_sql.is_approved(chat.id):
@@ -160,8 +156,6 @@ async def set_no_log_p_m(event):
 
 @geez_cmd(pattern="nolog$")
 async def set_no_log_p_m(event):
-    if event.sender_id in SUDO_USERS:
-        return
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
         if not no_log_pms_sql.is_approved(chat.id):
@@ -173,8 +167,6 @@ async def set_no_log_p_m(event):
 
 @geez_cmd(pattern="pmlog (on|off)$")
 async def set_pmlog(event):
-    if event.sender_id in SUDO_USERS:
-        return
     if BOTLOG_CHATID == -100:
         return await edit_delete(
             event,
@@ -205,8 +197,6 @@ async def set_pmlog(event):
 
 @geez_cmd(pattern="gruplog (on|off)$")
 async def set_gruplog(event):
-    if event.sender_id in SUDO_USERS:
-        return
     if BOTLOG_CHATID == -100:
         return await edit_delete(
             event,
