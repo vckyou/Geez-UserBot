@@ -1,19 +1,9 @@
-import asyncio
 import importlib
-import logging
 import sys
 from pathlib import Path
-from random import randint
 
-import heroku3
-from telethon.tl.functions.contacts import UnblockRequest
 
 from userbot import (
-    BOT_TOKEN,
-    BOTLOG_CHATID,
-    CMD_HELP,
-    HEROKU_API_KEY,
-    HEROKU_APP_NAME,
     LOGS,
     bot,
 )
