@@ -15,6 +15,7 @@ from userbot.modules.calls import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
 from userbot.utils.tools import media_type
 
+from userbot.events import register
 
 class LOG_CHATS:
     def __init__(self):
