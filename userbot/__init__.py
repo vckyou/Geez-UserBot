@@ -6,6 +6,7 @@ import time
 import re
 import redis
 
+from platform import uname
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
