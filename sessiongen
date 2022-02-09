@@ -1,0 +1,7 @@
+# ya
+# Copyright (C) 2022 GeezProjects
+#
+# This file is a part of < https://github.com/vckyou/GeezProjects >
+# PLease read the GNU Affero General Public License in <https://github.com/vckyou/GeezProjects/blob/main/LICENSE/>.
+
+bash userbot/resources/session/session.sh
