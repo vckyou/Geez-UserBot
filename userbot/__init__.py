@@ -20,6 +20,7 @@ from redis import StrictRedis
 from markdown import markdown
 from dotenv import load_dotenv
 from requests import get
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
 from telethon import Button, events, functions, types
