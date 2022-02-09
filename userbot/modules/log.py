@@ -88,7 +88,6 @@ async def monito_p_m_s(event):
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.mentioned))
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
-        return
         x = await event.client.get_entity(event.sender_id)
         if x.bot or x.verified:
         return
