@@ -126,6 +126,26 @@ OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 # remove.bg API key
 REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
 
+# Redis URI & Redis Password
+REDIS_URI = os.environ.get('REDIS_URI', None)
+REDIS_PASSWORD = os.environ.get('REDIS_PASSWORD', None)
+
+if REDIS_URI and REDIS_PASSWORD:
+    try:
+        REDIS_HOST = REDIS_URI.split(':')[0]
+        REDIS_PORT = REDIS_URI.split(':')[1]
+        redis_connection = redis.Redis(
+            host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD
+        )
+        redis_connection.ping()
+    except Exception as e:
+        logging.exception(e)
+        print()
+        logging.error(
+            "Make sure you have the correct Redis endpoint and password "
+            "and your machine can make connections."
+        )
+
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
@@ -247,6 +267,32 @@ API_URL = os.environ.get("API_URL", "http://antiddos.systems")
 # Inline bot helper
 BOT_TOKEN = os.environ.get("BOT_TOKEN") or None
 BOT_USERNAME = os.environ.get("BOT_USERNAME") or None
+
+# Init Mongo
+MONGOCLIENT = MongoClient(MONGO_URI, 27017, serverSelectionTimeoutMS=1)
+MONGO = MONGOCLIENT.userbot
+
+
+def is_mongo_alive():
+    try:
+        MONGOCLIENT.server_info()
+    except BaseException:
+        return False
+    return True
+
+
+# Init Redis
+# Redis will be hosted inside the docker container that hosts the bot
+# We need redis for just caching, so we just leave it to non-persistent
+REDIS = StrictRedis(host='localhost', port=6379, db=0)
+
+
+def is_redis_alive():
+    try:
+        REDIS.ping()
+        return True
+    except BaseException:
+        return False
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
