@@ -243,3 +243,4 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
 
 
 eod = edit_delete
+
