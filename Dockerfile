@@ -5,6 +5,8 @@ RUN git clone -b Geez-UserBot https://github.com/vckyou/GeezUserBot /home/geezus
     && chmod 777 /home/geezuserbot \
     && mkdir /home/geezuserbot/bin/
 
+COPY ./sample_config.env ./config.env* /home/geezuserbot/
+
 WORKDIR /home/geezuserbot/
 
-CMD [ "bash", "start" ]
+CMD [ "python3", "-m", "start" ]
