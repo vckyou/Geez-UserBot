@@ -121,7 +121,7 @@ async def log_tagged_messages(event):
         )
 
 
-@geez_cmd(pattern="save(?: |$)(.*)")
+@register(pattern=r"^\.save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -143,7 +143,7 @@ async def log(log_text):
         )
 
 
-@geez_cmd(pattern="log$")
+@register(pattern=r"^\.log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -154,7 +154,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@geez_cmd(pattern="nolog$")
+@register(pattern=r"^\.nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -165,7 +165,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@geez_cmd(pattern="pmlog (on|off)$")
+@register(pattern=r"^\.pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -195,7 +195,7 @@ async def set_pmlog(event):
         await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
 
 
-@geez_cmd(pattern="gruplog (on|off)$")
+@register(pattern=r"^\.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
