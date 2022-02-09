@@ -13,7 +13,6 @@ from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.modules.calls import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
-from userbot.utils.tools import media_type
 from telethon import custom, events
 from telethon.utils import get_display_name
 
@@ -90,7 +89,7 @@ async def monito_p_m_s(event):
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
-        hmm = await event.client.get_entity(event.sender_id)
+        await event.client.get_entity(event.sender_id)
         if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG"):
             return
         y = await event.client.get_entity(event.chat_id)
