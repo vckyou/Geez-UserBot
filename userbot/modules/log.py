@@ -119,6 +119,7 @@ async def log_tagged_messages(event):
         await event.client.send_message(
             BOTLOG_CHATID,
             resalt,
+            buttons=buttons,
             parse_mode="html",
             link_preview=False,
             buttons=[[custom.Button.url(btx, msg)]],
