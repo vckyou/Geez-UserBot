@@ -1,6 +1,7 @@
 """ Userbot module for other small commands. """
 from userbot import CMD_HELP, ALIVE_NAME
 from userbot.events import register
+from platform import uname
 
 
 # ================= CONSTANT =================
