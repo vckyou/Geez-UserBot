@@ -91,16 +91,7 @@ async def log_tagged_messages(event):
         return
         x = await event.client.get_entity(event.sender_id)
         if x.bot or x.verified:
-        hmm = await event.get_chat()
-
-        if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG") == "false":
-            return
-        if (
-            (no_log_pms_sql.is_approved(hmm.id))
-            or (BOTLOG_CHATID == -100)
-            or (await event.get_sender() and (await event.get_sender()).bot)
-        ):
-            return
+        return
         y = await event.client.get_entity(event.chat_id)
         if y.username:
             yy = f"[{get_display_name(y)}](https://t.me/{y.username})"
