@@ -101,7 +101,7 @@ async def log_tagged_messages(event):
     ):
         return
     x = await event.client.get_entity(event.sender_id)
-        if x.bot or x.verified:
+        if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG"):
             return
         y = await event.client.get_entity(event.chat_id)
         if y.username:
