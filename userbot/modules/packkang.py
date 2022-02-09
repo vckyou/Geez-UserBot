@@ -16,6 +16,7 @@ from telethon.utils import get_input_document
 
 from userbot import BOT_USERNAME
 from userbot import CMD_HELP
+from userbot import tgbot
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.utils import edit_delete, edit_or_reply
 from userbot.events import register
@@ -71,7 +72,7 @@ async def _(event):
             pack = 1
         await xnxx.edit(f"`{random.choice(KANGING_STR)}`")
         try:
-            create_st = await event.client.send_message(
+            create_st = await tgbot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -84,7 +85,7 @@ async def _(event):
             await asyncio.sleep(1)
             await xnxx.edit("`Sedang membuat paket baru...`")
             pack += 1
-            create_st = await event.client.send_message(
+            create_st = await tgbot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -100,5 +101,5 @@ async def _(event):
         await xnxx.edit("**Berkas Tidak Didukung. Harap Balas ke stiker saja.**")
 
 
-CMD_HELP.update({"logo": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pkang`"
+CMD_HELP.update({"packkang": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pkang`"
                  "\n↳ : **Reply Dan Ketik .pkang Ke Sticker Untuk Mencuri semua sticker pack tersebut"})
