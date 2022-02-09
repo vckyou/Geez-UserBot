@@ -4,6 +4,7 @@ Available Commands:
 .gban REASON
 .ungban REASON"""
 import asyncio
+from platform import uname
 from userbot.events import register
 from userbot import ALIVE_NAME, G_BAN_LOGGER_GROUP, bot
 # imported from uniborg by @heyworld
