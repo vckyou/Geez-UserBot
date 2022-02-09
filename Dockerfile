@@ -7,4 +7,4 @@ RUN git clone -b Geez-UserBot https://github.com/vckyou/GeezUserBot /home/geezus
 
 WORKDIR /home/geezuserbot/
 
-CMD ["python3","-m","userbot"]
+CMD [ "python3" ,"start" ]
