@@ -90,17 +90,7 @@ async def monito_p_m_s(event):
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
-    hmm = await event.get_chat()
-
-    if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG") == "false":
-        return
-    if (
-        (no_log_pms_sql.is_approved(hmm.id))
-        or (BOTLOG_CHATID == -100)
-        or (await event.get_sender() and (await event.get_sender()).bot)
-    ):
-        return
-    x = await event.client.get_entity(event.sender_id)
+        hmm = await event.client.get_entity(event.sender_id)
         if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG"):
             return
         y = await event.client.get_entity(event.chat_id)
