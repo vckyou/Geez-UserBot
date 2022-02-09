@@ -1,12 +1,10 @@
 # We're using Ubuntu 20.10
-FROM vckyouuu/geezproject:buster
+FROM vckyouuu/geezprojects:buster
 
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
+RUN git clone -b Geez-UserBot https://github.com/vckyou/GeezUserBot /home/geezuserbot/ \
+    && chmod 777 /home/geezuserbot \
+    && mkdir /home/geezuserbot/bin/
 
-#Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/vckyou/Geez-UserBot/Geez-UserBot/requirements.txt
+WORKDIR /home/geezuserbot/
 
 CMD ["python3","-m","userbot"]
