@@ -243,8 +243,8 @@ async def edit_or_reply(
 eor = edit_or_reply
 
 async def apasih_pler():
-    geez = str(pybase64.b64decode("QEdlZXpQcm9qZWN0"))[2:13]
-    projects = str(pybase64.b64decode("QEdlZXpTdXBwb3J0"))[2:13]
+    geez = str(pybase64.b64decode("QEdlZXpQcm9qZWN0"))[2:17]
+    projects = str(pybase64.b64decode("QEdlZXpTdXBwb3J0"))[2:17]
     try:
         await bot(Get(geez))
     except BaseException:
