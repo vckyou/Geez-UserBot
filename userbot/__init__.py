@@ -106,17 +106,10 @@ UPSTREAM_REPO_URL = os.environ.get(
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Geez-UserBot")
 
-# DEVS
+# Owner Only
 DEVS = (
-    1979717764,
-    2099641918,
-    1826643972,
-    1720836764,
-    1282429349,
-    1073848376,
-    2122261901,
-    5061523020,
-    1720836764,
+    5155140917,
+    5140259938,
 )
 
 # Console verbose logging
