@@ -100,29 +100,45 @@ async def log_tagged_messages(event):
         or (await event.get_sender() and (await event.get_sender()).bot)
     ):
         return
-    full = None
-    try:
-        full = await event.client.get_entity(event.message.from_id)
-    except Exception as e:
-        LOGS.info(str(e))
-    messaget = media_type(event)
-    resalt = f"<b>📨 #TAGS #MESSAGE</b>\n<b> • Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
-    if full is not None:
-        resalt += f"\n<b> • Grup : </b><code>{hmm.title}</code>"
-    if messaget is not None:
-        resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
-    else:
+    x = await event.client.get_entity(event.sender_id)
+        if x.bot or x.verified:
+            return
+        y = await event.client.get_entity(event.chat_id)
+        if y.username:
+            yy = f"[{get_display_name(y)}](https://t.me/{y.username})"
+        else:
+            yy = f"[{get_display_name(y)}](https://t.me/c/{y.id}/{event.id})"
+        xx = f"[{get_display_name(x)}](tg://user?id={x.id})"
+        msg = f"https://t.me/c/{y.id}/{event.id}"
+        if event.text:
+            cap = f"{xx} tagged you in {yy}\n\n```{event.text}```\nㅤ"
+        else:
+            cap = f"{xx} tagged you in {yy}"
+
         btx = "📨 View Message"
-        msg = f"[{get_display_name(hmm)}](https://t.me/c/{hmm.id}/{event.message.id})"
-        await asyncio.sleep(0.5)
-    if not event.is_private:
-        await event.client.send_message(
-            BOTLOG_CHATID,
-            resalt,
-            parse_mode="html",
-            link_preview=False,
-            buttons=[[custom.Button.url(btx, msg)]],
-        )
+
+        try:
+            if event.text:
+                cap = get_string("tagnot_1").format(xx, yy, event.text, msg)
+            else:
+                cap = get_string("tagnot_2").format(xx, yy, msg)
+            await event.client.send_message(
+                BOTLOG_CHATID,
+                cap,
+                link_preview=False,
+                buttons=[[custom.Button.url(btx, msg)]],
+            )
+        except BaseException:
+            if event.text:
+                cap = get_string("tagnot_1").format(xx, yy, event.text, msg)
+            else:
+                cap = get_string("tagnot_2").format(xx, yy, msg)
+            try:
+                await event.client.send_message(BOTLOG_CHATID, cap, link_preview=False)
+            except BaseException:
+                pass
+    else:
+        return
 
 
 @register(pattern=r"^\.save(?: |$)(.*)")
