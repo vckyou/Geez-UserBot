@@ -8,6 +8,7 @@ import os
 import random
 import time
 
+from platform import uname
 from lyrics_extractor import SongLyrics as sl
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
