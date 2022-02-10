@@ -8,7 +8,8 @@
 import sys
 from importlib import import_module
 
-from userbot import ALIVE_NAME, BOT_VER, BOTLOG_CHATID, LOGS, UPSTREAM_REPO_BRANCH, bot
+from telethon.tl.functions.channels import InviteToChannelRequest
+from userbot import ALIVE_NAME, BOT_USERNAME, BOT_VER, BOTLOG_CHATID, LOGS, UPSTREAM_REPO_BRANCH, bot
 from userbot.modules import ALL_MODULES
 from userbot.utils.tools import apasih_pler
 
@@ -27,11 +28,14 @@ async def geez_userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"🚫Geez - Projects Berhasil Diaktfikan 🚫\n━━━━━━━━━━━━━━━\n❍▹ Bot Of : {ALIVE_NAME}\n❍▹ BotVer : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n━━━━━━━━━━━━━━━",
+                f"💢 Geez - Projects Berhasil Diaktfikan 💢\n╼┅━━━━━╍━━━━━┅╾\n❍▹ Bot Of : {ALIVE_NAME}\n❍▹ BotVer : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n╼┅━━━━━╍━━━━━┅╾",
             )
     except Exception as e:
         LOGS.info(str(e))
-
+    try:
+        await bot(InviteToChannelRequest(int(BOTLOG_CHATID), [BOT_USERNAME]))
+    except BaseException:
+        pass
 
 bot.loop.run_until_complete(geez_userbot_on())
 bot.loop.run_until_complete(apasih_pler())
