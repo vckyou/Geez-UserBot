@@ -243,7 +243,7 @@ async def edit_or_reply(
 eor = edit_or_reply
 
 async def apasih_pler():
-    geez = str(pybase64.b64decode("R2VlelByb2plY3Q="))[2:12]
+    geez = str(pybase64.b64decode("R2VlelByb2plY3Q="))[2:11]
     projects = str(pybase64.b64decode("R2VlelN1cHBvcnQ="))[2:13]
     try:
         await bot(Get(geez))
