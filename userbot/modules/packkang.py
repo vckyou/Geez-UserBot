@@ -46,7 +46,7 @@ async def _(event):
     if reply.media and reply.media.document.mime_type == "image/webp":
         tikel_id = reply.media.document.attributes[1].stickerset.id
         tikel_hash = reply.media.document.attributes[1].stickerset.access_hash
-        got_stcr = await tgbot(
+        got_stcr = await event.client(
             functions.messages.GetStickerSetRequest(
                 stickerset=types.InputStickerSetID(id=tikel_id, access_hash=tikel_hash
                 ),
@@ -72,7 +72,7 @@ async def _(event):
             pack = 1
         await xnxx.edit(f"`{random.choice(KANGING_STR)}`")
         try:
-            create_st = await tgbot(
+            create_st = await event.client(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -85,7 +85,7 @@ async def _(event):
             await asyncio.sleep(1)
             await xnxx.edit("`Sedang membuat paket baru...`")
             pack += 1
-            create_st = await tgbot(
+            create_st = await event.client(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
