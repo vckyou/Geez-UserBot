@@ -49,20 +49,20 @@ async def _(e):
         await e.edit(f"`{str(ex)}`")
 
 
-@register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
-async def _(e):
-    chat = await e.get_chat()
+@register(outgoing=True, pattern=r"^\.stopvc$")
+async def stop_voice(c):
+    chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        return await e.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
+        await c.edit(NO_ADMIN)
+        return
     try:
-        await e.client(stopvc(await get_call(e)))
-        await e.edit("`Voice Chat Stopped...`")
+        await c.client(stopvc(await get_call(c)))
+        await c.edit("`Voice chat stopped...`")
     except Exception as ex:
-        await e.edit(f"`{str(ex)}`")
+        await c.edit(f"**ERROR:** `{ex}`")
 
 
 @register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
