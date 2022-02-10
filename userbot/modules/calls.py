@@ -24,7 +24,7 @@ def vcmention(user):
 
 async def get_call(event):
     geez = await event.client(getchat(event.chat_id))
-    vcky = await event.client(getvc(geez.full_chat.call))
+    vcky = await event.client(getvc(geez.full_chat.call, limit=1))
     return vcky.call
 
 
