@@ -11,7 +11,7 @@ from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.modules.calls import vcmention
-from userbot.utils import _format, edit_delete, edit_or_reply
+from userbot.utils import _format
 from telethon import events
 from userbot.utils.tools import media_type
 
@@ -133,15 +133,12 @@ async def log(log_text):
             textx = user + log_text.pattern_match.group(1)
             await log_text.client.send_message(BOTLOG_CHATID, textx)
         else:
-            await edit_delete(log_text, "**Apa yang harus saya simpan?**")
+            await log_text.edit("**Apa yang harus saya simpan?**")
             return
-        await edit_delete(log_text, "**Berhasil disimpan di Grup Log**")
+        await log_text.edit("**Berhasil disimpan di Grup Log**")
     else:
-        await edit_delete(
-            log_text,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        await log_text.edit(
+            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
 
 
 @register(pattern=r"^\.log$")
@@ -150,9 +147,7 @@ async def set_no_log_p_m(event):
         chat = await event.get_chat()
         if no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.disapprove(chat.id)
-            await edit_delete(
-                event, "**LOG Chat dari Grup ini Berhasil Diaktifkan**", 15
-            )
+            await event.edit("**LOG Chat dari Grup ini Berhasil Diaktifkan**")
 
 
 @register(pattern=r"^\.nolog$")
@@ -161,19 +156,13 @@ async def set_no_log_p_m(event):
         chat = await event.get_chat()
         if not no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.approve(chat.id)
-            await edit_delete(
-                event, "**LOG Chat dari Grup ini Berhasil Dimatikan**", 15
-            )
+            await event.edit("**LOG Chat dari Grup ini Berhasil Dimatikan**")
 
 
 @register(pattern=r"^\.pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
-        return await edit_delete(
-            event,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False
@@ -185,25 +174,21 @@ async def set_pmlog(event):
         PMLOG = True
     if PMLOG:
         if h_type:
-            await edit_or_reply(event, "**PM LOG Sudah Diaktifkan**")
+            await event.edit("**PM LOG Sudah Diaktifkan**")
         else:
             addgvar("PMLOG", h_type)
-            await edit_or_reply(event, "**PM LOG Berhasil Dimatikan**")
+            await event.edit("**PM LOG Berhasil Dimatikan**")
     elif h_type:
         addgvar("PMLOG", h_type)
-        await edit_or_reply(event, "**PM LOG Berhasil Diaktifkan**")
+        await event.edit("**PM LOG Berhasil Diaktifkan**")
     else:
-        await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
+        await event.edit("**PM LOG Sudah Dimatikan**")
 
 
 @register(pattern=r"^\.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
-        return await edit_delete(
-            event,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False
@@ -215,15 +200,15 @@ async def set_gruplog(event):
         GRUPLOG = True
     if GRUPLOG:
         if h_type:
-            await edit_or_reply(event, "**Group Log Sudah Diaktifkan**")
+            await event.edit("**Group Log Sudah Diaktifkan**")
         else:
             addgvar("GRUPLOG", h_type)
-            await edit_or_reply(event, "**Group Log Berhasil Dimatikan**")
+            await event.edit("**Group Log Berhasil Dimatikan**")
     elif h_type:
         addgvar("GRUPLOG", h_type)
-        await edit_or_reply(event, "**Group Log Berhasil Diaktifkan**")
+        await event.edit("**Group Log Berhasil Diaktifkan**")
     else:
-        await edit_or_reply(event, "**Group Log Sudah Dimatikan**")
+        await event.edit("**Group Log Sudah Dimatikan**")
 
 
 CMD_HELP.update(
