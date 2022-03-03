@@ -493,7 +493,7 @@ with bot:
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            current_page_number = int(lockpage)
+            current_page_number = int(looters)
             buttons = paginate_help(current_page_number, plugins, "helpme")
             await event.edit(
                 file=geezlogo,
