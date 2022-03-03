@@ -454,8 +454,8 @@ with bot:
         dugmeler = CMD_HELP
         user = bot.get_me()
         uid = user.id
-        logo = INLINE_PIC
-        ramlogo = HELP_LOGO
+        logo = ALIVE_LOGO
+        ramlogo = INLINE_PIC
         tgbotusername = BOT_USERNAME
 
         @tgbot.on(events.NewMessage(pattern="/start"))
