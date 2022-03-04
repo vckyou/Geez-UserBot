@@ -18,7 +18,7 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, GEEZ_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, GEEZ_TEKS_KUSTOM, StartTime, branch, bot
 from userbot.events import register
 
 
@@ -317,7 +317,7 @@ async def redis(alive):
         f" ❍ `Username :` @{user.username} \n"
         f" ❍ `Telethon :` Ver {version.__version__} \n"
         f" ❍ `Python   :` Ver {python_version()} \n"
-        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f" ❍ `Branch   :` {branch} \n"
         f" ❍ `Bot Ver  :` {BOT_VER} \n"
         f" ❍ `Modules  :` {len(modules)} Modules \n"
         f"╭═───────╼⌘╾───────═ \n"
