@@ -3,10 +3,8 @@ import hashlib
 import asyncio
 import shlex
 import os
-import pybase64
 from os.path import basename
 import os.path
-from telethon.tl.functions.channels import JoinChannelRequest as Get
 from html_telegraph_poster import TelegraphPoster
 from typing import Optional, Union
 from userbot import bot, LOGS
