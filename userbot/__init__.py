@@ -538,7 +538,7 @@ with bot:
                 text = f"**GeezProjects Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
-                    file=logogeez,
+                    file=geezlogo,
                     buttons=buttons,
                     link_preview=False,
                 )
