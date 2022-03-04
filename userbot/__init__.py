@@ -20,11 +20,13 @@ from redis import StrictRedis
 from markdown import markdown
 from dotenv import load_dotenv
 from requests import get
+from telethon.errors import UserIsBlockedError
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
 from telethon import Button, events, functions, types
 from telethon.utils import get_display_name
+from telethon.tl.types import InputWebDocument
 
 redis_db = None
 
