@@ -16,6 +16,7 @@
 from . import format as _format
 from .format import parse_pre
 from .chrome import chrome, options
+from .events import get_user_from_event
 from .google_images_download import googleimagesdownload
 from .progress import progress, CancelProcess
 from .tools import humanbytes, time_formatter, media_type, human_to_bytes, run_cmd, md5, post_to_telegraph, take_screen_shot, edit_or_reply, edit_delete, runcmd
