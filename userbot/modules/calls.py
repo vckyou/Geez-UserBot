@@ -4,6 +4,7 @@
 # Geez - Projects https://github.com/Vckyou/Geez-UserBot
 # Ini Belum Ke Fix Ya Bg :')
 
+from telethon.utils import get_display_name
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
