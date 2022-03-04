@@ -9,7 +9,7 @@ import os.path
 from telethon.tl.functions.channels import JoinChannelRequest as Get
 from html_telegraph_poster import TelegraphPoster
 from typing import Optional, Union
-from userbot import bot, LOGS
+from userbot import bot, LOGS, SUDO_USERS
 
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, DocumentAttributeFilename
@@ -183,6 +183,15 @@ def post_to_telegraph(title, html_format_content):
         text=html_format_content,
     )
     return post_page["url"]
+
+
+async def reply_id(event):
+    reply_to_id = None
+    if event.sender_id in SUDO_USERS:
+        reply_to_id = event.id
+    if event.reply_to_msg_id:
+        reply_to_id = event.reply_to_msg_id
+    return reply_to_id
 
 
 async def edit_or_reply(
