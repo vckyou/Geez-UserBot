@@ -12,7 +12,7 @@ from .carbon import all_col
 
 @register(outgoing=True, pattern=r"^\.q")
 async def quotly(event):
-    match = event.pattern_match.group(1).strip()
+    match = str(e.pattern_match.group(1)).split()
     if not event.is_reply:
         return await event.edit("**Mohon Balas ke Pesan**")
     msg = await event.edit("`Processing...`")
