@@ -226,12 +226,12 @@ async def crbn(event):
 
 CMD_HELP.update(
     {
-        "carbon": f"**Plugin : **`carbon`\
-        \n\n  •  **Syntax :** `{cmd}carbon` <text/reply>\
+        "carbon": "**Plugin : **`carbon`\
+        \n\n  •  **Syntax :** `.carbon` <text/reply>\
         \n  •  **Function : **Carbonisasi teks dengan pengaturan default.\
-        \n\n  •  **Syntax :** `{cmd}rcarbon` <text/reply>\
+        \n\n  •  **Syntax :** `.rcarbon` <text/reply>\
         \n  •  **Function : **Carbonisasi teks, dengan warna background acak.\
-        \n\n  •  **Syntax :** `{cmd}ccarbon` <warna> <text/reply>\
+        \n\n  •  **Syntax :** `.ccarbon` <warna> <text/reply>\
         \n  •  **Function : **Carbonisasi teks, dengan warna background custom.\
     "
     }
