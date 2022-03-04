@@ -13,6 +13,8 @@ from datetime import datetime
 import redis
 from speedtest import Speedtest
 
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import edit_or_reply, humanbytes, geez_cmd
 from userbot import ALIVE_NAME, CMD_HELP, DEVS, StartTime
 from userbot.events import register
 
@@ -62,7 +64,7 @@ async def _(landak):
     await landak.reply(random.choice(gesss))
 
 
-@register(outgoing=True, pattern="^.sping$")
+@geez_cmd(pattern="sping$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
@@ -85,7 +87,7 @@ async def redis(pong):
                     f"**╰━━━━━━━━━━━━━━━━━╯** \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.lping$")
+@geez_cmd(pattern="lping$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -100,7 +102,7 @@ async def redis(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.xping$")
+@geez_cmd(pattern="xping$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -123,7 +125,7 @@ async def redis(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.pings$")
+@geez_cmd(pattern="pings$")
 async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -148,23 +150,21 @@ async def redis(pong):
                     f"** ▹  Oᴡɴᴇʀ   :** `{ALIVE_NAME}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.ping$")
-async def redis(pong):
-    """ For .ping command, ping the userbot from any chat.  """
+@geez_cmd(pattern="ping$")
+async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("__Pinging.__")
-    await pong.edit("__Pinging..__")
-    await pong.edit("__Pinging...__")
-    await pong.edit("__Pinging....__")
-    await pong.edit("⚡")
-    await asyncio.sleep(2)
+    xx = await edit_or_reply(ping, "**Pinging.**")
+    await xx.edit("**Pinging..**")
+    await xx.edit("**Pinging...**")
+    await xx.edit("**Pinging....**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Geez - Project!!🎈**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+    await ping.client.get_me()
+    await xx.edit(f"**Geez - Project!!🎈**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
-@register(outgoing=True, pattern="^.speed$")
+@geez_cmd(pattern="speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("`Menjalankan Tes Kecepatan Jaringan, Mohon Tunggu...⚡`")
@@ -204,7 +204,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@register(outgoing=True, pattern="^.pong$")
+@geez_cmd(pattern="pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
@@ -217,9 +217,9 @@ async def pingme(pong):
 
 
 CMD_HELP.update({
-    "ping": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ping` | `.lping` | `.xping` | `.pings` | `.sping`\
+    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` | `{cmd}lping` | `{cmd}xping` | `{cmd}pings` | `{cmd}sping`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.speed`\
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pong`\
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pong`\
          \n↳ : Sama Seperti Perintah Ping."})
