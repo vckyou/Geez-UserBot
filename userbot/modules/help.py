@@ -5,38 +5,41 @@
 #
 """ Userbot help command """
 
-import asyncio
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
-from platform import uname
+from userbot import GROUP
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, ICON_HELP, bot
+from userbot.utils import edit_delete, edit_or_reply, geez_cmd
 
 modules = CMD_HELP
 
-# ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
 
-
-@register(outgoing=True, pattern="^.help(?: |$)(.*)")
+@geez_cmd(pattern="help(?: |$)(.*)")
 async def help(event):
-    """ For .help command,"""
+    """For help command"""
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await event.edit(str(CMD_HELP[args]))
+            await edit_or_reply(event, str(CMD_HELP[args]))
         else:
-            await event.edit("**`Command Tidak Ditemukan, Harap Ketik Command Dengan Benar`**")
-            await asyncio.sleep(200)
-            await event.delete()
+            await edit_delete(event, f"𝘔𝘢𝘢𝘧 𝘔𝘰𝘥𝘶𝘭𝘦 `{args}` 𝘛𝘪𝘥𝘢𝘬 𝘋𝘢𝘱𝘢𝘵 𝘋𝘪𝘵𝘦𝘮𝘶𝘬𝘢𝘯!!")
     else:
+        user = await bot.get_me()
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t ⊖  "
-        await event.edit("**⚡Geez - Project⚡**\n\n"
-                         f"**◉ Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◉ Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
-                         "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
-                         f"◉ {string}◉\n\n")
-        await event.reply(f"\n**Contoh** : Ketik <`.help afk`> Untuk Informasi Pengunaan.\nAtau Bisa Juga Ketik `.helpme` Untuk Main Menu Yang Lain-Nya.")
-        await asyncio.sleep(1000)
-        await event.delete()
+            string += f"`\t\t\t{ICON_HELP}\t\t\t"
+        await edit_or_reply(
+            event,
+            f"{ICON_HELP}   {string}"
+            f"\n\nSupport @{GROUP}\n"
+        )
+        await event.reply(
+            f"╭┄──────┈┄┈──────┄\n"
+            f"│ ▸ **Daftar Perintah Geez-UserBot :**\n"
+            f"│ ▸ **Jumlah** `{len(modules)}` **Modules**\n"
+            f"│ ▸ **Owner:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"├┄─────┈┄┈─────┄\n"
+            f"│ **Contoh Ketik** `{cmd}help ping`\n"
+            f"│ **Untuk Melihat Informasi Module**\n"
+            f"╰┄──────┈┈──────┄"
+        )
