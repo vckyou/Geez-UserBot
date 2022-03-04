@@ -15,6 +15,7 @@ from math import ceil
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
+from git import Repo
 from datetime import datetime
 from redis import StrictRedis
 from markdown import markdown
