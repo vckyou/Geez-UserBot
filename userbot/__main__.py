@@ -11,7 +11,7 @@ from importlib import import_module
 from telethon.tl.functions.channels import InviteToChannelRequest
 from userbot import ALIVE_NAME, BOTLOG_CHATID, BOT_USERNAME, BOT_VER, LOGS, bot, branch
 from userbot.modules import ALL_MODULES
-from userbot.utils.events import checking
+from userbot.utils.tools import checking
 
 try:
     for module_name in ALL_MODULES:
