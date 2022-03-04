@@ -114,7 +114,7 @@ async def setlang(prog):
     await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
 
 
-@register(outgoing=True, pattern=r"^\.image (.*)")
+@register(outgoing=True, pattern=r"^\.img (.*)")
 async def img_sampler(event):
     """For .img command, search and return images matching the query."""
     await event.edit("`Sedang Mencari Gambar Yang Anda Cari...`")
