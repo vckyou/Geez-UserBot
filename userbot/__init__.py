@@ -38,12 +38,19 @@ StartTime = time.time()
 repo = Repo()
 branch = repo.active_branch.name
 
+COUNT_MSG = 0
+USERS = {}
+COUNT_PM = {}
+LASTMSG = {}
+CMD_HELP = {}
 CMD_LIST = {}
 SUDO_LIST = {}
-# for later purposes
-CMD_HELP = {}
-INT_PLUG = ""
+ZALG_LIST = {}
 LOAD_PLUG = {}
+INT_PLUG = ""
+ISAFK = False
+AFKREASON = None
+ENABLE_KILLME = True
 
 # Bot Logs setup:
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
