@@ -122,7 +122,7 @@ async def log_tagged_messages(event):
         )
 
 
-@register(pattern=r"^\.save(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -150,7 +150,7 @@ async def set_no_log_p_m(event):
             await event.edit("**LOG Chat dari Grup ini Berhasil Diaktifkan**")
 
 
-@register(pattern=r"^\.nolog$")
+@register(outgoing=True, pattern=r"^\.nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -159,7 +159,7 @@ async def set_no_log_p_m(event):
             await event.edit("**LOG Chat dari Grup ini Berhasil Dimatikan**")
 
 
-@register(pattern=r"^\.pmlog (on|off)$")
+@register(outgoing=True, pattern=r"^\.pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
@@ -185,7 +185,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@register(pattern=r"^\.gruplog (on|off)$")
+@register(outgoing=True, pattern=r"^\.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
