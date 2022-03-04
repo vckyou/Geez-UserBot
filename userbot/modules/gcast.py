@@ -1,7 +1,7 @@
 import asyncio
 
 from userbot.events import register
-from userbot import CMD_HELP, DEVS, bot
+from userbot import CMD_HELP, DEVS
 
 
 GCAST_BLACKLIST = [
