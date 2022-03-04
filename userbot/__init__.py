@@ -39,6 +39,7 @@ repo = Repo()
 branch = repo.active_branch.name
 
 CMD_LIST = {}
+SUDO_LIST = {}
 # for later purposes
 CMD_HELP = {}
 INT_PLUG = ""
