@@ -429,7 +429,7 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "᚜ᴘʀᴇᴠɪᴏᴜꜱ᚛", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    f"ᴄʟᴏꜱᴇ", data="{}_close({})".format(prefix, modulo_page)
+                    f"❌", data="{}_close({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     "᚜ɴᴇxᴛ᚛", data="{}_next({})".format(prefix, modulo_page)
@@ -455,9 +455,9 @@ with bot:
             text = (
                 f"**Hey**, __I am using__  **GeezUserbot** \n\n"
                 f"       __Thanks For Using me__\n\n"
-                f"{INLINE_EMOJI} **Group Support :** [GEEZ](t.me/GeezSupport)\n"
-                f"{INLINE_EMOJI} **Owner Repo :** [Vicky](t.me/vckyaz)\n"
-                f"{INLINE_EMOJI} **Repo :** [GeezProjects](https://github.com/vckyou/Geez-Userbot)\n"
+                f" **Group Support :** [GEEZ](t.me/GeezSupport)\n"
+                f" **Owner Repo :** [Vicky](t.me/vckyaz)\n"
+                f" **Repo :** [GeezProjects](https://github.com/vckyou/Geez-Userbot)\n"
             )
             await tgbot.send_file(
                 event.chat_id,
@@ -530,19 +530,21 @@ with bot:
                 [result], switch_pm="USERBOT PORTAL", switch_pm_param="start"
             )
 
-        @tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"nepo")
-            )
-        )
+        @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"reopen")))
         async def on_plug_in_callback_query_handler(event):
-            current_page_number = int(looters)
-            buttons = paginate_help(current_page_number, dugmeler, "helpme")
-            await event.edit(
-                file=geezlogo,
-                buttons=buttons,
-                link_preview=False,
-            )
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
+                current_page_number = int(looters)
+                buttons = paginate_help(current_page_number, dugmeler, "helpme")
+                text = f"**GeezProjects Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
+                await event.edit(
+                    text,
+                    file=logogeez,
+                    buttons=buttons,
+                    link_preview=False,
+                )
+            else:
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -609,7 +611,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("Channel Support",
-                                       "t.me/GeezProject"),
+                                       "t.me/GeezProjectt"),
                             Button.url("Group Support",
                                        "t.me/GeezSupport")],
                         [Button.inline("Open Menu", data="nepo")],
@@ -618,12 +620,16 @@ with bot:
                     ]
                 )
 
-        @tgbot.on(events.CallbackQuery(data=b"close"))
-        async def close(event):
-            buttons =[
-                [custom.Button.inline("Open Menu", data="nepo")],
-            ]
-            await event.edit("Menu Ditutup!", buttons=buttons.clear())
+        @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
+                openlagi = custom.Button.inline("• Re-Open Menu •", data="reopen")
+                await event.edit(
+                    "❌ **Help Mode Button Ditutup!** ❌", buttons=openlagi
+                )
+            else:
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
