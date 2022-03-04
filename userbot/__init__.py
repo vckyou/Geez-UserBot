@@ -221,6 +221,13 @@ INLINE_PIC = os.environ.get(
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🔶"
 
+# Icon Help
+ICON_HELP = os.environ.get("ICON_HELP", "ꖒ")
+
+# Support
+GROUP = os.environ.get("GROUP", "GeezSupport")
+CHANNEL = os.environ.get("CHANNEL", "GeezProject")
+
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
 DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
