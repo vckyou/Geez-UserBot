@@ -14,7 +14,7 @@ import redis
 from speedtest import Speedtest
 
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, humanbytes, geez_cmd
+from userbot.utils import edit_or_reply, geez_cmd
 from userbot import ALIVE_NAME, CMD_HELP, DEVS, StartTime
 from userbot.events import register
 
