@@ -65,6 +65,7 @@ pyaztro
 pytube
 pymongo[srv]
 python-dateutil
+py-tgcalls
 pyfiglet
 PyGithub
 pip
