@@ -1,114 +1,88 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Port From UniBorg to Geez-Project To Vckyouuu
+from os import remove
+from random import choice
 
+from telethon.tl.functions.users import GetFullUserRequest
 
-import random
-import requests
-from asyncio.exceptions import TimeoutError
-
-from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP, bot
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.events import register
+from userbot.utils.misc import create_quotly
 
-if 1 == 1:
-    strings = {
-        "name": "Quotes",
-        "api_token_cfg_doc": "API Key/Token for Quotes.",
-        "api_url_cfg_doc": "API URL for Quotes.",
-        "colors_cfg_doc": "Username colors",
-        "default_username_color_cfg_doc": "Default color for the username.",
-        "no_reply": "You didn't reply to a message.",
-        "no_template": "You didn't specify the template.",
-        "delimiter": "</code>, <code>",
-        "server_error": "Server error. Please report to developer.",
-        "invalid_token": "You've set an invalid token, get it from `http://antiddos.systems`.",
-        "unauthorized": "You're unauthorized to do this.",
-        "not_enough_permissions": "Wrong template. You can use only the default one.",
-        "templates": "Available Templates: <code>{}</code>",
-        "cannot_send_stickers": "`Anda Tidak Bisa Mengirim Pesan Ke Obrolan Ini.`",
-        "admin": "admin",
-        "creator": "creator",
-        "hidden": "hidden",
-        "channel": "Channel"}
-
-    config = {"api_url": "http://api.antiddos.systems",
-              "username_colors": ["#fb6169", "#faa357", "#b48bf2", "#85de85",
-                                  "#62d4e3", "#65bdf3", "#ff5694"],
-              "default_username_color": "#b48bf2"}
+from .carbon import all_col
 
 
 @register(outgoing=True, pattern=r"^\.q")
-async def quotess(qotli):
-    if qotli.fwd_from:
-        return
-    if not qotli.reply_to_msg_id:
-        return await qotli.edit("```Mohon Balas Ke Pesan```")
-    reply_message = await qotli.get_reply_message()
-    if not reply_message.text:
-        return await qotli.edit("```Mohon Balas Ke Pesan```")
-    chat = "@QuotLyBot"
-    if reply_message.sender.bot:
-        return await qotli.edit("```Mohon Balas Ke Pesan```")
-    await qotli.edit("```Sedang Memproses Sticker, Mohon Menunggu```")
-    try:
-        async with bot.conversation(chat) as conv:
-            try:
-                response = conv.wait_event(
-                    events.NewMessage(
-                        incoming=True,
-                        from_users=1031952739))
-                msg = await bot.forward_messages(chat, reply_message)
-                response = await response
-                """ - don't spam notif - """
-                await bot.send_read_acknowledge(conv.chat_id)
-            except YouBlockedUserError:
-                return await qotli.reply("```Harap Jangan Blockir @QuotLyBot Buka Blokir Lalu Coba Lagi```")
-            if response.text.startswith("Hi!"):
-                await qotli.edit("```Mohon Menonaktifkan Pengaturan Privasi Forward Anda```")
+async def quotly(event):
+    match = event.pattern_match.group(1).strip()
+    if not event.is_reply:
+        return await event.edit("**Mohon Balas ke Pesan**")
+    msg = await event.edit("`Processing...`")
+    reply = await event.get_reply_message()
+    replied_to, reply_ = None, None
+    if match:
+        spli_ = match.split(maxsplit=1)
+        if (spli_[0] in ["r", "reply"]) or (
+            spli_[0].isdigit() and int(spli_[0]) in range(1, 21)
+        ):
+            if spli_[0].isdigit():
+                if not event.client._bot:
+                    reply_ = await event.client.get_messages(
+                        event.chat_id,
+                        min_id=event.reply_to_msg_id - 1,
+                        reverse=True,
+                        limit=int(spli_[0]),
+                    )
+                else:
+                    id_ = reply.id
+                    reply_ = []
+                    for msg_ in range(id_, id_ + int(spli_[0])):
+                        msh = await event.client.get_messages(event.chat_id, ids=msg_)
+                        if msh:
+                            reply_.append(msh)
             else:
-                await qotli.delete()
-                await bot.forward_messages(qotli.chat_id, response.message)
-                await bot.send_read_acknowledge(qotli.chat_id)
-                """ - cleanup chat after completed - """
-                await qotli.client.delete_messages(conv.chat_id,
-                                                   [msg.id, response.id])
-    except TimeoutError:
-        await qotli.edit()
-
-
-@register(outgoing=True, pattern="^.xquote(?: |$)(.*)")
-async def quote_search(event):
-    if event.fwd_from:
-        return
-    await event.edit("`Sedang Memproses...`")
-    search_string = event.pattern_match.group(1)
-    input_url = "https://bots.shrimadhavuk.me/Telegram/GoodReadsQuotesBot/?q={}".format(
-        search_string)
-    headers = {"USER-AGENT": "Uniborg"}
+                replied_to = await reply.get_reply_message()
+            try:
+                match = spli_[1]
+            except IndexError:
+                match = None
+    user = None
+    if not reply_:
+        reply_ = reply
+    if match:
+        match = match.split(maxsplit=1)
+    if match:
+        if match[0].startswith("@") or match[0].isdigit():
+            try:
+                match_ = await event.client(GetFullUserRequest(match[0]))
+                user = await event.client.get_entity(match_)
+            except ValueError:
+                pass
+            match = match[1] if len(match) == 2 else None
+        else:
+            match = match[0]
+    if match == "random":
+        match = choice(all_col)
     try:
-        response = requests.get(input_url, headers=headers).json()
-    except BaseException:
-        response = None
-    if response is not None:
-        result = random.choice(response).get(
-            "input_message_content").get("message_text")
-    else:
-        result = None
-    if result:
-        await event.edit(result.replace("<code>", "`").replace("</code>", "`"))
-    else:
-        await event.edit("`Tidak Ada Hasil Yang Ditemukan`")
+        file = await create_quotly(reply_, bg=match, reply=replied_to, sender=user)
+    except Exception as er:
+        return await msg.edit(f"**ERROR:** `{er}`")
+    message = await reply.reply("Quotly by GeezProject", file=file)
+    remove(file)
+    await msg.delete()
+    return message
 
 
-CMD_HELP.update({
-    "quotly":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.q`\
-\n↳ : Mengubah Pesan Menjadi sticker.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.xquote`\
-\n↳ : Mengubah Pesan Menjadi sticker."
-})
+CMD_HELP.update(
+    {
+        "quotly": f"**Plugin : **`quotly`\
+        \n\n•  **Command :** `.q`\
+        \n •  **Function : **Membuat pesan menjadi sticker dengan random background.\
+        \n\n•  **Command :** `.q` <angka>\
+        \n •  **Function : **Membuat pesan menjadi sticker dengan custom jumlah pesan yang diberikan.\
+        \n\n•  **Command :** `.q` <warna>\
+        \n •  **Function : **Membuat pesan menjadi sticker dengan custom warna background yang diberikan.\
+        \n\n•  **Command :** `.q` <username>\
+        \n •  **Function : **Membuat pesan menjadi sticker dengan custom username user tele yang diberikan.\
+    "
+    }
+)
