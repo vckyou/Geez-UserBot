@@ -2,7 +2,6 @@
 # Credits © Geez-Project
 # Ya gitu deh:')
 
-from shutil import rmtree
 from userbot.events import register
 from userbot import CMD_HELP
 from userbot.utils import googleimagesdownload
