@@ -13,16 +13,16 @@ async def yardim(event):
     try:
         tgbotusername = BOT_USERNAME
         if tgbotusername is not None:
-            results = await event.client.inline_query(tgbotusername, "@Geez-Project")
+            results = await event.client.inline_query(tgbotusername, "@Geez-Userbot")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
         else:
             await event.edit(
-                "`Botnya tidak berfungsi! Silahkan atur Bot Token dan Username dengan benar. Modul telah dihentikan.`"
+                "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped..`"
             )
     except Exception:
         return await event.edit(
-            "`Anda tidak dapat mengirim hasil sebaris dalam obrolan ini (disebabkan oleh SendInlineBotResultRequest)`"
+            "`You cannot send inline results in this chat (caused by SendInlineBotResultRequest)`"
         )
