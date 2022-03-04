@@ -19,6 +19,7 @@ dnspython
 emoji
 fontTools
 gitpython
+git+https://github.com/1danish-00/carbon-now-sh-api-wrapper.git
 git+https://github.com/ahupp/python-magic
 git+https://github.com/johnwmillr/LyricsGenius.git
 git+https://github.com/voins/google-images-download.git@2cd68173c961324a2c41c61e8b6f40a49663ce60
