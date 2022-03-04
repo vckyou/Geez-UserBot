@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from . import format as _format
+from .decorator import asst_cmd, callback, geez_cmd, geez_handler
 from .format import parse_pre
 from .chrome import chrome, options
 from .events import checking, get_user_from_event
