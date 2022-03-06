@@ -8,11 +8,11 @@
     <a href="https://github.com/vckyou/Geez-UserBot"> <img src="https://img.shields.io/github/repo-size/vckyou/Geez-UserBot?logo=github&style=for-the-badge" /></a>
     <a href="https://github.com/vckyou/Geez-UserBot/network/members"> <img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?logo=github&style=for-the-badge" /></a>
     <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
-    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-white?style=for-the-badge&logo=appveyor"/>
+    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.10.2-white?style=for-the-badge&logo=appveyor"/>
     <a href="https://hub.docker.com/r/vckyouuu/geezprojects"> <img src="https://img.shields.io/docker/image-size/vckyouuu/geezprojects/buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
     <a href="https://hub.docker.com/r/vckyouuu/geezprojects/buster"> <img src="https://img.shields.io/docker/v/vckyouuu/geezprojects/buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
-    <a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
-    <a href="https://t.me/VcgSupportGroup"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+    <a href="https://t.me/GeezSupport"><img src="https://img.shields.io/badge/GeezSupport%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+    <a href="https://t.me/RamSupportt"><img src="https://img.shields.io/badge/RamSupport%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
     </p>
 
 
