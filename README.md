@@ -24,23 +24,17 @@
 
 <h1 align="center"><img src="./resources/extras/GeezFire.gif" width="35px">Geez-UserBot<img src="./resources/extras/GeezFire.gif" width="35px"></h1>
 
-**Pada Dasarnya [Geez-UserBot](https://github.com/Vckyou/Geez-UserBot) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
-Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot. Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.**
+Pada Dasarnya [Geez-UserBot](https://github.com/Vckyou/Geez-UserBot) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
+Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot. Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.
 
-## DEPLOY TO HEROKU ⚠️
-<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=dmNreW91L0dlZXotVXNlckJvdCBHZWV6LVVzZXJCb3Q"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-indigo?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
+<p align="center"DEPLOY TO HEROKU</p>
 
-<h3 align="center">Userbot Digunakan untuk Bersenang-senang di Telegram, dan untuk Menjaga Grup Anda.</h3>
-<p align="center">&nbsp;</p>
-
+<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=dmNreW91L0dlZXotVXNlckJvdCBHZWV6LVVzZXJCb3Q"> <img src="https://www.herokucdn.com/deploy/button.svg" width="250" height="38.60" /></a></p>
 
 ### Generate String Using Replit⤵️
 
 <a href="https://replit.com/@Vckyou/Geez-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
-
-<details>
-  <summary><b>© Credits</b></summary>
 
 
  🙏 **THANK YOU VERY MUCH FOR**
@@ -55,5 +49,5 @@ Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://
 *   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
 
 
-## Stay Support 🚀
+## Stay Support 🍂
 *   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
