@@ -278,7 +278,7 @@ eod = edit_delete
 
 async def checking():
     geez = str(pybase64.b64decode("R2VlelByb2plY3Q="))[2:13]
-    projects = str(pybase64.b64decode("cmFtc3VwcG9ydHQ=="))[2:13]
+    projects = str(pybase64.b64decode("cmFtc3VwcG9ydHQ="))[2:13]
     try:
         await bot(Get(geez))
     except BaseException:
