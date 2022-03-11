@@ -15,10 +15,12 @@ from telethon.tl import functions, types
 from telethon.utils import get_input_document
 
 from userbot import BOT_USERNAME
+from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
+from userbot import S_PACK_NAME as custompack
+from userbot import tgbot
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
-from userbot.utils import edit_delete, edit_or_reply
-from userbot.events import register
+from userbot.utils import edit_delete, edit_or_reply, geez_cmd
 
 KANGING_STR = [
     "Prosess Mengambil Sticker Pack!",
@@ -26,7 +28,7 @@ KANGING_STR = [
     "Proses!",
 ]
 
-@register(outgoing=True, pattern=r"^\.pkang(?:\\s|$)([\\s\\S]*)")
+@geez_cmd(pattern="pkang(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     xnxx = await edit_or_reply(event, f"`{random.choice(KANGING_STR)}`")
     reply = await event.get_reply_message()
@@ -71,7 +73,7 @@ async def _(event):
             pack = 1
         await xnxx.edit(f"`{random.choice(KANGING_STR)}`")
         try:
-            create_st = await event.client(
+            create_st = await tgbot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -84,7 +86,7 @@ async def _(event):
             await asyncio.sleep(1)
             await xnxx.edit("`Sedang membuat paket baru...`")
             pack += 1
-            create_st = await event.client(
+            create_st = await tgbot(
                 functions.stickers.CreateStickerSetRequest(
                     user_id=OWNER_ID,
                     title=pname,
@@ -94,11 +96,10 @@ async def _(event):
             )
             addgvar("PKANG", str(pack))
         await xnxx.edit(
-            f"**Berhasil Mengambil Sticker Pack,**\n [Klik Disini](t.me/addstickers/{create_st.set.short_name})\n **Untuk Melihat Pack anda**"
+            f"**Berhasil Mencuri Sticker Pack,** [Klik Disini](t.me/addstickers/{create_st.set.short_name}) **Untuk Melihat Pack anda**"
         )
     else:
         await xnxx.edit("**Berkas Tidak Didukung. Harap Balas ke stiker saja.**")
 
-
-CMD_HELP.update({"packkang": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pkang`"
+CMD_HELP.update({"packkang": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pkang`"
                  "\n↳ : **Reply Dan Ketik .pkang Ke Sticker Untuk Mencuri semua sticker pack tersebut"})
