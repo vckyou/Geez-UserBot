@@ -29,7 +29,7 @@ GCAST_BLACKLIST = [
 
 @register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
 async def gcast(event):
-    user = await event.client.get_me()
+    xnxx = await event.client.get_me()
     xx = event.pattern_match.group(1)
     if xx:
         msg = xx
@@ -56,7 +56,7 @@ async def gcast(event):
                 except BaseException:
                     er += 1
     await kk.edit(
-        f"**[{owner}](tg://user?id={user.id}) Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**[{owner}](tg://user?id={xnxx.id}) Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
     )
 
 @register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
