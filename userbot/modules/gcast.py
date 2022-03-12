@@ -29,7 +29,6 @@ GCAST_BLACKLIST = [
 
 @register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
 async def gcast(event):
-    xnxx = await event.client.get_me()
     xx = event.pattern_match.group(1)
     if xx:
         msg = xx
@@ -41,6 +40,7 @@ async def gcast(event):
     kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 📢`")
     er = 0
     done = 0
+    xnxx = await event.client.get_me()
     async for x in event.client.iter_dialogs():
         if x.is_group:
             chat = x.id
