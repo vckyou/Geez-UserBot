@@ -463,6 +463,7 @@ with bot:
         dugmeler = CMD_HELP
         user = bot.get_me()
         uid = user.id
+        owner = user.first_name
         logo = ALIVE_LOGO
         geezlogo = INLINE_PIC
         tgbotusername = BOT_USERNAME
