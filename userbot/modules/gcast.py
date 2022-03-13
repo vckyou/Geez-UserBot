@@ -1,7 +1,7 @@
 import asyncio
 
 from userbot.events import register
-from userbot import CMD_HELP, DEVS, owner
+from userbot import CMD_HELP, DEVS
 
 
 GCAST_BLACKLIST = [
@@ -40,7 +40,6 @@ async def gcast(event):
     kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 📢`")
     er = 0
     done = 0
-    xnxx = await event.client.get_me()
     async for x in event.client.iter_dialogs():
         if x.is_group:
             chat = x.id
@@ -56,7 +55,7 @@ async def gcast(event):
                 except BaseException:
                     er += 1
     await kk.edit(
-        f"**[{owner}](tg://user?id={xnxx.id}) Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
     )
 
 @register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
