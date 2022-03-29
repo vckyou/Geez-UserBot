@@ -460,6 +460,7 @@ with bot:
     try:
         bot(JoinChannelRequest("@UserbotCh"))
         bot(JoinChannelRequest("@ramsupportt"))
+        bot(JoinChannelRequest("@geezProjectt"))
         
         dugmeler = CMD_HELP
         user = bot.get_me()
