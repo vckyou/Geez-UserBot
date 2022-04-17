@@ -1,9 +1,7 @@
-FROM vckyouuu/geezprojects:buster
+FROM vckyouubitch/geez:master
 
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
+RUN git clone -b master https://github.com/vckyou/GeezProjects /home/geezprojects/ \
+    && chmod 777 /home/geezprojects \
+    && mkdir /home/geezprojects/bin/
 
-WORKDIR /root/userbot
-
-CMD ["python3", "-m", "userbot"]
+CMD [ "bash", "start" ]
