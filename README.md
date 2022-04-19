@@ -29,7 +29,7 @@ Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://
 
 <p align="center"DEPLOY TO HEROKU</p>
 
-<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=dmNreW91L0dlZXotVXNlckJvdCBHZWV6LVVzZXJCb3Q"> <img src="https://www.herokucdn.com/deploy/button.svg" width="250" height="38.60" /></a></p>
+<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=dmNreW91L0dlZXpQcm9qZWN0cyBtYXN0ZXI"> <img src="https://www.herokucdn.com/deploy/button.svg" width="250" height="38.60" /></a></p>
 
 ### Generate String Using Replit⤵️
 
