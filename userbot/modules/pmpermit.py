@@ -30,15 +30,17 @@ from platform import uname
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "╭┈──────────────────────\n"
-    "│“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞”\n"
-    "├┈────────────────────\n"
-    "│𝗗𝗜𝗟𝗔𝗥𝗔𝗡𝗚 𝗠𝗘𝗟𝗔𝗞𝗨𝗞𝗔𝗡 𝗦𝗣𝗔𝗠𝗠𝗜𝗡𝗚❗\n│\n"
-    f"│𝘒𝘢𝘳𝘦𝘯𝘢 𝘚𝘢𝘺𝘢 𝘈𝘬𝘢𝘯 𝘖𝘵𝘰𝘮𝘢𝘵𝘪𝘴 𝘔𝘦𝘮𝘣𝘭𝘰𝘬𝘪𝘳\n│𝘈𝘯𝘥𝘢, 𝘛𝘶𝘯𝘨𝘨𝘶 𝘚𝘢𝘮𝘱𝘢𝘪 {DEFAULTUSER}\n│𝘔𝘦𝘯𝘦𝘳𝘪𝘮𝘢 𝘗𝘦𝘴𝘢𝘯 𝘈𝘯𝘥𝘢, 𝘛𝘦𝘳𝘪𝘮𝘢𝘬𝘢𝘴𝘪𝘩.\n"
-    "├┈──────────────────────\n"
-    "│ ○› `AUTOMATIC MESSAGES`\n"
-    f"│ ○› `BY` Geez Project\n"
-    "╰┈────────────────")
+    f"Hai Selamat datang di chat {DEFAULTUSER}\n"
+    "╾─────────────────────╼\n"
+    " Mohon untuk tidak\n"
+    " melakukan spam chat\n"
+    " Atau Saya Akan Otomatis\n"
+    " Mereport & Block Kamu\n"
+    " Silahkan Tunggu Sampai\n"
+    f" {DEFAULTUSER} Menerima Pesanmu\n"
+    "─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇\n\n"
+    f"- ©Bot Assisten {DEFAULTUSER}\n"
+    "- Protected By 🔥ANANG BOT🔥")
 # =================================================================
 
 
